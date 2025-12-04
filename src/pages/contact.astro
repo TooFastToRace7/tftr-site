@@ -1,0 +1,325 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact" description="Get in touch with Too Fast To Race - S Rogers Engineering Ltd, based in Carmarthen, Wales.">
+  
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Get In <span class="text-green">Touch</span></h1>
+      <p class="hero-subtitle">Whether it's a question about suspension setup, a Caterham build enquiry, or just to say hello – we'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Grid -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h2>Send a Message</h2>
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" />
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone <span class="optional">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">What's this about?</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select an option...</option>
+                <option value="suspension-setup">Suspension Setup</option>
+                <option value="custom-valving">Custom Valving</option>
+                <option value="caterham-build">Caterham Build</option>
+                <option value="caterham-service">Caterham Servicing</option>
+                <option value="h2-parts">Kawasaki H2 Parts</option>
+                <option value="track-support">Track Support</option>
+                <option value="other">Other Enquiry</option>
+              </select>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required rows="6" placeholder="Tell us about your project or enquiry..."></textarea>
+            </div>
+            
+            <div class="form-group full-width">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+          </form>
+          
+          <p class="form-note">We aim to respond to all enquiries within 24-48 hours. For urgent matters, please call.</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="info-block">
+            <h3>Location</h3>
+            <address>
+              <strong>S Rogers Engineering Ltd</strong><br />
+              Y Gwernen<br />
+              Dryslwyn<br />
+              Carmarthen<br />
+              SA32 8SA<br />
+              Wales, UK
+            </address>
+          </div>
+          
+          <div class="info-block">
+            <h3>Get Directions</h3>
+            <p>We're located in rural Carmarthenshire, between Llandeilo and Carmarthen. The workshop is easily accessible with good parking.</p>
+            <a href="https://www.google.com/maps/search/Y+Gwernen+Dryslwyn+Carmarthen+SA32+8SA" target="_blank" rel="noopener" class="map-link">Open in Google Maps →</a>
+          </div>
+          
+          <div class="info-block">
+            <h3>Website</h3>
+            <p><a href="https://toofasttorace.com">toofasttorace.com</a></p>
+          </div>
+          
+          <div class="info-block highlight">
+            <h3>Before You Visit</h3>
+            <p>Please contact us before visiting to ensure someone is available. We're often out at events, testing, or working on customer cars.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="map-placeholder">
+      <div class="map-overlay">
+        <p>Located in the heart of Carmarthenshire</p>
+        <a href="https://www.google.com/maps/search/Y+Gwernen+Dryslwyn+Carmarthen+SA32+8SA" target="_blank" rel="noopener" class="btn btn-outline">View on Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 60ch;
+    margin-top: var(--space-sm);
+  }
+
+  /* Contact Section */
+  .contact-section {
+    background: var(--tftr-black);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  /* Form Styling */
+  .contact-form-wrapper h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-group label {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey-light);
+  }
+
+  .form-group label .optional {
+    font-size: 0.75rem;
+    color: var(--tftr-grey);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 1rem;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--tftr-white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--tftr-grey);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--tftr-green);
+  }
+
+  .form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%235CB85C' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 3rem;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  .form-note {
+    margin-top: var(--space-md);
+    font-size: 0.9rem;
+    color: var(--tftr-grey);
+  }
+
+  /* Contact Info */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .info-block {
+    padding: var(--space-md);
+    background: var(--tftr-darker);
+    border-left: 3px solid var(--tftr-green);
+  }
+
+  .info-block.highlight {
+    background: rgba(92, 184, 92, 0.1);
+    border-color: var(--tftr-green);
+  }
+
+  .info-block h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--tftr-green);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-sm);
+  }
+
+  .info-block address {
+    font-style: normal;
+    color: var(--tftr-grey-light);
+    line-height: 1.8;
+  }
+
+  .info-block address strong {
+    color: var(--tftr-white);
+  }
+
+  .info-block p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .info-block a {
+    color: var(--tftr-green);
+  }
+
+  .info-block a:hover {
+    color: var(--tftr-green-light);
+  }
+
+  .map-link {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+  }
+
+  /* Map Section */
+  .map-section {
+    padding: 0;
+  }
+
+  .map-placeholder {
+    height: 400px;
+    background: 
+      linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.7)),
+      url('/images/Simon__R_Project_FF_203.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .map-overlay {
+    text-align: center;
+    padding: var(--space-lg);
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid rgba(92, 184, 92, 0.3);
+  }
+
+  .map-overlay p {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-md);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+      grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+      grid-column: 1;
+    }
+  }
+</style>

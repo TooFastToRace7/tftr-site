@@ -1,0 +1,373 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About" description="Simon Rogers - 30 years of championship-winning suspension expertise. Founder of RaceShocks.UK, Meteor Motorsport, and CORE Suspension.">
+  
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>About <span class="text-green">Simon</span></h1>
+      <p class="hero-subtitle">30 years of suspension expertise, from hillclimb wins to founding industry-leading brands.</p>
+    </div>
+  </section>
+
+  <!-- Bio Section -->
+  <section class="bio-section">
+    <div class="container">
+      <div class="bio-grid">
+        <div class="bio-image">
+          <div class="image-frame">
+            <img src="/images/Simon__R_Project_FF_202.png" alt="Simon Rogers" />
+          </div>
+        </div>
+        <div class="bio-content">
+          <h2>The Story</h2>
+          <p>Simon Rogers has been immersed in motorsport suspension for over three decades. What started as a passion for making cars go faster evolved into a career defining the standards for lightweight sports car suspension in the UK.</p>
+          
+          <p>A racer himself, Simon understands what drivers need because he's been there – pushing cars to their limits on track, hillclimb, and road. His Caterham 7 has seen victory at venues like Prescott, finishing over three seconds clear of the competition.</p>
+          
+          <p>This hands-on experience informs everything we do at Too Fast To Race. When you talk to us about suspension setup, you're talking to someone who's felt the difference a shim stack change makes at 1.7g through a high-speed corner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Track Record -->
+  <section class="track-record">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Track Record</h2>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Founded</span>
+            <h3>RS Automotive Engineering</h3>
+            <p>Trading as RaceShocks.UK and MeteorMotorsport.com – becoming a leading UK suspension specialist for lightweight sports cars.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Partnership</span>
+            <h3>CORE Suspension</h3>
+            <p>Partnered with TracTive Suspension BV (Netherlands) to create CORE Suspension – the first brand focused entirely on lightweight sports cars. TracTive supplies BMW, Dallara, Pagani, and RUF.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Competition</span>
+            <h3>Hillclimb Success</h3>
+            <p>Multiple championship wins and class victories at UK hillclimb venues including Prescott – consistently finishing on the podium in Caterham 7.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Today</span>
+            <h3>Too Fast To Race</h3>
+            <p>S Rogers Engineering Ltd – returning to the core passion: hands-on suspension development, Caterham builds, and bespoke engineering projects in rural Wales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise -->
+  <section class="expertise">
+    <div class="container">
+      <div class="expertise-grid">
+        <div class="expertise-content">
+          <span class="stripe-accent"></span>
+          <h2>Expertise</h2>
+          <p>Working across the full spectrum of performance suspension – from road-focused comfort to all-out race specification:</p>
+        </div>
+        
+        <div class="expertise-list">
+          <div class="expertise-item">
+            <h4>Damper Technology</h4>
+            <p>Expert knowledge of Penske, Nitron, Ohlins, Quantum, and TracTive damper systems. Custom valving for any application.</p>
+          </div>
+          
+          <div class="expertise-item">
+            <h4>Lightweight Sports Cars</h4>
+            <p>Specialist focus on Caterham, Lotus, Ariel, TVR, and Alpine. These cars demand suspension that understands their unique dynamics.</p>
+          </div>
+          
+          <div class="expertise-item">
+            <h4>Testing & Development</h4>
+            <p>Professional dyno testing, on-car data acquisition, and iterative development. We measure, test, and refine until it's right.</p>
+          </div>
+          
+          <div class="expertise-item">
+            <h4>Chassis Setup</h4>
+            <p>Complete vehicle dynamics – corner weighting, geometry optimisation, spring selection, and ride height calibration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="quote-section">
+    <div class="container">
+      <blockquote>
+        <p>"I have made changes via the remote control nearly every time I have used the dampers and on each occasion, I have felt the change but can 100% say that the suspension has then adapted itself and I have not once felt under or oversteer."</p>
+        <cite>– Simon Rogers, on semi-active suspension development</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Let's Talk Suspension</h2>
+        <p>Whether you're looking for setup advice, custom valving, or a complete build – get in touch.</p>
+        <a href="/contact" class="btn btn-primary">Contact Simon</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 60ch;
+    margin-top: var(--space-sm);
+  }
+
+  /* Bio Section */
+  .bio-section {
+    background: var(--tftr-black);
+  }
+
+  .bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .bio-image .image-frame {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+  }
+
+  .bio-image .image-frame::before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border: 2px solid var(--tftr-green);
+    transform: translate(-15px, -15px);
+    z-index: 1;
+  }
+
+  .bio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bio-content h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .bio-content p {
+    color: var(--tftr-grey-light);
+    margin-bottom: var(--space-sm);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  /* Track Record / Timeline */
+  .track-record {
+    background: var(--tftr-darker);
+  }
+
+  .timeline {
+    position: relative;
+    margin-top: var(--space-lg);
+    padding-left: var(--space-lg);
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--tftr-green), rgba(92, 184, 92, 0.2));
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: var(--space-lg);
+  }
+
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: calc(-1 * var(--space-lg) - 6px);
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background: var(--tftr-green);
+    border-radius: 50%;
+    border: 3px solid var(--tftr-darker);
+  }
+
+  .timeline-date {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-xs);
+  }
+
+  .timeline-content h3 {
+    margin-bottom: var(--space-xs);
+  }
+
+  .timeline-content p {
+    color: var(--tftr-grey-light);
+    max-width: 60ch;
+  }
+
+  /* Expertise */
+  .expertise {
+    background: var(--tftr-black);
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-xl);
+  }
+
+  .expertise-content p {
+    color: var(--tftr-grey-light);
+    margin-top: var(--space-sm);
+  }
+
+  .expertise-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .expertise-item {
+    padding: var(--space-md);
+    background: var(--tftr-darker);
+    border-left: 3px solid var(--tftr-green);
+  }
+
+  .expertise-item h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .expertise-item p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+  }
+
+  /* Quote Section */
+  .quote-section {
+    background: var(--tftr-darker);
+    text-align: center;
+  }
+
+  blockquote {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  blockquote p {
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--tftr-white);
+    max-width: none;
+  }
+
+  blockquote cite {
+    display: block;
+    margin-top: var(--space-md);
+    font-size: 0.95rem;
+    color: var(--tftr-green);
+    font-style: normal;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 50ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .bio-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .bio-image {
+      max-width: 400px;
+    }
+
+    .expertise-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .expertise-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
