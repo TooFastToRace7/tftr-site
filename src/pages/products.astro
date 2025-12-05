@@ -4,7 +4,6 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Products" description="Kawasaki Ninja H2 dry sump kits and performance parts. Specialist components for the supercharged H2 platform.">
   
-  <!-- Hero -->
   <section class="page-hero">
     <div class="container">
       <span class="stripe-accent"></span>
@@ -13,7 +12,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Product Intro -->
   <section class="product-intro">
     <div class="container">
       <div class="intro-content">
@@ -23,8 +21,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Featured Product -->
-<section class="featured-product">
+  <section class="featured-product">
     <div class="container">
       <div class="product-grid">
         
@@ -94,7 +91,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
-  <!-- Other Products -->
+
   <section class="other-products">
     <div class="container">
       <div class="section-header">
@@ -125,7 +122,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- About H2 -->
   <section class="about-h2">
     <div class="container">
       <div class="about-grid">
@@ -156,7 +152,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="cta-section">
     <div class="container">
       <div class="cta-content">
@@ -204,37 +199,58 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.8;
   }
 
-  /* Featured Product */
+  /* Featured Product Section Styling */
   .featured-product {
     background: var(--tftr-darker);
   }
 
   .product-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.5fr; /* Left column smaller than right */
     gap: var(--space-xl);
     align-items: start;
   }
 
-  .product-image {
-    position: sticky;
-    top: 100px;
-  }
-
-  .image-placeholder {
-    aspect-ratio: 1;
-    background: var(--tftr-dark);
-    border: 2px dashed rgba(92, 184, 92, 0.3);
+  /* Gallery Styling */
+  .product-gallery {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    color: var(--tftr-grey);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
   }
 
+  .main-image-container img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain; 
+    background: #000;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .thumbnail-grid img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    border: 1px solid transparent;
+  }
+
+  .thumbnail-grid img:hover {
+    opacity: 1;
+    border-color: var(--tftr-green);
+  }
+
+  /* Product Text Content */
   .product-category {
     display: inline-block;
     font-family: var(--font-heading);
@@ -478,97 +494,55 @@ import Layout from '../layouts/Layout.astro';
     background: var(--tftr-darker);
   }
 
-/* Responsive */
+  /* Responsive / Mobile Styles */
   @media (max-width: 900px) {
     .product-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* Stacks image on top of text on mobile */
     }
-    .product-image {
-      position: relative;
-      top: 0;
-    }
+    
     .specs-grid {
       grid-template-columns: 1fr;
     }
+    
     .products-grid {
       grid-template-columns: 1fr;
     }
+    
     .about-grid {
       grid-template-columns: 1fr;
     }
+    
     .about-stats {
       flex-direction: row;
       flex-wrap: wrap;
     }
+    
     .stat-card {
       flex: 1;
       min-width: 150px;
     }
-  } /* This closing bracket was missing in your file! */
-
-  /* --- GALLERY STYLES --- */
-  
-  .product-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
   }
 
-  /* Main Image */
-  .main-image-container img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: contain; /* Ensures the whole engine is visible */
-    background: #000;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  /* Thumbnail Grid */
-  .thumbnail-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-
-  /* Thumbnails */
-  .thumbnail-grid img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    border-radius: 4px;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: opacity 0.2s;
-    border: 1px solid transparent;
-  }
-
-  .thumbnail-grid img:hover {
-    opacity: 1;
-    border-color: var(--tftr-green);
-  }
-
-  /* Mobile Gallery adjustment */
   @media (max-width: 600px) {
     .thumbnail-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr); /* 2 thumbnails across on small screens */
     }
   }
-<script>
-  // 1. Find the big image
-  const mainImage = document.getElementById('current-image');
-  
-  // 2. Find all the thumbnails
-  const thumbnails = document.querySelectorAll('.thumb');
+</style>
 
-  // 3. Add a click listener to every thumbnail
-  thumbnails.forEach(thumb => {
-    thumb.addEventListener('click', function() {
-      // When clicked, change the Big Image src to the Thumbnail src
-      mainImage.src = this.src;
-      mainImage.alt = this.alt;
-    });
+<script>
+  // Script to handle Thumbnail Clicking
+  document.addEventListener("DOMContentLoaded", function() {
+    const mainImage = document.getElementById('current-image');
+    const thumbnails = document.querySelectorAll('.thumb');
+
+    if(mainImage && thumbnails) {
+      thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', function() {
+          mainImage.src = this.src;
+          mainImage.alt = this.alt;
+        });
+      });
+    }
   });
-<style>
 </script>
