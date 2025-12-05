@@ -24,30 +24,35 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Featured Product -->
-<div class="product-gallery">
-  <div class="main-image-container">
-    <img 
-      id="current-image" 
-      src="/images/Photoroom_20250830_133723.png" 
-      alt="Kawasaki H2 Dry Sump Kit Main View" 
-    />
-  </div>
+<section class="featured-product">
+    <div class="container">
+      <div class="product-grid">
+        
+        <div class="product-gallery">
+          <div class="main-image-container">
+            <img 
+              id="current-image" 
+              src="/images/Photoroom_20250830_133723.png" 
+              alt="Kawasaki H2 Dry Sump Kit Main View" 
+            />
+          </div>
 
-  <div class="thumbnail-grid">
-    <img class="thumb" src="/images/Photoroom_20250830_133723.png" alt="Main View" />
-    <img class="thumb" src="/images/Photoroom_20250830_133818.png" alt="Components" />
-    <img class="thumb" src="/images/Photoroom_20250830_134531.png" alt="Detail" />
-    <img class="thumb" src="/images/Photoroom_20250830_133445.png" alt="Angle" />
-    <img class="thumb" src="/images/Photoroom_20250830_133751.png" alt="Rear View" />
-    <img class="thumb" src="/images/Photoroom_20250830_134437.png" alt="Side View" />
-    <img class="thumb" src="/images/Photoroom_20250830_133648.png" alt="Top View" />
-    <img class="thumb" src="/images/Photoroom_20250830_134501.png" alt="Kit Contents" />
-  </div>
-</div>
+          <div class="thumbnail-grid">
+            <img class="thumb" src="/images/Photoroom_20250830_133723.png" alt="Main View" />
+            <img class="thumb" src="/images/Photoroom_20250830_133818.png" alt="Components" />
+            <img class="thumb" src="/images/Photoroom_20250830_134531.png" alt="Detail" />
+            <img class="thumb" src="/images/Photoroom_20250830_133445.png" alt="Angle" />
+            <img class="thumb" src="/images/Photoroom_20250830_133751.png" alt="Rear View" />
+            <img class="thumb" src="/images/Photoroom_20250830_134437.png" alt="Side View" />
+            <img class="thumb" src="/images/Photoroom_20250830_133648.png" alt="Top View" />
+            <img class="thumb" src="/images/Photoroom_20250830_134501.png" alt="Kit Contents" />
+          </div>
+        </div>
         
         <div class="product-content">
           <span class="product-category">Featured Product</span>
           <h2>Ninja H2/H2R Dry Sump Kit</h2>
+        
           <p class="product-lead">Purpose-built oil system for serious track use and lightweight car conversions.</p>
           
           <p>The stock H2 wet sump system works well for motorcycle road use, but under sustained high-G loading in a car – whether on track or in a lightweight car conversion – oil surge can become a reliability concern. Our dry sump kit eliminates this issue entirely.</p>
@@ -59,7 +64,8 @@ import Layout from '../layouts/Layout.astro';
               <li><strong>Increased Vacuum</strong> – Reduced windage losses mean more power to the rear wheel</li>
               <li><strong>Reliability</strong> – Eliminates oil starvation risk under extreme conditions</li>
               <li><strong>Flexibility</strong> – External tank can be positioned to suit your installation</li>
-              <li><strong>Simplicity</strong> – Fits in place of the standard water pump - an electric water pump is required.</li>            </ul>
+              <li><strong>Simplicity</strong> – Fits in place of the standard water pump - an electric water pump is required.</li>
+            </ul>
           </div>
           
           <div class="product-specs">
@@ -88,7 +94,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
-
   <!-- Other Products -->
   <section class="other-products">
     <div class="container">
@@ -473,87 +478,83 @@ import Layout from '../layouts/Layout.astro';
     background: var(--tftr-darker);
   }
 
-  /* Responsive */
+/* Responsive */
   @media (max-width: 900px) {
     .product-grid {
       grid-template-columns: 1fr;
     }
-
     .product-image {
       position: relative;
       top: 0;
     }
-
     .specs-grid {
       grid-template-columns: 1fr;
     }
-
     .products-grid {
       grid-template-columns: 1fr;
     }
-
     .about-grid {
       grid-template-columns: 1fr;
     }
-
     .about-stats {
       flex-direction: row;
       flex-wrap: wrap;
     }
-
     .stat-card {
       flex: 1;
       min-width: 150px;
     }
-/* Container for the whole gallery */
-.product-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+  } /* This closing bracket was missing in your file! */
 
-/* The Big Image Styling */
-.main-image-container img {
-  width: 100%;
-  aspect-ratio: 16/9; /* Keeps the big image a consistent rectangle */
-  object-fit: cover;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* The Grid for small images */
-.thumbnail-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 images across */
-  gap: 1rem;
-}
-
-/* The Small Images Styling */
-.thumbnail-grid img {
-  width: 100%;
-  aspect-ratio: 4/3; /* Thumbnails are slightly more square */
-  object-fit: cover;
-  border-radius: 4px;
-  cursor: pointer; /* Turn cursor into a hand so user knows to click */
-  opacity: 0.6;    /* Dim them slightly */
-  transition: opacity 0.2s;
-  border: 1px solid transparent;
-}
-
-/* Hover effect on thumbnails */
-.thumbnail-grid img:hover {
-  opacity: 1;
-  border-color: var(--tftr-green);
-}
-
-/* Mobile: Show 2 across instead of 4 */
-@media (max-width: 600px) {
-  .thumbnail-grid {
-    grid-template-columns: repeat(2, 1fr);
+  /* --- GALLERY STYLES --- */
+  
+  .product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
   }
-}
 
-</style>
+  /* Main Image */
+  .main-image-container img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain; /* Ensures the whole engine is visible */
+    background: #000;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Thumbnail Grid */
+  .thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  /* Thumbnails */
+  .thumbnail-grid img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    border: 1px solid transparent;
+  }
+
+  .thumbnail-grid img:hover {
+    opacity: 1;
+    border-color: var(--tftr-green);
+  }
+
+  /* Mobile Gallery adjustment */
+  @media (max-width: 600px) {
+    .thumbnail-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 <script>
   // 1. Find the big image
   const mainImage = document.getElementById('current-image');
@@ -569,4 +570,5 @@ import Layout from '../layouts/Layout.astro';
       mainImage.alt = this.alt;
     });
   });
+<style>
 </script>
