@@ -530,16 +530,21 @@ import Layout from '../layouts/Layout.astro';
   }
 </style>
 
-<script>
-  // Script to handle Thumbnail Clicking
-  document.addEventListener("DOMContentLoaded", function() {
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1. Select the main large image
     const mainImage = document.getElementById('current-image');
+    
+    // 2. Select all the thumbnail images
     const thumbnails = document.querySelectorAll('.thumb');
 
-    if(mainImage && thumbnails) {
+    // 3. Loop through them and add the click event
+    if (mainImage && thumbnails.length > 0) {
       thumbnails.forEach(thumb => {
         thumb.addEventListener('click', function() {
+          // Swap the source of the main image to match the clicked thumbnail
           mainImage.src = this.src;
+          // Optional: Swap the alt text too for accessibility
           mainImage.alt = this.alt;
         });
       });
