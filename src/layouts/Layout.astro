@@ -262,7 +262,7 @@ const { title, description = "Specialist suspension setup, Caterham engineering,
 </style>
 
 <style>
-  /* Header */
+  /* Header Styles */
   .site-header {
     position: fixed;
     top: 0;
@@ -284,10 +284,16 @@ const { title, description = "Specialist suspension setup, Caterham engineering,
   }
 
   .logo-img {
-    height: 120px;
+    height: 120px; /* Desktop Size */
     width: auto;
     margin-left: 20px; 
-    margin-top: 10px;   }
+    margin-top: 10px;
+  }
+
+  /* NEW: Pushes page content down so it doesn't hide behind the fixed header */
+  main {
+    padding-top: 160px; /* 120px Header + Spacing */
+  }
 
   .nav-links {
     display: flex;
@@ -448,23 +454,36 @@ const { title, description = "Specialist suspension setup, Caterham engineering,
     font-size: 0.85rem;
   }
 
-  /* Responsive */
+  /* Responsive / Mobile Styles */
   @media (max-width: 900px) {
     .mobile-menu-btn {
       display: flex;
     }
 
+    /* FIX: Resize logo to be smaller on mobile (Icon size) */
+    .logo-img {
+      height: 60px; 
+      margin-top: 5px;
+    }
+
+    /* FIX: Adjust page padding for the smaller mobile header */
+    main {
+      padding-top: 100px;
+    }
+
     .nav-links {
       position: fixed;
-      top: 0;
+      /* FIX: Move menu down so it doesn't cover the header */
+      top: 90px;
       right: -100%;
       width: 100%;
-      height: 100vh;
+      height: calc(100vh - 90px);
       background: var(--tftr-black);
       flex-direction: column;
       justify-content: center;
       gap: 2rem;
       transition: right 0.3s ease;
+      border-top: 1px solid rgba(92, 184, 92, 0.2);
     }
 
     .nav-links.active {
