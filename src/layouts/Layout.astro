@@ -15,6 +15,73 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
     <meta name="description" content={description} />
     <link rel="icon" type="image/png" href="/images/TFTR_Icon.png" />
     <title>{title} | Too Fast To Race</title>
+
+    <link rel="canonical" href={Astro.url} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Too Fast To Race" />
+    <meta property="og:title" content={`${title} | Too Fast To Race`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://toofasttorace.com/images/TFTR.png" />
+    <meta property="og:url" content={Astro.url} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | Too Fast To Race`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://toofasttorace.com/images/TFTR.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Too Fast To Race",
+      "alternateName": "TFTR",
+      "legalName": "S Rogers Engineering Ltd",
+      "description": "Specialist suspension specification, chassis development and vehicle dynamics consultancy. Bespoke Nitron and Penske suspension systems for fast road, track day and motorsport applications.",
+      "url": "https://toofasttorace.com",
+      "logo": "https://toofasttorace.com/images/TFTR.png",
+      "image": "https://toofasttorace.com/images/TFTR.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Y Gwernen",
+        "addressLocality": "Dryslwyn",
+        "addressRegion": "Carmarthen",
+        "postalCode": "SA32 8SA",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "51.8566",
+        "longitude": "-4.0731"
+      },
+      "areaServed": "United Kingdom",
+      "serviceType": [
+        "Suspension Specification",
+        "Chassis Development",
+        "Vehicle Dynamics Consultancy",
+        "Nitron Suspension Systems",
+        "Penske Racing Shocks",
+        "Track Day Suspension Setup",
+        "Hillclimb Suspension"
+      ],
+      "knowsAbout": [
+        "Suspension Engineering",
+        "Vehicle Dynamics",
+        "Nitron Suspension",
+        "Penske Racing Shocks",
+        "Caterham Seven",
+        "Caterham 7",
+        "Lotus Seven",
+        "Lotus 7",
+        "Chassis Development",
+        "Motorsport Engineering"
+      ],
+      "sameAs": []
+    }
+    </script>
     
     <!-- Google Fonts - Racing-inspired typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
