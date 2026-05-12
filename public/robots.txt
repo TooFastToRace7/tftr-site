@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toofasttorace.com/sitemap-index.xml
