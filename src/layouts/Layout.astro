@@ -54,6 +54,10 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
           <img src="/images/TFTR_Icon.png" alt="TFTR" class="footer-logo" />
           <p class="footer-tagline">Too Fast To Race</p>
           <p class="footer-company">S Rogers Engineering Ltd</p>
+          <div class="footer-caterham-links">
+            <a href="/caterham">Caterham</a>
+            <a href="/kawasaki-h2-parts">Kawasaki H2 Parts</a>
+          </div>
         </div>
         <div class="footer-contact">
           <h4>Location</h4>
@@ -414,6 +418,22 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
   .footer-company {
     color: var(--tftr-grey);
     font-size: 0.9rem;
+  }
+
+  .footer-caterham-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: var(--space-sm);
+  }
+
+  .footer-caterham-links a {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+  }
+
+  .footer-caterham-links a:hover {
+    color: var(--tftr-green);
   }
 
   .footer-content h4 {
