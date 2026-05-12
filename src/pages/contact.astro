@@ -21,7 +21,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Contact Form -->
         <div class="contact-form-wrapper">
           <h2>Send a Message</h2>
-          <form class="contact-form" action="https://formspree.io/f/mjknoakd" method="POST">
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required placeholder="Your name" />
@@ -85,10 +85,6 @@ import Layout from '../layouts/Layout.astro';
           </div>
           
           <div class="info-block">
-            <h3>Phone</h3>
-            <p><a href="tel:07920843146">07920 843146</a></p>
-            <h3>Email</h3>
-            <p><a href="mailto:simon@toofasttorace.com"">simon@toofasttorace.com</a></p>
             <h3>Website</h3>
             <p><a href="https://toofasttorace.com">toofasttorace.com</a></p>
           </div>
@@ -245,7 +241,7 @@ import Layout from '../layouts/Layout.astro';
     color: var(--tftr-green);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: 0.10rem;
+    margin-bottom: var(--space-sm);
   }
 
   .info-block address {
@@ -261,12 +257,11 @@ import Layout from '../layouts/Layout.astro';
   .info-block p {
     color: var(--tftr-grey-light);
     font-size: 0.95rem;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
+    line-height: 1.6;
   }
 
   .info-block a {
-    color: var(--tftr-grey-light);
+    color: var(--tftr-green);
   }
 
   .info-block a:hover {
