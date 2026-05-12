@@ -130,7 +130,46 @@ import Layout from '../layouts/Layout.astro';
           <p>This level of performance demands suspension that can keep up. Every aspect of the chassis has been developed to work with the engine's character – predictable, communicative, and ultimately fast.</p>
         </div>
         <div class="build-image">
-          <img src="/images/Simon__R_Project_FF_204.png" alt="Caterham GSXR Build" />
+          <img src="/images/TFTR.png" alt="Too Fast To Race" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- H2 Build -->
+  <section class="featured-build h2-build">
+    <div class="container">
+      <div class="build-grid reversed">
+        <div class="build-image">
+          <img src="/images/TFTR_Icon.png" alt="Too Fast To Race" />
+        </div>
+        <div class="build-content">
+          <span class="stripe-accent"></span>
+          <h2>The Kawasaki H2 <span class="text-green">Conversion</span></h2>
+          <p class="lead">Supercharged · 310bhp · Engineering Precision</p>
+          <p>The Kawasaki Ninja H2 engine represents one of the most extraordinary powerplants available for lightweight car conversion — a supercharged inline-four producing up to 310bhp in H2R specification, in a compact and relatively lightweight package. Integrating it correctly into a lightweight chassis demands real engineering rather than improvisation.</p>
+
+          <div class="build-specs">
+            <div class="spec">
+              <span class="spec-label">Engine</span>
+              <span class="spec-value">Kawasaki Ninja H2</span>
+            </div>
+            <div class="spec">
+              <span class="spec-label">Induction</span>
+              <span class="spec-value">Centrifugal Supercharger</span>
+            </div>
+            <div class="spec">
+              <span class="spec-label">Power</span>
+              <span class="spec-value">Up to 310bhp (H2R)</span>
+            </div>
+            <div class="spec">
+              <span class="spec-label">Displacement</span>
+              <span class="spec-value">998cc Inline-Four</span>
+            </div>
+          </div>
+
+          <p>Dry sump conversion, thermal management and correct engineering integration are essential for the H2 platform to perform reliably in a car application. We develop and supply the specialist components that make this conversion work — including our purpose-built H2 dry sump system.</p>
+          <a href="/kawasaki-h2-parts" class="btn btn-primary">H2 Parts & Engineering</a>
         </div>
       </div>
     </div>
@@ -398,6 +437,19 @@ import Layout from '../layouts/Layout.astro';
   .build-image img {
     width: 100%;
     height: auto;
+  }
+
+  /* H2 Build */
+  .h2-build {
+    background: var(--tftr-darker);
+  }
+
+  .build-grid.reversed {
+    direction: rtl;
+  }
+
+  .build-grid.reversed > * {
+    direction: ltr;
   }
 
   /* Why Us */
