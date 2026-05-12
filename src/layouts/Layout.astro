@@ -4,7 +4,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Specialist suspension setup, Caterham engineering, and motorsport services. 30 years experience." } = Astro.props;
+const { title, description = "Bespoke Nitron and Penske suspension specification, chassis development and vehicle dynamics consultancy from Too Fast To Race. Over 30 years of motorsport and suspension development experience." } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -20,29 +20,12 @@ const { title, description = "Specialist suspension setup, Caterham engineering,
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1328734395601203');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1328734395601203&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-</head>
+  </head>
   <body>
     <header class="site-header">
       <nav class="nav-container">
         <a href="/" class="logo">
-          <img src="/images/TFTR Icon clear.png" alt="Too Fast To Race" class="logo-img" />
+          <img src="/images/TFTR_Icon.png" alt="Too Fast To Race" class="logo-img" />
         </a>
         <button class="mobile-menu-btn" aria-label="Toggle menu">
           <span></span>
@@ -51,12 +34,12 @@ src="https://www.facebook.com/tr?id=1328734395601203&ev=PageView&noscript=1"
         </button>
         <ul class="nav-links">
           <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/services">Services</a></li>
+          <li><a href="/about">Philosophy</a></li>
+          <li><a href="/services">Applications</a></li>
           <li><a href="/caterham">Caterham</a></li>
-          <li><a href="/products">Products</a></li>
+          <li><a href="/suspension">Suspension</a></li>
           <li><a href="/partners">Partners</a></li>
-          <li><a href="/contact" class="nav-cta">Contact</a></li>
+          <li><a href="/contact" class="nav-cta">Discuss Your Car</a></li>
         </ul>
       </nav>
     </header>
@@ -78,18 +61,29 @@ src="https://www.facebook.com/tr?id=1328734395601203&ev=PageView&noscript=1"
             Y Gwernen<br />
             Dryslwyn<br />
             Carmarthen<br />
-            SA32 8SA<br />            
-            email: simon@toofasttorace.com<br />
-            Call  07920 843146
+            SA32 8SA
           </address>
         </div>
         <div class="footer-links">
-          <h4>Services</h4>
+          <h4>Suspension</h4>
           <ul>
-            <li><a href="/services#suspension">Suspension Setup</a></li>
-            <li><a href="/services#valving">Custom Valving</a></li>
-            <li><a href="/services#chassis">Chassis Engineering</a></li>
-            <li><a href="/caterham">Caterham Builds</a></li>
+            <li><a href="/suspension">Suspension Overview</a></li>
+            <li><a href="/nitron-suspension">Nitron Systems</a></li>
+            <li><a href="/nitron-electron">Nitron elec-TRON</a></li>
+            <li><a href="/track-day-suspension">Track Day Suspension</a></li>
+            <li><a href="/fast-road-suspension">Fast Road Suspension</a></li>
+            <li><a href="/nurburgring-suspension">Nürburgring Suspension</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Vehicles</h4>
+          <ul>
+            <li><a href="/caterham">Caterham</a></li>
+            <li><a href="/bmw-suspension">BMW</a></li>
+            <li><a href="/porsche-suspension">Porsche</a></li>
+            <li><a href="/lotus-suspension">Lotus</a></li>
+            <li><a href="/mazda-mx5-suspension">Mazda MX-5</a></li>
+            <li><a href="/alpine-suspension">Alpine A110</a></li>
           </ul>
         </div>
         <div class="footer-partners">
@@ -279,7 +273,7 @@ src="https://www.facebook.com/tr?id=1328734395601203&ev=PageView&noscript=1"
 </style>
 
 <style>
-  /* Header Styles */
+  /* Header */
   .site-header {
     position: fixed;
     top: 0;
@@ -301,15 +295,8 @@ src="https://www.facebook.com/tr?id=1328734395601203&ev=PageView&noscript=1"
   }
 
   .logo-img {
-    height: 120px; /* Desktop Size */
+    height: 40px;
     width: auto;
-    margin-left: 20px; 
-    margin-top: 10px;
-  }
-
-  /* NEW: Pushes page content down so it doesn't hide behind the fixed header */
-  main {
-    padding-top: 160px; /* 120px Header + Spacing */
   }
 
   .nav-links {
@@ -471,36 +458,23 @@ src="https://www.facebook.com/tr?id=1328734395601203&ev=PageView&noscript=1"
     font-size: 0.85rem;
   }
 
-  /* Responsive / Mobile Styles */
+  /* Responsive */
   @media (max-width: 900px) {
     .mobile-menu-btn {
       display: flex;
     }
 
-    /* FIX: Resize logo to be smaller on mobile (Icon size) */
-    .logo-img {
-      height: 60px; 
-      margin-top: 5px;
-    }
-
-    /* FIX: Adjust page padding for the smaller mobile header */
-    main {
-      padding-top: 100px;
-    }
-
     .nav-links {
       position: fixed;
-      /* FIX: Move menu down so it doesn't cover the header */
-      top: 90px;
+      top: 0;
       right: -100%;
       width: 100%;
-      height: calc(100vh - 90px);
+      height: 100vh;
       background: var(--tftr-black);
       flex-direction: column;
       justify-content: center;
       gap: 2rem;
       transition: right 0.3s ease;
-      border-top: 1px solid rgba(92, 184, 92, 0.2);
     }
 
     .nav-links.active {
