@@ -13,6 +13,27 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Internal Linking Hub -->
+  <section class="internal-links-hub">
+    <div class="container">
+      <div class="hub-header">
+        <span class="stripe-accent"></span>
+        <h2>Suspension by <span class="text-green">Platform</span></h2>
+        <p>Specialist suspension specification across leading performance platforms</p>
+      </div>
+      <div class="hub-grid">
+        <a href="/caterham" class="hub-link">Caterham Seven →</a>
+        <a href="/porsche-suspension" class="hub-link">Porsche 911 / Cayman / Boxster →</a>
+        <a href="/lotus-suspension" class="hub-link">Lotus Elise / Exige / Evora →</a>
+        <a href="/bmw-suspension" class="hub-link">BMW M Cars (E46 to G80) →</a>
+        <a href="/mazda-mx5-suspension" class="hub-link">Mazda MX-5 (NA to ND) →</a>
+        <a href="/alpine-suspension" class="hub-link">Alpine A110 →</a>
+        <a href="/toyota-gr-yaris-suspension" class="hub-link">Toyota GR Yaris →</a>
+        <a href="/tvr-suspension" class="hub-link">TVR Griffith / Chimaera / Cerbera →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Service: Suspension Setup -->
   <section id="suspension" class="service-detail">
     <div class="container">
@@ -361,8 +382,55 @@ import Layout from '../layouts/Layout.astro';
     background: var(--tftr-darker);
   }
 
+  /* Internal Links Hub */
+  .internal-links-hub {
+    background: var(--tftr-darker);
+    border-top: 1px solid rgba(92, 184, 92, 0.2);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hub-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .hub-header p {
+    color: var(--tftr-grey-light);
+    margin-top: var(--space-xs);
+  }
+
+  .hub-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .hub-link {
+    display: block;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--tftr-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+  }
+
+  .hub-link:hover {
+    border-color: var(--tftr-green);
+    background: rgba(92, 184, 92, 0.1);
+    transform: translateY(-2px);
+  }
+
   /* Responsive */
   @media (max-width: 900px) {
+    .hub-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .service-grid,
     .service-grid.reverse {
       grid-template-columns: 1fr;

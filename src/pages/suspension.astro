@@ -54,7 +54,7 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="area-card">
           <h3>Nitron Suspension Systems</h3>
-          <p>Nitron produce some of the finest road and track suspension systems available at their price point. We specify Nitron systems with bespoke spring rates and damping characteristics developed around real chassis testing rather than generic catalogue settings.</p>
+          <p>Nitron produce some of the finest road and track suspension systems available at their price point. We specify Nitron systems with bespoke spring rates and damping characteristics developed around real chassis testing rather than generic catalogue settings. Understanding the difference between <a href="/nitron-r1-vs-r3" class="inline-link">Nitron R1 and R3</a> is the first step in choosing the right platform for your application.</p>
           <a href="/nitron-suspension" class="area-link">Nitron Suspension →</a>
         </div>
 
@@ -284,7 +284,14 @@ import Layout from '../layouts/Layout.astro';
     margin-top: auto;
   }
 
-  .area-link:hover {
+  .inline-link {
+    color: var(--tftr-green);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .inline-link:hover {
     color: var(--tftr-green-light);
   }
 

@@ -76,6 +76,43 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- elec-TRON Feature -->
+  <section class="electron-feature">
+    <div class="container">
+      <div class="electron-grid">
+        <div class="electron-content">
+          <span class="electron-label">Active Damper Technology</span>
+          <h2>Nitron <span class="text-green">elec-TRON</span></h2>
+          <p>Beyond the passive R1 and R3 range, Nitron produce the elec-TRON — an active electronic damper system that replaces the manual adjustment needle with a high-speed proportional solenoid valve. The system monitors vehicle sensors and adjusts damping continuously every five to six milliseconds in response to real-time road and chassis inputs.</p>
+          <p>For BMW and Porsche owners with factory electronic damping systems — BMW EDC and Porsche PASM — the elec-TRON integrates directly with the factory wiring harness. Your dashboard mode controls are retained but now operate through Nitron's motorsport-grade hardware with a significantly wider dynamic range than the factory system allows. For vehicles without factory electronic damping, the Nitron DCU provides standalone active damping control.</p>
+          <p>The elec-TRON resolves the fundamental compromise of passive suspension — the system can be genuinely compliant over surface imperfections while simultaneously being controlled and composed through corners. Spring rate specification remains as important as ever — the electronics manage damping, not physics.</p>
+          <a href="/nitron-electron" class="btn btn-primary">Explore Nitron elec-TRON</a>
+        </div>
+        <div class="electron-specs">
+          <div class="electron-spec">
+            <span class="spec-value">5—6ms</span>
+            <span class="spec-label">Damping update rate</span>
+          </div>
+          <div class="electron-spec">
+            <span class="spec-value">BMW EDC</span>
+            <span class="spec-label">Plug-and-play integration</span>
+          </div>
+          <div class="electron-spec">
+            <span class="spec-value">Porsche PASM</span>
+            <span class="spec-label">Plug-and-play integration</span>
+          </div>
+          <div class="electron-spec">
+            <span class="spec-value">eR1 & eR3</span>
+            <span class="spec-label">Two system variants</span>
+          </div>
+          <div class="electron-note">
+            <p>Available for BMW M2, M3, M4, Porsche 911, Cayman and other platforms. Contact us to discuss compatibility with your vehicle.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Specification Approach -->
   <section class="spec-approach">
     <div class="container">
@@ -120,14 +157,24 @@ import Layout from '../layouts/Layout.astro';
         <h2>Related Expertise</h2>
       </div>
       <div class="related-grid">
+        <a href="/products" class="related-card">
+          <h3>Suspension Systems</h3>
+          <p>Overview of our full suspension range and specification approach across all platforms.</p>
+          <span class="related-link">View Products →</span>
+        </a>
         <a href="/nitron-r1-vs-r3" class="related-card">
           <h3>Nitron R1 vs R3</h3>
           <p>Understanding the real differences between the R1 and R3 and which is right for your application.</p>
           <span class="related-link">Read More →</span>
         </a>
-        <a href="/nitron-electron" class="related-card">
-          <h3>Nitron elec-TRON</h3>
-          <p>Active electronic damper technology — continuously adjusting damping in real time for BMW and Porsche platforms.</p>
+        <a href="/caterham" class="related-card">
+          <h3>Caterham Suspension</h3>
+          <p>How we specify Nitron systems for Caterham Sevens — from fast road to race.</p>
+          <span class="related-link">Read More →</span>
+        </a>
+        <a href="/porsche-suspension" class="related-card">
+          <h3>Porsche Suspension</h3>
+          <p>Nitron specification for Porsche 911, Cayman and Boxster platforms.</p>
           <span class="related-link">Read More →</span>
         </a>
         <a href="/track-day-suspension" class="related-card">
@@ -272,6 +319,83 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.85rem;
   }
 
+  /* elec-TRON Feature */
+  .electron-feature {
+    background: var(--tftr-black);
+    border-top: 2px solid var(--tftr-green);
+    border-bottom: 2px solid var(--tftr-green);
+  }
+
+  .electron-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .electron-label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-xs);
+  }
+
+  .electron-content h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .electron-content p {
+    color: var(--tftr-grey-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+  }
+
+  .electron-specs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .electron-spec {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid var(--tftr-green);
+    padding-left: var(--space-sm);
+  }
+
+  .spec-value {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--tftr-green);
+    line-height: 1;
+  }
+
+  .spec-label {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+    margin-top: 0.25rem;
+  }
+
+  .electron-note {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: var(--space-sm);
+  }
+
+  .electron-note p {
+    color: var(--tftr-grey);
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
   /* Specification Approach */
   .spec-approach {
     background: var(--tftr-black);
@@ -338,7 +462,7 @@ import Layout from '../layouts/Layout.astro';
 
   .related-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-md);
   }
 
@@ -417,7 +541,7 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .related-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 </style>

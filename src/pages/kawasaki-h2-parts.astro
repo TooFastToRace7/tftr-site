@@ -13,6 +13,23 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Related Suspension Expertise -->
+  <section class="related-expertise">
+    <div class="container">
+      <div class="expertise-header">
+        <span class="stripe-accent"></span>
+        <h3>Engineering <span class="text-green">Beyond the Engine</span></h3>
+        <p>H2-powered cars still need correct suspension specification. Our chassis development expertise applies across every platform we work with.</p>
+      </div>
+      <div class="expertise-grid">
+        <a href="/suspension" class="expertise-link">Suspension Philosophy →</a>
+        <a href="/nitron-suspension" class="expertise-link">Nitron Systems →</a>
+        <a href="/penske-racing-shocks" class="expertise-link">Penske Racing Shocks →</a>
+        <a href="/caterham" class="expertise-link">Lightweight Chassis Development →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Product Intro -->
   <section class="product-intro">
     <div class="container">
@@ -173,6 +190,56 @@ import Layout from '../layouts/Layout.astro';
   .product-intro {
     background: var(--tftr-black);
     padding: var(--space-lg) 0;
+  }
+
+    /* Related Expertise */
+  .related-expertise {
+    background: var(--tftr-darker);
+    border-top: 1px solid rgba(92, 184, 92, 0.2);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+    padding: var(--space-lg) 0;
+  }
+
+  .expertise-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .expertise-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .expertise-header p {
+    color: var(--tftr-grey-light);
+    max-width: 50ch;
+    margin: 0 auto;
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+
+  .expertise-link {
+    display: block;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--tftr-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+  }
+
+  .expertise-link:hover {
+    border-color: var(--tftr-green);
+    background: rgba(92, 184, 92, 0.1);
+    transform: translateY(-2px);
   }
 
   .intro-content {
@@ -494,6 +561,10 @@ import Layout from '../layouts/Layout.astro';
     .stat-card {
       flex: 1;
       min-width: 150px;
+    }
+
+    .expertise-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 </style>
