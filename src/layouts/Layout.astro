@@ -83,16 +83,19 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
     }
     </script>
     
-    <!-- Google Fonts - Racing-inspired typography -->
+    <!-- Google Fonts - Racing-inspired typography (non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
   </head>
   <body>
     <header class="site-header">
       <nav class="nav-container">
         <a href="/" class="logo">
-          <img src="/images/TFTR_Icon.png" alt="Too Fast To Race" class="logo-img" onerror="this.src='/images/TFTR.png'" />
+          <img src="/images/TFTR_Icon.png" alt="Too Fast To Race" class="logo-img" width="90" height="90" onerror="this.src='/images/TFTR.png'" />
         </a>
         <button class="mobile-menu-btn" aria-label="Toggle menu">
           <span></span>
@@ -146,7 +149,7 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-brand">
-          <img src="/images/TFTR_Icon.png" alt="TFTR" class="footer-logo" />
+          <img src="/images/TFTR_Icon.png" alt="TFTR" class="footer-logo" width="60" height="60" />
           <p class="footer-tagline">Too Fast To Race</p>
           <p class="footer-company">S Rogers Engineering Ltd</p>
           <div class="footer-caterham-links">
@@ -196,6 +199,13 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
             <li>Nitron Racing Systems</li>
             <li>Hyperco Springs</li>
             <li>Eibach</li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Tools & Apps</h4>
+          <ul>
+            <li><a href="https://www.racetracs.com" target="_blank" rel="noopener noreferrer">RaceTracs — Lap Timing & Analysis</a></li>
+            <li><a href="https://www.springspec.com" target="_blank" rel="noopener noreferrer">SpringSpec — Suspension Spring Calculator</a></li>
           </ul>
         </div>
       </div>
