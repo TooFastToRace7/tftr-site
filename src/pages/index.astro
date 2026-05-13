@@ -57,7 +57,7 @@ import Layout from '../layouts/Layout.astro';
               <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
             </svg>
           </div>
-          <h3>Bespoke Nitron Suspension Systems</h3>
+          <h2>Bespoke Nitron Suspension Systems</h2>
           <p>Not generic off-the-shelf kits. We specify Nitron suspension systems around your exact vehicle, driving style, tyre package, ride quality expectations and intended use.</p>
           <a href="/products" class="service-link">Nitron Suspension Systems →</a>
         </div>
@@ -68,7 +68,7 @@ import Layout from '../layouts/Layout.astro';
               <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
             </svg>
           </div>
-          <h3>Suspension Development Specifications</h3>
+          <h2>Suspension Development Specifications</h2>
           <p>Where appropriate, we specify alternative spring rates and damping configurations developed through real-world chassis experience, circuit testing and long-term suspension development.</p>
           <a href="/about" class="service-link">Suspension Development Philosophy →</a>
         </div>
@@ -93,7 +93,7 @@ import Layout from '../layouts/Layout.astro';
               <path d="M2 12l10 5 10-5"/>
             </svg>
           </div>
-          <h3>Caterham Suspension Specialist</h3>
+          <h2>Caterham Suspension Specialist</h2>
           <p>Over 30 years owning, racing and developing Caterhams. Specialist Nitron and Penske suspension specification for fast road, track day, Nürburgring and competition Sevens.</p>
           <a href="/caterham" class="service-link">Caterham Suspension Systems →</a>
         </div>
@@ -115,7 +115,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="philosophy-image">
           <div class="image-frame">
-            <img src="/images/Caterham_Nitron_R1_Suspension_Kit.png" alt="Nitron R1 Suspension Kit for Caterham" />
+            <img src="/images/Caterham_Nitron_R1_Suspension_Kit.png" alt="Nitron R1 Suspension Kit for Caterham" width="600" height="450" />
           </div>
         </div>
       </div>
@@ -526,4 +526,10 @@ import Layout from '../layouts/Layout.astro';
       flex-direction: column;
     }
   }
+  /* Ensure service card h2 matches previous h3 styling */
+  .service-card h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: var(--space-xs);
+  }
+
 </style>
