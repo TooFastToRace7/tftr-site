@@ -215,19 +215,7 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
       });
 
       // Mobile dropdown toggles
-      if (window.innerWidth <= 900) {
-        const dropdowns = document.querySelectorAll('.dropdown');
-        dropdowns.forEach(dropdown => {
-          const link = dropdown.querySelector('a');
-          link?.addEventListener('click', (e) => {
-            e.preventDefault();
-            dropdown.classList.toggle('dropdown-open');
-          });
-        });
-      }
-
-      // Handle resize to re-initialize mobile dropdowns
-      window.addEventListener('resize', () => {
+      function initMobileDropdowns() {
         if (window.innerWidth <= 900) {
           const dropdowns = document.querySelectorAll('.dropdown');
           dropdowns.forEach(dropdown => {
@@ -241,7 +229,11 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
             }
           });
         }
-      });
+      }
+
+      // Run on load and resize
+      initMobileDropdowns();
+      window.addEventListener('resize', initMobileDropdowns);
     </script>
   </body>
 </html>
@@ -427,8 +419,10 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
   }
 
   .logo-img {
-    height: 40px;
+    height: 60px;
     width: auto;
+    margin-top: -10px;
+    margin-bottom: -10px;
   }
 
   .nav-links {
