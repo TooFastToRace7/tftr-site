@@ -1,8 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Too Fast To Race - Toyota GR Yaris Suspension Specialist",
+  "url": "https://toofasttorace.com/toyota-gr-yaris-suspension",
+  "description": "Specialist Toyota GR Yaris suspension specification for fast road, track day and competition use. Nitron systems specified around real GR Yaris chassis behaviour.",
+  "areaServed": "UK",
+  "knowsAbout": ["Toyota GR Yaris", "GR Yaris", "AWD Performance", "Nitron Suspension", "Fast Road Setup", "Track Day Suspension"],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Toyota GR Yaris Fast Road Suspension",
+      "description": "Road-focused suspension preserving daily usability while improving handling"
+    },
+    {
+      "@type": "Offer",
+      "name": "Toyota GR Yaris Track Day Setup",
+      "description": "Track-focused suspension development for the GR Yaris platform"
+    },
+    {
+      "@type": "Offer",
+      "name": "Toyota GR Yaris Competition Suspension",
+      "description": "Race-focused spring rate and damping calibration for competition use"
+    }
+  ]
+};
 ---
 
 <Layout title="Toyota GR Yaris Suspension | Specification & Setup | Too Fast To Race" description="Specialist Toyota GR Yaris suspension specification for fast road, track day and competition use. Nitron systems specified around real GR Yaris chassis behaviour by Too Fast To Race.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
   <section class="page-hero">

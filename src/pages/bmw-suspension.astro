@@ -1,8 +1,41 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Too Fast To Race - BMW Suspension Specialist",
+  "url": "https://toofasttorace.com/bmw-suspension",
+  "description": "Specialist BMW suspension specification across all generations of 3 Series, M3, M4 and M car platforms. Nitron systems specified around real BMW chassis behaviour.",
+  "areaServed": "UK",
+  "knowsAbout": ["BMW M3", "BMW M4", "BMW 3 Series", "E46 M3", "E90 M3", "F80 M3", "G80 M3", "Nitron R1", "Nitron R3", "Nitron elec-TRON"],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "BMW M3 Suspension Specification",
+      "description": "Suspension development across all M3 generations from E30 to G80"
+    },
+    {
+      "@type": "Offer",
+      "name": "BMW 3 Series Suspension Setup",
+      "description": "Fast road and track day suspension for 3 Series platforms"
+    },
+    {
+      "@type": "Offer",
+      "name": "BMW M Car Chassis Development",
+      "description": "Spring rate and damping calibration for M2, M3, M4 and M5 platforms"
+    },
+    {
+      "@type": "Offer",
+      "name": "Nitron elec-TRON for BMW",
+      "description": "Electronic damping upgrade retaining factory mode controls for newer M cars"
+    }
+  ]
+};
 ---
 
 <Layout title="BMW Suspension | M3, 3 Series & M Car Specification | Too Fast To Race" description="Specialist BMW suspension specification across all generations of 3 Series, M3, M4 and M car platforms. Nitron systems specified around real BMW chassis behaviour by Too Fast To Race.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
   <section class="page-hero">

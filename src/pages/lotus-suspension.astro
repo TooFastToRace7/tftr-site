@@ -1,8 +1,41 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Too Fast To Race - Lotus Suspension Specialist",
+  "url": "https://toofasttorace.com/lotus-suspension",
+  "description": "Specialist Lotus suspension specification across Elise, Exige, Evora and Emira platforms. Lightweight chassis expertise and Nitron systems specified around real Lotus chassis behaviour.",
+  "areaServed": "UK",
+  "knowsAbout": ["Lotus Elise", "Lotus Exige", "Lotus Evora", "Lotus Emira", "Lightweight Chassis Suspension", "Nitron Dampers", "Vehicle Dynamics"],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Lotus Elise Suspension Specification",
+      "description": "Weight-appropriate spring rates and damping calibration for Elise platforms"
+    },
+    {
+      "@type": "Offer",
+      "name": "Lotus Exige Suspension Specification",
+      "description": "Track-focused suspension including aero load considerations"
+    },
+    {
+      "@type": "Offer",
+      "name": "Lotus Evora Suspension Development",
+      "description": "Suspension specification for the heavier Evora platform"
+    },
+    {
+      "@type": "Offer",
+      "name": "Lotus Emira Suspension Setup",
+      "description": "Modern Lotus suspension development and specification"
+    }
+  ]
+};
 ---
 
 <Layout title="Lotus Suspension | Elise, Exige, Emira & Evora Specification | Too Fast To Race" description="Specialist Lotus suspension specification across Elise, Exige, Evora and Emira platforms. Lightweight chassis expertise and Nitron systems specified around real Lotus chassis behaviour by Too Fast To Race.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
   <section class="page-hero">

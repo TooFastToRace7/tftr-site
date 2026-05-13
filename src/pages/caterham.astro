@@ -1,8 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Too Fast To Race - Caterham Specialist",
+  "url": "https://toofasttorace.com/caterham",
+  "description": "Over 30 years of Caterham 7 experience. Bespoke builds, GSXR conversions, suspension setup, and complete engineering services.",
+  "areaServed": "UK",
+  "knowsAbout": ["Caterham 7", "GSXR Conversion", "Suspension Setup", "Vehicle Dynamics", "Chassis Development"],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Bespoke Caterham Builds",
+      "description": "Full build service from kit or donor with component selection and suspension development"
+    },
+    {
+      "@type": "Offer",
+      "name": "GSXR Conversions",
+      "description": "Suzuki GSXR engine conversion for Caterham 7"
+    },
+    {
+      "@type": "Offer",
+      "name": "Caterham Suspension Setup",
+      "description": "Fast road, track day, and Nürburgring suspension configurations"
+    }
+  ]
+};
 ---
 
 <Layout title="Caterham Specialist" description="Over 30 years of Caterham 7 experience. Bespoke builds, GSXR conversions, suspension setup, and complete engineering services.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   
   <!-- Hero -->
   <section class="page-hero caterham-hero">
@@ -130,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
           <p>This level of performance demands suspension that can keep up. Every aspect of the chassis has been developed to work with the engine's character – predictable, communicative, and ultimately fast.</p>
         </div>
         <div class="build-image">
-          <img src="/images/TFTR.png" alt="Too Fast To Race" />
+          <img src="/images/TFTR.png" alt="Too Fast To Race GSXR-powered Caterham 7 build - 390kg, 250bhp lightweight sports car" />
         </div>
       </div>
     </div>
@@ -141,7 +169,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="build-grid reversed">
         <div class="build-image">
-          <img src="/images/TFTR_Icon.png" alt="Too Fast To Race" />
+          <img src="/images/TFTR_Icon.png" alt="Too Fast To Race Caterham specialist logo - suspension and chassis development expertise" />
         </div>
         <div class="build-content">
           <span class="stripe-accent"></span>

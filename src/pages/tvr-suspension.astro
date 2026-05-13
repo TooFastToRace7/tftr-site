@@ -1,8 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Too Fast To Race - TVR Suspension Specialist",
+  "url": "https://toofasttorace.com/tvr-suspension",
+  "description": "Specialist TVR suspension specification across Griffith, Chimaera, Cerbera, Tuscan and T350 platforms. Lightweight British sports car expertise and Nitron systems.",
+  "areaServed": "UK",
+  "knowsAbout": ["TVR Griffith", "TVR Chimaera", "TVR Cerbera", "TVR Tuscan", "TVR T350", "Lightweight British Sports Car", "Nitron Suspension"],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "TVR Fast Road Suspension",
+      "description": "Road-focused suspension preserving the TVR's naturally balanced handling"
+    },
+    {
+      "@type": "Offer",
+      "name": "TVR Track Day Setup",
+      "description": "Track-focused suspension development for TVR platforms"
+    },
+    {
+      "@type": "Offer",
+      "name": "TVR Chassis Development",
+      "description": "Complete suspension specification for Griffith, Chimaera, Cerbera, Tuscan and T350"
+    }
+  ]
+};
 ---
 
 <Layout title="TVR Suspension | Specification & Setup | Too Fast To Race" description="Specialist TVR suspension specification across Griffith, Chimaera, Cerbera, Tuscan and T350 platforms. Lightweight British sports car expertise and Nitron systems specified by Too Fast To Race.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
   <section class="page-hero">

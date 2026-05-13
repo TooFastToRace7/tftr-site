@@ -1,8 +1,41 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Too Fast To Race - Porsche Suspension Specialist",
+  "url": "https://toofasttorace.com/porsche-suspension",
+  "description": "Specialist Porsche suspension specification across 911, Cayman, Boxster and GT platform variants. Nitron and elec-TRON systems specified around real Porsche chassis behaviour.",
+  "areaServed": "UK",
+  "knowsAbout": ["Porsche 911", "Porsche Cayman", "Porsche Boxster", "Porsche GT3", "Porsche GT4", "PASM", "Nitron elec-TRON", "Vehicle Dynamics"],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Porsche 911 Suspension Specification",
+      "description": "Rear-engined specific suspension development including rear compliance optimisation"
+    },
+    {
+      "@type": "Offer",
+      "name": "Porsche Cayman & Boxster Suspension",
+      "description": "Mid-engined suspension specification for naturally balanced handling"
+    },
+    {
+      "@type": "Offer",
+      "name": "Porsche GT Platform Development",
+      "description": "Spring rate refinement and geometry optimisation for GT3, GT3 RS and GT4"
+    },
+    {
+      "@type": "Offer",
+      "name": "Nitron elec-TRON for PASM Cars",
+      "description": "Direct upgrade for PASM-equipped Porsche retaining factory mode controls"
+    }
+  ]
+};
 ---
 
 <Layout title="Porsche Suspension | GT, 911 & Sports Car Specification | Too Fast To Race" description="Specialist Porsche suspension specification across 911, Cayman, Boxster and GT platform variants. Nitron and elec-TRON systems specified around real Porsche chassis behaviour by Too Fast To Race.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
   <section class="page-hero">

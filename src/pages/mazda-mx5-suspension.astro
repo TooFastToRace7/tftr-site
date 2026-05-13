@@ -1,8 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Too Fast To Race - Mazda MX-5 Suspension Specialist",
+  "url": "https://toofasttorace.com/mazda-mx5-suspension",
+  "description": "Specialist Mazda MX-5 suspension specification across all generations. Nitron systems specified for fast road, track day and competition use.",
+  "areaServed": "UK",
+  "knowsAbout": ["Mazda MX-5", "Mazda Miata", "NA MX-5", "NB MX-5", "NC MX-5", "ND MX-5", "Lightweight Chassis", "Nitron Suspension"],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Mazda MX-5 Fast Road Suspension",
+      "description": "Road-focused suspension preserving the MX-5's naturally balanced handling"
+    },
+    {
+      "@type": "Offer",
+      "name": "Mazda MX-5 Track Day Setup",
+      "description": "Track-focused suspension development for MX-5 platforms"
+    },
+    {
+      "@type": "Offer",
+      "name": "Mazda MX-5 Competition Suspension",
+      "description": "Race-focused spring rate and damping calibration for competition MX-5s"
+    }
+  ]
+};
 ---
 
 <Layout title="Mazda MX-5 Suspension | Specification & Setup | Too Fast To Race" description="Specialist Mazda MX-5 suspension specification across all generations. Nitron systems specified around real MX-5 chassis behaviour for fast road, track day and competition use by Too Fast To Race.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
   <section class="page-hero">

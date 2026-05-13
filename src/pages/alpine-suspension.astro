@@ -1,8 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Too Fast To Race - Alpine A110 Suspension Specialist",
+  "url": "https://toofasttorace.com/alpine-suspension",
+  "description": "Specialist Alpine A110 suspension specification for fast road, track day and competition use. Lightweight mid-engined chassis expertise and Nitron systems.",
+  "areaServed": "UK",
+  "knowsAbout": ["Alpine A110", "Lightweight Mid-Engined Chassis", "Nitron Suspension", "Fast Road Setup", "Track Day Suspension"],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Alpine A110 Fast Road Suspension",
+      "description": "Road-focused suspension specification preserving compliance and feedback"
+    },
+    {
+      "@type": "Offer",
+      "name": "Alpine A110 Track Day Setup",
+      "description": "Track-focused suspension development for the lightweight A110 platform"
+    },
+    {
+      "@type": "Offer",
+      "name": "Alpine A110 Competition Suspension",
+      "description": "Race-focused spring rate and damping calibration"
+    }
+  ]
+};
 ---
 
 <Layout title="Alpine A110 Suspension | Specification & Setup | Too Fast To Race" description="Specialist Alpine A110 suspension specification for fast road, track day and competition use. Lightweight mid-engined chassis expertise and Nitron systems specified by Too Fast To Race.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
   <section class="page-hero">
