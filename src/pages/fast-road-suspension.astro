@@ -123,6 +123,90 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Related Expertise -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related Suspension Expertise</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/track-day-suspension" class="related-card">
+          <h3>Track Day Suspension</h3>
+          <p>How track-focused specification differs from fast road — and when each is appropriate.</p>
+          <span class="related-link">Track Day Suspension →</span>
+        </a>
+        <a href="/nurburgring-suspension" class="related-card">
+          <h3>Nürburgring Setup</h3>
+          <p>Nürburgring suspension philosophy — why the 'Ring demands its own approach.</p>
+          <span class="related-link">Nürburgring Suspension →</span>
+        </a>
+        <a href="/nitron-suspension" class="related-card">
+          <h3>Nitron Systems</h3>
+          <p>Nitron R1, R3 and elec-TRON systems specified for fast road applications.</p>
+          <span class="related-link">Nitron Suspension →</span>
+        </a>
+        <a href="/caterham" class="related-card">
+          <h3>Caterham Fast Road</h3>
+          <p>Fast road suspension specification for Caterham Sevens — lightweight chassis considerations.</p>
+          <span class="related-link">Caterham Suspension →</span>
+        </a>
+        <a href="/porsche-suspension" class="related-card">
+          <h3>Porsche Fast Road</h3>
+          <p>Fast road setup for Porsche 911, Cayman and Boxster platforms.</p>
+          <span class="related-link">Porsche Suspension →</span>
+        </a>
+        <a href="/products" class="related-card">
+          <h3>Suspension Systems</h3>
+          <p>Overview of our full suspension range and specification approach.</p>
+          <span class="related-link">View Products →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Expertise -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related Suspension Expertise</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/track-day-suspension" class="related-card">
+          <h3>Track Day Suspension</h3>
+          <p>How track-focused specification differs from fast road — and when each is appropriate.</p>
+          <span class="related-link">Track Day Suspension →</span>
+        </a>
+        <a href="/nurburgring-suspension" class="related-card">
+          <h3>Nürburgring Setup</h3>
+          <p>Nürburgring suspension philosophy — why the 'Ring demands its own approach.</p>
+          <span class="related-link">Nürburgring Suspension →</span>
+        </a>
+        <a href="/nitron-suspension" class="related-card">
+          <h3>Nitron Systems</h3>
+          <p>Nitron R1, R3 and elec-TRON systems specified for fast road applications.</p>
+          <span class="related-link">Nitron Suspension →</span>
+        </a>
+        <a href="/caterham" class="related-card">
+          <h3>Caterham Fast Road</h3>
+          <p>Fast road suspension specification for Caterham Sevens — lightweight chassis considerations.</p>
+          <span class="related-link">Caterham Suspension →</span>
+        </a>
+        <a href="/porsche-suspension" class="related-card">
+          <h3>Porsche Fast Road</h3>
+          <p>Fast road setup for Porsche 911, Cayman and Boxster platforms.</p>
+          <span class="related-link">Porsche Suspension →</span>
+        </a>
+        <a href="/products" class="related-card">
+          <h3>Suspension Systems</h3>
+          <p>Overview of our full suspension range and specification approach.</p>
+          <span class="related-link">View Products →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="cta-section">
     <div class="container">
@@ -316,6 +400,62 @@ import Layout from '../layouts/Layout.astro';
 
   .system-link:hover {
     color: var(--tftr-green-light);
+  }
+
+  /* Related Section */
+  .related-section {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    margin-top: auto;
+  }
+
+  @media (max-width: 900px) {
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* CTA Section */
