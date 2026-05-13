@@ -92,7 +92,7 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
     <header class="site-header">
       <nav class="nav-container">
         <a href="/" class="logo">
-          <img src="/images/TFTR_Icon.png" alt="Too Fast To Race" class="logo-img" />
+          <img src="/images/TFTR_Icon.png" alt="Too Fast To Race" class="logo-img" onerror="this.src='/images/TFTR.png'" />
         </a>
         <button class="mobile-menu-btn" aria-label="Toggle menu">
           <span></span>
@@ -409,18 +409,18 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
   .nav-container {
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0.75rem var(--container-padding);
+    padding: 0.5rem var(--container-padding);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 120px;
+    min-height: 80px;
   }
 
   .logo-img {
-    height: 90px;
+    height: 50px;
     width: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .nav-links {
