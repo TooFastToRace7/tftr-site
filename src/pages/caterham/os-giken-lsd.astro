@@ -13,6 +13,8 @@ const structuredData = {
   "offers": {
     "@type": "Offer",
     "url": "https://toofasttorace.com/caterham/os-giken-lsd",
+    "price": "1360.00",
+    "priceCurrency": "GBP",
     "seller": {
       "@type": "Organization",
       "name": "Too Fast To Race"
@@ -66,6 +68,11 @@ const structuredData = {
             <span class="origin-label">Use Case</span>
             <span class="origin-value">Fast Road · Track Day · Motorsport</span>
           </div>
+          <div class="price-card">
+            <span class="price-label">Supply Price</span>
+            <span class="price-value">£1,360<span class="price-vat"> ex VAT</span></span>
+            <span class="price-note">Includes UK shipping · European shipping available — contact for rates</span>
+          </div>
         </div>
       </div>
     </div>
@@ -90,6 +97,10 @@ const structuredData = {
             <cite>— Simon Rogers, Too Fast To Race</cite>
           </blockquote>
         </div>
+      </div>
+      <div class="lsd-compare-image">
+        <img src="/images/LSDvsDual.jpg" alt="OS Giken Super Lock LSD alongside the Dual Core LSD — side gear comparison" loading="lazy" />
+        <p class="image-caption">OS Giken Super Lock LSD (left) alongside the Dual Core LSD (right) — the difference in side gear profile between the two units is visible. The Super Lock uses parallel-cut gears; the Dual Core uses spiral-cut gears that add rotation-sensitive locking capability.</p>
       </div>
     </div>
   </section>
@@ -152,6 +163,27 @@ const structuredData = {
     </div>
   </section>
 
+  <!-- Product Gallery -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>OS Giken Super Lock LSD</h2>
+      </div>
+      <div class="product-gallery">
+        <div class="gallery-item">
+          <img src="/images/Super1.jpeg" alt="OS Giken Super Lock LSD for Caterham Seven" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/Super2.jpeg" alt="OS Giken Super Lock LSD internal components" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="/images/Super3.jpeg" alt="OS Giken Super Lock LSD construction detail" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Specification at a Glance -->
   <section class="spec-section">
     <div class="container">
@@ -205,6 +237,10 @@ const structuredData = {
             <tr>
               <td class="spec-name">Supply</td>
               <td class="spec-detail">UK & Europe — Too Fast To Race</td>
+            </tr>
+            <tr>
+              <td class="spec-name">Price</td>
+              <td class="spec-detail spec-price">£1,360 <span class="spec-vat">ex VAT · includes UK shipping</span></td>
             </tr>
           </tbody>
         </table>
@@ -753,6 +789,114 @@ const structuredData = {
     .spec-name {
       width: 140px;
       font-size: 0.8rem;
+    }
+  }
+
+  /* Price Card */
+  .price-card {
+    background: var(--tftr-dark);
+    border: 2px solid rgba(92, 184, 92, 0.4);
+    padding: var(--space-sm) var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .price-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--tftr-grey);
+  }
+
+  .price-value {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    color: var(--tftr-white);
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  .price-vat {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--tftr-grey);
+    letter-spacing: 0.05em;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--tftr-grey);
+    line-height: 1.4;
+    margin-top: 0.25rem;
+  }
+
+  /* Compare Image */
+  .lsd-compare-image {
+    margin-top: var(--space-lg);
+  }
+
+  .lsd-compare-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .image-caption {
+    margin-top: var(--space-sm);
+    font-size: 0.85rem;
+    color: var(--tftr-grey);
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* Gallery */
+  .gallery-section {
+    background: var(--tftr-black);
+    padding: var(--space-xl) 0;
+  }
+
+  .product-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.04);
+  }
+
+  /* Spec price */
+  .spec-price {
+    color: var(--tftr-white) !important;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+  }
+
+  .spec-vat {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--tftr-grey);
+    margin-left: 0.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .product-gallery {
+      grid-template-columns: 1fr;
     }
   }
 </style>
