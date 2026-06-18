@@ -159,16 +159,7 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
           <img src="/images/TFTR_Icon.png" alt="TFTR" class="footer-logo" width="60" height="60" />
           <p class="footer-tagline">Too Fast To Race</p>
           <p class="footer-company">S Rogers Engineering Ltd</p>
-          <div class="footer-caterham-links">
-            <a href="/caterham">Caterham</a>
-            <a href="/caterham/os-giken-lsd">OS Giken LSD</a>
-            <a href="/caterham/os-giken-dual-core-lsd">OS Giken Dual Core LSD</a>
-            <a href="/kawasaki-h2-parts">Kawasaki H2 Parts</a>
-          </div>
-        </div>
-        <div class="footer-contact">
-          <h2>Location</h2>
-          <address>
+          <address class="footer-address">
             Y Gwernen<br />
             Dryslwyn<br />
             Carmarthen<br />
@@ -189,11 +180,17 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
           </ul>
         </div>
         <div class="footer-links">
-          <h2>Vehicles</h2>
+          <h2>Caterham</h2>
           <ul>
-            <li><a href="/caterham">Caterham</a></li>
+            <li><a href="/caterham">Caterham Overview</a></li>
             <li><a href="/caterham/os-giken-lsd">OS Giken LSD</a></li>
             <li><a href="/caterham/os-giken-dual-core-lsd">OS Giken Dual Core LSD</a></li>
+            <li><a href="/kawasaki-h2-parts">Kawasaki H2 Parts</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h2>Vehicles</h2>
+          <ul>
             <li><a href="/lotus-suspension">Lotus</a></li>
             <li><a href="/porsche-suspension">Porsche</a></li>
             <li><a href="/bmw-suspension">BMW</a></li>
@@ -203,7 +200,7 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
             <li><a href="/tvr-suspension">TVR</a></li>
           </ul>
         </div>
-        <div class="footer-partners">
+        <div class="footer-links">
           <h2>Partners</h2>
           <ul>
             <li>Penske Racing Shocks</li>
@@ -213,9 +210,9 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
           </ul>
         </div>
         <div class="footer-links">
-          <h2>Tools & Apps</h2>
+          <h2>Tools &amp; Apps</h2>
           <ul>
-            <li><a href="https://www.racetracs.com" target="_blank" rel="noopener noreferrer">RaceTracs — Lap Timing & Analysis</a></li>
+            <li><a href="https://www.racetracs.com" target="_blank" rel="noopener noreferrer">RaceTracs — Lap Timing &amp; Analysis</a></li>
             <li><a href="https://www.springspec.com" target="_blank" rel="noopener noreferrer">SpringSpec — Suspension Spring Calculator</a></li>
           </ul>
         </div>
@@ -584,8 +581,35 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
     margin: 0 auto;
     padding: 0 var(--container-padding);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--space-lg);
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    gap: var(--space-lg) var(--space-md);
+    align-items: start;
+  }
+
+  @media (max-width: 1100px) {
+    .footer-content {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .footer-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .footer-address {
+    font-style: normal;
+    color: var(--tftr-grey-light);
+    line-height: 1.8;
+    margin-top: var(--space-sm);
+    font-size: 0.95rem;
   }
 
   .footer-brand {
