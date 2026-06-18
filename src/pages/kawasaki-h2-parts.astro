@@ -46,9 +46,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="product-grid">
         <div class="product-image">
-          <div class="image-placeholder">
-            <span>H2 Dry Sump Kit</span>
-          </div>
+          <img src="/images/Kawasaki_H2_Dry_Sump.png" alt="Billet dry sump pan for the Kawasaki Ninja H2 / H2R engine, with integrated scavenge filters and oil pickup" class="product-photo" />
         </div>
         <div class="product-content">
           <span class="product-category">Specialist Engineering Product</span>
@@ -285,6 +283,14 @@ import Layout from '../layouts/Layout.astro';
     color: var(--tftr-grey);
     text-transform: uppercase;
     letter-spacing: 0.1em;
+  }
+
+  .product-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(92, 184, 92, 0.3);
+    background: var(--tftr-black);
   }
 
   .product-category {
