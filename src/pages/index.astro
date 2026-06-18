@@ -1,244 +1,165 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "AutomotiveBusiness",
-  "name": "Too Fast To Race - Caterham Specialist",
-  "url": "https://toofasttorace.com/caterham",
-  "description": "Over 30 years of Caterham 7 experience. Bespoke builds, GSXR conversions, suspension setup, and complete engineering services.",
-  "areaServed": "UK",
-  "knowsAbout": ["Caterham 7", "GSXR Conversion", "Suspension Setup", "Vehicle Dynamics", "Chassis Development"],
-  "makesOffer": [
-    {
-      "@type": "Offer",
-      "name": "Bespoke Caterham Builds",
-      "description": "Full build service from kit or donor with component selection and suspension development"
-    },
-    {
-      "@type": "Offer",
-      "name": "GSXR Conversions",
-      "description": "Suzuki GSXR engine conversion for Caterham 7"
-    },
-    {
-      "@type": "Offer",
-      "name": "Caterham Suspension Setup",
-      "description": "Fast road, track day, and Nürburgring suspension configurations"
-    }
-  ]
-};
 ---
 
-<Layout title="Caterham Suspension & Coilovers | Seven Specialist | Too Fast To Race" description="Specialist Caterham Seven suspension, coilovers and chassis development. Bespoke Nitron specification, GSXR and Kawasaki H2 conversions, builds and setup from Too Fast To Race — over 30 years of Caterham experience.">
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+<Layout title="Bespoke Nitron & Penske Suspension Systems | Too Fast To Race" description="Bespoke Nitron and Penske suspension systems specified around the individual driver, vehicle and application. 30 years of championship-winning chassis and suspension development experience.">
   
-  <!-- Hero -->
-  <section class="page-hero caterham-hero">
+  <!-- Hero Section -->
+  <section class="hero">
     <div class="hero-bg"></div>
-    <div class="container">
-      <span class="stripe-accent"></span>
-      <h1>Caterham <span class="text-green">Specialist</span></h1>
-      <p class="hero-subtitle">Over 30 years owning, racing, and developing Caterham 7s. From suspension setup to complete bespoke builds.</p>
-    </div>
-  </section>
-
-  <!-- Intro -->
-  <section class="intro-section">
-    <div class="container">
-      <div class="intro-grid">
-        <div class="intro-content">
-          <h2>The Car That's "Too Fast To Race"</h2>
-          <p>The Caterham Seven was banned from racing in the US in the 1960s, and again in the UK in the 1970s – for being "Too fast to race". That heritage is in our name and in our DNA.</p>
-          <p>Simon has been involved with Caterhams since the beginning of his motorsport career. Racing, developing, building, and refining these incredible machines. There's no better platform for understanding <a href="/suspension">vehicle dynamics and suspension engineering</a>.</p>
-          <p>Whether you need your existing car optimised with a <a href="/fast-road-suspension">fast road setup</a>, a dedicated <a href="/track-day-suspension">track day configuration</a>, or even a full <a href="/nurburgring-suspension">Nürburgring-focused specification</a> – or are considering a GSXR conversion – we have the experience and expertise to deliver. Every Caterham leaves with suspension developed through real-world testing, not guesswork.</p>
+    <div class="hero-content container">
+      <div class="hero-text">
+                <span class="hero-label">Bespoke Nitron Suspension Systems</span>
+        <h1>Suspension<br /><span class="text-green">Specified Properly</span></h1>
+        <p class="hero-subtitle">
+          Specialist Nitron and Penske suspension systems tailored to the individual driver, vehicle and application. Over 30 years of championship-winning chassis and damper development experience.
+        </p>
+        <div class="hero-ctas">
+          <a href="/contact" class="btn btn-primary">Discuss Your Car</a>
+          <a href="/products" class="btn btn-outline">Nitron & Penske Suspension Systems</a>
         </div>
-        <div class="intro-stats">
-          <div class="stat-card">
-            <span class="stat-number">30+</span>
-            <span class="stat-label">Years with Caterhams</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">390kg</span>
-            <span class="stat-label">GSXR Build Weight</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">250bhp</span>
-            <span class="stat-label">GSXR Power</span>
-          </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">30+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+          <div class="stat">
+          <span class="stat-number">Bespoke</span>
+          <span class="stat-label">Specifications</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">UK</span>
+          <span class="stat-label">Based</span>
         </div>
       </div>
     </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
   </section>
 
-  <!-- Services Grid -->
-  <section class="caterham-services">
+  <!-- Services Overview -->
+  <section class="services-overview">
     <div class="container">
       <div class="section-header">
         <span class="stripe-accent"></span>
-        <h2>Caterham Services</h2>
+        <h2>Bespoke Suspension Specification</h2>
+                <p>Specialist Nitron and Penske suspension systems specified around the driver, the chassis, tyre choice and intended use.</p>
       </div>
       
       <div class="services-grid">
-        <div class="service-card large">
-          <div class="service-card-content">
-            <h3>Bespoke Builds</h3>
-            <p>Your Caterham, built your way. We work with you from concept to completion – specifying components, building to the highest standards, and developing the setup to suit your requirements.</p>
-            <ul>
-              <li>Full build service from kit or donor</li>
-              <li>Component selection and specification</li>
-              <li>Engine and transmission options</li>
-              <li>Suspension setup and development</li>
-              <li>Rolling road tuning</li>
-            </ul>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+            </svg>
           </div>
+          <h2>Bespoke Nitron Suspension Systems</h2>
+          <p>Not generic off-the-shelf kits. We specify Nitron suspension systems around your exact vehicle, driving style, tyre package, ride quality expectations and intended use.</p>
+          <a href="/products" class="service-link">Nitron Suspension Systems →</a>
         </div>
         
         <div class="service-card">
-          <div class="service-card-content">
-            <h3>GSXR Conversions</h3>
-            <p>The Suzuki GSXR engine transforms the Caterham experience. 250bhp in a 390kg car delivers extraordinary performance with the soundtrack to match.</p>
-            <p>We have extensive experience with bike-engined Sevens and can guide you through the conversion process or build a complete car to your specification.</p>
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
           </div>
+          <h2>Suspension Development Specifications</h2>
+          <p>Where appropriate, we specify alternative spring rates and damping configurations developed through real-world chassis experience, circuit testing and long-term suspension development.</p>
+          <a href="/about" class="service-link">Suspension Development Philosophy →</a>
         </div>
         
         <div class="service-card">
-          <div class="service-card-content">
-            <h3>Suspension Setup</h3>
-            <p>Every Caterham we've owned or developed has taught us something. That accumulated knowledge goes into every setup we deliver.</p>
-            <p>From standard Sigma cars to full race-spec, we dial in suspension that makes your car communicate clearly and respond predictably.</p>
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
           </div>
+          <h3>Suspension Application Expertise</h3>
+          <p>Fast road, track day, Nürburgring and race suspension systems specified around genuine vehicle usage, driver expectations, tyre behaviour and chassis balance.</p>
+          <a href="/services" class="service-link">Suspension System Applications →</a>
         </div>
         
-        <div class="service-card">
-          <div class="service-card-content">
-            <h3>Servicing & Maintenance</h3>
-            <p>Regular servicing by someone who understands Caterhams keeps your car reliable and performing at its best. We catch issues before they become problems.</p>
+        <div class="service-card featured">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
           </div>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-card-content">
-            <h3>Upgrades & Modifications</h3>
-            <p>Suspension upgrades, engine work, braking improvements, weight reduction – we can advise on and implement modifications that genuinely improve your car.</p>
-          </div>
+          <h2>Caterham Suspension Specialist</h2>
+          <p>Over 30 years owning, racing and developing Caterhams. Specialist Nitron and Penske suspension specification for fast road, track day, Nürburgring and competition Sevens.</p>
+          <a href="/caterham" class="service-link">Caterham Suspension Systems →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Build -->
-  <section class="featured-build">
+  <!-- Philosophy Section -->
+  <section class="philosophy">
     <div class="container">
-      <div class="build-grid">
-        <div class="build-content">
+      <div class="philosophy-grid">
+        <div class="philosophy-content">
           <span class="stripe-accent"></span>
-          <h2>The GSXR Build</h2>
-          <p class="lead">390kg · 250bhp · Pure Driving</p>
-          <p>Our GSXR-powered Caterham represents the pinnacle of what the Seven platform can deliver. Lightweight, powerful, and developed through countless hours of testing and refinement.</p>
-          
-          <div class="build-specs">
-            <div class="spec">
-              <span class="spec-label">Engine</span>
-              <span class="spec-value">Suzuki GSXR 1000</span>
-            </div>
-            <div class="spec">
-              <span class="spec-label">Power</span>
-              <span class="spec-value">250bhp @ 10,000rpm</span>
-            </div>
-            <div class="spec">
-              <span class="spec-label">Weight</span>
-              <span class="spec-value">390kg</span>
-            </div>
-            <div class="spec">
-              <span class="spec-label">Power/Weight</span>
-              <span class="spec-value">641bhp/tonne</span>
-            </div>
-          </div>
-          
-          <p>This level of performance demands suspension that can keep up. Every aspect of the chassis has been developed to work with the engine's character – predictable, communicative, and ultimately fast.</p>
+          <h2>Our Philosophy</h2>
+          <p class="lead">Correct suspension specification starts with understanding how the car is actually used.</p>
+          <p>Every driver wants something different from a suspension system. We work directly with customers to specify the correct Nitron platform, spring rates and damping philosophy for their exact requirements.</p>
+          <p>We are deliberately consultation-led rather than catalogue-led. The focus is on supplying suspension systems that genuinely work properly for the customer, rather than simply selling standardised kits online.</p>
+          <a href="/about" class="btn btn-outline">About Our Suspension Philosophy</a>
         </div>
-        <div class="build-image">
-          <img src="/images/TFTR.png" alt="Too Fast To Race GSXR-powered Caterham 7 build - 390kg, 250bhp lightweight sports car" />
+        <div class="philosophy-image">
+          <div class="image-frame">
+            <img src="/images/Caterham_Nitron_R1_Suspension_Kit.png" alt="Nitron R1 Suspension Kit for Caterham" width="600" height="450" />
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- H2 Build -->
-  <section class="featured-build h2-build">
-    <div class="container">
-      <div class="build-grid reversed">
-        <div class="build-image">
-          <img src="/images/TFTR_Icon.png" alt="Too Fast To Race Caterham specialist logo - suspension and chassis development expertise" />
-        </div>
-        <div class="build-content">
-          <span class="stripe-accent"></span>
-          <h2>The Kawasaki H2 <span class="text-green">Conversion</span></h2>
-          <p class="lead">Supercharged · 290bhp stock engine· Engineering Precision</p>
-          <p>The Kawasaki Ninja H2 engine represents one of the most extraordinary powerplants available for lightweight car conversion — a supercharged inline-four producing up to 310bhp in H2R specification, in a compact and relatively lightweight package. Integrating it correctly into a lightweight chassis demands real engineering rather than improvisation.</p>
-
-          <div class="build-specs">
-            <div class="spec">
-              <span class="spec-label">Engine</span>
-              <span class="spec-value">Kawasaki Ninja H2</span>
-            </div>
-            <div class="spec">
-              <span class="spec-label">Induction</span>
-              <span class="spec-value">Centrifugal Supercharger</span>
-            </div>
-            <div class="spec">
-              <span class="spec-label">Power</span>
-              <span class="spec-value">Up to 290bhp(stock) (H2R)</span>
-            </div>
-            <div class="spec">
-              <span class="spec-label">Displacement</span>
-              <span class="spec-value">998cc Inline-Four</span>
-            </div>
-          </div>
-
-          <p>Dry sump conversion, thermal management and correct engineering integration are essential for the H2 platform to perform reliably in a car application. We develop and supply the specialist components that make this conversion work — including our purpose-built H2 dry sump system.</p>
-          <a href="/kawasaki-h2-parts" class="btn btn-primary">H2 Parts & Engineering</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Us -->
-  <section class="why-us">
+  <!-- Partners -->
+  <section class="partners">
     <div class="container">
       <div class="section-header centered">
         <span class="stripe-accent"></span>
-        <h2>Why Choose Us for Your Caterham</h2>
+        <h2>Technical Suspension Partners</h2>
+        <p>Working with leading suspension and motorsport engineering manufacturers including Nitron Racing Systems, Penske Racing Shocks, Hyperco, Eibach and AiM Sports.</p>
       </div>
-      
-      <div class="reasons-grid">
-        <div class="reason">
-          <h4>Experience</h4>
-          <p>30+ years of hands-on Caterham ownership, racing, and development. We've made the mistakes so you don't have to.</p>
+      <div class="partners-logos">
+        <div class="partner-logo">
+          <span>Penske Racing Shocks</span>
         </div>
-        <div class="reason">
-          <h4>Results</h4>
-          <p>Championship wins and podium finishes at hillclimbs across the UK. We know what it takes to be competitive.</p>
+        <div class="partner-logo">
+          <span>Nitron Racing Systems</span>
         </div>
-        <div class="reason">
-          <h4>Engineering Depth</h4>
-          <p>Founded RaceShocks.UK and CORE Suspension. Worked with TracTive, Penske, Nitron. We understand dampers at a fundamental level.</p>
+        <div class="partner-logo">
+          <span>Bespoke Suspension Development</span>
         </div>
-        <div class="reason">
-          <h4>Personal Service</h4>
-          <p>When you work with us, you work with Simon. Direct communication, no layers – just expert advice and quality work.</p>
+        <div class="partner-logo">
+          <span>Hyperco</span>
+        </div>
+        <div class="partner-logo">
+          <span>Eibach</span>
+        </div>
+        <div class="partner-logo">
+          <span>AiM Sports</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
       <div class="cta-content">
-        <h2>Let's Build Something Special</h2>
-        <p>Whether it's a setup consultation or a complete bespoke build – get in touch to discuss your project.</p>
-        <a href="/contact" class="btn btn-primary">Contact Us</a>
+        <h2>Discuss Your Suspension Requirements</h2>
+        <p>Talk to us about your vehicle, intended usage, tyre package and suspension objectives. Every Nitron and Penske system is specified around the individual customer and application.</p>
+        <a href="/contact" class="btn btn-primary">Discuss Your Car</a>
       </div>
     </div>
   </section>
@@ -301,90 +222,134 @@ const structuredData = {
 </Layout>
 
 <style>
-  /* Hero */
-  .page-hero {
-    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
-    background: var(--tftr-darker);
-    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
-  }
-
-  .caterham-hero {
+  /* Hero Section */
+  .hero {
     position: relative;
-    min-height: 50vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 80px;
+    overflow: hidden;
   }
 
-  .caterham-hero .hero-bg {
+  .hero-bg {
     position: absolute;
     inset: 0;
     background: 
-      linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.7) 100%),
-      url('/images/Simon__R_Project_FF_203.png') center/cover no-repeat;
+      linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.7) 100%),
+      url('/images/Front Page Caterham Epynt GSXR.JPG') center/cover no-repeat;
     z-index: -1;
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, var(--tftr-black), transparent);
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .hero-label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-sm);
+    padding-left: 3rem;
+    position: relative;
+  }
+
+  .hero-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 2rem;
+    height: 2px;
+    background: var(--tftr-green);
   }
 
   .hero-subtitle {
     font-size: 1.25rem;
     color: var(--tftr-grey-light);
-    max-width: 60ch;
-    margin-top: var(--space-sm);
+    margin: var(--space-md) 0;
+    max-width: 50ch;
   }
 
-  /* Intro */
-  .intro-section {
-    background: var(--tftr-black);
+  .hero-ctas {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
   }
 
-  .intro-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--space-xl);
-    align-items: start;
-  }
-
-  .intro-content h2 {
-    margin-bottom: var(--space-md);
-  }
-
-  .intro-content p {
-    color: var(--tftr-grey-light);
-    margin-bottom: var(--space-sm);
-    line-height: 1.8;
-  }
-
-  .intro-stats {
+  .hero-stats {
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
+    padding-left: var(--space-lg);
+    border-left: 1px solid rgba(92, 184, 92, 0.3);
   }
 
-  .stat-card {
-    background: var(--tftr-darker);
-    padding: var(--space-md);
-    border-left: 3px solid var(--tftr-green);
+  .stat {
     display: flex;
     flex-direction: column;
   }
 
-  .stat-card .stat-number {
+  .stat-number {
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--tftr-green);
     line-height: 1;
   }
 
-  .stat-card .stat-label {
+  .stat-label {
     font-family: var(--font-heading);
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--tftr-grey);
-    margin-top: var(--space-xs);
   }
 
-  /* Services Grid */
-  .caterham-services {
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--tftr-grey);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--tftr-green), transparent);
+    animation: scrollPulse 2s infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 1; transform: scaleY(1); }
+    50% { opacity: 0.5; transform: scaleY(0.8); }
+  }
+
+  /* Services Overview */
+  .services-overview {
     background: var(--tftr-darker);
   }
 
@@ -399,17 +364,36 @@ const structuredData = {
     align-items: center;
   }
 
+  .section-header p {
+    color: var(--tftr-grey-light);
+    font-size: 1.1rem;
+    margin-top: var(--space-xs);
+  }
+
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-md);
   }
 
   .service-card {
     background: var(--tftr-dark);
+    padding: var(--space-md);
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
+    position: relative;
     overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--tftr-green);
+    transition: height 0.3s ease;
   }
 
   .service-card:hover {
@@ -417,22 +401,29 @@ const structuredData = {
     transform: translateY(-4px);
   }
 
-  .service-card.large {
-    grid-column: span 1;
-    grid-row: span 2;
+  .service-card:hover::before {
+    height: 100%;
   }
 
-  .service-card-content {
-    padding: var(--space-md);
+  .service-card.featured {
+    border-color: rgba(92, 184, 92, 0.3);
+    background: linear-gradient(135deg, var(--tftr-dark), rgba(92, 184, 92, 0.05));
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-sm);
+  }
+
+  .service-icon svg {
+    width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
   }
 
   .service-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--space-sm);
-    color: var(--tftr-green);
+    margin-bottom: var(--space-xs);
   }
 
   .service-card p {
@@ -441,126 +432,100 @@ const structuredData = {
     margin-bottom: var(--space-sm);
   }
 
-  .service-card ul {
-    margin-top: auto;
-  }
-
-  .service-card li {
-    position: relative;
-    padding-left: 1rem;
-    margin-bottom: 0.4rem;
-    color: var(--tftr-grey-light);
-    font-size: 0.9rem;
-  }
-
-  .service-card li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
+  .service-link {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
     color: var(--tftr-green);
   }
 
-  /* Featured Build */
-  .featured-build {
+  .service-link:hover {
+    color: var(--tftr-green-light);
+  }
+
+  /* Philosophy */
+  .philosophy {
     background: var(--tftr-black);
   }
 
-  .build-grid {
+  .philosophy-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
     align-items: center;
   }
 
-  .build-content .lead {
-    font-family: var(--font-display);
-    font-size: 1.75rem;
-    color: var(--tftr-green);
-    letter-spacing: 0.05em;
-    margin-bottom: var(--space-md);
+  .philosophy-content .lead {
+    font-size: 1.5rem;
+    color: var(--tftr-white);
+    margin-bottom: var(--space-sm);
   }
 
-  .build-content p {
+  .philosophy-content p {
     color: var(--tftr-grey-light);
     margin-bottom: var(--space-sm);
-    line-height: 1.8;
   }
 
-  .build-specs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-sm);
-    margin: var(--space-md) 0;
-    padding: var(--space-md);
+  .philosophy-content .btn {
+    margin-top: var(--space-md);
+  }
+
+  .image-frame {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .image-frame::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid var(--tftr-green);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Partners */
+  .partners {
     background: var(--tftr-darker);
   }
 
-  .spec {
+  .partners-logos {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-md);
   }
 
-  .spec-label {
-    font-size: 0.75rem;
+  .partner-logo {
+    padding: var(--space-md);
+    background: var(--tftr-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .partner-logo span {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--tftr-grey);
-  }
-
-  .spec-value {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    color: var(--tftr-white);
-  }
-
-  .build-image {
-    position: relative;
-  }
-
-  .build-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* H2 Build */
-  .h2-build {
-    background: var(--tftr-darker);
-  }
-
-  .build-grid.reversed {
-    direction: rtl;
-  }
-
-  .build-grid.reversed > * {
-    direction: ltr;
-  }
-
-  /* Why Us */
-  .why-us {
-    background: var(--tftr-darker);
-  }
-
-  .reasons-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-md);
-  }
-
-  .reason {
-    text-align: center;
-    padding: var(--space-md);
-  }
-
-  .reason h4 {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    color: var(--tftr-green);
-    margin-bottom: var(--space-xs);
-  }
-
-  .reason p {
     color: var(--tftr-grey-light);
-    font-size: 0.95rem;
   }
 
   /* CTA Section */
@@ -590,57 +555,39 @@ const structuredData = {
   }
 
   /* Responsive */
-  @media (max-width: 1100px) {
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .service-card.large {
-      grid-column: span 2;
-      grid-row: span 1;
-    }
-    
-    .reasons-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .intro-grid {
+  @media (max-width: 900px) {
+    .hero-content {
       grid-template-columns: 1fr;
     }
 
-    .intro-stats {
+    .hero-stats {
       flex-direction: row;
-      flex-wrap: wrap;
+      border-left: none;
+      border-top: 1px solid rgba(92, 184, 92, 0.3);
+      padding-left: 0;
+      padding-top: var(--space-md);
+      margin-top: var(--space-md);
     }
 
-    .stat-card {
-      flex: 1;
-      min-width: 150px;
-    }
-    
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .service-card.large {
-      grid-column: span 1;
-    }
-
-    .build-grid {
+    .philosophy-grid {
       grid-template-columns: 1fr;
     }
 
-    .build-image {
+    .philosophy-image {
       order: -1;
     }
-    
-    .reasons-grid {
-      grid-template-columns: 1fr;
+
+    .hero-ctas {
+      flex-direction: column;
     }
   }
-/* Our Motorsport Apps */
+  /* Ensure service card h2 matches previous h3 styling */
+  .service-card h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: var(--space-xs);
+  }
+
+  /* Our Motorsport Apps */
   .apps-section {
     background: var(--tftr-black);
   }
