@@ -1,0 +1,355 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Caterham Suspension Kits",
+  "description": "Nitron and Penske coilover suspension kits for the Caterham Seven — S3, SV and CSR chassis. Bespoke specification from Too Fast To Race.",
+  "url": "https://toofasttorace.com/caterham/suspension",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Caterham Nitron NTR R1 40mm Suspension Kit",
+      "url": "https://toofasttorace.com/caterham/nitron-ntr-r1"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Caterham Nitron NTR R3 40mm Suspension Kit",
+      "url": "https://toofasttorace.com/caterham/nitron-ntr-r3"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Caterham Penske 7500 COSA Suspension Kit",
+      "url": "https://toofasttorace.com/caterham/penske-7500-cosa"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Caterham Penske 7500 CODA Suspension Kit",
+      "url": "https://toofasttorace.com/caterham/penske-7500-coda"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Caterham Penske 8700 3-Way Suspension Kit",
+      "url": "https://toofasttorace.com/caterham/penske-8700-3-way"
+    }
+  ]
+};
+---
+
+<Layout title="Caterham Suspension Kits | Nitron & Penske Coilovers | Too Fast To Race" description="Caterham Seven suspension kits — Nitron NTR R1 and R3, Penske 7500 COSA, 7500 CODA and 8700 3-way coilovers for S3, SV and CSR. Bespoke specification, championship-winning valving and honest advice from Too Fast To Race.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Caterham <span class="text-green">Suspension Kits</span></h1>
+      <p class="hero-subtitle">Nitron and Penske coilover kits for the Caterham Seven — S3, SV and CSR. Every kit is specified for your car rather than sold off a shelf, built on valving proven in real competition. Choose by where your car sits, not by price alone — and ask us if you're unsure.</p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="hub-intro">
+    <div class="container">
+      <div class="content-block">
+        <h2>How to <span class="text-green">Choose</span></h2>
+        <p>For the overwhelming majority of fast road and track day Caterhams, a correctly specified Nitron NTR R1 is the right answer — and a better use of budget than something more adjustable used without a process. The NTR R3 adds independent compression and rebound for drivers developing the car with intent.</p>
+        <p>The Penske kits are for the committed programme that values Penske's build quality, rebuildability and long-term development: the 7500 COSA and CODA, and the three-way, remote-canister 8700 at the top of the range. We will always recommend the kit your car and your use actually justify — read <a href="/nitron-r1-vs-r3">Nitron R1 vs R3</a> and our view on <a href="/penske-racing-shocks">Penske Racing Shocks</a>, then talk to us.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kit Cards -->
+  <section class="kits-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>The Range</h2>
+      </div>
+
+      <div class="kits-grid">
+        <a href="/caterham/nitron-ntr-r1" class="kit-card">
+          <div class="kit-card-image">
+            <img src="/images/NitronR1.png" alt="Caterham Nitron NTR R1 40mm coilover suspension kit" width="600" height="600" loading="lazy" />
+          </div>
+          <div class="kit-card-body">
+            <span class="kit-card-brand">Nitron</span>
+            <h3>NTR R1 40mm</h3>
+            <p>Single-adjustable. The right answer for the overwhelming majority of road and track day Caterhams.</p>
+            <div class="kit-card-foot">
+              <span class="kit-card-price">From £1,579</span>
+              <span class="kit-card-link">View Kit →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/caterham/nitron-ntr-r3" class="kit-card">
+          <div class="kit-card-image">
+            <img src="/images/NitronR3.png" alt="Caterham Nitron NTR R3 40mm coilover suspension kit" width="600" height="600" loading="lazy" />
+          </div>
+          <div class="kit-card-body">
+            <span class="kit-card-brand">Nitron</span>
+            <h3>NTR R3 40mm</h3>
+            <p>Independent compression and rebound — for the data-led programme adjusting with intent.</p>
+            <div class="kit-card-foot">
+              <span class="kit-card-price">From £3,206</span>
+              <span class="kit-card-link">View Kit →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/caterham/penske-7500-cosa" class="kit-card">
+          <div class="kit-card-image">
+            <img src="/images/7500.png" alt="Caterham Penske 7500 COSA coilover suspension kit" width="600" height="600" loading="lazy" />
+          </div>
+          <div class="kit-card-body">
+            <span class="kit-card-brand">Penske</span>
+            <h3>7500 COSA</h3>
+            <p>Single-adjustable Penske. The entry to genuine Penske ownership, sweep or clicker adjuster.</p>
+            <div class="kit-card-foot">
+              <span class="kit-card-price">From £3,392</span>
+              <span class="kit-card-link">View Kit →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/caterham/penske-7500-coda" class="kit-card">
+          <div class="kit-card-image">
+            <img src="/images/7500.png" alt="Caterham Penske 7500 CODA double-adjustable coilover suspension kit" width="600" height="600" loading="lazy" />
+          </div>
+          <div class="kit-card-body">
+            <span class="kit-card-brand">Penske</span>
+            <h3>7500 CODA</h3>
+            <p>Double-adjustable Penske — independent compression and rebound, no remote reservoir.</p>
+            <div class="kit-card-foot">
+              <span class="kit-card-price">From £3,758</span>
+              <span class="kit-card-link">View Kit →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/caterham/penske-8700-3-way" class="kit-card">
+          <div class="kit-card-image">
+            <img src="/images/8700.png" alt="Caterham Penske 8700 3-way triple-adjustable remote-canister coilover suspension kit" width="600" height="600" loading="lazy" />
+          </div>
+          <div class="kit-card-body">
+            <span class="kit-card-brand">Penske</span>
+            <h3>8700 3-Way</h3>
+            <p>Triple-adjustable with remote canister — the top of the range, for the serious race programme.</p>
+            <div class="kit-card-foot">
+              <span class="kit-card-price">From £7,156</span>
+              <span class="kit-card-link">View Kit →</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <p class="kits-note">All prices are "from", excluding VAT and shipping. Every kit comes with mounting spacers and is specified for the Caterham Seven S3, SV and CSR chassis. Eibach or Hyperco springs, hydraulic spring perches and Torrington bearings are available across the range.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Not Sure Which Kit?</h2>
+        <p>Tell us about your Caterham, your tyres and how you use the car. We will recommend the right kit honestly — and specify it to suit your car, not just sell it to you.</p>
+        <a href="/contact" class="btn btn-primary">Start Your Specification</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  /* Intro */
+  .hub-intro {
+    background: var(--tftr-black);
+  }
+
+  .content-block {
+    max-width: 800px;
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Kits */
+  .kits-section {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .kits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .kit-card {
+    background: var(--tftr-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .kit-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .kit-card-image {
+    background: var(--tftr-white);
+    padding: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+  }
+
+  .kit-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .kit-card-body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .kit-card-brand {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--tftr-green);
+    margin-bottom: 0.25rem;
+  }
+
+  .kit-card-body h3 {
+    font-size: 1.4rem;
+    color: var(--tftr-white);
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-card-body p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-md);
+  }
+
+  .kit-card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: var(--space-sm);
+  }
+
+  .kit-card-price {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--tftr-green);
+    letter-spacing: 0.03em;
+  }
+
+  .kit-card-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-white);
+  }
+
+  .kit-card:hover .kit-card-link {
+    color: var(--tftr-green);
+  }
+
+  .kits-note {
+    color: var(--tftr-grey);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-top: var(--space-lg);
+    max-width: 75ch;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .kits-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .kits-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
