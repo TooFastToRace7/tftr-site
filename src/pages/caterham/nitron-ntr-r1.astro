@@ -35,9 +35,12 @@ const structuredData = {
     <div class="container">
       <span class="stripe-accent"></span>
       <h1>Caterham Nitron <span class="text-green">NTR R1 40mm</span></h1>
-      <p class="hero-subtitle">A correctly specified Nitron NTR R1 is the right answer for the overwhelming majority of fast road and track day Caterham Sevens. Single-adjustable, beautifully made, and specified around your car — not sold off a shelf.</p>
-      <img src="/images/Nitron.png" alt="Nitron NTR R1 suspension for Caterham — Nitron Racing Systems" class="brand-logo" width="200" height="80" />
-    </div>
+      <div class="hero-intro">
+        <div class="brand-logo-chip">
+          <img src="/images/Nitron.png" alt="Nitron NTR R1 suspension for Caterham — Nitron Racing Systems" class="brand-logo" width="160" height="64" />
+        </div>
+        <p class="hero-subtitle">A correctly specified Nitron NTR R1 is the right answer for the overwhelming majority of fast road and track day Caterham Sevens. Single-adjustable, beautifully made, and specified around your car — not sold off a shelf.</p>
+      </div>
   </section>
 
   <!-- Summary / Price -->
@@ -75,10 +78,15 @@ const structuredData = {
   <!-- What It Is -->
   <section class="kit-content">
     <div class="container">
-      <div class="content-block">
-        <h2>Specified, Not Just <span class="text-green">Supplied</span></h2>
-        <p>The Nitron NTR R1 is a single-adjustable coilover damper — one adjuster controls compression and rebound damping together, fine-tuning the car around a base that has already been calibrated for the application. On a Caterham Seven that single adjuster is not a compromise; it is exactly what the overwhelming majority of road and track drivers actually need.</p>
-        <p>What determines how your Caterham behaves is not the number of adjusters. It is whether the spring rates and damping have been specified for your actual car, your tyres and the way you use it. That is the work we do on every NTR R1 kit — a specification project rather than a box-shifting exercise. A correctly specified R1 will comprehensively out-drive a generically set-up car with more adjustment.</p>
+      <div class="showcase-grid">
+        <div class="showcase-image">
+          <img src="/images/NitronR1.png" alt="Nitron NTR R1 40mm coilover damper for Caterham Seven — S3, SV and CSR" width="800" height="900" loading="lazy" />
+        </div>
+        <div class="content-block showcase-text">
+          <h2>Specified, Not Just <span class="text-green">Supplied</span></h2>
+          <p>The Nitron NTR R1 is a single-adjustable coilover damper — one adjuster controls compression and rebound damping together, fine-tuning the car around a base that has already been calibrated for the application. On a Caterham Seven that single adjuster is not a compromise; it is exactly what the overwhelming majority of road and track drivers actually need.</p>
+          <p>What determines how your Caterham behaves is not the number of adjusters. It is whether the spring rates and damping have been specified for your actual car, your tyres and the way you use it. That is the work we do on every NTR R1 kit — a specification project rather than a box-shifting exercise. A correctly specified R1 will comprehensively out-drive a generically set-up car with more adjustment.</p>
+        </div>
       </div>
 
       <div class="content-block">
@@ -186,11 +194,43 @@ const structuredData = {
     line-height: 1.7;
   }
 
-  .brand-logo {
-    height: 60px;
-    width: auto;
+  .hero-intro {
+    display: flex;
+    align-items: stretch;
+    gap: var(--space-md);
     margin-top: var(--space-md);
-    opacity: 0.9;
+  }
+
+  .hero-intro .hero-subtitle {
+    margin-top: 0;
+  }
+
+  .brand-logo-chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tftr-white);
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .brand-logo {
+    height: 100%;
+    width: auto;
+    max-height: 96px;
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    .hero-intro {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .brand-logo {
+      height: 44px;
+    }
   }
 
   /* Summary / Price */
@@ -413,6 +453,43 @@ const structuredData = {
 
     .related-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  /* Product Showcase */
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .showcase-image {
+    background: var(--tftr-white);
+    border-radius: 6px;
+    padding: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .showcase-image img {
+    width: 100%;
+    height: auto;
+    max-height: 460px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .showcase-text {
+    margin-bottom: 0 !important;
+  }
+
+  @media (max-width: 900px) {
+    .showcase-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
     }
   }
 </style>
