@@ -57,10 +57,19 @@ const structuredData = {
   <!-- Intro -->
   <section class="hub-intro">
     <div class="container">
-      <div class="content-block">
-        <h2>How to <span class="text-green">Choose</span></h2>
-        <p>For the overwhelming majority of fast road and track day Caterhams, a correctly specified Nitron NTR R1 is the right answer — and a better use of budget than something more adjustable used without a process. The NTR R3 adds independent compression and rebound for drivers developing the car with intent.</p>
-        <p>The Penske kits are for the committed programme that values Penske's build quality, rebuildability and long-term development: the 7500 COSA and CODA, and the three-way, remote-canister 8700 at the top of the range. We will always recommend the kit your car and your use actually justify — read <a href="/nitron-r1-vs-r3">Nitron R1 vs R3</a> and our view on <a href="/penske-racing-shocks">Penske Racing Shocks</a>, then talk to us.</p>
+      <div class="intro-grid">
+        <div class="content-block">
+          <h2>How to <span class="text-green">Choose</span></h2>
+          <p>For the overwhelming majority of fast road and track day Caterhams, a correctly specified Nitron NTR R1 is the right answer — and a better use of budget than something more adjustable used without a process. The NTR R3 adds independent compression and rebound for drivers developing the car with intent.</p>
+          <p>The Penske kits are for the committed programme that values Penske's build quality, rebuildability and long-term development: the 7500 COSA and CODA, and the three-way, remote-canister 8700 at the top of the range. We will always recommend the kit your car and your use actually justify — read <a href="/nitron-r1-vs-r3">Nitron R1 vs R3</a> and our view on <a href="/penske-racing-shocks">Penske Racing Shocks</a>, then talk to us.</p>
+        </div>
+
+        <aside class="guide-aside">
+          <span class="kit-card-brand">Free Download</span>
+          <h3>The Complete Buyer's Guide</h3>
+          <p>Simon's full guide to specifying Caterham suspension — every kit explained, spring and ride-height options, the thinking behind digressive valving, and honest recommendations for road, track and competition.</p>
+          <a href="/downloads/caterham-suspension-buyers-guide.pdf" class="btn btn-primary" target="_blank" rel="noopener">Read the Guide (PDF)</a>
+        </aside>
       </div>
     </div>
   </section>
@@ -213,6 +222,45 @@ const structuredData = {
     font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: var(--space-sm);
+  }
+
+  /* Intro two-column with guide download */
+  .intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+
+  .guide-aside {
+    background: var(--tftr-dark);
+    border: 1px solid rgba(92, 184, 92, 0.25);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .guide-aside h3 {
+    font-size: 1.4rem;
+    color: var(--tftr-white);
+    margin: 0.25rem 0 var(--space-sm);
+  }
+
+  .guide-aside p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+
+  .guide-aside .btn-primary {
+    align-self: flex-start;
+  }
+
+  @media (max-width: 900px) {
+    .intro-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* Kits */
