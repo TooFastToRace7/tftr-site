@@ -154,6 +154,18 @@ const structuredData = {
     </div>
   </section>
 
+  <!-- Buyer's Guide Download -->
+  <section class="guide-section">
+    <div class="container">
+      <div class="guide-block">
+        <span class="stripe-accent"></span>
+        <h2>The Complete <span class="text-green">Buyer's Guide</span></h2>
+        <p>Simon's full guide to specifying Caterham suspension — every kit explained, spring and ride-height options, the thinking behind digressive valving, and honest recommendations for road, track and competition. The same advice we give on the phone, written down.</p>
+        <a href="/downloads/caterham-suspension-buyers-guide.pdf" class="btn btn-primary" target="_blank" rel="noopener">Read the Guide (PDF)</a>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="cta-section">
     <div class="container">
@@ -312,6 +324,27 @@ const structuredData = {
     line-height: 1.7;
     margin-top: var(--space-lg);
     max-width: 75ch;
+  }
+
+  /* Buyer's Guide */
+  .guide-section {
+    background: var(--tftr-black);
+  }
+
+  .guide-block {
+    max-width: 800px;
+  }
+
+  .guide-block h2 {
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .guide-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
   }
 
   /* CTA */
