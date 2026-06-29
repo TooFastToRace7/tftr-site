@@ -8,7 +8,8 @@ export async function onRequest(context) {
     path.startsWith("/product-category/") ||
     path.startsWith("/brand/") ||
     path.startsWith("/shop") ||
-    path.startsWith("/wp-");
+    path.startsWith("/wp-") ||
+    path.startsWith("/laba7");
 
   if (isLegacy) {
     return new Response("Gone", {
