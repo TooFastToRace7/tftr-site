@@ -15,11 +15,29 @@ const structuredData = {
     "url": "https://toofasttorace.com/caterham/os-giken-dual-core-lsd",
     "price": "1637.42",
     "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
       "name": "Too Fast To Race"
     },
-    "areaServed": ["GB", "EU"]
+    "areaServed": ["GB", "EU"],
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "15.00",
+        "currency": "GBP"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "GB"
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "GB",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    }
   }
 };
 ---
