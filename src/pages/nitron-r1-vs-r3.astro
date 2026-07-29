@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AuthorPanel from '../components/AuthorPanel.astro';
 ---
 
 <Layout title="Nitron R1 vs R3 | Which Nitron is Right For You | Too Fast To Race" description="Nitron R1 vs R3 explained. Understanding the real differences between the Nitron R1 and R3 and which system is right for your application. Honest guidance from Too Fast To Race.">
@@ -10,6 +11,7 @@ import Layout from '../layouts/Layout.astro';
       <span class="stripe-accent"></span>
       <h1>Nitron R1 <span class="text-green">vs R3</span></h1>
       <p class="hero-subtitle">The R3 is not a better R1. It is a more adjustable R1 — and adjustability is only an advantage when you have the knowledge and the process to use it purposefully. Understanding this distinction is the starting point for choosing correctly.</p>
+      <AuthorPanel compact />
     </div>
   </section>
 
@@ -130,6 +132,13 @@ import Layout from '../layouts/Layout.astro';
         <p>Spring rates appropriate for your actual corner weights and motion ratio. Damping calibrated for your tyre construction and intended use. Ride height set for your geometry and practical requirements. These decisions determine how your car behaves — the adjustment range of the damper determines only how far you can deviate from that base in the future.</p>
         <p>This is why Too Fast To Race approaches every Nitron enquiry as a specification project rather than a product selection exercise. The product is the easy part. Getting the specification right is where the real work — and the real performance improvement — comes from.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Author -->
+  <section class="author-section">
+    <div class="container">
+      <AuthorPanel />
     </div>
   </section>
 
