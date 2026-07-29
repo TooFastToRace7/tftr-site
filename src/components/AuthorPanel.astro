@@ -1,0 +1,70 @@
+---
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+{compact ? (
+  <p class="author-byline">
+    By <a href="/about">Simon Rogers</a> — founder of Raceshocks UK and Meteor Motorsport; over 25 years of suspension specification and chassis development.
+  </p>
+) : (
+  <aside class="author-panel">
+    <h2 class="author-panel-heading">About the Author — Simon Rogers</h2>
+    <p>
+      Simon Rogers founded Raceshocks UK and Meteor Motorsport, supporting multiple
+      race-winning and championship-winning customers across a range of motorsport
+      disciplines and classes. A championship-winning driver and record holder himself,
+      he brings over 25 years of hands-on damper specification, chassis development
+      and driver-feedback-led setup experience to every recommendation on this site.
+    </p>
+    <p class="author-panel-link">
+      <a href="/about">Read more about Simon's suspension philosophy</a>
+    </p>
+  </aside>
+)}
+
+<style>
+  .author-byline {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .author-byline a {
+    color: var(--tftr-green);
+  }
+
+  .author-panel {
+    background: var(--tftr-darker);
+    border: 1px solid rgba(92, 184, 92, 0.3);
+    border-left: 4px solid var(--tftr-green);
+    padding: 1.5rem 2rem;
+    margin: 2.5rem 0;
+  }
+
+  .author-panel-heading {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--tftr-green);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  .author-panel p {
+    color: var(--tftr-grey-light);
+    line-height: 1.7;
+  }
+
+  .author-panel-link {
+    margin-top: 0.75rem;
+  }
+
+  .author-panel-link a {
+    color: var(--tftr-green);
+    font-size: 0.95rem;
+  }
+</style>
