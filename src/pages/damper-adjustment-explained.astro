@@ -1,0 +1,1143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuthorPanel from '../components/AuthorPanel.astro';
+---
+
+<Layout title="Damper Adjustment Explained | Suspension Setup Guide | Too Fast To Race" description="What bump and rebound actually do, how many adjusters you really need, and how to set dampers from a baseline. A practical, brand-agnostic suspension setup guide from Simon Rogers.">
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Damper Adjustment <span class="text-green">Explained</span></h1>
+      <p class="hero-subtitle">What the adjusters actually do, and how to use them. A practical guide to springs, dampers and setup — brand-agnostic, and written for the car you already have.</p>
+      <p class="hero-byline">By Simon Rogers</p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="content-intro">
+    <div class="container">
+      <div class="intro-content">
+        <h2>Who This Guide Is <span class="text-green">For</span></h2>
+        <p>This is written for the owner preparing a car in a modest home workshop, with limited time and limited money, who wants to understand what they are actually adjusting before they start turning things.</p>
+        <p>It is deliberately brand-agnostic. Nothing here depends on whose dampers are fitted to your car. The principles apply to a set of budget coilovers as much as they do to a three-way race damper, and a good deal of what follows is about recognising which of those two situations you are actually in.</p>
+        <p>It is also deliberately narrow. This guide covers springs and dampers — the two things you can specify, change and control directly. Geometry, alignment and tyre pressures all matter enormously, but they are a subject in their own right, and folding them in here would only blur what the adjusters on your dampers are really doing.</p>
+        <p>This is driver speak, not engineer speak. Where I have simplified something, I have simplified it on purpose.</p>
+
+        <nav class="guide-contents" aria-label="Contents">
+          <span class="contents-label">On this page</span>
+          <ul>
+            <li><a href="#understanding">What you are actually adjusting</a></li>
+            <li><a href="#roadmap">The chassis preparation roadmap</a></li>
+            <li><a href="#adjusting">Adjusting the dampers</a></li>
+            <li><a href="#symptoms">Symptom and adjustment</a></li>
+            <li><a href="#quality">What actually makes a damper good</a></li>
+            <li><a href="#standard">If you are still on standard dampers</a></li>
+            <li><a href="#faq">Common questions</a></li>
+          </ul>
+        </nav>
+</ul>
+        </nav>
+
+        <div class="guide-download">
+          <div class="download-text">
+            <span class="download-label">Take it with you</span>
+            <p>The full guide as a printable PDF — useful in the garage, or at the circuit where there is no signal.</p>
+          </div>
+          <a href="/downloads/damper-adjustment-and-suspension-setup.pdf" class="btn btn-outline" download>Download PDF</a>
+        </div>
+      </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Part 1 -->
+  <section class="guide-section alt" id="understanding">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>What You Are Actually Adjusting</h2>
+        <p>Before the adjusters, the ideas they depend on.</p>
+      </div>
+
+      <div class="article-body">
+        <h3>What a damper really is</h3>
+
+        <p class="lead-line">A damper is a timing device.</p>
+
+        <p>That is the single most useful thing you can understand about it. It does not hold the car up — the spring does that. What the damper controls is the speed at which the chassis transfers its weight. How quickly the car rolls into a corner. How quickly load arrives on the outside front tyre under braking. How quickly the tyre settles back onto the road after a bump.</p>
+
+        <p>Everything else in this guide follows from that. When you turn an adjuster you are not adding or removing grip directly. You are changing the timing of when load arrives, how long it stays, and how quickly it leaves. That is the whole game.</p>
+
+        <h3>Bump and rebound are two different jobs</h3>
+
+        <p>Almost every adjustable damper separates, or partly separates, two things.</p>
+
+        <p><strong>Compression (bump)</strong> controls the damper as it shortens — the wheel moving up towards the car. This is what happens over a bump, a kerb or a compression, and it is also what happens as load transfers onto an axle.</p>
+
+        <p><strong>Rebound</strong> controls the damper as it extends — the wheel moving back down, away from the car. This is the spring releasing the energy it has just stored, and rebound decides how quickly it is allowed to do that.</p>
+
+        <blockquote>
+          <p>Rebound relates to balance. Compression relates to ride.</p>
+        </blockquote>
+
+        <p>Rebound governs how long load stays on an axle after a transition, so it is usually the adjustment that most obviously changes understeer and oversteer. Compression governs how the car deals with the surface and how quickly load arrives, so it is the adjustment you feel as composure and response.</p>
+
+        <p>It is not absolute — both affect both — but it is close enough to be genuinely useful when you are stood in the paddock with a screwdriver deciding what to do next.</p>
+
+        <h3>How many adjusters do you actually need?</h3>
+
+        <p>This is where most of the money gets spent and most of the misunderstanding lives.</p>
+
+        <p><strong>Non-adjustable.</strong> Everything is decided by the internal valving. If it was valved correctly for your car, your springs and your use, a non-adjustable damper can be excellent. If it was not, there is nothing you can do about it. The specification is the product.</p>
+
+        <p><strong>Single-adjustable (1-way).</strong> One adjuster moves compression and rebound together, fine-tuning the car around a base that has already been set by the valving. This is the biggest practical step, because it lets you trim the car to conditions, tyres and driver preference without changing hardware. For the overwhelming majority of <a href="/fast-road-suspension">fast road cars</a>, road-and-track cars and <a href="/track-day-suspension">track day cars</a>, this is genuinely enough.</p>
+
+        <p><strong>Double-adjustable (2-way).</strong> Compression and rebound become independent. This is the more significant technical step, because those are two different events with two different requirements, and now you can address one without disturbing the other. The practical difference is set out in more detail in <a href="/nitron-r1-vs-r3">single versus double adjustable dampers</a>.</p>
+
+        <p><strong>Triple-adjustable (3-way).</strong> Compression is split into high-speed and low-speed. Low-speed compression deals with body movement — roll, dive and squat. High-speed compression deals with sharp inputs from the surface, such as kerbs and sharp-edged bumps. Separating them lets you control body movement firmly without making the car brittle. True high-speed control generally requires a remote canister to give the valving somewhere to work.</p>
+
+        <p>Note that the speeds refer to the movement of the damper shaft, not to the speed of the car. You can generate a very high damper speed at walking pace over a sharp-edged pothole, and a very low one at 140 mph on a smooth circuit.</p>
+
+        <p class="lead-line">Adjusters cannot rescue bad valving.</p>
+
+        <p>Because so many dampers ship with poor base valving, manufacturers rely on adjusters to fudge a force curve into something usable. On the dyno we regularly see units producing identical curves front and rear on the same car, or the same internals used across completely different platforms — a 200 lb/in road setup and a 1,000 lb/in race car running the same stack. Clickers do not have the tuning authority buyers believe they have.</p>
+
+        <p>The hardware sets the ceiling. The specification decides whether you ever reach it. If a manufacturer supplies one fixed valving spec regardless of your spring rate or your use case, no amount of adjuster twiddling will save it.</p>
+
+        <h3>Adjusters that behave themselves</h3>
+
+        <p>A personal preference, and one worth stating plainly, because a later section of this guide depends on it.</p>
+
+        <p>I strongly dislike dampers whose adjustment is not linear, and I dislike crossover even more — where adjusting rebound also changes the compression forces, or the other way round. This happens on a number of high-end brands.</p>
+
+        <p>That does not mean those dampers do not perform. I have had it explained to me that a crossover design can ultimately deliver better performance, and that may well be true. But how would I know what forces I was actually generating without days of dyno data covering every conceivable combination of settings?</p>
+
+        <p>For general use, and for tuning at the circuit, I will take an adjuster with zero crossover that follows repeatable, even steps, every time. If you cannot predict what a click does, you cannot tune with it — you can only guess with it.</p>
+
+        <h3>Pistons: why digressive matters</h3>
+
+        <p>This is the part that separates a good kit from an ordinary one, and it is worth understanding because it explains why some stiff cars ride beautifully and others do not.</p>
+
+        <p>With a <strong>linear piston</strong>, damping force rises in a straight line with damper speed: gentle at low speeds, and much firmer at the high speeds you see over potholes and kerbs. It is predictable, and it is the right answer in plenty of places.</p>
+
+        <p>With a <strong>digressive piston</strong>, the force curve blends off at the high-speed end. The car is not harsh when it hits a sharp bump or a kerb, but it keeps strong control at the lower speeds — which is precisely where you feel the car and where the balance is decided.</p>
+
+        <p>My own preference is a digressive compression piston paired with a linear rebound — what gets written as digressive/linear. The digressive compression takes the harshness out of the sharp stuff, and the linear rebound leaves me able to genuinely control rebound at the lower shaft speeds, which is where the driver feels the car.</p>
+
+        <p>Double-digressive, where the rebound blends off at the high-speed end as well, is a legitimate arrangement and I will use it. But it takes considerably more testing and development to arrive at something you can trust, and it is not where I would start.</p>
+
+        <p>The configuration that suits a car depends on how that car loads each axle. It is not a universal answer, and any damper technician worth talking to will have a view on your specific platform.</p>
+
+        <h3>Springs: linear or progressive?</h3>
+
+        <p>I run linear springs, front and rear, and it is a deliberate decision.</p>
+
+        <p>A linear spring holds the same rate wherever the car is in its travel, so the feedback through the chassis stays consistent and predictable. You learn the car once, and it behaves the same way every time you drive it.</p>
+
+        <p>Progressive springs have their place, but their rate changes as they compress, and that variability works against the clarity I want a driver to feel. I would rather control ride compliance with the damper — a digressive piston takes the harshness out of sharp inputs while keeping strong low-speed control — and leave the spring doing one honest, predictable job.</p>
+
+        <p>The result is a car that talks to you the same way in every corner.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Part 2 -->
+  <section class="guide-section" id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>The Chassis Preparation Roadmap</h2>
+        <p>Six steps, in this order. Work out of order and you will spend the season chasing your own tail.</p>
+      </div>
+
+      <div class="article-body">
+        <p>If you are starting on a fresh chassis, the order you do things in matters more than the individual decisions. Work in this sequence and each step gives you the information the next one needs.</p>
+
+        <h3>Step 1 — Start with a clean slate</h3>
+
+        <p>This is the one that trips people up.</p>
+
+        <p>Act as though no previous owner has ever touched the car. Strip away assumptions, internet folklore and unverified wisdom from trackside experts. If you cannot personally verify a figure — a spring rate, a corner weight, a damper setting — treat it as unknown rather than as a starting point.</p>
+
+        <p>Almost every genuinely baffling setup problem I have been asked to solve turned out to be a number somebody believed but had never measured.</p>
+
+        <h3>Step 2 — Establish motion ratios and corner weights</h3>
+
+        <p>Accurate motion ratios and corner masses are the foundation everything else stands on.</p>
+
+        <p>Lock the motion ratios down carefully, because every calculation further down the line hinges on them. Corner weights will shift as the build progresses — swap a heavy factory battery for a lightweight lithium unit and the numbers move — but getting close is enough. The motion ratios need to be right.</p>
+
+        <p>Extra points if you can plot toe and camber gain across suspension travel. I rarely do, for a simple reason: on most cars we cannot change them. I deal with the parts I can change — the springs and the dampers.</p>
+
+        <p>If you are not sure how to establish a motion ratio on your own car, there is a tutorial covering it in <a href="https://springspec.com" target="_blank" rel="noopener">SpringSpec</a>, which will do the arithmetic for you.</p>
+
+        <h3>Step 3 — Select your spring rates</h3>
+
+        <p>Calculate the spring requirement from your motion ratios and corner weights, not from what somebody else runs on a similar-looking car.</p>
+
+        <p>There are many opinions on target frequencies. Mine follows a repeatable formula:</p>
+
+        <ul class="guide-list">
+          <li><strong>Front-engine, rear-wheel drive:</strong> aim for a rear frequency roughly 10–15% lower than the front.</li>
+          <li><strong>Front-wheel drive, or mid/rear-engine rear-wheel drive:</strong> the opposite — a rear frequency roughly 10–15% higher than the front.</li>
+        </ul>
+
+        <p>Total stiffness then depends on the shell, the suspension travel you can actually use, and whether the car sees regular road use or pure track duty. A car that has to work on a British B-road and a car that only ever sees smooth circuits are two different specifications, and pretending otherwise is where most road-and-track builds go wrong.</p>
+
+        <p><a href="https://springspec.com" target="_blank" rel="noopener">SpringSpec</a> will calculate all of this from your corner weights and motion ratios, and it carries my own guidance on target frequencies for everything from road use through to full track duty.</p>
+
+        <h3>Step 4 — Understand roll before you try to eliminate it</h3>
+
+        <p>The one thing I would have you take away from this whole guide:</p>
+
+        <blockquote>
+          <p>Just because a car rolls does not mean it is not fast. If a car is rolling, it is creating grip.</p>
+        </blockquote>
+
+        <p>There obviously comes a point where roll becomes undriveable, and that point is different for every driver. That is the real conundrum, and it is a driver question as much as an engineering one.</p>
+
+        <p>This is also where the damper-as-timing-device idea earns its keep. Springs and anti-roll bars set how much the car will eventually roll; the dampers control how quickly it gets there and how long it takes to settle. Since a corner takes a finite amount of time, controlling the rate of roll absolutely affects how much roll the car actually reaches in that corner.</p>
+
+        <p>So do not assume the answer is always stiffer springs and bigger anti-roll bars.</p>
+
+        <h3>Step 5 — Select the right dampers</h3>
+
+        <p>Avoid buying off-the-shelf from a parts distributor. Deal directly with a damper technician.</p>
+
+        <p>Give them what you have gathered: corner weights, spring rates, tyres and primary use case. Then check two things:</p>
+
+        <ul class="guide-list">
+          <li>Does the hardware pass basic quality checks — travel, body length, friction, build consistency?</li>
+          <li>Do they offer genuine custom valving for your platform and your spring rates, rather than a fixed generic specification?</li>
+        </ul>
+
+        <p>If the answer to the second is no, you are buying a shell with adjusters on it. As the old motorsport line goes: do not buy dampers, buy a damper tuner.</p>
+
+        <h3>Step 6 — Ride height and platform</h3>
+
+        <p>Establish your target ride heights and set the car on a level, balanced platform unless you have a strong engineering reason to do otherwise.</p>
+
+        <p>Ride height is not a cosmetic decision. It determines how much bump and droop travel you actually have available, and that directly constrains what the damper can be asked to do. A car set too low is a car whose damper is being asked to work in the last inch of its travel, and no amount of adjustment will fix that.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Part 3 -->
+  <section class="guide-section alt" id="adjusting">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Adjusting The Dampers</h2>
+        <p>Where to start, what order to work in, and how to judge whether a change helped.</p>
+      </div>
+
+      <div class="article-body">
+        <h3>Before you touch anything</h3>
+
+        <p>Two assumptions run underneath everything in this section, and if either is wrong you will spend a long time adjusting your way towards a car that was never going to work.</p>
+
+        <p><strong>The spring frequencies must be right.</strong> No damper adjustment will rescue a wrong spring rate. If the car is badly sprung, every adjustment you make will be a compromise chasing a compromise.</p>
+
+        <p><strong>The car must have travel to work in.</strong> If it is bottoming out or running on the bump stops, that is a ride height and spring problem, not a damper problem.</p>
+
+        <p>Assuming both are sound, here is how I set a car up.</p>
+
+        <h3>Find your baseline</h3>
+
+        <p>You cannot tune from a setting you cannot describe.</p>
+
+        <ol class="guide-list guide-list-ordered">
+          <li>Wind the adjuster fully in (hard) until it stops. Firmly, not violently — you are looking for the stop, not making a new one.</li>
+          <li>Treat that position as zero.</li>
+          <li>Count clicks, or turns, back out to your setting. Every setting on the car is now described as X clicks from full hard.</li>
+          <li>Write it down. Front and rear, left and right, compression and rebound.</li>
+        </ol>
+
+        <p>Two things this gives you. First, you can always get back to where you started, which is the single most valuable thing in setup work. Second, when you speak to whoever specified the dampers, you are both describing the same thing.</p>
+
+        <p>If the kit came with a recommended baseline, start there. If it did not, ask — a good damper technician should be able to give you initial settings for your car, and if they cannot, that tells you something in itself.</p>
+
+        <p>Do not expect those settings to sit in the middle of the range, and do not correct them if they do not. Where the adjuster wants to be depends entirely on the shape of the force curve built into the damper, and a valving specification chosen properly for your car may well want the adjuster well off centre. The middle of the range is not a neutral position. It is just a position.</p>
+
+        <h3>Set high-speed compression first — and then leave it alone</h3>
+
+        <p>If you have three-way dampers, this is the first thing you do, before you touch anything else. High-speed compression sets the ceiling that everything else then works underneath. Get it wrong and the low-speed adjuster will never have the room to create a meaningful influence.</p>
+
+        <p>This procedure depends on having genuinely separate adjustment with no crossover, which is the practical reason I care so much about that in a damper.</p>
+
+        <ol class="guide-list guide-list-ordered">
+          <li>Set every damper to full soft.</li>
+          <li>Find a repeatable input. A race apex kerb, a significant bump, or a hole in the road. It does not need to be fast — just enough to work the damper, and not enough to damage the car.</li>
+          <li>Drive it. At full soft the damper will move readily out of the way.</li>
+          <li>Increase high-speed compression only, in 4-click steps. Big enough that you can actually feel the change.</li>
+          <li>Repeat over the same input. For a while the car will feel broadly the same — the mass of the car is still overcoming the high-speed force.</li>
+          <li>Keep going until it does not. Eventually the mass can no longer overcome the damper force, and the damper feels like a steel bar.</li>
+          <li>Back off 2 clicks and test again. From there you might go one softer, one harder, or stay where you are.</li>
+          <li>Settle on the compliant side of that point. You want to sit where the blow-off is still happening and the damper still moves readily — firmer than full soft, but a click or two clear of where it locks up.</li>
+        </ol>
+
+        <p>Now leave it. High-speed compression should not need touching again unless the spring rate or the weight of the car changes.</p>
+
+        <p>What you have done is establish the maximum range within which the low-speed compression can work. Set high speed too soft, or leave it somewhere arbitrary in the middle, and the low-speed adjuster will not have the room to do its job.</p>
+
+        <h3>Two principles that decide most adjustments</h3>
+
+        <p><strong>Work on the end that is not doing its job, not the end that is.</strong> If the car understeers, the front is the problem. You can shift the balance by destabilising the rear, and sometimes you will have to, but it should be the second move, not the first. Fixing the end that is working tends to cost you grip you already had, and it turns one complaint into two.</p>
+
+        <p><strong>Think about the contact patch, not just the chassis.</strong> This is where I depart from conventional practice.</p>
+
+        <h3>Where I break the rules</h3>
+
+        <p>A chassis engineer will tell you to control the chassis. I think about the wheel and the contact patch, and on a couple of adjustments that leads me to the opposite answer from the textbook.</p>
+
+        <p>Take corner exit understeer. On the power, the front of the car is extending. The conventional fix is to add front rebound to hold the nose down and keep the front loaded. I do the opposite — <strong>I reduce front rebound</strong>.</p>
+
+        <p>Technically, yes, that allows more lift at the front. But rebound damping is the thing resisting the spring as it tries to push the wheel back down. Take rebound out, and the spring drives that tyre into the road surface faster and with more force behind it. More load into the contact patch, sooner. And it works.</p>
+
+        <p>I am fully aware this breaks the accepted rules. As a World Sports Car engineer once put it to me: until you find different, carry on. So I do — and where you see the same reasoning applied elsewhere in this guide, that is why.</p>
+
+        <h3>How to actually make a change</h3>
+
+        <ul class="guide-list">
+          <li><strong>One change at a time.</strong> One axle, one direction, one adjustment. If you change two things and the car improves, you have learned nothing.</li>
+          <li><strong>Make the change big enough to feel.</strong> A single click is often below the noise floor of a road car and a human being. Move enough to produce a clear result, then refine.</li>
+          <li><strong>Use the same piece of road, or the same corner.</strong> Compare like with like, in similar conditions, with a similar fuel load.</li>
+          <li><strong>Write down what you did and what happened</strong>, in that order, before you form an opinion about it.</li>
+          <li><strong>Be prepared to put it back.</strong> Most sessions end with a return to baseline plus one deliberate change, and that is a good outcome.</li>
+        </ul>
+
+        <h3>Judge the change on the right evidence</h3>
+
+        <p>Most drivers tune dampers on seat-of-the-pants feedback rather than corner exit speed, tyre temperatures or lap times.</p>
+
+        <p>A big, immediately noticeable change is often preferred simply because it is tangible — regardless of whether it produced any useful grip. People frequently move an adjuster not because it is the correct adjustment, but because the adjuster is there.</p>
+
+        <p>Be careful, though, of the assumption that runs the other way: that the comfortable setting must be the slow one. I do not accept that as a rule. A well sorted car should be good in most conditions, and a great many kits get specified far too firm on the belief that hard must be fast. It is not necessarily. The best setting and the most comfortable setting are not automatically the same, but nor are they automatically different — and if your quick setting is punishing to drive, that is worth investigating rather than accepting.</p>
+
+        <p>If you can measure something — tyre temperatures across the tread, sector times, exit speed — measure it. If you cannot, judge the car on whether it is easier to place, more predictable and less tiring, rather than on whether it feels busier.</p>
+
+        <h3>What too stiff actually feels like</h3>
+
+        <p>Too stiff is not the same as harsh, and it does not always announce itself.</p>
+
+        <p>The car skates rather than settles. Over a bumpy corner the tyres feel as though they are being knocked away from the surface, and the car takes a beat to recover. Front-end response feels sharp on turn-in, but the grip does not arrive with it. Tyre wear goes uneven, and the car is tiring to drive over a full session.</p>
+
+        <p>A correct setup is usually more compliant than people expect. That is the most common surprise when a car has been specified properly rather than specified aggressively. It is also why a car set up for the <a href="/nurburgring-suspension">Nordschleife</a> is rarely the stiffest thing in the paddock.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Part 4 -->
+  <section class="guide-section" id="symptoms">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Symptom And Adjustment</h2>
+        <p>A starting point, not a rulebook. Where two actions are given, take the first one first.</p>
+      </div>
+
+      <div class="article-body">
+        <p>This assumes the spring frequencies are correct, the car has travel to work in, and — where fitted — high-speed compression has already been set by the procedure above. Where two actions are given, the first is almost always the one acting on the end of the car that is not doing its job.</p>
+
+        <figure class="guide-figure">
+          <figcaption>Balance traits — all four are rebound adjustments</figcaption>
+          <div class="figure-scroll">
+            <svg viewBox="0 0 680 300" role="img" aria-labelledby="fig1title fig1desc" class="tftr-figure">
+              <title id="fig1title">Rebound adjustments for understeer and oversteer at corner entry and corner exit</title>
+              <desc id="fig1desc">A two by two matrix. Rows are understeer and oversteer. Columns are turn-in under braking and corner exit on power. Each cell gives the first rebound adjustment to make.</desc>
+
+              <text class="fig-head" x="275" y="48" text-anchor="middle" dominant-baseline="central">Turn-in, on the brakes</text>
+              <text class="fig-head" x="505" y="48" text-anchor="middle" dominant-baseline="central">Corner exit, on the power</text>
+
+              <text class="fig-head" x="160" y="108" text-anchor="end" dominant-baseline="central">Understeer</text>
+              <text class="fig-head" x="160" y="210" text-anchor="end" dominant-baseline="central">Oversteer</text>
+
+              <rect class="fig-soft" x="170" y="68" width="210" height="80" rx="4"></rect>
+              <text class="fig-title" x="275" y="96" text-anchor="middle" dominant-baseline="central">Soften front rebound</text>
+              <text class="fig-sub" x="275" y="120" text-anchor="middle" dominant-baseline="central">then less rear rebound</text>
+
+              <rect class="fig-soft" x="400" y="68" width="210" height="80" rx="4"></rect>
+              <text class="fig-title" x="505" y="96" text-anchor="middle" dominant-baseline="central">Less front rebound</text>
+              <text class="fig-sub" x="505" y="120" text-anchor="middle" dominant-baseline="central">spring drives tyre down</text>
+
+              <rect class="fig-add" x="170" y="170" width="210" height="80" rx="4"></rect>
+              <text class="fig-title" x="275" y="198" text-anchor="middle" dominant-baseline="central">More rear rebound</text>
+              <text class="fig-sub" x="275" y="222" text-anchor="middle" dominant-baseline="central">resists the rear lifting</text>
+
+              <rect class="fig-soft" x="400" y="170" width="210" height="80" rx="4"></rect>
+              <text class="fig-title" x="505" y="198" text-anchor="middle" dominant-baseline="central">Less rear rebound</text>
+              <text class="fig-sub" x="505" y="222" text-anchor="middle" dominant-baseline="central">spring drives tyre down</text>
+            </svg>
+          </div>
+          <p class="figure-key">
+            <span class="key-swatch key-soft"></span> Take damping out
+            <span class="key-swatch key-add"></span> Add damping
+          </p>
+        </figure>
+
+        <p>The asymmetry is the useful part. Three of the four soften, and only turn-in oversteer adds rebound — because that is the one case where the axle is genuinely lifting and needs holding down.</p>
+
+        <h3>Understeer on turn-in</h3>
+
+        <p><strong>First:</strong> soften front rebound, and take a little front low-speed compression out. This gets the weight transferring onto the front and gets load into the front contact patch.</p>
+
+        <p><strong>If that is not enough:</strong> reduce rear rebound, making the rear a little less stable to help the car rotate. Second move, not first.</p>
+
+        <h3>Oversteer on turn-in</h3>
+
+        <p><strong>Increase rear rebound.</strong> Under braking and turn-in the rear of the car is lifting. Rebound is what resists that extension, so more rear rebound holds the rear down, keeps it loaded and settles the car.</p>
+
+        <p>The equivalent move on the compression side would be more front compression, to hold the nose up. Get comfortable with rebound first.</p>
+
+        <h3>Understeer on corner exit</h3>
+
+        <p><strong>Reduce front rebound.</strong> This runs against conventional practice. On the power the front is extending; taking rebound out lets the spring drive the front tyre back into the surface faster and harder. More grip at the contact patch, at the cost of some body control.</p>
+
+        <h3>Oversteer on corner exit</h3>
+
+        <p><strong>Reduce rear rebound.</strong> The same reasoning at the other end — let the spring push the rear tyre into the road rather than damping its return.</p>
+
+        <figure class="guide-figure">
+          <figcaption>Load timing and over-control traits — compression territory</figcaption>
+          <div class="figure-scroll">
+            <svg viewBox="0 0 680 300" role="img" aria-labelledby="fig2title fig2desc" class="tftr-figure">
+              <title id="fig2title">Compression and damping adjustments grouped by whether to add or reduce</title>
+              <desc id="fig2desc">Two groups. On the left, three traits cured by adding low-speed compression: slow to take a set, excessive dive, excessive squat. On the right, two traits cured by taking damping out: nervous or skating, and harsh over kerbs.</desc>
+
+              <text class="fig-head" x="185" y="46" text-anchor="middle" dominant-baseline="central">Add low-speed compression</text>
+              <text class="fig-head" x="495" y="46" text-anchor="middle" dominant-baseline="central">Take damping out</text>
+
+              <rect class="fig-add" x="60" y="68" width="250" height="56" rx="4"></rect>
+              <text class="fig-title" x="185" y="86" text-anchor="middle" dominant-baseline="central">Slow to take a set</text>
+              <text class="fig-sub" x="185" y="106" text-anchor="middle" dominant-baseline="central">load arrives too late</text>
+
+              <rect class="fig-add" x="60" y="136" width="250" height="56" rx="4"></rect>
+              <text class="fig-title" x="185" y="154" text-anchor="middle" dominant-baseline="central">Excessive dive</text>
+              <text class="fig-sub" x="185" y="174" text-anchor="middle" dominant-baseline="central">front, under braking</text>
+
+              <rect class="fig-add" x="60" y="204" width="250" height="56" rx="4"></rect>
+              <text class="fig-title" x="185" y="222" text-anchor="middle" dominant-baseline="central">Excessive squat</text>
+              <text class="fig-sub" x="185" y="242" text-anchor="middle" dominant-baseline="central">rear, on the power</text>
+
+              <rect class="fig-soft" x="370" y="68" width="250" height="56" rx="4"></rect>
+              <text class="fig-title" x="495" y="86" text-anchor="middle" dominant-baseline="central">Nervous, skating, chattering</text>
+              <text class="fig-sub" x="495" y="106" text-anchor="middle" dominant-baseline="central">rebound out first</text>
+
+              <rect class="fig-soft" x="370" y="136" width="250" height="56" rx="4"></rect>
+              <text class="fig-title" x="495" y="154" text-anchor="middle" dominant-baseline="central">Harsh over kerbs only</text>
+              <text class="fig-sub" x="495" y="174" text-anchor="middle" dominant-baseline="central">check both compression settings</text>
+            </svg>
+          </div>
+        </figure>
+
+        <h3>Car feels lazy, slow to take a set</h3>
+
+        <p><strong>Increase low-speed compression.</strong> This is a load-timing problem, not a settling problem. More low-speed compression speeds up how quickly the damper loads up, and therefore how quickly load arrives at the tyre.</p>
+
+        <h3>Car feels nervous or over-reactive, or skates and chatters over bumps</h3>
+
+        <p>These usually turn out to be the same complaint with the same cure.</p>
+
+        <p><strong>First:</strong> reduce rebound. Excessive rebound packs the car down and stops the wheel returning to the surface, so the tyre spends time not following the road.</p>
+
+        <p><strong>Then:</strong> reduce low-speed compression, which may be too firm for the mass of the car.</p>
+
+        <p><strong>And if it is specifically over sharp inputs:</strong> go back and re-check high-speed compression. This is the one circumstance in which it is worth revisiting.</p>
+
+        <h3>Harsh over kerbs, but composed everywhere else</h3>
+
+        <p><strong>Review both compression settings, not just high speed.</strong></p>
+
+        <p>The obvious suspect is a high-speed setting sitting too close to lock-up, where the damper stops blowing off and behaves like a steel bar. But it can equally be excessive low-speed compression: if there is not enough mass to overcome the low-speed force, the damper never gets far enough into its stroke for the high-speed circuit to do anything at all. The complaint looks like a high-speed problem and is not.</p>
+
+        <p>If both are set correctly and the car is still harsh, this becomes a valving question rather than an adjuster question — and it is the argument for a digressive compression piston.</p>
+
+        <h3>Excessive dive under braking</h3>
+
+        <p><strong>Increase front low-speed compression.</strong></p>
+
+        <p>This is not about tidying up how the car looks. Without enough low-speed compression the load does not transfer until the spring has fully loaded from weight transfer — which, on a soft enough car, may not happen until it reaches the bump stop. The damper is what gets load into the front tyre during the braking event, which is when you need it.</p>
+
+        <h3>Excessive squat on power</h3>
+
+        <p><strong>Increase rear low-speed compression.</strong> The mirror of dive, for exactly the same reason: getting load into the rear tyres while the squat is happening, rather than waiting for the spring to finish compressing.</p>
+
+        <h3>Floats over crests, feels loose at speed</h3>
+
+        <p>This one genuinely goes both ways, and the right answer depends on which of two things is happening.</p>
+
+        <p><strong>If the tyre is leaving the surface</strong> — fast enough that the car is close to airborne and load on the tyre is approaching zero — reduce rebound. More rebound would hold the wheel up and away from the road at exactly the moment you need contact.</p>
+
+        <p><strong>If the chassis is building its own momentum</strong> — a car without enough grip lets the body start to lift, and by the time the damper is loading up, the chassis already has momentum and nothing will hold it down — increase rebound. Catch it earlier and the momentum never builds, so the contact patch stays put. We apply exactly this thinking to rear-engined, rear-wheel-drive Autograss cars, where it is what stops the car over-rotating into a wheelie.</p>
+
+        <p>Same symptom, opposite cures. The distinction is whether the tyre is being lifted off the road, or the body is running away with itself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Part 5 -->
+  <section class="guide-section alt" id="quality">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>What Actually Makes A Damper Good</h2>
+        <p>Seven things buyers believe, and what actually matters in practice.</p>
+      </div>
+
+      <div class="article-body">
+        <p>Having spent years helping drivers across a range of motorsport classes set cars up, I have noticed a large gap between what track day enthusiasts assume separates a brilliant damper from a poor one, and what actually matters. Some factors are vital. Others are marketing.</p>
+
+        <h3>1. Compatibility and ease of fitting</h3>
+        <p class="perception">The perception: a tick-box exercise.</p>
+        <p>It matters immensely. Owners care far more about avoiding custom fabrication than they do about pure on-track dynamics, and rightly so. If fitting a damper requires machining work, it is a non-starter for the vast majority of drivers, however clever the internals are.</p>
+
+        <h3>2. Low-speed ride quality over bumps and kerbs</h3>
+        <p class="perception">The perception: the ultimate test of quality, and the thing people most associate with a top-tier damper.</p>
+        <p>Decent compliance over road imperfections is achievable on almost any damper architecture with proper effort. The sharp difference between a budget damper and a premium one usually comes down to poor valving choices for the application — a generic off-the-shelf damping profile, a linear piston, and clickers designed to mask the underlying problem. Worth adding: the setting that rides best and the setting that grips best are not automatically the same, but nor are they automatically opposed, and far too many kits are specified firm on the assumption that they must be.</p>
+
+        <h3>3. The number of adjusters</h3>
+        <p class="perception">The perception: more dials means a better, more tuneable damper.</p>
+        <p>One of the most persistent myths in the paddock. Adjusters are there to trim a correct base, not to create one.</p>
+
+        <h3>4. How dramatic the adjustments feel</h3>
+        <p class="perception">The perception: if one click transforms the car, the adjuster is doing important work.</p>
+        <p>A misconception. Drivers prefer changes they can feel, whether or not those changes produce grip. A damper whose adjuster range is wide enough to feel impressive is not the same thing as a damper whose adjuster range is useful.</p>
+
+        <h3>5. Sound engineering, free of flaws</h3>
+        <p class="perception">The perception: a cheap-coilover problem that disappears once you spend proper money.</p>
+        <p>Fundamental design flaws exist at every price point. The body must be correctly dimensioned for the intended ride height — neither short of travel nor bottoming out. The design must avoid the internal friction and stiction that introduce hysteresis. Over-length bodies, common when a manufacturer reuses one generic shell across many cars, and straightforward assembly mistakes both occur at all levels. Some of the worst offenders we have had on the dyno have been very expensive units.</p>
+
+        <h3>6. The internal valving</h3>
+        <p class="perception">The perception: valving is hidden inside — it is the adjusters and the spec sheet that sell the damper.</p>
+        <p>This is the single biggest differentiator between a mediocre damper and a brilliant one. A poorly valved premium damper will be comprehensively out-driven by budget hardware that happens to be valved correctly for the application.</p>
+
+        <h3>7. Response speed, hysteresis and internal friction</h3>
+        <p class="perception">The perception: not even on the radar for most track day buyers.</p>
+        <p>This is what elevates a good damper to an exceptional one. Lower gas pressure lets the valve stack react faster to sudden wheel inputs. Reduced friction cleans up small-displacement noise so the tyre can track the tarmac precisely. Minimal hysteresis — the lag between compression and rebound movements — produces predictable forces, which is what lets you shape a damping curve for maximum mechanical grip. The manufacturers who invest seriously in reducing seal drag and internal fluid lag are the ones whose dampers feel as though they are reading the road rather than reacting to it.</p>
+
+        <h3>And on price</h3>
+
+        <p>A high price tag alone does not guarantee performance. Above a modest baseline floor, there is minimal correlation between cost and functional quality. Beyond that threshold it is the internal engineering, not the price, that delivers genuine lap time — right up until you enter dedicated high-end motorsport territory.</p>
+
+        <p>Plenty of drivers win championships on unremarkable kit, and plenty of retailers excel at selling expensive promises. Understand the principles that actually generate grip, and make sure you are paying for engineering rather than hype.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Part 6 -->
+  <section class="guide-section" id="standard">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>If You Are Still On Standard Dampers</h2>
+      </div>
+
+      <div class="article-body">
+        <p>The honest picture: standard and OE-style performance dampers are built for broad road use and long service life, not for a light, quick car being driven hard.</p>
+
+        <p>They are typically a little under-damped for the way you now drive — not quite enough force to control the car's momentum — and they can vary noticeably from unit to unit. They are rarely failed. They are simply doing a different job from the one you now want done.</p>
+
+        <p>Any correctly specified performance kit will transform ride, control and precision. And as long as the spring rates are right, it will not be harsh. If you want to know exactly where yours stand, they can be dyno tested.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="guide-section alt" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Common Questions</h2>
+      </div>
+
+      <div class="article-body faq">
+        <h3>Do I need adjustable dampers?</h3>
+        <p>Not necessarily. A correctly valved non-adjustable damper can be excellent. Adjustment is valuable when it lets you trim a correct base to conditions, tyres or driver preference. It cannot create a correct base that is not there.</p>
+
+        <h3>Is a two-way damper better than a one-way?</h3>
+        <p>It is more capable, which is not the same thing. Independent compression and rebound is a genuine technical advantage if you have a process for using it. Used without a method, extra adjustment simply gives you more ways to move away from a setting that was already right.</p>
+
+        <h3>What is the difference between high-speed and low-speed compression?</h3>
+        <p>The speeds refer to the damper shaft, not the car. Low-speed compression deals with body movement — roll, dive and squat. High-speed compression deals with sharp inputs from the road surface, such as kerbs and sharp-edged bumps.</p>
+
+        <h3>How do I set my dampers from scratch?</h3>
+        <p>Set high-speed compression first, using the kerb procedure above, then leave it alone. For everything else, wind each adjuster fully hard, treat that as zero, and count clicks back out. Record every setting, change one thing at a time, and always be able to return to where you began.</p>
+
+        <h3>Does rebound or compression affect understeer?</h3>
+        <p>As a working generalisation, rebound relates to balance and compression relates to ride, so rebound is usually the adjustment that changes understeer and oversteer. Both affect both.</p>
+
+        <h3>Should I run linear or progressive springs?</h3>
+        <p>I run linear springs front and rear. A linear rate stays the same throughout the travel, so the car behaves consistently and you learn it once. I would rather manage ride compliance through the damper's piston and valving than through a spring whose rate is moving around.</p>
+
+        <h3>Are my standard dampers worn out?</h3>
+        <p>Probably not. They are more likely under-damped for how you now use the car, which is a specification issue rather than a failure. A dyno test will tell you exactly where they stand.</p>
+
+        <h3>Is my car too stiff?</h3>
+        <p>If it skates over bumps, feels sharp on turn-in without the grip arriving, wears tyres unevenly and is tiring over a session, it very likely is. A correct setup is usually more compliant than people expect.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Author -->
+  <section class="author-section">
+    <div class="container">
+      <AuthorPanel />
+    </div>
+  </section>
+
+  <!-- Internal Links -->
+  <section class="related-content">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related Expertise</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/nitron-r1-vs-r3" class="related-card">
+          <h3>Single vs Double Adjustable</h3>
+          <p>What independent compression and rebound adjustment actually buys you, and when it does not.</p>
+          <span class="related-link">Read More →</span>
+        </a>
+        <a href="/fast-road-suspension" class="related-card">
+          <h3>Fast Road Suspension</h3>
+          <p>Why a road-biased specification is a different problem from a track one, and how we approach it.</p>
+          <span class="related-link">Read More →</span>
+        </a>
+        <a href="/track-day-suspension" class="related-card">
+          <h3>Track Day Suspension</h3>
+          <p>Specifying for track day use, and why the fastest car is rarely the stiffest one.</p>
+          <span class="related-link">Read More →</span>
+        </a>
+        <a href="/nurburgring-suspension" class="related-card">
+          <h3>Nürburgring Suspension</h3>
+          <p>Setup for a surface that punishes over-damped cars harder than any circuit.</p>
+          <span class="related-link">Read More →</span>
+        </a>
+        <a href="/caterham/suspension-buyers-guide" class="related-card">
+          <h3>Caterham Buyer's Guide</h3>
+          <p>How these principles translate into specifying a coilover kit for the Seven.</p>
+          <span class="related-link">Read More →</span>
+        </a>
+        <a href="/suspension" class="related-card">
+          <h3>Suspension Specification</h3>
+          <p>How we specify suspension around your chassis, tyres and application rather than a part number.</p>
+          <span class="related-link">Read More →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>A Second Opinion On Your Own Car</h2>
+        <p>None of this requires a race budget. Tell us what you have, how you use it and what the car is doing, and we will give you a straight answer on what would genuinely improve it.</p>
+        <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need adjustable dampers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not necessarily. A correctly valved non-adjustable damper can be excellent. Adjustment is valuable when it lets you trim a correct base to conditions, tyres or driver preference. It cannot create a correct base that is not there."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a two-way damper better than a one-way?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is more capable, which is not the same thing. Independent compression and rebound is a genuine technical advantage if you have a process for using it. Used without a method, extra adjustment simply gives you more ways to move away from a setting that was already right."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between high-speed and low-speed compression?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The speeds refer to the damper shaft, not the car. Low-speed compression deals with body movement such as roll, dive and squat. High-speed compression deals with sharp inputs from the road surface, such as kerbs and sharp-edged bumps."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I set my dampers from scratch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Set high-speed compression first, then leave it alone. For everything else, wind each adjuster fully hard, treat that as zero, and count clicks back out. Record every setting, change one thing at a time, and always be able to return to where you began."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does rebound or compression affect understeer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As a working generalisation, rebound relates to balance and compression relates to ride, so rebound is usually the adjustment that changes understeer and oversteer. Both affect both."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I run linear or progressive springs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Linear springs, front and rear. A linear rate stays the same throughout the travel, so the car behaves consistently and you learn it once. Ride compliance is better managed through the damper's piston and valving than through a spring whose rate is moving around."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my standard dampers worn out?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Probably not. They are more likely under-damped for how you now use the car, which is a specification issue rather than a failure. A dyno test will tell you exactly where they stand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my car too stiff?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If it skates over bumps, feels sharp on turn-in without the grip arriving, wears tyres unevenly and is tiring over a session, it very likely is. A correct setup is usually more compliant than people expect."
+        }
+      }
+    ]
+  })} />
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  .hero-byline {
+    margin-top: var(--space-sm);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    color: var(--tftr-green);
+  }
+
+  /* Content Intro */
+  .content-intro {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .intro-content {
+    max-width: 800px;
+  }
+
+  .intro-content h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .intro-content p {
+    color: var(--tftr-grey-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Contents */
+  .guide-contents {
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--tftr-dark);
+    border-left: 3px solid var(--tftr-green);
+  }
+
+  .contents-label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-xs);
+  }
+
+  .guide-contents ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .guide-contents a {
+    color: var(--tftr-grey-light);
+    font-size: 0.98rem;
+  }
+
+  .guide-contents a:hover {
+    color: var(--tftr-green);
+  }
+
+/* Download panel */
+  .guide-download {
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background: var(--tftr-dark);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .download-label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-xs);
+  }
+
+  .guide-download p {
+    color: var(--tftr-grey-light);
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0 !important;
+    max-width: 45ch;
+  }
+
+  /* Guide sections */
+  .guide-section.alt {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .section-header p {
+    color: var(--tftr-grey-light);
+    margin-top: var(--space-xs);
+    font-size: 1.1rem;
+  }
+
+  .article-body {
+    max-width: 800px;
+  }
+
+  .article-body h3 {
+    font-size: 1.35rem;
+    margin: var(--space-md) 0 var(--space-xs);
+    color: var(--tftr-white);
+  }
+
+  .article-body h3:first-child {
+    margin-top: 0;
+  }
+
+  .article-body p {
+    color: var(--tftr-grey-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .article-body p strong,
+  .article-body li strong {
+    color: var(--tftr-white);
+  }
+
+  .article-body a {
+    color: var(--tftr-green);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.35);
+  }
+
+  .article-body a:hover {
+    border-bottom-color: var(--tftr-green);
+  }
+
+  .lead-line {
+    font-family: var(--font-heading);
+    font-size: 1.5rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--tftr-white) !important;
+    line-height: 1.3 !important;
+  }
+
+  .perception {
+    color: var(--tftr-grey) !important;
+    font-style: italic;
+    margin-bottom: 0.5rem !important;
+  }
+
+  blockquote {
+    border-left: 3px solid var(--tftr-green);
+    padding: var(--space-sm) var(--space-md);
+    margin: var(--space-md) 0;
+    background: var(--tftr-dark);
+  }
+
+  blockquote p {
+    font-family: var(--font-heading);
+    font-size: 1.4rem !important;
+    color: var(--tftr-white) !important;
+    margin-bottom: 0 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.3 !important;
+  }
+
+  /* Lists */
+  .guide-list {
+    max-width: 65ch;
+    margin: 0 0 var(--space-sm) 0;
+    color: var(--tftr-grey-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .guide-list li {
+    list-style: none;
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .guide-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.85em;
+    width: 10px;
+    height: 2px;
+    background: var(--tftr-green);
+  }
+
+  .guide-list-ordered {
+    counter-reset: step;
+  }
+
+  .guide-list-ordered li {
+    padding-left: 2.2rem;
+  }
+
+  .guide-list-ordered li::before {
+    counter-increment: step;
+    content: counter(step);
+    background: none;
+    width: auto;
+    height: auto;
+    top: 0;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--tftr-green);
+  }
+
+  /* Figures */
+  .guide-figure {
+    margin: var(--space-md) 0;
+    padding: var(--space-md);
+    background: var(--tftr-dark);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .guide-figure figcaption {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-sm);
+  }
+
+  .figure-scroll {
+    overflow-x: auto;
+  }
+
+  .tftr-figure {
+    display: block;
+    width: 100%;
+    min-width: 560px;
+    height: auto;
+  }
+
+  .fig-soft {
+    fill: rgba(92, 184, 92, 0.10);
+    stroke: var(--tftr-green);
+    stroke-width: 1;
+  }
+
+  .fig-add {
+    fill: rgba(239, 159, 39, 0.12);
+    stroke: #EF9F27;
+    stroke-width: 1;
+  }
+
+  .fig-head {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    fill: var(--tftr-green);
+  }
+
+  .fig-title {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    fill: var(--tftr-white);
+  }
+
+  .fig-sub {
+    font-family: var(--font-body);
+    font-size: 13px;
+    fill: var(--tftr-grey-light);
+  }
+
+  .figure-key {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem !important;
+    color: var(--tftr-grey) !important;
+    margin: var(--space-sm) 0 0 !important;
+  }
+
+  .key-swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid;
+    margin-right: 0.5rem;
+  }
+
+  .key-swatch.key-add {
+    margin-left: 1.5rem;
+  }
+
+  .key-soft {
+    background: rgba(92, 184, 92, 0.10);
+    border-color: var(--tftr-green);
+  }
+
+  .key-add {
+    background: rgba(239, 159, 39, 0.12);
+    border-color: #EF9F27;
+  }
+
+  /* FAQ */
+  .faq h3 {
+    color: var(--tftr-green);
+  }
+
+  /* Related */
+  .related-content {
+    background: var(--tftr-darker);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    color: var(--tftr-green);
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .related-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .guide-figure {
+      padding: var(--space-sm);
+    }
+  }
+</style>
