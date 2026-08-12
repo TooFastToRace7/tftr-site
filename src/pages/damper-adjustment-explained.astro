@@ -344,7 +344,119 @@ import AuthorPanel from '../components/AuthorPanel.astro';
         <p>This assumes the spring frequencies are correct, the car has travel to work in, and — where fitted — high-speed compression has already been set by the procedure above. Where two actions are given, the first is almost always the one acting on the end of the car that is not doing its job.</p>
 
         <figure class="guide-figure">
-          <figcaption>Balance traits — all four are rebound adjustments</figcaption>
+          <figcaption>The whole flow — symptom to first adjustment</figcaption>
+          <div class="figure-scroll">
+            <svg viewBox="0 0 1040 830" role="img" aria-labelledby="fig0title fig0desc" class="tftr-figure tftr-figure-wide">
+              <title id="fig0title">Damper adjustment decision flow, from symptom to first action</title>
+              <desc id="fig0desc">A flow diagram. It starts with a check that spring rates, travel and high-speed compression are correct, then branches by when the problem happens: on the brakes turning in, on the power exiting, body movement, or over the surface. Each branch gives the first adjustment. Two cases at the bottom have two valid opposite answers.</desc>
+
+              <g class="fig-line">
+                <path d="M520 84 L520 112"></path>
+                <path d="M137 112 L903 112"></path>
+                <path d="M137 112 L137 134"></path><path d="M392 112 L392 134"></path><path d="M647 112 L647 134"></path><path d="M903 112 L903 134"></path>
+                <path d="M137 240 L137 254"></path>
+                <path d="M392 240 L392 254"></path><path d="M392 368 L392 382"></path>
+                <path d="M647 240 L647 254"></path><path d="M647 368 L647 382"></path><path d="M647 496 L647 510"></path>
+                <path d="M903 240 L903 254"></path><path d="M903 368 L903 382"></path>
+                <path d="M265 686 L265 706"></path><path d="M150 706 L380 706"></path><path d="M150 706 L150 722"></path><path d="M380 706 L380 722"></path>
+                <path d="M775 686 L775 706"></path><path d="M660 706 L890 706"></path><path d="M660 706 L660 722"></path><path d="M890 706 L890 722"></path>
+              </g>
+
+              <rect class="fig-neutral" x="250" y="16" width="540" height="68" rx="4"></rect>
+              <text class="fig-title" x="520" y="41" text-anchor="middle" dominant-baseline="central">Before you touch an adjuster</text>
+              <text class="fig-sub" x="520" y="63" text-anchor="middle" dominant-baseline="central">Spring rates right? Travel available? High-speed compression already set?</text>
+
+              <text class="fig-head" x="137" y="152" text-anchor="middle" dominant-baseline="central">On the brakes, turning in</text>
+              <text class="fig-head" x="392" y="152" text-anchor="middle" dominant-baseline="central">On the power, exiting</text>
+              <text class="fig-head" x="647" y="152" text-anchor="middle" dominant-baseline="central">Body movement</text>
+              <text class="fig-head" x="903" y="152" text-anchor="middle" dominant-baseline="central">Over the surface</text>
+
+              <rect class="fig-neutral" x="20" y="178" width="235" height="62" rx="4"></rect>
+              <text class="fig-title" x="137" y="209" text-anchor="middle" dominant-baseline="central">Oversteer on turn-in</text>
+              <rect class="fig-add" x="20" y="254" width="235" height="70" rx="4"></rect>
+              <text class="fig-title" x="137" y="278" text-anchor="middle" dominant-baseline="central">More rear rebound</text>
+              <text class="fig-sub" x="137" y="301" text-anchor="middle" dominant-baseline="central">holds the lifting rear down</text>
+
+              <rect class="fig-neutral" x="275" y="178" width="235" height="62" rx="4"></rect>
+              <text class="fig-title" x="392" y="209" text-anchor="middle" dominant-baseline="central">Understeer on exit</text>
+              <rect class="fig-soft" x="275" y="254" width="235" height="70" rx="4"></rect>
+              <text class="fig-title" x="392" y="278" text-anchor="middle" dominant-baseline="central">Less front rebound</text>
+              <text class="fig-sub" x="392" y="301" text-anchor="middle" dominant-baseline="central">spring drives tyre down</text>
+
+              <rect class="fig-neutral" x="275" y="344" width="235" height="62" rx="4"></rect>
+              <text class="fig-title" x="392" y="375" text-anchor="middle" dominant-baseline="central">Oversteer on exit</text>
+              <rect class="fig-soft" x="275" y="382" width="235" height="70" rx="4"></rect>
+              <text class="fig-title" x="392" y="406" text-anchor="middle" dominant-baseline="central">Less rear rebound</text>
+              <text class="fig-sub" x="392" y="429" text-anchor="middle" dominant-baseline="central">same reasoning, other end</text>
+
+              <rect class="fig-neutral" x="530" y="178" width="235" height="62" rx="4"></rect>
+              <text class="fig-title" x="647" y="202" text-anchor="middle" dominant-baseline="central">Lazy, slow to</text>
+              <text class="fig-title" x="647" y="222" text-anchor="middle" dominant-baseline="central">take a set</text>
+              <rect class="fig-add" x="530" y="254" width="235" height="70" rx="4"></rect>
+              <text class="fig-title" x="647" y="278" text-anchor="middle" dominant-baseline="central">More low-speed compression</text>
+              <text class="fig-sub" x="647" y="301" text-anchor="middle" dominant-baseline="central">load arrives sooner</text>
+
+              <rect class="fig-neutral" x="530" y="344" width="235" height="62" rx="4"></rect>
+              <text class="fig-title" x="647" y="375" text-anchor="middle" dominant-baseline="central">Excessive dive</text>
+              <rect class="fig-add" x="530" y="382" width="235" height="70" rx="4"></rect>
+              <text class="fig-title" x="647" y="406" text-anchor="middle" dominant-baseline="central">More front LS compression</text>
+              <text class="fig-sub" x="647" y="429" text-anchor="middle" dominant-baseline="central">loads the tyre while braking</text>
+
+              <rect class="fig-neutral" x="530" y="472" width="235" height="62" rx="4"></rect>
+              <text class="fig-title" x="647" y="503" text-anchor="middle" dominant-baseline="central">Excessive squat</text>
+              <rect class="fig-add" x="530" y="510" width="235" height="70" rx="4"></rect>
+              <text class="fig-title" x="647" y="534" text-anchor="middle" dominant-baseline="central">More rear LS compression</text>
+              <text class="fig-sub" x="647" y="557" text-anchor="middle" dominant-baseline="central">loads the tyre on power</text>
+
+              <rect class="fig-neutral" x="785" y="178" width="235" height="62" rx="4"></rect>
+              <text class="fig-title" x="903" y="202" text-anchor="middle" dominant-baseline="central">Nervous, skating,</text>
+              <text class="fig-title" x="903" y="222" text-anchor="middle" dominant-baseline="central">chattering</text>
+              <rect class="fig-soft" x="785" y="254" width="235" height="70" rx="4"></rect>
+              <text class="fig-title" x="903" y="278" text-anchor="middle" dominant-baseline="central">Less rebound first</text>
+              <text class="fig-sub" x="903" y="301" text-anchor="middle" dominant-baseline="central">then less LS compression</text>
+
+              <rect class="fig-neutral" x="785" y="344" width="235" height="62" rx="4"></rect>
+              <text class="fig-title" x="903" y="375" text-anchor="middle" dominant-baseline="central">Harsh over kerbs only</text>
+              <rect class="fig-soft" x="785" y="382" width="235" height="70" rx="4"></rect>
+              <text class="fig-title" x="903" y="406" text-anchor="middle" dominant-baseline="central">Review both compression</text>
+              <text class="fig-sub" x="903" y="429" text-anchor="middle" dominant-baseline="central">settings, not just high speed</text>
+
+              <line class="fig-divider" x1="20" y1="612" x2="1020" y2="612"></line>
+              <text class="fig-head" x="520" y="640" text-anchor="middle" dominant-baseline="central">Two cases where either direction can be right</text>
+
+              <rect class="fig-neutral" x="130" y="660" width="270" height="50" rx="4"></rect>
+              <text class="fig-title" x="265" y="685" text-anchor="middle" dominant-baseline="central">Understeer on turn-in</text>
+              <rect class="fig-soft" x="35" y="722" width="230" height="72" rx="4"></rect>
+              <text class="fig-title" x="150" y="742" text-anchor="middle" dominant-baseline="central">Less front compression</text>
+              <text class="fig-sub" x="150" y="763" text-anchor="middle" dominant-baseline="central">more transfer, but slower</text>
+              <text class="fig-sub" x="150" y="781" text-anchor="middle" dominant-baseline="central">linear front piston</text>
+              <rect class="fig-add" x="275" y="722" width="230" height="72" rx="4"></rect>
+              <text class="fig-title" x="390" y="742" text-anchor="middle" dominant-baseline="central">More front LS compression</text>
+              <text class="fig-sub" x="390" y="763" text-anchor="middle" dominant-baseline="central">loads faster, more bite</text>
+              <text class="fig-sub" x="390" y="781" text-anchor="middle" dominant-baseline="central">digressive front piston</text>
+
+              <rect class="fig-neutral" x="640" y="660" width="270" height="50" rx="4"></rect>
+              <text class="fig-title" x="775" y="685" text-anchor="middle" dominant-baseline="central">Floats over crests</text>
+              <rect class="fig-soft" x="545" y="722" width="230" height="72" rx="4"></rect>
+              <text class="fig-title" x="660" y="742" text-anchor="middle" dominant-baseline="central">Less rebound</text>
+              <text class="fig-sub" x="660" y="763" text-anchor="middle" dominant-baseline="central">tyre leaving the road</text>
+              <text class="fig-sub" x="660" y="781" text-anchor="middle" dominant-baseline="central">keeps it in contact</text>
+              <rect class="fig-add" x="785" y="722" width="230" height="72" rx="4"></rect>
+              <text class="fig-title" x="900" y="742" text-anchor="middle" dominant-baseline="central">More rebound</text>
+              <text class="fig-sub" x="900" y="763" text-anchor="middle" dominant-baseline="central">chassis gaining momentum</text>
+              <text class="fig-sub" x="900" y="781" text-anchor="middle" dominant-baseline="central">catch it before it builds</text>
+            </svg>
+          </div>
+          <p class="figure-key">
+            <span class="key-swatch key-soft"></span> Take damping out
+            <span class="key-swatch key-add"></span> Add damping
+          </p>
+        </figure>
+
+        <p>The two figures below break the same information down into balance traits and load-timing traits, and each symptom is written out in full underneath.</p>
+
+        <figure class="guide-figure">
+          <figcaption>Balance traits — the four entry and exit cases</figcaption>
           <div class="figure-scroll">
             <svg viewBox="0 0 680 300" role="img" aria-labelledby="fig1title fig1desc" class="tftr-figure">
               <title id="fig1title">Rebound adjustments for understeer and oversteer at corner entry and corner exit</title>
@@ -357,8 +469,8 @@ import AuthorPanel from '../components/AuthorPanel.astro';
               <text class="fig-head" x="160" y="210" text-anchor="end" dominant-baseline="central">Oversteer</text>
 
               <rect class="fig-soft" x="170" y="68" width="210" height="80" rx="4"></rect>
-              <text class="fig-title" x="275" y="96" text-anchor="middle" dominant-baseline="central">Soften front rebound</text>
-              <text class="fig-sub" x="275" y="120" text-anchor="middle" dominant-baseline="central">then less rear rebound</text>
+              <text class="fig-title" x="275" y="96" text-anchor="middle" dominant-baseline="central">Front compression first</text>
+              <text class="fig-sub" x="275" y="120" text-anchor="middle" dominant-baseline="central">either direction — see below</text>
 
               <rect class="fig-soft" x="400" y="68" width="210" height="80" rx="4"></rect>
               <text class="fig-title" x="505" y="96" text-anchor="middle" dominant-baseline="central">Less front rebound</text>
@@ -383,9 +495,15 @@ import AuthorPanel from '../components/AuthorPanel.astro';
 
         <h3>Understeer on turn-in</h3>
 
-        <p><strong>First:</strong> soften front rebound, and take a little front low-speed compression out. This gets the weight transferring onto the front and gets load into the front contact patch.</p>
+        <p>This is the one balance trait where both directions genuinely work, because they work by different mechanisms. Front compression is the circuit doing the job here — under braking the front is compressing, so that is where the adjustment has authority.</p>
 
-        <p><strong>If that is not enough:</strong> reduce rear rebound, making the rear a little less stable to help the car rotate. Second move, not first.</p>
+        <p><strong>Less front compression</strong> lets the front travel more freely, so more weight transfers onto it. More load eventually, but it takes longer to arrive.</p>
+
+        <p><strong>More front low-speed compression</strong> makes the damper resist sooner, so the front tyre loads up faster. Less total transfer, but the bite arrives on turn-in, which is when you want it. A good digressive front piston is what makes this viable without the harshness that would normally come with it.</p>
+
+        <p>The piston type is a starting point rather than a rule — it is not that clean in practice. Which direction is right depends on the car, the tyres and what you are chasing. Try one, in a step big enough to feel, and be prepared to put it back.</p>
+
+        <p><strong>If neither is enough:</strong> reduce rear rebound, making the rear a little less stable to help the car rotate. Second move, not first.</p>
 
         <h3>Oversteer on turn-in</h3>
 
@@ -992,6 +1110,28 @@ import AuthorPanel from '../components/AuthorPanel.astro';
     fill: rgba(239, 159, 39, 0.12);
     stroke: #EF9F27;
     stroke-width: 1;
+  }
+
+  .fig-neutral {
+    fill: rgba(255, 255, 255, 0.04);
+    stroke: rgba(255, 255, 255, 0.22);
+    stroke-width: 1;
+  }
+
+  .fig-line path {
+    stroke: rgba(255, 255, 255, 0.28);
+    stroke-width: 1.5;
+    fill: none;
+  }
+
+  .fig-divider {
+    stroke: rgba(255, 255, 255, 0.18);
+    stroke-width: 1;
+    stroke-dasharray: 4 4;
+  }
+
+  .tftr-figure-wide {
+    min-width: 900px;
   }
 
   .fig-head {
