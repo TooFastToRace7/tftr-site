@@ -1,0 +1,348 @@
+---
+export interface GalleryImage {
+  src: string;
+  alt: string;
+}
+
+export interface Props {
+  images?: GalleryImage[];
+  caption?: string;
+}
+
+const { images = [], caption } = Astro.props;
+const hasImages = images.length > 0;
+const hasThumbs = images.length > 1;
+---
+
+{hasImages && (
+  <div class="pg-root" data-gallery>
+    <button type="button" class="pg-main" data-pg-open aria-label="Enlarge image">
+      <img
+        src={images[0].src}
+        alt={images[0].alt}
+        data-pg-main-img
+        data-index="0"
+        width="1200"
+        height="900"
+        loading="lazy"
+      />
+      <span class="pg-zoom-hint" aria-hidden="true">Click to enlarge</span>
+    </button>
+
+    {hasThumbs && (
+      <div class="pg-thumbs" role="list">
+        {images.map((image, i) => (
+          <button
+            type="button"
+            class:list={["pg-thumb", { "is-active": i === 0 }]}
+            data-pg-thumb
+            data-index={i}
+            data-src={image.src}
+            data-alt={image.alt}
+            role="listitem"
+            aria-label={`View image ${i + 1}: ${image.alt}`}
+          >
+            <img src={image.src} alt="" width="300" height="225" loading="lazy" />
+          </button>
+        ))}
+      </div>
+    )}
+
+    {caption && <p class="pg-caption">{caption}</p>}
+  </div>
+)}
+
+<style>
+  .pg-root {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .pg-main {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: var(--tftr-white);
+    border: none;
+    border-radius: 6px;
+    padding: var(--space-md);
+    cursor: zoom-in;
+    overflow: hidden;
+  }
+
+  .pg-main img {
+    width: 100%;
+    height: auto;
+    max-height: 460px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .pg-main:hover img {
+    transform: scale(1.02);
+  }
+
+  .pg-zoom-hint {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.4rem 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .pg-main:hover .pg-zoom-hint,
+  .pg-main:focus-visible .pg-zoom-hint {
+    opacity: 1;
+  }
+
+  .pg-thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .pg-thumb {
+    background: var(--tftr-white);
+    border: 2px solid transparent;
+    border-radius: 4px;
+    padding: 0.35rem;
+    cursor: pointer;
+    aspect-ratio: 4 / 3;
+    transition: border-color 0.25s ease, opacity 0.25s ease;
+    opacity: 0.6;
+  }
+
+  .pg-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .pg-thumb:hover,
+  .pg-thumb:focus-visible {
+    opacity: 1;
+  }
+
+  .pg-thumb.is-active {
+    border-color: var(--tftr-green);
+    opacity: 1;
+  }
+
+  .pg-caption {
+    color: var(--tftr-grey);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    .pg-main {
+      padding: var(--space-sm);
+    }
+  }
+</style>
+
+<style is:global>
+  /* Lightbox — global because the overlay is appended to <body> */
+  .pg-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .pg-lightbox.is-open {
+    display: flex;
+  }
+
+  .pg-lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .pg-lightbox-btn {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+  }
+
+  .pg-lightbox-btn:hover {
+    background: rgba(92, 184, 92, 0.3);
+  }
+
+  .pg-lightbox-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .pg-lightbox-prev {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .pg-lightbox-next {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .pg-lightbox-count {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+  }
+
+  body.pg-locked {
+    overflow: hidden;
+  }
+
+  @media (max-width: 600px) {
+    .pg-lightbox {
+      padding: 4rem 0.5rem;
+    }
+
+    .pg-lightbox-prev {
+      left: 0.5rem;
+    }
+
+    .pg-lightbox-next {
+      right: 0.5rem;
+    }
+  }
+</style>
+
+<script>
+  function initProductGalleries() {
+    const galleries = document.querySelectorAll<HTMLElement>('[data-gallery]');
+    if (!galleries.length) return;
+
+    // Build one shared lightbox for the whole page
+    const box = document.createElement('div');
+    box.className = 'pg-lightbox';
+    box.innerHTML = `
+      <img class="pg-lightbox-img" src="" alt="" />
+      <button type="button" class="pg-lightbox-btn pg-lightbox-close" aria-label="Close">&times;</button>
+      <button type="button" class="pg-lightbox-btn pg-lightbox-prev" aria-label="Previous image">&#8249;</button>
+      <button type="button" class="pg-lightbox-btn pg-lightbox-next" aria-label="Next image">&#8250;</button>
+      <span class="pg-lightbox-count"></span>
+    `;
+    document.body.appendChild(box);
+
+    const boxImg = box.querySelector<HTMLImageElement>('.pg-lightbox-img')!;
+    const boxCount = box.querySelector<HTMLElement>('.pg-lightbox-count')!;
+    const btnPrev = box.querySelector<HTMLElement>('.pg-lightbox-prev')!;
+    const btnNext = box.querySelector<HTMLElement>('.pg-lightbox-next')!;
+
+    let active: { src: string; alt: string }[] = [];
+    let index = 0;
+
+    function show(i: number) {
+      if (!active.length) return;
+      index = (i + active.length) % active.length;
+      boxImg.src = active[index].src;
+      boxImg.alt = active[index].alt;
+      boxCount.textContent = active.length > 1 ? `${index + 1} / ${active.length}` : '';
+      const multiple = active.length > 1;
+      btnPrev.style.display = multiple ? 'flex' : 'none';
+      btnNext.style.display = multiple ? 'flex' : 'none';
+    }
+
+    function open() {
+      box.classList.add('is-open');
+      document.body.classList.add('pg-locked');
+    }
+
+    function close() {
+      box.classList.remove('is-open');
+      document.body.classList.remove('pg-locked');
+    }
+
+    galleries.forEach((gallery) => {
+      const mainImg = gallery.querySelector<HTMLImageElement>('[data-pg-main-img]');
+      const thumbs = Array.from(gallery.querySelectorAll<HTMLElement>('[data-pg-thumb]'));
+      const openBtn = gallery.querySelector<HTMLElement>('[data-pg-open]');
+      if (!mainImg) return;
+
+      const items = thumbs.length
+        ? thumbs.map((t) => ({
+            src: t.dataset.src || '',
+            alt: t.dataset.alt || '',
+          }))
+        : [{ src: mainImg.src, alt: mainImg.alt }];
+
+      thumbs.forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+          const i = Number(thumb.dataset.index || 0);
+          mainImg.src = items[i].src;
+          mainImg.alt = items[i].alt;
+          mainImg.dataset.index = String(i);
+          thumbs.forEach((t) => t.classList.remove('is-active'));
+          thumb.classList.add('is-active');
+        });
+      });
+
+      openBtn?.addEventListener('click', () => {
+        active = items;
+        show(Number(mainImg.dataset.index || 0));
+        open();
+      });
+    });
+
+    btnPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      show(index - 1);
+    });
+
+    btnNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      show(index + 1);
+    });
+
+    box.querySelector('.pg-lightbox-close')?.addEventListener('click', close);
+
+    box.addEventListener('click', (e) => {
+      if (e.target === box || e.target === boxImg) close();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!box.classList.contains('is-open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(index - 1);
+      if (e.key === 'ArrowRight') show(index + 1);
+    });
+  }
+
+  initProductGalleries();
+  document.addEventListener('astro:page-load', initProductGalleries);
+</script>
