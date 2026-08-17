@@ -77,8 +77,11 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
         "Lotus Seven",
         "Lotus 7",
         "Chassis Development",
-        "Motorsport Engineering"
-      ],
+        "Motorsport Engineering",
+        "Kawasaki H2 Engine",
+        "Motorcycle Engine Car Conversion",
+        "Dry Sump Systems"
+      ],,
       "sameAs": []
     }
     </script>
@@ -131,6 +134,19 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
               <li><a href="/caterham/suspension-buyers-guide">Suspension Buyer's Guide</a></li>
               <li><a href="/caterham/os-giken-lsd">OS Giken LSD</a></li>
               <li><a href="/caterham/os-giken-dual-core-lsd">OS Giken Dual Core LSD</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/kawasaki-h2">Kawasaki H2 <span class="dropdown-arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/kawasaki-h2">H2 Overview &amp; Engine Guide</a></li>
+              <li><a href="/kawasaki-h2/dry-sump-kit">Dry Sump System</a></li>
+              <li><a href="/kawasaki-h2/oil-cooler-blanking-plate">Oil Cooler Blanking Plate</a></li>
+              <li><a href="/kawasaki-h2/high-volume-oil-pump">High Volume Oil Pump</a></li>
+              <li><a href="/kawasaki-h2/pair-block-off-plates">PAIR Block Off Plates</a></li>
+              <li><a href="/kawasaki-h2/wiring-loom">Motorsport Wiring Loom</a></li>
+              <li><a href="/kawasaki-h2/ecu-options">ECU Options</a></li>
+              <li><a href="/kawasaki-h2/mbe-9a9-ecu">MBE 9A9 ECU &amp; Map</a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -191,7 +207,17 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
             <li><a href="/caterham/suspension-buyers-guide">Suspension Buyer's Guide</a></li>
             <li><a href="/caterham/os-giken-lsd">OS Giken LSD</a></li>
             <li><a href="/caterham/os-giken-dual-core-lsd">OS Giken Dual Core LSD</a></li>
-            <li><a href="/kawasaki-h2-parts">Kawasaki H2 Parts</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h2>Kawasaki H2</h2>
+          <ul>
+            <li><a href="/kawasaki-h2">H2 Overview</a></li>
+            <li><a href="/kawasaki-h2/dry-sump-kit">Dry Sump System</a></li>
+            <li><a href="/kawasaki-h2/oil-cooler-blanking-plate">Oil Cooler Blanking Plate</a></li>
+            <li><a href="/kawasaki-h2/high-volume-oil-pump">High Volume Oil Pump</a></li>
+            <li><a href="/kawasaki-h2/wiring-loom">Motorsport Wiring Loom</a></li>
+            <li><a href="/kawasaki-h2/mbe-9a9-ecu">MBE 9A9 ECU &amp; Map</a></li>
           </ul>
         </div>
         <div class="footer-links">
@@ -589,7 +615,7 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
     margin: 0 auto;
     padding: 0 var(--container-padding);
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr repeat(6, 1fr);
     gap: var(--space-lg) var(--space-md);
     align-items: start;
   }
