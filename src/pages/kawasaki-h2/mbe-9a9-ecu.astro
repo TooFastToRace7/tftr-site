@@ -1,0 +1,441 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+
+// Gallery images. Add entries as photographs are uploaded to
+// /public/images/kawasaki-h2/ — the gallery renders nothing while this is empty.
+const galleryImages = [
+  // { src: '/images/kawasaki-h2/mbe-9a9-01.jpg', alt: 'MBE 9A9 motorsport ECU supplied for the Kawasaki H2 engine' },
+  // { src: '/images/kawasaki-h2/mbe-9a9-02.jpg', alt: 'MBE 9A9 ECU connector detail' }
+];
+
+// NOTE: `offers` is deliberately omitted while pricing is being finalised.
+// The ECU is built to customer specification, so a base price plus options may
+// be the honest structure here rather than a single figure.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "MBE 9A9 ECU with Kawasaki H2 Map",
+  "description": "MBE 9A9 motorsport ECU supplied with a Kawasaki supercharged H2 base map developed by Too Fast To Race. Full sequential fuelling, fly-by-wire throttle control, twin wideband lambda, launch and traction control and data logging for H2 car installations.",
+  "brand": {
+    "@type": "Brand",
+    "name": "MBE Systems"
+  },
+  "category": "Motorsport Engine Management System",
+  "url": "https://toofasttorace.com/kawasaki-h2/mbe-9a9-ecu"
+};
+---
+
+<Layout title="MBE 9A9 ECU & Kawasaki H2 Map | Engine Management | Too Fast To Race" description="MBE 9A9 motorsport ECU supplied with our own Kawasaki H2 base map. Full sequential fuelling, fly-by-wire throttle, twin wideband lambda, launch and traction control and data logging — configured for the supercharged H2 in car installations.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>MBE 9A9 ECU <span class="text-green">& H2 Map</span></h1>
+      <p class="hero-subtitle">A proven motorsport ECU, supplied with our own Kawasaki H2 base map. The hardware is available from several places — the calibration that makes a supercharged H2 run properly in a car is what you are actually buying.</p>
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="kit-summary-section">
+    <div class="container">
+      <div class="kit-summary">
+        <div class="kit-price">
+          <span class="price-label">Pricing</span>
+          <span class="price-pending">To Follow</span>
+          <span class="price-note">Specification dependent</span>
+        </div>
+        <div class="kit-specs">
+          <div class="spec">
+            <span class="spec-label">ECU</span>
+            <span class="spec-value">MBE 9A9</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Fuelling</span>
+            <span class="spec-value">8 Sequential Drives</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Throttle</span>
+            <span class="spec-value">Fly-by-Wire Capable</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Base Map</span>
+            <span class="spec-value">Developed In-House</span>
+          </div>
+        </div>
+        <a href="/contact" class="btn btn-primary">Discuss Your ECU</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="kit-content">
+    <div class="container">
+      <ProductGallery images={galleryImages} />
+
+      <div class="content-block">
+        <h2>The Map Is the <span class="text-green">Product</span></h2>
+        <p>The MBE 9A9 is a well-established motorsport ECU, supplied to us by MBE's UK distributor SBD Motorsport. It is capable hardware and it is not exclusive to us — several suppliers sell the same unit.</p>
+        <p>What is not widely available is a base map for a supercharged Kawasaki H2 running in a car. That is ours, developed on our own engines through the same work that produced our <a href="/kawasaki-h2/dry-sump-kit">dry sump system</a>, and it is the difference between an ECU that arrives ready to start your engine and a box of potential you then pay someone to unlock.</p>
+        <p>Every unit is built to specification, so we need your full engine details at the point of order — variant, injectors, sensors, and what the car is being used for.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Why This ECU Suits <span class="text-green">the H2</span></h2>
+        <p>Three capabilities matter more than the rest on this engine.</p>
+        <p><strong>Fly-by-wire throttle control.</strong> The H2 is a ride-by-wire engine. An ECU that cannot properly drive and monitor an electronic throttle is not a candidate, whatever else it offers. This is the single most common reason budget standalone systems fail on this platform.</p>
+        <p><strong>Eight sequential fuel drives.</strong> A four-cylinder needs four — but the 9A9 supports upper and lower injectors on a four-cylinder, which gives real headroom if fuelling demand grows beyond what a single set of injectors will deliver. On a forced-induction engine that is worth having in reserve.</p>
+        <p><strong>Twin wideband lambda inputs.</strong> Closed-loop fuelling against a target lambda map is genuinely useful on a supercharged engine, where charge temperature and ambient conditions move the mixture around more than they would on a naturally aspirated one.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="included-col">
+          <h3>Core Capability</h3>
+          <ul class="kit-list">
+            <li>Eight sequential fuel drives, saturated injectors</li>
+            <li>Fly-by-wire (Egas) throttle control</li>
+            <li>Twin wideband lambda inputs, closed-loop target lambda mapping</li>
+            <li>Crank sensor and trigger wheel input — the original crank sensor can usually be retained</li>
+            <li>Manifold pressure, barometric, air temperature and water temperature inputs</li>
+            <li>High side and low side drivers — outputs driven directly or via relay</li>
+          </ul>
+        </div>
+        <div class="included-col">
+          <h3>Motorsport Functions</h3>
+          <ul class="kit-list">
+            <li>Launch control and traction control</li>
+            <li>Gearbox control and power shift</li>
+            <li>Pit lane limiter and rain light</li>
+            <li>Shift light and combined warning system outputs</li>
+            <li>Radiator fan, fuel pump, idle and electric water pump outputs</li>
+            <li>Onboard data logging, histograms and CAN data stream</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>Specified Alongside <span class="text-green">the Loom</span></h2>
+        <p>The ECU and the <a href="/kawasaki-h2/wiring-loom">wiring loom</a> should be specified together, not separately. Our looms are built to terminate correctly for your chosen ECU and to the distances in your car, which means the two arrive as a matched pair rather than as two components you then have to reconcile.</p>
+        <p>Two loom options tie directly to functions on this ECU. Wheel speed sensor connections are what make launch control and traction control meaningful rather than nominal — without them, both are working blind. Paddle shift integration pairs with the gearbox control and power shift functions. Both are far cheaper to build into the loom at the outset than to retro-fit afterwards.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>An Honest Note on <span class="text-green">Boost Control</span></h2>
+        <p>The 9A9 carries turbo and anti-lag outputs, and they are genuine capabilities — but they have limited relevance here, and we would rather say so than let a spec list imply otherwise.</p>
+        <p>The H2 supercharger is mechanically driven from the crankshaft through a fixed step-up gear train. There is no wastegate and no boost controller in the turbocharged sense: boost is a function of engine speed and impeller gearing. Boost management on this engine is therefore a mapping exercise — ignition, fuelling and knock margin — rather than a control-valve exercise.</p>
+        <p>That matters most on the high-compression Z H2 and H2 SX engines, where the knock threshold sits closer than it does on the 8.5:1 Ninja H2. The calibration is where boost is managed, which is precisely why the map is the part of this package worth paying for. Our <a href="/kawasaki-h2">H2 engine reference</a> explains that difference in full.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Software and <span class="text-green">Support</span></h2>
+        <p>Calibration and setup use MBE's Easimap 6 software, connecting to the ECU via a USB/CAN interface. The software itself is a free download from MBE; the interface, mapping kits and formal technical support are supplied through SBD as UK distributor.</p>
+        <p>We supply the base map and can advise on running changes for your installation. If you intend to develop the calibration yourself, tell us at the point of order and we will make sure you have what you need to do that sensibly rather than starting from a locked position.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related H2 Engineering</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/kawasaki-h2/wiring-loom" class="related-card">
+          <h3>Motorsport Wiring Loom</h3>
+          <p>Built to terminate for your ECU and to the distances in your car. Specify both together.</p>
+          <span class="related-link">Wiring Loom →</span>
+        </a>
+        <a href="/kawasaki-h2/ecu-options" class="related-card">
+          <h3>ECU Options</h3>
+          <p>What H2 engine management actually has to handle, and how the choices compare.</p>
+          <span class="related-link">ECU Options →</span>
+        </a>
+        <a href="/kawasaki-h2/dry-sump-kit" class="related-card">
+          <h3>Dry Sump System</h3>
+          <p>Three-stage scavenge. The single most important change when putting an H2 engine in a car.</p>
+          <span class="related-link">Dry Sump →</span>
+        </a>
+        <a href="/kawasaki-h2/oil-cooler-blanking-plate" class="related-card">
+          <h3>OE Oil Cooler Blanking Plate</h3>
+          <p>Deletes the factory oil/water heat exchanger for installations running their own oil cooling.</p>
+          <span class="related-link">Blanking Plate →</span>
+        </a>
+        <a href="/kawasaki-h2" class="related-card">
+          <h3>H2 Engine Reference</h3>
+          <p>The variants, how they genuinely differ, and what a conversion actually requires. Free PDF.</p>
+          <span class="related-link">Read the Reference →</span>
+        </a>
+        <a href="/contact" class="related-card">
+          <h3>Conversion Support</h3>
+          <p>ECU, loom, oil system and cooling specified as one package rather than part by part.</p>
+          <span class="related-link">Get in Touch →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Specify Your System</h2>
+        <p>Send us your engine variant, injector and sensor specification and how the car will be used. We will confirm the build and supply it mapped and ready to start.</p>
+        <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  /* Summary */
+  .kit-summary-section {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .kit-summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-lg);
+    align-items: center;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+    border-left: 3px solid var(--tftr-green);
+    padding: var(--space-md);
+  }
+
+  .kit-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .price-pending {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--tftr-green);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--tftr-grey);
+  }
+
+  .kit-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .spec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .spec-value {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--tftr-white);
+  }
+
+  /* Content */
+  .kit-content {
+    background: var(--tftr-black);
+  }
+
+  .content-block {
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-block p strong {
+    color: var(--tftr-white);
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .included-col {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .included-col h3 {
+    font-size: 1.1rem;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .kit-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .kit-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--tftr-green);
+  }
+
+  /* Related */
+  .related-section {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    margin-top: auto;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .kit-summary {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .kit-specs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .included-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

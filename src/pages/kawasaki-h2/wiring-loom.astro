@@ -1,0 +1,432 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+
+// Gallery images. Add entries as photographs are uploaded to
+// /public/images/kawasaki-h2/ — the gallery renders nothing while this is empty,
+// so the page is safe to publish before photography is done.
+const galleryImages = [
+  // { src: '/images/kawasaki-h2/loom-01.jpg', alt: 'Bespoke motorsport wiring loom for the Kawasaki H2 engine' },
+  // { src: '/images/kawasaki-h2/loom-02.jpg', alt: 'Loom engine-end terminations and sensor connectors' }
+];
+
+// NOTE: `offers` is deliberately omitted — this is a made-to-order product and
+// pricing depends on specification. If a fixed base price is published later,
+// add an "offers" object matching the Caterham kit pages.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kawasaki H2 Bespoke Motorsport Wiring Loom",
+  "description": "Bespoke motorsport wiring loom built to suit the Kawasaki supercharged H2 engine in car installations. Variable-length tails specified at point of order, ECU choice optional, with paddle shift and wheel speed sensor integration available.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Too Fast To Race"
+  },
+  "category": "Motorsport Wiring Loom",
+  "url": "https://toofasttorace.com/kawasaki-h2/wiring-loom"
+};
+---
+
+<Layout title="Kawasaki H2 Motorsport Wiring Loom | Made to Order | Too Fast To Race" description="Bespoke motorsport wiring loom for the Kawasaki H2 engine in car installations. Variable-length tails specified to your car, ECU choice optional, with paddle shift and wheel speed sensor integration available. Every loom built to order.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>H2 Motorsport <span class="text-green">Wiring Loom</span></h1>
+      <p class="hero-subtitle">A bespoke motorsport loom built around the H2 engine and around your car. Every tail length specified at point of order, so the loom arrives to fit rather than arriving to be adapted.</p>
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="kit-summary-section">
+    <div class="container">
+      <div class="kit-summary">
+        <div class="kit-price">
+          <span class="price-label">Pricing</span>
+          <span class="price-pending">To Follow</span>
+          <span class="price-note">Specification dependent</span>
+        </div>
+        <div class="kit-specs">
+          <div class="spec">
+            <span class="spec-label">Build</span>
+            <span class="spec-value">Made to Order</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Tail Lengths</span>
+            <span class="spec-value">Specified by You</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">ECU</span>
+            <span class="spec-value">Your Choice</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Options</span>
+            <span class="spec-value">Paddle Shift · Wheel Speed</span>
+          </div>
+        </div>
+        <a href="/contact" class="btn btn-primary">Specify Your Loom</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="kit-content">
+    <div class="container">
+      <ProductGallery images={galleryImages} />
+
+      <div class="content-block">
+        <h2>The Factory Loom <span class="text-green">Cannot Come With You</span></h2>
+        <p>This is the point at which a large proportion of H2 conversion projects stall — usually with the engine already in the car and the budget already spent.</p>
+        <p>The motorcycle loom and ECU expect to see a motorcycle. The immobiliser and security integration will not permit the engine to run without motorcycle-specific components present. Throttle actuation is ride-by-wire and has to be correctly reproduced. Motorcycle sensors and connector standards are not always appropriate to a car's vibration, heat and moisture exposure. And none of the things a car actually needs — cooling fan control, fuel pump control, dash feed, warning strategy, data logging — are provided for in any usable form.</p>
+        <p>Removing the factory electrics entirely is not a shortcut taken to save effort. It is the only route that produces a car that starts reliably, runs predictably and can be diagnosed when something is wrong.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Built to Your <span class="text-green">Installation</span></h2>
+        <p>Every loom is made to order. Rather than supplying a fixed harness with generous slack coiled up behind the bulkhead, we build to the distances in your car: you specify where the ECU sits and where each ancillary lives, and the tails are made to those lengths.</p>
+        <p>That matters for more than tidiness. Excess loom length adds weight, creates chafe points, complicates fault-finding and gives you somewhere for water to collect. A loom cut to the car is lighter, easier to route, easier to diagnose and considerably better looking — which, on a car where the engine bay is on display, is not a trivial consideration.</p>
+        <p>ECU choice is yours. Tell us what you are running, or discuss it with us first via our <a href="/kawasaki-h2/ecu-options">ECU options</a>, and the loom is built to terminate correctly for it.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="included-col">
+          <h3>Available Options</h3>
+          <ul class="kit-list">
+            <li>Paddle shift integration built into the loom</li>
+            <li>Wheel speed sensor connections for launch control and traction control</li>
+            <li>Both supplied with variable tail lengths to your specified end points</li>
+            <li>Terminated to suit your chosen ECU</li>
+          </ul>
+        </div>
+        <div class="included-col">
+          <h3>What We Need From You</h3>
+          <ul class="kit-list">
+            <li>Engine variant — Ninja H2, H2R, H2 SX or Z H2</li>
+            <li>ECU type and its mounting location in the car</li>
+            <li>Distances from the engine to each ancillary location</li>
+            <li>Whether paddle shift is required, and where the paddles mount</li>
+            <li>Whether wheel speed sensors are being fitted, and at which corners</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>Paddle Shift <span class="text-green">and Traction Control</span></h2>
+        <p>Both options are worth deciding on before the loom is built rather than after. Retro-fitting either to a finished loom means either splicing into a harness you paid to have made properly, or building a second one.</p>
+        <p>Paddle shift integration brings the shift control into the same loom rather than running as a separate parallel system — fewer connectors, fewer failure points, one harness to diagnose.</p>
+        <p>Wheel speed sensor provision is what makes meaningful launch control and traction control possible. On an engine with this much torque in a light car, that is not a luxury feature. Even if you do not intend to enable them immediately, having the connections in place costs very little at build time and a great deal afterwards.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Engine <span class="text-green">Variants</span></h2>
+        <p>Looms are built for the supercharged H2 family. Confirm your engine variant when ordering — the variants differ in specification, and the loom is built for the engine you actually have rather than for the family in general.</p>
+        <p>If you are unsure which you have, our <a href="/kawasaki-h2">H2 engine reference</a> explains how to identify one properly. The engine number prefix alone will not tell you, because it is shared across the whole family.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related H2 Engineering</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/kawasaki-h2/ecu-options" class="related-card">
+          <h3>Standalone ECU Options</h3>
+          <p>Engine management configured for the H2 in car use. Specify the ECU and the loom together.</p>
+          <span class="related-link">ECU Options →</span>
+        </a>
+        <a href="/kawasaki-h2/dry-sump-kit" class="related-card">
+          <h3>Dry Sump System</h3>
+          <p>Three-stage scavenge. The single most important change when putting an H2 engine in a car.</p>
+          <span class="related-link">Dry Sump →</span>
+        </a>
+        <a href="/kawasaki-h2/oil-cooler-blanking-plate" class="related-card">
+          <h3>OE Oil Cooler Blanking Plate</h3>
+          <p>Deletes the factory oil/water heat exchanger for installations running their own oil cooling.</p>
+          <span class="related-link">Blanking Plate →</span>
+        </a>
+        <a href="/kawasaki-h2/pair-block-off-plates" class="related-card">
+          <h3>PAIR Block Off Plates</h3>
+          <p>Removes redundant motorcycle emissions hardware and simplifies the engine for car installation.</p>
+          <span class="related-link">PAIR Plates →</span>
+        </a>
+        <a href="/kawasaki-h2" class="related-card">
+          <h3>H2 Engine Reference</h3>
+          <p>The variants, how they genuinely differ, and what a conversion actually requires. Free PDF.</p>
+          <span class="related-link">Read the Reference →</span>
+        </a>
+        <a href="/contact" class="related-card">
+          <h3>Conversion Support</h3>
+          <p>Loom, ECU, oil system and cooling specified as one package rather than part by part.</p>
+          <span class="related-link">Get in Touch →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Specify Your Loom</h2>
+        <p>Send us the engine variant, your ECU choice and the distances in your car. We will confirm the specification and build the loom to it.</p>
+        <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  /* Summary */
+  .kit-summary-section {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .kit-summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-lg);
+    align-items: center;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+    border-left: 3px solid var(--tftr-green);
+    padding: var(--space-md);
+  }
+
+  .kit-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .price-pending {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--tftr-green);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--tftr-grey);
+  }
+
+  .kit-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .spec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .spec-value {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--tftr-white);
+  }
+
+  /* Content */
+  .kit-content {
+    background: var(--tftr-black);
+  }
+
+  .content-block {
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-block p strong {
+    color: var(--tftr-white);
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .included-col {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .included-col h3 {
+    font-size: 1.1rem;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .kit-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .kit-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--tftr-green);
+  }
+
+  /* Related */
+  .related-section {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    margin-top: auto;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .kit-summary {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .kit-specs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .included-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

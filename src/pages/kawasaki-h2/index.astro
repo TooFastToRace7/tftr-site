@@ -1,1 +1,791 @@
+---
+import Layout from '../../layouts/Layout.astro';
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Kawasaki H2 Engine Parts & Conversion Components",
+  "description": "Specialist components for the Kawasaki supercharged H2 engine in car installations — dry sump systems, oil cooler blanking plates, wiring looms, ECU options, uprated oil pump gears, PAIR block off plates and clutch spring upgrades.",
+  "url": "https://toofasttorace.com/kawasaki-h2",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Kawasaki H2 Dry Sump System",
+      "url": "https://toofasttorace.com/kawasaki-h2/dry-sump-kit"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kawasaki H2 OE Oil Cooler Blanking Plate",
+      "url": "https://toofasttorace.com/kawasaki-h2/oil-cooler-blanking-plate"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kawasaki H2 Car Conversion Wiring Loom",
+      "url": "https://toofasttorace.com/kawasaki-h2/wiring-loom"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Kawasaki H2 Standalone ECU Options",
+      "url": "https://toofasttorace.com/kawasaki-h2/ecu-options"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Kawasaki H2 High Volume Oil Pump",
+      "url": "https://toofasttorace.com/kawasaki-h2/high-volume-oil-pump"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Kawasaki H2 PAIR Block Off Plates",
+      "url": "https://toofasttorace.com/kawasaki-h2/pair-block-off-plates"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "MBE 9A9 ECU with Kawasaki H2 Map",
+      "url": "https://toofasttorace.com/kawasaki-h2/mbe-9a9-ecu"
+    }
+  ]
+};
+---
+
+<Layout title="Kawasaki H2 Engine Parts & Dry Sump Systems | Too Fast To Race" description="Specialist Kawasaki supercharged H2 engine parts for car installations — dry sump systems, high volume oil pumps, oil cooler blanking plates, motorsport wiring looms and standalone ECU options. Developed from real conversion experience.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Kawasaki H2 <span class="text-green">Engine Parts & Conversion Engineering</span></h1>
+      <p class="hero-subtitle">Specialist components for the supercharged H2 engine in cars — dry sump systems, oil control, looms and engine management. Developed from real conversion work, not adapted from motorcycle parts.</p>
+    </div>
+  </section>
+
+  <!-- Intro + Guide Download -->
+  <section class="hub-intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="content-block">
+          <h2>An Extraordinary Engine, <span class="text-green">With Conditions</span></h2>
+          <p>The Kawasaki supercharged H2 is one of the most compelling engines available to a car builder — 998cc, forced induction from the ground up, and a power-to-weight ratio that very little else approaches at the money. It has found its way into lightweight sports cars, kit and component cars, sports racing cars, single-seaters, hillclimb specials and one-off chassis of every description.</p>
+          <p>It also has requirements that the original motorcycle never had to meet. Oil control under sustained lateral loading, thermal management outside a motorcycle's airflow, and a complete replacement of the factory electrics are not optional extras — they are the difference between an engine that lasts and one that does not. Those three problems are what our H2 components exist to solve.</p>
+        </div>
+
+        <aside class="guide-aside">
+          <span class="kit-card-brand">Read First</span>
+          <h3>The H2 Engine Family Reference</h3>
+          <p>Our full technical reference on the supercharged H2 platform — the variants and how they genuinely differ, how to identify an engine correctly, why the standard lubrication system becomes the limiting factor in a car, and what a conversion actually requires.</p>
+          <a href="/downloads/kawasaki-h2-engine-reference.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download the Reference (PDF)</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engine Synopsis -->
+  <section class="synopsis-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Understanding the <span class="text-green">H2 Platform</span></h2>
+        <p>A short summary of what matters before you buy an engine. The full detail is in the downloadable reference above.</p>
+      </div>
+
+      <div class="synopsis-grid">
+        <div class="synopsis-block">
+          <h3>One Family, Two Engine Specifications</h3>
+          <p>The H2 range is frequently discussed as though it were a single engine. It is not. The family splits into two genuinely different builds, and the difference is mechanical rather than a matter of calibration.</p>
+          <p>The <strong>Ninja H2 and H2R</strong> run low compression with higher boost. The <strong>Ninja H2 SX and Z H2</strong> run high compression with more moderate boost, using a different cylinder head, camshafts, crankshaft and pistons, along with a different supercharger impeller and plenum chamber.</p>
+
+          <div class="spec-table">
+            <div class="spec-row spec-row-head">
+              <span>Model</span>
+              <span>Compression</span>
+              <span>Claimed Power</span>
+            </div>
+            <div class="spec-row">
+              <span>Ninja H2 (2015–2018)</span>
+              <span>8.5:1</span>
+              <span>200 PS</span>
+            </div>
+            <div class="spec-row">
+              <span>Ninja H2 (2019 on)</span>
+              <span>8.5:1</span>
+              <span>231 PS</span>
+            </div>
+            <div class="spec-row">
+              <span>Ninja H2R</span>
+              <span>8.3:1</span>
+              <span>310 PS</span>
+            </div>
+            <div class="spec-row">
+              <span>Ninja H2 SX / SX SE</span>
+              <span>11.2:1</span>
+              <span>200 PS</span>
+            </div>
+            <div class="spec-row">
+              <span>Z H2 / Z H2 SE</span>
+              <span>11.2:1</span>
+              <span>200 PS</span>
+            </div>
+          </div>
+
+          <p>Compression ratio dictates the boost ceiling, fuel sensitivity and off-boost behaviour. A high-output, high-boost build is better served by the low-compression Ninja H2 specification. Strong mid-range and driveability on pump fuel — usually the better answer in a road or hillclimb car — favours the 11.2:1 engines. Calibration developed on one is not transferable to the other.</p>
+        </div>
+
+        <div class="synopsis-block">
+          <h3>Why Lubrication Is the Limiting Factor</h3>
+          <p>The H2 wet sump is well designed for its purpose. A motorcycle leans into a corner, so the oil surface stays broadly perpendicular to the sump and the pickup remains submerged. Sustained lateral loading is simply not a design case.</p>
+          <p>A car does not lean. The same corner produces sustained lateral acceleration acting across the sump, and oil migrates away from the pickup and stays there for the duration of the corner — precisely when bearing loads are highest. The severity scales with the car: a light chassis on slicks through long corners is the worst case, and that is exactly the sort of car this engine ends up in.</p>
+          <p>This is a geometry problem rather than a capacity problem. It is not reliably solved by baffling, a deeper pan, or simply running more oil. Oil starvation is the recurring failure pattern in car-installed H2 engines wherever the original wet sump arrangement has been retained or only lightly modified.</p>
+
+          <h3>Identify the Engine Properly</h3>
+          <p>The <strong>ZXT00NE</strong> engine number prefix appears across the whole supercharged family — Z H2, Ninja H2 SX and Ninja H2 alike — and serial numbers run sequentially across all of them. It tells you nothing about compression ratio or state of tune, so buying on prefix alone is a real risk. Identify by VIN or model code, and confirm the specification physically where no VIN is available.</p>
+        </div>
+      </div>
+
+      <div class="synopsis-cta">
+        <p>The full reference covers supercharger specification, oil pressure characteristics and how to interpret them, rev limits and calibration in car use, and what a standalone loom and ECU must account for.</p>
+        <a href="/downloads/kawasaki-h2-engine-reference.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download the Full Reference</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>H2 Components</h2>
+        <p>Purpose-developed parts for the H2 engine in car installations. Each is explained in detail on its own page.</p>
+      </div>
+
+      <div class="parts-grid">
+        <a href="/kawasaki-h2/dry-sump-kit" class="part-card part-card-feature">
+          <div class="part-card-image">
+            <img src="/images/Kawasaki%20H2%20Dry%20Sump.png" alt="Billet dry sump pan for the Kawasaki H2 engine with integrated scavenge filters and oil pickup" width="600" height="600" loading="lazy" />
+          </div>
+          <div class="part-card-body">
+            <span class="kit-card-brand">Flagship Product</span>
+            <h3>Dry Sump System</h3>
+            <p>Three-stage scavenge dry sump for the H2 engine. Consistent oil supply regardless of cornering load or attitude, reduced windage, and the sump depth taken out of your packaging problem.</p>
+            <div class="part-card-foot">
+              <span class="part-card-price">Pricing to follow</span>
+              <span class="kit-card-link">View Details →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/kawasaki-h2/oil-cooler-blanking-plate" class="part-card">
+          <div class="part-card-body">
+            <span class="kit-card-brand">Oil System</span>
+            <h3>OE Oil Cooler Blanking Plate</h3>
+            <p>Fitted in place of the factory oil/water heat exchanger. Oil passes out of the block and straight back in, deleting the OE cooler entirely — for installations running their own remote oil cooling. Four bolts, no plumbing.</p>
+            <div class="part-card-foot">
+              <span class="part-card-price">Pricing to follow</span>
+              <span class="kit-card-link">View Details →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/kawasaki-h2/wiring-loom" class="part-card">
+          <div class="part-card-body">
+            <span class="kit-card-brand">Electrical</span>
+            <h3>Car Conversion Wiring Loom</h3>
+            <p>The factory loom cannot be carried into a car — immobiliser integration, ride-by-wire actuation and motorcycle connector standards all get in the way. A purpose-built loom removes that problem at the start of the project rather than after the engine is in the car.</p>
+            <div class="part-card-foot">
+              <span class="part-card-price">Pricing to follow</span>
+              <span class="kit-card-link">View Details →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/kawasaki-h2/ecu-options" class="part-card">
+          <div class="part-card-body">
+            <span class="kit-card-brand">Engine Management</span>
+            <h3>Standalone ECU Options</h3>
+            <p>Correctly configured engine management for the H2 in car use — trigger interpretation, throttle actuation, fan and fuel pump control, warning strategy and data logging. Specified around your installation and intended use.</p>
+            <div class="part-card-foot">
+              <span class="part-card-price">Pricing to follow</span>
+              <span class="kit-card-link">View Details →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/kawasaki-h2/high-volume-oil-pump" class="part-card">
+          <div class="part-card-body">
+            <span class="kit-card-brand">Oil System</span>
+            <h3>High Volume Oil Pump</h3>
+            <p>A wider EN26 steel gerotor raising oil pressure 30–50% across the rev range. Supplied complete with billet pump body, or as the gear set alone where a dry sump has taken over the water pump position.</p>
+            <div class="part-card-foot">
+              <span class="part-card-price">Pricing to follow</span>
+              <span class="kit-card-link">View Details →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/kawasaki-h2/pair-block-off-plates" class="part-card">
+          <div class="part-card-body">
+            <span class="kit-card-brand">Induction & Emissions</span>
+            <h3>PAIR Block Off Plates</h3>
+            <p>Block off plates for the PAIR secondary air injection system on the Ninja H2 and Z H2. Removes redundant motorcycle emissions hardware and simplifies the engine for car installation.</p>
+            <div class="part-card-foot">
+              <span class="part-card-price">Pricing to follow</span>
+              <span class="kit-card-link">View Details →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/kawasaki-h2/mbe-9a9-ecu" class="part-card">
+          <div class="part-card-body">
+            <span class="kit-card-brand">Engine Management</span>
+            <h3>MBE 9A9 ECU &amp; Map</h3>
+            <p>A proven motorsport ECU supplied with our own H2 base map. The hardware is available from several places — the calibration that makes a supercharged H2 run properly in a car is what you are actually buying.</p>
+            <div class="part-card-foot">
+              <span class="part-card-price">Pricing to follow</span>
+              <span class="kit-card-link">View Details →</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <p class="parts-note">Pricing is being finalised across the range and will be published here. In the meantime, contact us for current pricing, lead times and advice on which components your installation actually needs — we would rather specify it properly than sell you a part you do not require. Further components are in development and will be added as they are released.</p>
+    </div>
+  </section>
+
+  <!-- Engineering Support -->
+  <section class="support-section">
+    <div class="container">
+      <div class="support-grid">
+        <div class="support-content">
+          <h2>Conversion <span class="text-green">Engineering Support</span></h2>
+          <p>Beyond the components themselves, we can support the wider engineering of an H2 installation — cooling strategy, oil system layout and tank positioning, mounting and integration, and calibration decisions appropriate to the engine specification you are working with.</p>
+          <p>Our involvement in H2 engineering comes directly from encountering and solving these problems in practice rather than from reading about them. If you are early in a project, the most valuable conversation is usually the one before anything is bought.</p>
+        </div>
+        <div class="support-stats">
+          <div class="stat-card">
+            <span class="stat-number">998</span>
+            <span class="stat-unit">cc</span>
+            <span class="stat-label">Supercharged Displacement</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">9.2</span>
+            <span class="stat-unit">&times;</span>
+            <span class="stat-label">Supercharger Drive Ratio to Crank Speed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-unit">Stage</span>
+            <span class="stat-label">Dry Sump Scavenge System</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Expertise -->
+  <section class="related-expertise">
+    <div class="container">
+      <div class="expertise-header">
+        <span class="stripe-accent"></span>
+        <h3>Engineering <span class="text-green">Beyond the Engine</span></h3>
+        <p>An H2-powered car still needs correct suspension specification. Our chassis development expertise applies across every platform we work with.</p>
+      </div>
+      <div class="expertise-grid">
+        <a href="/suspension" class="expertise-link">Suspension Philosophy →</a>
+        <a href="/nitron-suspension" class="expertise-link">Nitron Systems →</a>
+        <a href="/penske-racing-shocks" class="expertise-link">Penske Racing Shocks →</a>
+        <a href="/caterham" class="expertise-link">Lightweight Chassis Development →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Discuss Your H2 Project</h2>
+        <p>Tell us about the engine, the car and how you intend to use it. We will tell you honestly what the installation needs — and what it does not.</p>
+        <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  /* Intro */
+  .hub-intro {
+    background: var(--tftr-black);
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+
+  .content-block {
+    max-width: 800px;
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .guide-aside {
+    background: var(--tftr-dark);
+    border: 1px solid rgba(92, 184, 92, 0.25);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .guide-aside h3 {
+    font-size: 1.4rem;
+    color: var(--tftr-white);
+    margin: 0.25rem 0 var(--space-sm);
+  }
+
+  .guide-aside p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+
+  .guide-aside .btn-primary {
+    align-self: flex-start;
+  }
+
+  /* Shared */
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .section-header p {
+    color: var(--tftr-grey-light);
+    margin-top: var(--space-xs);
+    max-width: 70ch;
+  }
+
+  .kit-card-brand {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--tftr-green);
+    margin-bottom: 0.25rem;
+  }
+
+  .kit-card-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-white);
+  }
+
+  /* Synopsis */
+  .synopsis-section {
+    background: var(--tftr-darker);
+  }
+
+  .synopsis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .synopsis-block h3 {
+    font-size: 1.35rem;
+    color: var(--tftr-white);
+    margin-bottom: var(--space-sm);
+  }
+
+  .synopsis-block h3 + p {
+    margin-top: 0;
+  }
+
+  .synopsis-block > h3:not(:first-child) {
+    margin-top: var(--space-lg);
+  }
+
+  .synopsis-block p {
+    color: var(--tftr-grey-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .synopsis-block p strong {
+    color: var(--tftr-white);
+  }
+
+  .spec-table {
+    background: var(--tftr-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: var(--space-md) 0;
+  }
+
+  .spec-row {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: var(--space-sm);
+    padding: 0.7rem var(--space-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
+    color: var(--tftr-grey-light);
+  }
+
+  .spec-row:last-child {
+    border-bottom: none;
+  }
+
+  .spec-row-head {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    background: rgba(92, 184, 92, 0.08);
+  }
+
+  .synopsis-cta {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 75ch;
+  }
+
+  .synopsis-cta p {
+    color: var(--tftr-grey-light);
+    margin-bottom: var(--space-sm);
+    line-height: 1.8;
+  }
+
+  /* Parts Grid */
+  .products-section {
+    background: var(--tftr-black);
+  }
+
+  .parts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .part-card {
+    background: var(--tftr-darker);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .part-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .part-card-feature {
+    grid-column: span 2;
+    flex-direction: row;
+  }
+
+  .part-card-image {
+    background: var(--tftr-white);
+    padding: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 45%;
+  }
+
+  .part-card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .part-card-body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .part-card-body h3 {
+    font-size: 1.35rem;
+    color: var(--tftr-white);
+    margin-bottom: var(--space-sm);
+  }
+
+  .part-card-body p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    flex-grow: 1;
+    margin-bottom: var(--space-md);
+  }
+
+  .part-card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: var(--space-sm);
+  }
+
+  .part-card-price {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .part-card:hover .kit-card-link {
+    color: var(--tftr-green);
+  }
+
+  .parts-note {
+    color: var(--tftr-grey);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-top: var(--space-lg);
+    max-width: 75ch;
+  }
+
+  /* Support */
+  .support-section {
+    background: var(--tftr-darker);
+  }
+
+  .support-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .support-content h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .support-content p {
+    color: var(--tftr-grey-light);
+    margin-bottom: var(--space-sm);
+    line-height: 1.8;
+  }
+
+  .support-stats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .stat-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border-left: 3px solid var(--tftr-green);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .stat-card .stat-number {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--tftr-green);
+    line-height: 1;
+  }
+
+  .stat-card .stat-unit {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--tftr-green);
+    margin-left: 0.25rem;
+  }
+
+  .stat-card .stat-label {
+    width: 100%;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+    margin-top: var(--space-xs);
+  }
+
+  /* Related Expertise */
+  .related-expertise {
+    background: var(--tftr-black);
+    border-top: 1px solid rgba(92, 184, 92, 0.2);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+    padding: var(--space-lg) 0;
+  }
+
+  .expertise-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .expertise-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .expertise-header p {
+    color: var(--tftr-grey-light);
+    max-width: 55ch;
+    margin: 0 auto;
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+
+  .expertise-link {
+    display: block;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--tftr-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+  }
+
+  .expertise-link:hover {
+    border-color: var(--tftr-green);
+    background: rgba(92, 184, 92, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .parts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .part-card-feature {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .intro-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .synopsis-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .support-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .support-stats {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .stat-card {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .expertise-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .part-card-feature {
+      flex-direction: column;
+    }
+
+    .part-card-image {
+      flex: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .parts-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .part-card-feature {
+      grid-column: span 1;
+    }
+
+    .spec-row {
+      grid-template-columns: 1.4fr 0.8fr 0.8fr;
+      font-size: 0.82rem;
+    }
+  }
+</style>

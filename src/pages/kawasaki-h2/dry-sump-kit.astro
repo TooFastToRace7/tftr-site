@@ -1,0 +1,466 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+
+// Gallery images. Add an entry per photograph as they are uploaded to
+// /public/images/kawasaki-h2/ — thumbnails appear automatically once there is
+// more than one image. Write genuine alt text describing each shot.
+const galleryImages = [
+  {
+    src: '/images/Kawasaki%20H2%20Dry%20Sump.png',
+    alt: 'Billet dry sump pan for the Kawasaki H2 engine with integrated scavenge filters and oil pickup'
+  }
+  // ,{ src: '/images/kawasaki-h2/dry-sump-02.jpg', alt: 'Dry sump pan underside showing scavenge pickup locations' }
+  // ,{ src: '/images/kawasaki-h2/dry-sump-03.jpg', alt: 'Dry sump system fitted to the H2 crankcase' }
+];
+
+// NOTE: `offers` is deliberately omitted while pricing is being finalised.
+// Once prices are fixed, add an "offers" object matching the Caterham kit
+// pages (priceCurrency, price, availability, seller, shippingDetails,
+// hasMerchantReturnPolicy) — an Offer without a price is invalid structured data.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kawasaki H2 Dry Sump System",
+  "description": "Three-stage scavenge dry sump system for the Kawasaki supercharged H2 engine in car installations. Consistent oil supply under sustained cornering load, reduced windage and improved packaging. Fits Ninja H2, H2R, Ninja H2 SX and Z H2.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Too Fast To Race"
+  },
+  "category": "Dry Sump Oil System",
+  "image": "https://toofasttorace.com/images/Kawasaki%20H2%20Dry%20Sump.png",
+  "url": "https://toofasttorace.com/kawasaki-h2/dry-sump-kit"
+};
+---
+
+<Layout title="Kawasaki H2 Dry Sump Kit | Ninja H2, H2R, H2 SX & Z H2 | Too Fast To Race" description="Three-stage scavenge dry sump system for the Kawasaki supercharged H2 engine in car installations. Solves the oil surge that the standard wet sump was never designed to cope with. Fits Ninja H2, H2R, H2 SX and Z H2.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Kawasaki H2 <span class="text-green">Dry Sump System</span></h1>
+      <p class="hero-subtitle">The single most important change you can make when putting an H2 engine in a car. Three-stage scavenge, consistent oil supply under sustained cornering load, and the sump depth taken out of your packaging problem.</p>
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="kit-summary-section">
+    <div class="container">
+      <div class="kit-summary">
+        <div class="kit-price">
+          <span class="price-label">Pricing</span>
+          <span class="price-pending">To Follow</span>
+          <span class="price-note">Contact us for current pricing</span>
+        </div>
+        <div class="kit-specs">
+          <div class="spec">
+            <span class="spec-label">Fitment</span>
+            <span class="spec-value">Ninja H2 · H2R · H2 SX · Z H2</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Scavenge</span>
+            <span class="spec-value">3-Stage</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Application</span>
+            <span class="spec-value">Car Installation / Race</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Specification</span>
+            <span class="spec-value">Advised per Installation</span>
+          </div>
+        </div>
+        <a href="/contact" class="btn btn-primary">Enquire About This System</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="kit-content">
+    <div class="container">
+      <div class="showcase-grid">
+        <div class="showcase-gallery">
+          <ProductGallery images={galleryImages} />
+        </div>
+        <div class="content-block showcase-text">
+          <h2>A Geometry Problem, <span class="text-green">Not a Capacity One</span></h2>
+          <p>The standard H2 wet sump is well designed for its purpose. A motorcycle leans into a corner, so the oil surface stays broadly perpendicular to the sump and the pickup remains submerged. Sustained lateral loading is simply not a design case for it.</p>
+          <p>A car does not lean. The same corner produces sustained lateral acceleration acting across the sump, and oil migrates away from the pickup and stays there for the duration of the corner — precisely when bearing loads are highest. Braking and acceleration add longitudinal displacement on top of that.</p>
+          <p>This is why baffling, a deeper pan or simply running more oil do not reliably fix it. The oil is not in short supply; it is in the wrong place. A dry sump removes the problem rather than mitigating it.</p>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>Why It Matters <span class="text-green">In Your Car</span></h2>
+        <p>The severity scales with the car. A road-biased build on modest tyres will see far less of it than a light chassis on slicks sustaining high lateral g through long corners — which is exactly the sort of car this engine tends to end up in. Long-radius corners and banked or high-speed circuits are the worst case, because the loading is sustained rather than transient.</p>
+        <p>Oil starvation is the recurring failure pattern in car-installed H2 engines wherever the original wet sump arrangement has been retained or only lightly modified. It is also, unhelpfully, a failure that gives very little warning: the engine feels fine right up until the moment it does not. Our own development work on this platform began with exactly that failure, which is why this system exists in the form it does.</p>
+        <p>The full reasoning — including oil pressure characteristics on the H2 and why motorsport sensors often read misleadingly low on these engines — is set out in our <a href="/kawasaki-h2">H2 engine family reference</a>.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="included-col">
+          <h3>What the System Does</h3>
+          <ul class="kit-list">
+            <li>Maintains oil supply regardless of cornering load, braking or attitude</li>
+            <li>Three-stage scavenge for effective crankcase evacuation</li>
+            <li>Reduced windage losses, returning power otherwise lost to oil drag</li>
+            <li>Removes sump depth from the installation, easing packaging in a low chassis</li>
+            <li>External tank can be positioned to suit the car rather than the engine</li>
+          </ul>
+        </div>
+        <div class="included-col">
+          <h3>Specified Around the Installation</h3>
+          <ul class="kit-list">
+            <li>Tank position, capacity and line routing advised for your chassis</li>
+            <li>Line sizing appropriate to the system rather than a fixed default</li>
+            <li>Oil cooling strategy considered alongside the sump, not after it</li>
+            <li>Compatible with our <a href="/kawasaki-h2/oil-cooler-blanking-plate">OE oil cooler blanking plate</a> where remote cooling is used</li>
+            <li>Supplied with the uprated <a href="/kawasaki-h2/high-volume-oil-pump">high volume oil pump gear set</a></li>
+            <li>Requires an electric water pump — see below</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>What It Changes <span class="text-green">Elsewhere</span></h2>
+        <p>Two consequences follow from the design, and both are better known before you order than after.</p>
+        <p><strong>The mechanical water pump comes off.</strong> Our scavenge pump occupies the position the original water pump sat in — a deliberate packaging decision that puts the scavenge stage where it needs to be and keeps the installation compact. Cooling therefore moves to an electric water pump under ECU control.</p>
+        <p>In a car that is arguably the better arrangement regardless. Coolant flow becomes a mapped function rather than something tied to engine speed, so you get flow at idle when heat soak is at its worst, and no parasitic drag at high rpm. Any suitable pump will do and the choice is entirely yours — it does not need deciding before the sump is ordered, and we can supply one as part of a complete package if you would rather not source it separately. The <a href="/kawasaki-h2/mbe-9a9-ecu">MBE 9A9</a> carries a dedicated electric water pump output, so the control is already provided for.</p>
+        <p><strong>The uprated oil pump gear set comes with it.</strong> Our scavenge pump is built around the <a href="/kawasaki-h2/high-volume-oil-pump">high volume gear set</a>, so it is effectively standard on these builds. Specifying the sump without it means machining the scavenge pump as a one-off, which on a part of this kind will typically cost more than the gear set itself. You end up paying more for less oil pressure — so we would rather explain that now than have the conversation afterwards.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Engine <span class="text-green">Fitment</span></h2>
+        <p>The crankcase architecture and sump pan mating arrangement are shared across the supercharged H2 family, so this system fits the <strong>Ninja H2, Ninja H2R, Ninja H2 SX and Z H2</strong>. The differences between those variants — compression ratio, camshafts, cylinder head and supercharger — sit above the sump and do not affect fitment.</p>
+        <p>If your engine has been previously rebuilt, modified around the sump area, or fitted with an aftermarket wet sump arrangement, tell us before ordering and we will confirm compatibility. If you are unsure which variant you have, our <a href="/kawasaki-h2">engine reference</a> explains how to identify it properly — the engine number prefix alone will not tell you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related H2 Engineering</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/kawasaki-h2/high-volume-oil-pump" class="related-card">
+          <h3>High Volume Oil Pump</h3>
+          <p>Wider steel gerotor raising oil pressure 30–50%. Supplied with our dry sump as the gear set.</p>
+          <span class="related-link">Oil Pump →</span>
+        </a>
+        <a href="/kawasaki-h2/oil-cooler-blanking-plate" class="related-card">
+          <h3>OE Oil Cooler Blanking Plate</h3>
+          <p>Deletes the factory oil/water heat exchanger for installations running their own remote oil cooling.</p>
+          <span class="related-link">Blanking Plate →</span>
+        </a>
+        <a href="/kawasaki-h2/wiring-loom" class="related-card">
+          <h3>Car Conversion Loom</h3>
+          <p>The factory loom cannot come with you. A purpose-built loom removes that problem at the start.</p>
+          <span class="related-link">Wiring Loom →</span>
+        </a>
+        <a href="/kawasaki-h2/ecu-options" class="related-card">
+          <h3>Standalone ECU Options</h3>
+          <p>Engine management configured for the H2 in car use — trigger, throttle, cooling and logging.</p>
+          <span class="related-link">ECU Options →</span>
+        </a>
+        <a href="/kawasaki-h2" class="related-card">
+          <h3>H2 Engine Reference</h3>
+          <p>The variants, how they genuinely differ, and what a conversion actually requires. Free PDF.</p>
+          <span class="related-link">Read the Reference →</span>
+        </a>
+        <a href="/suspension" class="related-card">
+          <h3>Suspension Specification</h3>
+          <p>An H2-powered car still needs correct suspension. Chassis development is where we started.</p>
+          <span class="related-link">Suspension →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Discuss Your Installation</h2>
+        <p>Tell us about the engine, the car and how you intend to use it. We will advise on tank positioning, line routing and cooling strategy alongside the system itself.</p>
+        <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  /* Summary */
+  .kit-summary-section {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .kit-summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-lg);
+    align-items: center;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+    border-left: 3px solid var(--tftr-green);
+    padding: var(--space-md);
+  }
+
+  .kit-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .price-pending {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--tftr-green);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--tftr-grey);
+  }
+
+  .kit-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .spec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .spec-value {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--tftr-white);
+  }
+
+  /* Content */
+  .kit-content {
+    background: var(--tftr-black);
+  }
+
+  .content-block {
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-block p strong {
+    color: var(--tftr-white);
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .included-col {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .included-col h3 {
+    font-size: 1.1rem;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .kit-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .kit-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--tftr-green);
+  }
+
+  /* Related */
+  .related-section {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    margin-top: auto;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Product Showcase */
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .showcase-gallery {
+    min-width: 0;
+  }
+
+  .showcase-text {
+    margin-bottom: 0 !important;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .kit-summary {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .kit-specs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .included-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .showcase-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+  }
+</style>

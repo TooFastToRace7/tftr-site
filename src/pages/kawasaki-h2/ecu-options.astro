@@ -1,0 +1,298 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Kawasaki H2 Standalone ECU Options & Engine Management | Too Fast To Race" description="What a standalone ECU must handle on a supercharged Kawasaki H2 in a car — immobiliser removal, ride-by-wire throttle, trigger interpretation and boost strategy. Honest guidance on choosing engine management for an H2 conversion.">
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>H2 Engine <span class="text-green">Management</span></h1>
+      <p class="hero-subtitle">The factory ECU cannot come with you into a car. What replaces it has to solve four specific problems on this engine — and a great many standalone systems solve only three of them.</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="kit-content">
+    <div class="container">
+      <div class="content-block">
+        <h2>Why the Factory ECU <span class="text-green">Has to Go</span></h2>
+        <p>This is not a matter of preference or of chasing more power. The motorcycle ECU is built to run a motorcycle, and it verifies that it is in one before it will do anything at all.</p>
+        <p>The immobiliser and security integration expect to see motorcycle-specific components present. The dash, switchgear and safety interlocks are part of the same conversation. And none of the outputs a car actually needs — cooling fan strategy sized for a car radiator, fuel pump control, dash feed, warning logic, data logging — exist in usable form.</p>
+        <p>People do attempt to keep the factory system. It generally consumes more time than the conversion itself and produces a car that cannot be diagnosed when something goes wrong. Removing it entirely is the shorter route, not the longer one.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Four Things an ECU Must <span class="text-green">Get Right Here</span></h2>
+        <p>If you are evaluating engine management for an H2, these are the questions worth asking before price enters the conversation.</p>
+      </div>
+
+      <div class="factor-grid">
+        <div class="factor-card">
+          <span class="factor-num">01</span>
+          <h3>Fly-by-Wire Throttle</h3>
+          <p>The H2 is a ride-by-wire engine. The ECU must properly drive and monitor an electronic throttle body, with the safety logic that implies. This is the single most common reason a budget standalone system fails on this platform — the specification sheet says "throttle position input" and the buyer assumes that covers it. It does not.</p>
+        </div>
+        <div class="factor-card">
+          <span class="factor-num">02</span>
+          <h3>Trigger Interpretation</h3>
+          <p>The ECU has to read the engine's crank and cam arrangement correctly and be configurable for it. In most cases the original crank sensor can be retained, which saves work — but only if the replacement system can be told what it is looking at.</p>
+        </div>
+        <div class="factor-card">
+          <span class="factor-num">03</span>
+          <h3>Forced Induction Strategy</h3>
+          <p>A manifold pressure input is the minimum. More important is that whoever calibrates it understands that boost on this engine is not controllable in the turbocharged sense — the supercharger is crank-driven at a fixed ratio, so boost follows engine speed. Management happens through fuelling and ignition, not through a wastegate.</p>
+        </div>
+        <div class="factor-card">
+          <span class="factor-num">04</span>
+          <h3>Car-Side Outputs</h3>
+          <p>Fan control, fuel pump control, dash and warning strategy, and data logging. These are trivial to overlook when comparing headline specifications and painful to work around afterwards. Logging in particular is not a luxury on a supercharged engine you are still learning.</p>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>Compression Ratio Changes <span class="text-green">the Calibration Job</span></h2>
+        <p>Worth understanding before you commit to a system or a mapper. The H2 family splits into two engine specifications: the Ninja H2 and H2R at 8.5:1 and 8.3:1, and the Ninja H2 SX and Z H2 at 11.2:1.</p>
+        <p>A high-compression engine reaches its knock limit at markedly less boost, and is more sensitive to fuel quality and charge temperature. Calibration developed on one compression ratio is not transferable to the other. If you are being offered a map, the first question is which engine it was developed on.</p>
+        <p>Our <a href="/kawasaki-h2">H2 engine reference</a> sets out the differences in full, including how to identify which variant you actually have — the engine number prefix will not tell you, because it is shared across the whole family.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>What We <span class="text-green">Supply</span></h2>
+        <p>We supply the <a href="/kawasaki-h2/mbe-9a9-ecu">MBE 9A9</a> with our own H2 base map. The hardware is a well-established motorsport ECU available from several suppliers; the calibration for a supercharged H2 running in a car is ours, developed on our own engines.</p>
+        <p>That is the honest division. You are not buying exclusive hardware — you are buying an ECU that arrives configured and mapped for this engine rather than one you then pay someone else to work out from first principles.</p>
+        <p>If you are already committed to a different system, say so. We would rather tell you whether it will do the job than talk you out of something that suits you, and the <a href="/kawasaki-h2/wiring-loom">loom</a> can be built to terminate for whatever you are running.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Specify the ECU and Loom <span class="text-green">Together</span></h2>
+        <p>These two decisions are the same decision. Our looms are made to order, terminated for your chosen ECU and cut to the distances in your car, so specifying them as a pair produces a matched system rather than two components you reconcile on the bench.</p>
+        <p>Two loom options connect directly to ECU functions. Wheel speed sensor provision is what makes launch control and traction control meaningful rather than nominal. Paddle shift integration pairs with gearbox control and power shift. Both cost very little to build in at the outset and a great deal to add afterwards.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related H2 Engineering</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/kawasaki-h2/mbe-9a9-ecu" class="related-card">
+          <h3>MBE 9A9 ECU &amp; Map</h3>
+          <p>The system we supply, with our own H2 base map. Full specification and what it does on this engine.</p>
+          <span class="related-link">MBE 9A9 →</span>
+        </a>
+        <a href="/kawasaki-h2/wiring-loom" class="related-card">
+          <h3>Motorsport Wiring Loom</h3>
+          <p>Built to terminate for your ECU and to the distances in your car. Specify both together.</p>
+          <span class="related-link">Wiring Loom →</span>
+        </a>
+        <a href="/kawasaki-h2/dry-sump-kit" class="related-card">
+          <h3>Dry Sump System</h3>
+          <p>Three-stage scavenge. The single most important change when putting an H2 engine in a car.</p>
+          <span class="related-link">Dry Sump →</span>
+        </a>
+        <a href="/kawasaki-h2/oil-cooler-blanking-plate" class="related-card">
+          <h3>OE Oil Cooler Blanking Plate</h3>
+          <p>Deletes the factory oil/water heat exchanger for installations running their own oil cooling.</p>
+          <span class="related-link">Blanking Plate →</span>
+        </a>
+        <a href="/kawasaki-h2" class="related-card">
+          <h3>H2 Engine Reference</h3>
+          <p>The variants, how they genuinely differ, and what a conversion actually requires. Free PDF.</p>
+          <span class="related-link">Read the Reference →</span>
+        </a>
+        <a href="/contact" class="related-card">
+          <h3>Conversion Support</h3>
+          <p>ECU, loom, oil system and cooling specified as one package rather than part by part.</p>
+          <span class="related-link">Get in Touch →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Talk It Through First</h2>
+        <p>Tell us the engine variant, the car and how it will be used. We will tell you what the management system needs to do — before you spend anything.</p>
+        <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  /* Content */
+  .kit-content {
+    background: var(--tftr-black);
+  }
+
+  .content-block {
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-block p strong {
+    color: var(--tftr-white);
+  }
+
+  /* Factors */
+  .factor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .factor-card {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .factor-num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-xs);
+  }
+
+  .factor-card h3 {
+    font-size: 1.2rem;
+    color: var(--tftr-white);
+    margin-bottom: var(--space-sm);
+  }
+
+  .factor-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Related */
+  .related-section {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    margin-top: auto;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .factor-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

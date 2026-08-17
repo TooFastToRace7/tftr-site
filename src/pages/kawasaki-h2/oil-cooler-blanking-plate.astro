@@ -1,0 +1,422 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// NOTE: `offers` is deliberately omitted while pricing is being finalised.
+// Once prices are fixed, add an "offers" object matching the Caterham kit
+// pages (priceCurrency, price, availability, seller, shippingDetails,
+// hasMerchantReturnPolicy) — an Offer without a price is invalid structured data.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kawasaki H2 OE Oil Cooler Blanking Plate",
+  "description": "Blanking plate fitted in place of the factory oil/water heat exchanger on the Kawasaki supercharged H2 engine. Oil passes out of the block and returns directly, deleting the OE cooler for car installations running their own remote oil cooling.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Too Fast To Race"
+  },
+  "category": "Engine Oil System Component",
+  "url": "https://toofasttorace.com/kawasaki-h2/oil-cooler-blanking-plate"
+};
+---
+
+<Layout title="Kawasaki H2 OE Oil Cooler Blanking Plate | Car Conversion | Too Fast To Race" description="Blanking plate for the Kawasaki H2 OE oil/water cooler. Fits in its place with four bolts, returning oil directly to the block — for car installations running their own remote oil cooling. Ninja H2, H2R, H2 SX and Z H2.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>OE Oil Cooler <span class="text-green">Blanking Plate</span></h1>
+      <p class="hero-subtitle">Fitted in place of the factory oil/water heat exchanger. Oil passes out of the block and straight back in — deleting the OE cooler entirely for installations running their own oil cooling. Four bolts, no plumbing.</p>
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="kit-summary-section">
+    <div class="container">
+      <div class="kit-summary">
+        <div class="kit-price">
+          <span class="price-label">Pricing</span>
+          <span class="price-pending">To Follow</span>
+          <span class="price-note">Contact us for current pricing</span>
+        </div>
+        <div class="kit-specs">
+          <div class="spec">
+            <span class="spec-label">Fitment</span>
+            <span class="spec-value">Ninja H2 · H2R · H2 SX · Z H2</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Function</span>
+            <span class="spec-value">OE Oil/Water Cooler Delete</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Fitting</span>
+            <span class="spec-value">Four Bolts</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Requires</span>
+            <span class="spec-value">Remote Oil Cooling</span>
+          </div>
+        </div>
+        <a href="/contact" class="btn btn-primary">Enquire About This Part</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="kit-content">
+    <div class="container">
+      <div class="content-block">
+        <h2>What It <span class="text-green">Replaces</span></h2>
+        <p>The standard H2 engine carries an oil/water heat exchanger mounted to the block — functionally similar to a Laminova core, transferring heat between the oil and the coolant. On the motorcycle it does two useful jobs: it sheds oil heat under sustained load, and it brings the oil up to temperature quickly from cold by borrowing heat from the coolant.</p>
+        <p>Our blanking plate fits in its place. Oil leaves the block, passes through the plate and returns to the block directly, with the heat exchanger and its associated coolant plumbing removed from the engine entirely. It fixes with four bolts and requires no additional pipework of its own.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Why Delete It <span class="text-green">In a Car?</span></h2>
+        <p>In a car installation the OE heat exchanger is usually redundant and frequently in the way. Almost every serious H2 conversion runs its own oil cooling — a remote cooler, or a Laminova-type exchanger positioned to suit the car — because the engine is no longer sitting in a motorcycle's airflow and the coolant system has typically been re-engineered around a car radiator anyway.</p>
+        <p>Once you have your own oil cooling, the factory unit becomes a second, uncontrolled heat path tied into a coolant circuit you have already changed, plus a lump of hardware occupying space on the side of the block. Removing it simplifies the plumbing, frees up packaging, and puts oil temperature management where you can actually control it.</p>
+        <p>It also pairs naturally with a <a href="/kawasaki-h2/dry-sump-kit">dry sump conversion</a>, where the oil circuit is being redesigned from the ground up and cooling is best specified as part of that system rather than inherited from the motorcycle.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="included-col">
+          <h3>What It Gives You</h3>
+          <ul class="kit-list">
+            <li>Deletes the OE oil/water heat exchanger completely</li>
+            <li>Removes the associated coolant plumbing from the block</li>
+            <li>Frees packaging space on the side of the engine</li>
+            <li>Puts oil temperature control entirely in your own circuit</li>
+            <li>Straightforward four-bolt fitment in place of the original unit</li>
+          </ul>
+        </div>
+        <div class="included-col">
+          <h3>Before You Fit It</h3>
+          <ul class="kit-list">
+            <li>Your installation must have its own oil cooling in place</li>
+            <li>Oil warm-up from cold is slower without the coolant heat path</li>
+            <li>Oil temperature monitoring becomes more important, not less</li>
+            <li>Best specified alongside the sump and cooling strategy together</li>
+            <li>Ask us if you are unsure whether it suits your installation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>An Honest <span class="text-green">Caveat</span></h2>
+        <p>This part removes cooling capability. That is the point of it — but only if something else is doing that job. Fitting a blanking plate to an engine with no other oil cooling provision will run oil temperatures higher than the engine was designed for, and on the high-compression Z H2 and H2 SX variants, elevated oil and charge temperatures are exactly what erodes your knock margin.</p>
+        <p>Equally, the loss of the coolant-to-oil warm-up path means the oil takes longer to reach temperature from cold. In a road car used for short journeys that is worth thinking about; in a track or competition car it rarely matters.</p>
+        <p>None of this is a reason to avoid the part. It is a reason to specify the oil system as a whole rather than component by component — which is a conversation we are happy to have before you buy anything.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Engine <span class="text-green">Fitment</span></h2>
+        <p>Suitable for the supercharged H2 family — <strong>Ninja H2, Ninja H2R, Ninja H2 SX and Z H2</strong>. The variants differ in compression ratio, camshafts, cylinder head and supercharger specification, but those differences do not affect this mounting.</p>
+        <p>If your engine has been previously modified around the oil cooler mounting, or you are unsure which variant you have, tell us before ordering. Our <a href="/kawasaki-h2">H2 engine reference</a> explains how to identify an engine properly — the engine number prefix alone will not tell you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related H2 Engineering</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/kawasaki-h2/dry-sump-kit" class="related-card">
+          <h3>Dry Sump System</h3>
+          <p>Three-stage scavenge. The single most important change when putting an H2 engine in a car.</p>
+          <span class="related-link">Dry Sump →</span>
+        </a>
+        <a href="/kawasaki-h2/oil-pump-gears" class="related-card">
+          <h3>Uprated Oil Pump Gears</h3>
+          <p>The H2 lubrication strategy prioritises flow over pressure. In car use that flow is worth protecting.</p>
+          <span class="related-link">Oil Pump Gears →</span>
+        </a>
+        <a href="/kawasaki-h2/pair-block-off-plates" class="related-card">
+          <h3>PAIR Block Off Plates</h3>
+          <p>Removes redundant motorcycle emissions hardware and simplifies the engine for car installation.</p>
+          <span class="related-link">PAIR Plates →</span>
+        </a>
+        <a href="/kawasaki-h2/wiring-loom" class="related-card">
+          <h3>Car Conversion Loom</h3>
+          <p>The factory loom cannot come with you. A purpose-built loom removes that problem at the start.</p>
+          <span class="related-link">Wiring Loom →</span>
+        </a>
+        <a href="/kawasaki-h2" class="related-card">
+          <h3>H2 Engine Reference</h3>
+          <p>The variants, how they genuinely differ, and what a conversion actually requires. Free PDF.</p>
+          <span class="related-link">Read the Reference →</span>
+        </a>
+        <a href="/contact" class="related-card">
+          <h3>Specification Advice</h3>
+          <p>Oil system, cooling and management specified as one package rather than part by part.</p>
+          <span class="related-link">Get in Touch →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Specify the Oil System Properly</h2>
+        <p>Tell us about the engine, the car and your cooling arrangement. We will tell you whether this part suits your installation — and what it needs alongside it.</p>
+        <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  /* Summary */
+  .kit-summary-section {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .kit-summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-lg);
+    align-items: center;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+    border-left: 3px solid var(--tftr-green);
+    padding: var(--space-md);
+  }
+
+  .kit-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .price-pending {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--tftr-green);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--tftr-grey);
+  }
+
+  .kit-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .spec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .spec-value {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--tftr-white);
+  }
+
+  /* Content */
+  .kit-content {
+    background: var(--tftr-black);
+  }
+
+  .content-block {
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-block p strong {
+    color: var(--tftr-white);
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .included-col {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .included-col h3 {
+    font-size: 1.1rem;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .kit-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .kit-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--tftr-green);
+  }
+
+  /* Related */
+  .related-section {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    margin-top: auto;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .kit-summary {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .kit-specs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .included-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

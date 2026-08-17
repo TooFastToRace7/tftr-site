@@ -1,0 +1,462 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+
+// Gallery images. Add entries as photographs are uploaded to
+// /public/images/kawasaki-h2/ — the gallery renders nothing while this is empty.
+const galleryImages = [
+  // { src: '/images/kawasaki-h2/oil-pump-01.jpg', alt: 'High volume oil pump kit for the Kawasaki H2 engine' },
+  // { src: '/images/kawasaki-h2/oil-pump-02.jpg', alt: 'EN26 steel gerotor set for the Kawasaki H2 oil pump' }
+];
+
+// NOTE: `offers` is deliberately omitted while UK pricing is being finalised.
+// Two configurations are supplied, so a price per configuration may be the
+// honest structure here rather than a single figure.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kawasaki H2 High Volume Oil Pump Upgrade",
+  "description": "High volume oil pump upgrade for the Kawasaki supercharged H2 engine. Supplied as a complete kit with billet pump body, or as the EN26 steel gerotor set alone for dry sump installations. Fits Ninja H2, H2R, H2 SX and Z H2.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Extreme Creations"
+  },
+  "category": "Engine Oil Pump",
+  "url": "https://toofasttorace.com/kawasaki-h2/high-volume-oil-pump"
+};
+---
+
+<Layout title="Kawasaki H2 High Volume Oil Pump | H2, H2R, H2 SX & Z H2 | Too Fast To Race" description="High volume oil pump upgrade for the supercharged Kawasaki H2 engine. EN26 steel gerotor raising oil pressure across the rev range — supplied complete with billet pump body, or as the gear set alone for dry sump installations.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>High Volume <span class="text-green">Oil Pump</span></h1>
+      <p class="hero-subtitle">A wider steel gerotor that raises oil pressure across the rev range. Supplied complete with a billet pump body for engines keeping the standard cooling arrangement, or as the gear set alone where a dry sump conversion has taken over the water pump position.</p>
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="kit-summary-section">
+    <div class="container">
+      <div class="kit-summary">
+        <div class="kit-price">
+          <span class="price-label">Pricing</span>
+          <span class="price-pending">To Follow</span>
+          <span class="price-note">Per configuration</span>
+        </div>
+        <div class="kit-specs">
+          <div class="spec">
+            <span class="spec-label">Fitment</span>
+            <span class="spec-value">H2 · H2R · H2 SX · Z H2</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Pressure Gain</span>
+            <span class="spec-value">30–50%</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Gerotor</span>
+            <span class="spec-value">EN26 Steel</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Supplied As</span>
+            <span class="spec-value">Full Kit or Gear Set</span>
+          </div>
+        </div>
+        <a href="/contact" class="btn btn-primary">Enquire About This Pump</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="kit-content">
+    <div class="container">
+      <ProductGallery images={galleryImages} />
+
+      <div class="content-block">
+        <h2>Why the H2 Runs <span class="text-green">Low Pressure</span></h2>
+        <p>The H2 family carries additional shafts inside the engine to drive and support the supercharger system. Every one of those shafts needs feeding, and each oiling passage bleeds a little pressure out of the system. Add Kawasaki's deliberate choice to run low pressure in the interests of efficiency and emissions compliance, and the result is an engine operating at noticeably lower oil pressure than most comparable performance engines.</p>
+        <p>Standard figures sit somewhere around 25 to 37 psi depending on variant, measured at 50°C and 4,000 rpm, and can fall to single figures at hot idle.</p>
+        <p>For a standard motorcycle ridden as Kawasaki intended, that is entirely adequate — it was engineered that way on purpose. The difficulty is that it leaves very little margin, and margin is the first thing to disappear when you change what the engine is being asked to do.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>What Changes <span class="text-green">Under Load</span></h2>
+        <p>People now routinely extract well beyond stock output from this platform — in some cases more than the factory H2R produced. Bearing loads rise accordingly, while the lubrication system coping with them remains the one designed around a standard road engine.</p>
+        <p>Connecting rod and main bearing failures attributed to inadequate oil pressure under raised boost and load are a recognised pattern on this platform. It is a predictable consequence rather than a mystery: more load, more heat, thinner oil film, and a pressure figure with no headroom to begin with.</p>
+        <p>In a car the same reasoning applies with additions. Sustained high output is the norm rather than the exception, and cornering loads act laterally across the engine rather than being cancelled by lean angle. The pump becomes the component every bearing in the engine depends on.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Two <span class="text-green">Configurations</span></h2>
+        <p>Which one you need depends entirely on whether the engine still has its original water pump — and that depends on whether you are running a dry sump.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="included-col">
+          <h3>Complete Kit</h3>
+          <p class="config-intro">For engines retaining the standard cooling arrangement.</p>
+          <ul class="kit-list">
+            <li>EN26 steel gerotor, precision ground and polished</li>
+            <li>New hardened drive pin, supplied oiled in a sealed bag</li>
+            <li>Billet aluminium oil/water pump body, black anodised</li>
+            <li>New shaft seals and O-ring fitted to the body</li>
+            <li>Assembly instructions and silicone grease</li>
+            <li>Direct fit in the stock location, factory water pump retained</li>
+          </ul>
+        </div>
+        <div class="included-col">
+          <h3>Gear Set Only</h3>
+          <p class="config-intro">For our dry sump installation, where the water pump position is no longer available.</p>
+          <ul class="kit-list">
+            <li>EN26 steel gerotor and hardened drive pin</li>
+            <li>Billet pump body not required — the scavenge pump occupies that position</li>
+            <li>Original water pump removed as part of the conversion</li>
+            <li>Cooling handled by an electric water pump under ECU control</li>
+            <li>Same pressure benefit, without paying for a part you cannot use</li>
+            <li>Effectively standard on our dry sump builds — omitting it costs more, not less</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>Why the Dry Sump Changes <span class="text-green">the Answer</span></h2>
+        <p>On our <a href="/kawasaki-h2/dry-sump-kit">dry sump conversion</a>, the scavenge pump is positioned where the original water pump sat. That is a deliberate packaging decision — it puts the scavenge stage where it needs to be and keeps the installation compact — but it means the standard mechanical water pump cannot stay.</p>
+        <p>Cooling instead moves to an electric water pump running under ECU control. In a car that is arguably the better arrangement anyway: coolant flow becomes a mapped function rather than something tied to engine speed, so you get flow at idle when heat soak is worst and no parasitic drag at high rpm. The <a href="/kawasaki-h2/mbe-9a9-ecu">MBE 9A9</a> carries a dedicated electric water pump output, so the control is already provided for.</p>
+        <p>The practical consequence for this product is simple: in that configuration the billet pump body has nowhere to go, so we supply the gerotor gear set on its own. You get the full pressure benefit without buying a housing you would put straight on the shelf.</p>
+        <p>The electric water pump itself is an open choice. Any suitable unit will do, we are happy to work around whatever you intend to fit, and it does not need to be decided before the dry sump is ordered. If you would rather not source it separately, we can supply one as part of a complete package.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Leaving the Gear Set Out <span class="text-green">Costs More</span></h2>
+        <p>Worth stating plainly, because it is counter-intuitive and it comes up.</p>
+        <p>Our scavenge pump is built around the uprated gear set. Specifying a dry sump without it means the scavenge pump has to be machined as a one-off, and one-off machining on a part of this kind will typically exceed the price of the gear set itself.</p>
+        <p>So if you are having the dry sump, take the gear set with it. Better oil pressure for less outlay than the alternative — the two decisions are linked, and this is the direction the economics run.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Monitor the <span class="text-green">Pressure</span></h2>
+        <p>An oil pressure gauge is strongly recommended on any H2 running raised output, with or without this upgrade. If you are going to the trouble of improving the lubrication system, you want to be able to see it working.</p>
+        <p>One caveat when you do. Motorsport pressure sensors frequently read apparently low or delayed on this engine, because the available sensor location sits downstream in the oil galleries rather than at the pump outlet. Interpret readings against what is normal for an H2 rather than a figure you would expect elsewhere — otherwise you will chase a fault that is not there. Our <a href="/kawasaki-h2">H2 engine reference</a> covers this.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Fitting and <span class="text-green">Timing</span></h2>
+        <p>Either configuration requires access to the pump, so the sensible moment is while the engine is apart — during a rebuild, or alongside a dry sump conversion. Fitted then, the additional labour is close to nothing.</p>
+        <p>Tell us which configuration your installation calls for when you enquire. If you are not yet certain whether you are running a dry sump, that is the conversation to have first — it determines this decision and several others.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related H2 Engineering</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/kawasaki-h2/dry-sump-kit" class="related-card">
+          <h3>Dry Sump System</h3>
+          <p>Three-stage scavenge. The conversion that determines which pump configuration you need.</p>
+          <span class="related-link">Dry Sump →</span>
+        </a>
+        <a href="/kawasaki-h2/mbe-9a9-ecu" class="related-card">
+          <h3>MBE 9A9 ECU &amp; Map</h3>
+          <p>Carries the electric water pump output that replaces the mechanical pump on a dry sump build.</p>
+          <span class="related-link">MBE 9A9 →</span>
+        </a>
+        <a href="/kawasaki-h2/oil-cooler-blanking-plate" class="related-card">
+          <h3>OE Oil Cooler Blanking Plate</h3>
+          <p>Deletes the factory oil/water heat exchanger for installations running their own oil cooling.</p>
+          <span class="related-link">Blanking Plate →</span>
+        </a>
+        <a href="/kawasaki-h2/wiring-loom" class="related-card">
+          <h3>Motorsport Wiring Loom</h3>
+          <p>Built to terminate for your ECU and to the distances in your car. Made to order.</p>
+          <span class="related-link">Wiring Loom →</span>
+        </a>
+        <a href="/kawasaki-h2" class="related-card">
+          <h3>H2 Engine Reference</h3>
+          <p>The variants, how they genuinely differ, and what a conversion actually requires. Free PDF.</p>
+          <span class="related-link">Read the Reference →</span>
+        </a>
+        <a href="/contact" class="related-card">
+          <h3>Conversion Support</h3>
+          <p>Oil system, cooling, loom and management specified as one package rather than part by part.</p>
+          <span class="related-link">Get in Touch →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Which Configuration?</h2>
+        <p>Tell us whether you are running a dry sump, your output target and how the car is used. We will confirm which version you need and whether it is worth it.</p>
+        <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  /* Summary */
+  .kit-summary-section {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .kit-summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-lg);
+    align-items: center;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+    border-left: 3px solid var(--tftr-green);
+    padding: var(--space-md);
+  }
+
+  .kit-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .price-pending {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--tftr-green);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--tftr-grey);
+  }
+
+  .kit-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .spec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .spec-value {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--tftr-white);
+  }
+
+  /* Content */
+  .kit-content {
+    background: var(--tftr-black);
+  }
+
+  .content-block {
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-block p strong {
+    color: var(--tftr-white);
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .included-col {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .included-col h3 {
+    font-size: 1.1rem;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-xs);
+  }
+
+  .config-intro {
+    color: var(--tftr-white);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .kit-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .kit-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--tftr-green);
+  }
+
+  /* Related */
+  .related-section {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    margin-top: auto;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .kit-summary {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .kit-specs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .included-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

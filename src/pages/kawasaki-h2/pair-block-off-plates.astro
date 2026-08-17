@@ -1,0 +1,473 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+
+// Gallery images. Add entries as photographs are uploaded to
+// /public/images/kawasaki-h2/ — the gallery renders nothing while this is empty.
+const galleryImages = [
+  // { src: '/images/kawasaki-h2/pair-plates-01.jpg', alt: 'PAIR block off plates for the Kawasaki Ninja H2 and Z H2' },
+  // { src: '/images/kawasaki-h2/pair-plates-02.jpg', alt: 'PAIR block off plate fitted to the cylinder head' }
+];
+
+// NOTE: `offers` is deliberately omitted while pricing is being finalised.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kawasaki H2 PAIR Block Off Plates",
+  "description": "PAIR block off plates for the Kawasaki Ninja H2 and Z H2. Seal the secondary air injection ports when the PAIR system is removed during car conversion, tidying the engine and removing a source of false lambda readings.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Too Fast To Race"
+  },
+  "category": "Engine Component",
+  "url": "https://toofasttorace.com/kawasaki-h2/pair-block-off-plates"
+};
+---
+
+<Layout title="Kawasaki H2 PAIR Block Off Plates | Ninja H2 & Z H2 | Too Fast To Race" description="PAIR block off plates for the Kawasaki Ninja H2 and Z H2. Seal the secondary air injection ports when the PAIR system is removed for car conversion — tidier engine, fewer hoses and accurate lambda readings.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>PAIR <span class="text-green">Block Off Plates</span></h1>
+      <p class="hero-subtitle">A small part that solves a real problem. With the PAIR system removed for car conversion, these seal the ports properly — and stop fresh air reaching the exhaust and corrupting the lambda readings your calibration depends on.</p>
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="kit-summary-section">
+    <div class="container">
+      <div class="kit-summary">
+        <div class="kit-price">
+          <span class="price-label">Pricing</span>
+          <span class="price-pending">To Follow</span>
+          <span class="price-note">Contact us for current pricing</span>
+        </div>
+        <div class="kit-specs">
+          <div class="spec">
+            <span class="spec-label">Fitment</span>
+            <span class="spec-value">Ninja H2 · Z H2</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Function</span>
+            <span class="spec-value">PAIR System Delete</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Fitting</span>
+            <span class="spec-value">Bolt On</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Application</span>
+            <span class="spec-value">Car Installation / Race</span>
+          </div>
+        </div>
+        <a href="/contact" class="btn btn-primary">Enquire About These Plates</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="kit-content">
+    <div class="container">
+      <ProductGallery images={galleryImages} />
+
+      <div class="content-block">
+        <h2>What PAIR <span class="text-green">Actually Does</span></h2>
+        <p>PAIR — pulsed secondary air injection — is an emissions device. It draws filtered air from the airbox and admits it into the exhaust ports through reed valves in the cylinder head cover, so that unburnt hydrocarbons in the exhaust gas continue burning after they have left the combustion chamber. It lowers measured emissions without altering how the engine runs.</p>
+        <p>On the motorcycle it does its job quietly and causes nobody any trouble. In a car conversion it becomes redundant hardware — and, more importantly, an active nuisance.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Why It Has to Go in <span class="text-green">a Car</span></h2>
+        <p><strong>It corrupts your lambda readings.</strong> This is the one that matters. PAIR admits fresh air into the exhaust stream upstream of where a lambda sensor typically sits. The sensor reads that oxygen and reports a mixture leaner than the engine is actually running. If you are mapping on wideband lambda — and on a supercharged engine you should be — that is bad data going into the decisions that protect your pistons. Worse, if you are running closed-loop fuelling against a target lambda map, the ECU will act on it and enrich an engine that was already correct.</p>
+        <p><strong>It feeds from an airbox you have removed.</strong> The PAIR system takes its air supply from the standard airbox. In most car installations the airbox is gone, which leaves the system either drawing from wherever it happens to be pointing or simply open to the engine bay.</p>
+        <p><strong>It causes popping and afterfire on the overrun.</strong> Fresh air meeting hot, rich exhaust gas is exactly the recipe. Entertaining once; tiresome by the second lap.</p>
+        <p><strong>It is clutter.</strong> Hoses, a solenoid valve and pipework routed around the top of the engine, none of it doing anything useful in your car, all of it in the way when you are trying to package a loom and a cooling system into a space that was never meant to hold them.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="included-col">
+          <h3>What These Give You</h3>
+          <ul class="kit-list">
+            <li>Ports sealed properly rather than blanked improvised</li>
+            <li>Accurate lambda readings for mapping and closed-loop control</li>
+            <li>No secondary air path into the exhaust</li>
+            <li>Hoses, valve and pipework removed from the top of the engine</li>
+            <li>One less unmetered air route into the system</li>
+            <li>A tidier engine in a car where the engine is usually on display</li>
+          </ul>
+        </div>
+        <div class="included-col">
+          <h3>Worth Knowing</h3>
+          <ul class="kit-list">
+            <li>Supplied as a pair — one per reed plate — with stainless steel fixings</li>
+            <li>Fit in place of the original PAIR caps, no machining or modification</li>
+            <li>Original reed plates are retained and refitted</li>
+            <li>Can be done with the engine in the car</li>
+            <li>Best done alongside the loom conversion</li>
+            <li>Check what emissions requirements apply to your particular build</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2><span class="text-green">Fitting</span></h2>
+        <p>A short job, and one that can be done with the engine in the car. Work to the Kawasaki service manual for removal of the original PAIR caps and valve solenoid, then:</p>
+        <ol class="fit-steps">
+          <li>Take the two screws and four reed valves out of each reed plate. The reed plates themselves are reused.</li>
+          <li>Inspect each reed plate around its outer gasket face. That is your sealing surface, it is off the engine anyway, and a marked or distorted plate is worth replacing while you are there rather than chasing a leak afterwards.</li>
+          <li>Refit the reed plates together with the block off plates, in place of the original caps, using the supplied stainless fixings. Torque to 10 Nm.</li>
+          <li>Remove the PAIR valve solenoid and its associated pipework from the engine.</li>
+        </ol>
+        <p><strong>One motorcycle problem you do not inherit.</strong> On a bike, removing the PAIR solenoid frequently triggers a fault light that then needs an ECU flash or a bypass plug to clear. In a car conversion the factory ECU has gone entirely, so the situation never arises — one of the few places where the wholesale electrical rebuild makes life simpler rather than harder.</p>
+        <p>Some applications also need the airbox port plugging. On the Ninja H2 that is not required, and in most car installations the standard airbox has been removed in any case.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Do It Before <span class="text-green">You Map</span></h2>
+        <p>If you take one thing from this page: fit these before the engine is calibrated, not after.</p>
+        <p>A map developed with PAIR still active is a map developed against lambda data that was wrong the whole time. The correction is not a small trim — the mixture the sensor reported and the mixture the engine was actually running were different figures, and every decision built on top of that inherits the error.</p>
+        <p>It is a cheap part that protects an expensive process. Our <a href="/kawasaki-h2/mbe-9a9-ecu">MBE 9A9 systems</a> run twin wideband lambda inputs with closed-loop target lambda mapping, and that capability is only as good as what the sensors are actually seeing.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Engine <span class="text-green">Fitment</span></h2>
+        <p>Supplied for the <strong>Ninja H2 and Z H2</strong>. If you are running an H2 SX or an H2R, ask us before ordering and we will confirm — secondary air provision varies between variants and we would rather check than send you something that does not fit.</p>
+        <p>If you are unsure which variant you have, our <a href="/kawasaki-h2">H2 engine reference</a> explains how to identify one properly. The engine number prefix will not tell you, because it is shared across the whole family.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related H2 Engineering</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/kawasaki-h2/mbe-9a9-ecu" class="related-card">
+          <h3>MBE 9A9 ECU &amp; Map</h3>
+          <p>Twin wideband lambda and closed-loop mapping — only as good as what the sensors actually see.</p>
+          <span class="related-link">MBE 9A9 →</span>
+        </a>
+        <a href="/kawasaki-h2/wiring-loom" class="related-card">
+          <h3>Motorsport Wiring Loom</h3>
+          <p>The natural moment to strip the redundant motorcycle systems off the engine.</p>
+          <span class="related-link">Wiring Loom →</span>
+        </a>
+        <a href="/kawasaki-h2/dry-sump-kit" class="related-card">
+          <h3>Dry Sump System</h3>
+          <p>Three-stage scavenge. The single most important change when putting an H2 engine in a car.</p>
+          <span class="related-link">Dry Sump →</span>
+        </a>
+        <a href="/kawasaki-h2/high-volume-oil-pump" class="related-card">
+          <h3>High Volume Oil Pump</h3>
+          <p>Wider steel gerotor raising oil pressure 30–50%. Supplied complete or as the gear set alone.</p>
+          <span class="related-link">Oil Pump →</span>
+        </a>
+        <a href="/kawasaki-h2" class="related-card">
+          <h3>H2 Engine Reference</h3>
+          <p>The variants, how they genuinely differ, and what a conversion actually requires. Free PDF.</p>
+          <span class="related-link">Read the Reference →</span>
+        </a>
+        <a href="/contact" class="related-card">
+          <h3>Conversion Support</h3>
+          <p>Oil system, cooling, loom and management specified as one package rather than part by part.</p>
+          <span class="related-link">Get in Touch →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Stripping the Engine Down?</h2>
+        <p>Tell us your engine variant and where you are with the build. These are best fitted alongside the loom conversion, before anything is mapped.</p>
+        <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  /* Summary */
+  .kit-summary-section {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .kit-summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-lg);
+    align-items: center;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+    border-left: 3px solid var(--tftr-green);
+    padding: var(--space-md);
+  }
+
+  .kit-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .price-pending {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--tftr-green);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--tftr-grey);
+  }
+
+  .kit-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .spec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .spec-value {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--tftr-white);
+  }
+
+  /* Content */
+  .kit-content {
+    background: var(--tftr-black);
+  }
+
+  .content-block {
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-block p strong {
+    color: var(--tftr-white);
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .included-col {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .included-col h3 {
+    font-size: 1.1rem;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-sm);
+  }
+
+  .fit-steps {
+    counter-reset: fit;
+    list-style: none;
+    margin: 0 0 var(--space-sm);
+    padding: 0;
+  }
+
+  .fit-steps li {
+    counter-increment: fit;
+    position: relative;
+    padding-left: 2.25rem;
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .fit-steps li::before {
+    content: counter(fit);
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1;
+    color: var(--tftr-green);
+  }
+
+  .kit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .kit-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .kit-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--tftr-green);
+  }
+
+  /* Related */
+  .related-section {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    margin-top: auto;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .kit-summary {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .kit-specs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .included-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
