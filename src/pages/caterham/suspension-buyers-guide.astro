@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import AuthorPanel from '../../components/AuthorPanel.astro';
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -488,6 +489,13 @@ const structuredData = {
         <p>The same guide is available as a printable PDF, useful if you want to read it away from the screen or share it with a friend who is weighing up the same decision.</p>
         <a href="/downloads/caterham-suspension-buyers-guide.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download the Guide (PDF)</a>
       </div>
+    </div>
+  </section>
+
+  <!-- Author -->
+  <section class="author-section">
+    <div class="container">
+      <AuthorPanel />
     </div>
   </section>
 

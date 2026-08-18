@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import AuthorPanel from '../../components/AuthorPanel.astro';
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -231,6 +232,13 @@ const breadcrumbData = {
           <p class="setup-apps">Keep a record of your alignment with <strong>StringAlignPro</strong>, and check your fastener figures with <strong>SevenSense</strong> — search for both in the App Store or on Google Play.</p>
         </aside>
       </div>
+    </div>
+  </section>
+
+  <!-- Author -->
+  <section class="author-section">
+    <div class="container">
+      <AuthorPanel />
     </div>
   </section>
 
