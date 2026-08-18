@@ -1,0 +1,834 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://toofasttorace.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Caterham",
+          "item": "https://toofasttorace.com/caterham"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Suspension Kits",
+          "item": "https://toofasttorace.com/caterham/suspension"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Suspension Buyer's Guide",
+          "item": "https://toofasttorace.com/caterham/suspension-buyers-guide"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Caterham Seven Suspension: A Buyer's Guide to Specifying Coilovers Properly",
+      "description": "Simon Rogers' complete guide to specifying Caterham Seven suspension — Nitron NTR R1 and R3, Penske 7500 COSA, 7500 CODA and 8700 3-Way, spring and ride-height options, digressive valving explained, and honest recommendations for road, track and competition.",
+      "url": "https://toofasttorace.com/caterham/suspension-buyers-guide",
+      "datePublished": "2026-07-01",
+      "dateModified": "2026-07-01",
+      "inLanguage": "en-GB",
+      "author": {
+        "@type": "Person",
+        "name": "Simon Rogers",
+        "jobTitle": "Suspension Specialist",
+        "url": "https://toofasttorace.com/about",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Too Fast To Race",
+          "legalName": "S Rogers Engineering Ltd",
+          "url": "https://toofasttorace.com"
+        },
+        "knowsAbout": [
+          "Caterham Seven suspension",
+          "Nitron Racing Systems dampers",
+          "Penske Racing Shocks",
+          "Damper valving",
+          "Spring rate specification",
+          "Vehicle dynamics",
+          "Chassis development"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Too Fast To Race",
+        "url": "https://toofasttorace.com"
+      },
+      "about": [
+        "Caterham Seven",
+        "Coilover suspension",
+        "Nitron NTR R1",
+        "Nitron NTR R3",
+        "Penske 7500",
+        "Penske 8700"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which Caterham suspension kit should I choose?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For the overwhelming majority of Caterham Sevens — fast road, track days, road-and-track use and Nürburgring trips — a correctly specified Nitron NTR R1 is the right answer. Choose the Nitron NTR R3 if you are actively developing the car and adjusting between events with intent. Choose a Penske 7500 COSA or CODA for a committed programme that values Penske build quality and rebuildability, and the Penske 8700 3-Way for a serious, data-led race programme."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a single-adjustable damper a compromise?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. On a Caterham Seven a single adjuster controls compression and rebound together, fine-tuning the car around a base that has already been calibrated for the application. A correctly specified single-adjustable kit will comprehensively out-drive a more adjustable kit that has been set up generically. The hardware sets the ceiling; the specification decides whether you ever reach it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a Caterham coilover kit cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Guide prices from Too Fast To Race, excluding VAT and shipping: Nitron NTR R1 40mm from £1,579; Nitron NTR R3 40mm from £3,206; Penske 7500 COSA from £3,392 (clicker adjuster from £3,636); Penske 7500 CODA from £3,758 (clicker adjuster from £4,002); Penske 8700 3-Way from £7,156. Prices correct as at July 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will new coilovers make my Caterham harsh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not if the spring rates are right. Any correctly specified performance kit will transform the car's ride, control and precision without being harsh. Harshness usually comes from spring rates chosen without reference to the car, its tyres and its use — or from a linear piston that spikes in force over sharp bumps and kerbs. A digressive front piston blends that force off at the high-speed end while keeping strong low-speed control."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do these kits fit an S3, SV or CSR Caterham?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every kit is specified for the Caterham Seven across the S3, SV and CSR chassis and is supplied with mounting spacers. The specification work behind the kit is what adapts it to your particular car, tyres and use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I upgrade to Hyperco springs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hyperco springs are rated more accurately and tested at more positions than other coilover springs, and carry a lifetime warranty. From Too Fast To Race the upgrade is £280 on a Nitron kit (which is supplied with Nitron springs as standard) or £120 on a Penske kit (supplied with Eibach as standard), excluding VAT. Both standard springs are good; Hyperco is the choice if you want the most consistent and precisely rated spring under the car."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a digressive piston and why does it matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In a linear piston, damping force rises in a straight line: gentle at low damper speeds, much firmer at high speeds such as potholes and kerbs. A digressive piston blends that force off at the high-speed end, so the car is not harsh over sharp inputs, while retaining strong control at the low speeds where the driver actually feels the car. On the Caterham Seven the preferred Too Fast To Race configuration is front digressive/linear and rear linear, chosen for how the car loads each axle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my standard Caterham dampers worn out?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They are rarely failed. Standard and OE-style performance dampers are built for broad road use and long life, not for a light, fast Seven being driven hard, so they are typically a little under-damped for the way you now drive and can vary from unit to unit. They are simply doing a different job. If you want to know exactly where yours stand, they can be dyno tested."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the lead time on a Caterham suspension kit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Approximately six weeks across all kits. Every kit is built and tested for the individual car, which is part of why it arrives right."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="Caterham Suspension Buyer's Guide | Nitron & Penske Coilovers | Too Fast To Race" description="Simon Rogers' complete Caterham Seven suspension buyer's guide — Nitron NTR R1 and R3, Penske 7500 COSA, CODA and 8700 3-Way compared, guide prices from £1,579 +VAT, spring and ride-height options, digressive valving explained and honest recommendations for road, track and competition.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Caterham Suspension <span class="text-green">Buyer's Guide</span></h1>
+      <p class="hero-subtitle">Specifying coilovers properly for the Caterham Seven — S3, SV and CSR. Every kit explained, every option priced, and an honest view on which one your car actually justifies.</p>
+      <p class="byline">By <a href="/about">Simon Rogers</a> &middot; Too Fast To Race &middot; Updated July 2026</p>
+    </div>
+  </section>
+
+  <!-- Why I Wrote This -->
+  <section class="guide-body">
+    <div class="container">
+      <div class="content-block">
+        <h2>Why I Wrote <span class="text-green">This Guide</span></h2>
+        <p>For years — back when I ran RaceShocks.UK and Meteor Motorsport — I would sit down every few months and rewrite a buyer's guide like this one. The cars changed, the products changed, and so did my own thinking. This is that guide, brought up to date for Too Fast To Race and for where we are now.</p>
+        <p>The biggest change is what we have chosen to leave out. Over the years we sold a wide range of brands and specifications, including our own CORE (by TracTive) label and the Quantum ranges. After a great deal of testing, building and living with these dampers on real Caterhams, we made a deliberate decision: we now concentrate on the two manufacturers that, in our hands, consistently deliver the best balance of performance, serviceability and value for the Seven — <a href="/nitron-suspension">Nitron</a> and <a href="/penske-racing-shocks">Penske</a>. Narrowing the range is not about offering less choice; it is about offering the right choice, backed by deep knowledge of two platforms rather than shallow knowledge of many.</p>
+        <p>Everything else that mattered in the old guide still holds. The core principle has not changed: we will always find the best product for your use and your budget. That is the heart of how we work — and it is why we would like to see you come back to us as the car develops, and tell your friends while you are at it.</p>
+      </div>
+
+      <!-- What You're Buying -->
+      <div class="content-block">
+        <h2>What Are You <span class="text-green">Actually Buying?</span></h2>
+        <p>The real value in a kit from us is not access to a damper. Anyone can sell you a damper. The value is in how it is specified for your car.</p>
+        <p>What determines how your Caterham behaves — on the road or the circuit — is not the number of adjusters on the damper. It is whether the spring rates and the valving have been chosen for your actual car, your tyres and the way you drive. A correctly specified single-adjustable kit will comprehensively out-drive a more adjustable kit that has been set up generically. <strong>The hardware sets the ceiling; the specification decides whether you ever reach it.</strong></p>
+        <p>That is the whole point of talking to me rather than ordering from a manufacturer who knows the damper but not the car. Every Penske kit we supply, for instance, is built on valving I have developed and proven over years of real Caterham competition — front and rear digressive/linear pistons on our three-way 8700 kits, chosen deliberately for how the Seven loads each axle. You will not find that in a catalogue.</p>
+        <p>And here is something many people do not expect: you often feel the quality of a good damper more on the road than on the track. The circuit is smooth and consistent; the road is not. But on track there is a stopwatch — and good suspension setup gives you confidence, and confidence is what produces lap time. The gains show up as a car that is easier to drive, more neutral, less edgy, with longer and more even tyre wear.</p>
+      </div>
+
+      <!-- How to Choose -->
+      <div class="content-block">
+        <h2>Which Kit Should <span class="text-green">You Choose?</span></h2>
+        <p>Do not choose by price alone, and do not assume more adjustment is automatically better. Choose by where your car sits and how you use it:</p>
+        <ul class="choose-list">
+          <li><strong><a href="/fast-road-suspension">Fast road</a>, <a href="/track-day-suspension">track days</a>, road-and-track or <a href="/nurburgring-suspension">Nürburgring</a> trips</strong> — <a href="/caterham/nitron-ntr-r1">Nitron NTR R1</a>. For the overwhelming majority of Caterhams, this is the right answer.</li>
+          <li><strong>A car you are actively developing</strong>, adjusting between events with intent — <a href="/caterham/nitron-ntr-r3">Nitron NTR R3</a>.</li>
+          <li><strong>A committed programme that values Penske build quality and rebuildability</strong> — <a href="/caterham/penske-7500-cosa">Penske 7500 COSA</a> or <a href="/caterham/penske-7500-coda">7500 CODA</a>.</li>
+          <li><strong>A serious, data-led race programme</strong> — <a href="/caterham/penske-8700-3-way">Penske 8700 3-Way</a>.</li>
+        </ul>
+        <p>If you are not sure, that is exactly the conversation to have with us — and we will give you a straight answer for your car. If you want the reasoning behind the single-versus-double-adjustable decision in more depth, read <a href="/nitron-r1-vs-r3">Nitron R1 vs R3 explained</a>.</p>
+      </div>
+
+      <!-- Range at a Glance -->
+      <div class="content-block">
+        <h2>The Range at <span class="text-green">a Glance</span></h2>
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th scope="col">Kit</th>
+                <th scope="col">Adjustment</th>
+                <th scope="col">From (+VAT)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="/caterham/nitron-ntr-r1">Nitron NTR R1 40mm</a></td>
+                <td>Single</td>
+                <td class="price-cell">£1,579</td>
+              </tr>
+              <tr>
+                <td><a href="/caterham/nitron-ntr-r3">Nitron NTR R3 40mm</a></td>
+                <td>Compression &amp; rebound</td>
+                <td class="price-cell">£3,206</td>
+              </tr>
+              <tr>
+                <td><a href="/caterham/penske-7500-cosa">Penske 7500 COSA</a></td>
+                <td>Single</td>
+                <td class="price-cell">£3,392</td>
+              </tr>
+              <tr>
+                <td><a href="/caterham/penske-7500-coda">Penske 7500 CODA</a></td>
+                <td>Compression &amp; rebound</td>
+                <td class="price-cell">£3,758</td>
+              </tr>
+              <tr>
+                <td><a href="/caterham/penske-8700-3-way">Penske 8700 3-Way</a></td>
+                <td>HS comp / LS comp / rebound</td>
+                <td class="price-cell">£7,156</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">All prices exclude VAT and shipping. Every kit is specified for the Caterham Seven across the S3, SV and CSR chassis and comes with mounting spacers; the specification work behind it is what adapts the kit to your particular car. Prices correct as at July 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Five Kits -->
+  <section class="kits-detail">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>The Five Kits</h2>
+      </div>
+
+      <article class="kit-detail">
+        <div class="kit-detail-head">
+          <h3>Nitron NTR R1 40mm</h3>
+          <span class="kit-detail-price">From £1,579 +VAT</span>
+        </div>
+        <p>Single-adjustable. One adjuster controls compression and rebound together, fine-tuning the car around a base that has already been calibrated for the application. On a Seven that single adjuster is not a compromise — it is exactly what most road and track drivers actually need.</p>
+        <p>This is the kit for fast road cars, track day cars and road-and-track compromise builds: a composed, communicative, genuinely fast car, set correctly once and used with confidence. Specified properly, it will out-drive plenty of more expensive, more adjustable kits that were never set up correctly.</p>
+        <blockquote class="my-take">
+          <p><strong>My take</strong> — for most people reading this, the R1 is the answer, and the best use of your budget.</p>
+        </blockquote>
+        <a href="/caterham/nitron-ntr-r1" class="kit-detail-link">Full Nitron NTR R1 specification &rarr;</a>
+      </article>
+
+      <article class="kit-detail">
+        <div class="kit-detail-head">
+          <h3>Nitron NTR R3 40mm</h3>
+          <span class="kit-detail-price">From £3,206 +VAT</span>
+        </div>
+        <p>Independently adjustable compression and rebound. These are genuinely different events with different requirements, and the R3 lets you address one without disturbing the other.</p>
+        <p>That capability is only an advantage in the right hands. Used to refine a setup against chassis behaviour you can identify and measure, it is a precision instrument. Used without a process, the extra adjustment simply gives you more ways to move away from a setting that was already right. The hardware does not make the difference — the method does. Do remember that we are always here to help: as part of our sales process we will help you understand how and what to adjust. It is rather more simple than you think.</p>
+        <p>This is the kit for the dedicated owner: circuit and <a href="/hillclimb-suspension">hillclimb</a> cars under active development, drivers logging data and adjusting with a clear objective, builds refined progressively across seasons.</p>
+        <blockquote class="my-take">
+          <p><strong>My take</strong> — if your car is a fast road or occasional track day car, the R1 is almost certainly the better choice, and a better use of budget. I will tell you honestly which side of that line your car sits on.</p>
+        </blockquote>
+        <a href="/caterham/nitron-ntr-r3" class="kit-detail-link">Full Nitron NTR R3 specification &rarr;</a>
+      </article>
+
+      <article class="kit-detail">
+        <div class="kit-detail-head">
+          <h3>Penske 7500 COSA</h3>
+          <span class="kit-detail-price">From £3,392 +VAT &middot; clicker from £3,636</span>
+        </div>
+        <p>The single-adjustable entry to genuine Penske ownership. The same manufacturing precision, consistency and full rebuildability Penske is trusted for across world motorsport, valved specifically for the Seven. A single external adjuster fine-tunes the car around a base that is already correct.</p>
+        <p>Every COSA kit we build runs my own special valving — front digressive/linear, rear linear. It is offered with two adjuster styles: the standard sweep adjuster, set with a pin tool (the robust, proven choice, from £3,392), or the clicker eyelet for quicker, repeatable adjustment by hand, which many competition drivers prefer (from £3,636). The kit is otherwise identical — the choice is purely the adjuster.</p>
+        <blockquote class="my-take">
+          <p><strong>My take</strong> — this is for the committed driver who wants genuine Penske build quality and the ability to rebuild and re-valve as the car develops. For many fast road and lighter track day cars, a correctly specified R1 delivers outstanding performance for considerably less — and I will say so honestly.</p>
+        </blockquote>
+        <a href="/caterham/penske-7500-cosa" class="kit-detail-link">Full Penske 7500 COSA specification &rarr;</a>
+      </article>
+
+      <article class="kit-detail">
+        <div class="kit-detail-head">
+          <h3>Penske 7500 CODA</h3>
+          <span class="kit-detail-price">From £3,758 +VAT &middot; clicker from £4,002</span>
+        </div>
+        <p>The double-adjustable 7500. Same platform as the COSA, with a second external adjuster so compression and rebound can be set independently — without the complexity or packaging of a remote reservoir. Similar valving, the same deliberate front digressive/linear and rear linear configuration, now with the freedom to refine each direction as the car evolves.</p>
+        <blockquote class="my-take">
+          <p><strong>My take</strong> — the kit for the Penske owner who has a process and adjusts with purpose, and who values the rebuildability for long-term development. If you want most of that benefit for less, the Nitron R3 gives you independent adjustment at a lower price, and I will give you an honest comparison.</p>
+        </blockquote>
+        <a href="/caterham/penske-7500-coda" class="kit-detail-link">Full Penske 7500 CODA specification &rarr;</a>
+      </article>
+
+      <article class="kit-detail">
+        <div class="kit-detail-head">
+          <h3>Penske 8700 3-Way</h3>
+          <span class="kit-detail-price">From £7,156 +VAT</span>
+        </div>
+        <p>The top of the range, and the most capable damper we offer for the Seven. A triple-adjustable, remote-canister coilover that separates high-speed compression, low-speed compression and rebound into three independent adjustments. The remote canister is what makes true high-speed compression control possible — managing how the damper responds to sharp surface inputs such as kerbs and sharp bumps, independently of how it controls body movement.</p>
+        <p>On the Caterham 8700 that is <strong>17 clicks of high-speed compression, 22 of low-speed compression and 80 of rebound</strong>. Both front and rear run digressive/linear pistons, chosen for a programme that will use the full breadth of that adjustment purposefully across both axles. I run this damper myself.</p>
+        <p>That is a great deal of adjustment, and it is an incredible advantage in the hands of someone with the process to use it. This is the kit for genuine track or race use: conditions that vary between events, and a budget that reflects a serious long-term commitment. For most Caterhams it is more damper than the application justifies, and I will tell you that plainly. But once you have used a set it is very, very difficult to go back.</p>
+        <blockquote class="my-take">
+          <p><strong>My take</strong> — the way I would describe the difference at this level: with a Penske you can feel the grains of sand on the road; with most other dampers you feel the small stones.</p>
+        </blockquote>
+        <a href="/caterham/penske-8700-3-way" class="kit-detail-link">Full Penske 8700 3-Way specification &rarr;</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Springs -->
+  <section class="guide-body alt-bg">
+    <div class="container">
+      <div class="content-block">
+        <h2>Which Springs Come With Your Kit, and <span class="text-green">What to Upgrade To</span></h2>
+        <p>Every Nitron kit comes with Nitron springs as standard; every Penske kit comes with Eibach. Both are good springs. The question is whether to upgrade.</p>
+
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th scope="col">Option</th>
+                <th scope="col">Applies to</th>
+                <th scope="col">Cost (+VAT)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Eibach springs (vs Nitron standard)</td>
+                <td>Nitron kits</td>
+                <td class="price-cell">£200</td>
+              </tr>
+              <tr>
+                <td>Hyperco springs (vs Nitron standard)</td>
+                <td>Nitron kits</td>
+                <td class="price-cell">£280</td>
+              </tr>
+              <tr>
+                <td>Hyperco springs (vs Eibach standard)</td>
+                <td>Penske kits</td>
+                <td class="price-cell">£120</td>
+              </tr>
+              <tr>
+                <td>Hyperco hydraulic spring platforms</td>
+                <td>All kits</td>
+                <td class="price-cell">£175 each*</td>
+              </tr>
+              <tr>
+                <td>Torrington bearings (set of 4)</td>
+                <td>All kits, unless on hydraulic platforms</td>
+                <td class="price-cell">£39 each &middot; £156 per kit</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">* The hydraulic spring platforms include shipping only when you are also upgrading to Hyperco springs; otherwise add shipping. All option prices exclude VAT. Prices correct as at July 2026.</p>
+
+        <h3>Why consider Hyperco?</h3>
+        <p>Hyperco springs are manufactured to a higher specification than any other coilover spring — rated more accurately, tested at more positions, and carrying a lifetime warranty no one else offers. They are the exclusive spring supplier to the NASCAR Cup Series, which means every Next Gen Cup car runs Hyperco springs as a matter of the rulebook. Hyperco's own record is that their springs have been under every winner of the Indianapolis 500 for more than fifty consecutive years, and when IMSA's current hybrid prototypes were introduced, every car in the field ran Hyperco. If you want the most consistent, most precisely rated spring under your car, this is it.</p>
+
+        <h3>Linear, across the board</h3>
+        <p>I run linear springs on every kit, front and rear — and that is a deliberate decision. A linear spring holds the same rate wherever the car is in its travel, so the feedback through the chassis stays consistent and predictable: you learn the car once, and it behaves the same way every time you drive it. Progressive springs have their place, but their rate changes as they compress, and that variability works against the clarity I want you to feel. I would rather control ride compliance with the damper — a digressive piston on the front takes the harshness out of sharp bumps and kerbs while keeping strong low-speed control — and leave the spring doing one honest, predictable job. The result is a car that talks to you the same way in every corner.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pistons & Valving -->
+  <section class="guide-body">
+    <div class="container">
+      <div class="content-block">
+        <h2>What Is a Digressive Piston, and <span class="text-green">Why Does It Matter?</span></h2>
+        <p>This is the part that genuinely separates a good kit from an ordinary one, and it is worth understanding.</p>
+        <p>Think of a damper as a timing device. It controls the speed at which the chassis transfers its weight. A damper with different forces at different velocities lets you influence that timing — and that is the whole game.</p>
+        <p>In a linear piston, the damping force rises in a straight line: gentle at low damper speeds, much firmer at high speeds such as potholes and kerbs. A digressive piston blends the force off at the high-speed end, so the car is not harsh when it hits sharp bumps and kerbs — while keeping strong control at the lower speeds, which is where you actually feel the car. I prefer a double-digressive arrangement: the rebound is digressive too, so the spring can extend quickly under high loads to keep the tyre tracking the surface. The result is strong feedback and confidence when you are driving, without the brittleness that puts people off stiff setups. On the Seven, our preferred configuration is <strong>front digressive/linear and rear linear</strong> — chosen for how the car loads each axle.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Ride Height — Hydraulic Platforms <span class="text-green">or Bearings</span></h2>
+        <p>Adjusting ride height on a coilover means turning the spring platform, and friction in that joint makes it harder than it should be. There are two ways to solve it:</p>
+        <ul class="choose-list">
+          <li><strong>Hyperco hydraulic spring platforms</strong> — the premium solution, £175 each. Add shipping only if you are not also upgrading to Hyperco springs; if you are, it is already included.</li>
+          <li><strong>Torrington bearings</strong> — the value solution, £39 each, four per kit (£156 +VAT per kit). They reduce friction so the platforms turn freely. I would recommend these on every kit that is not running the hydraulic platforms.</li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h2>What Would <span class="text-green">I Do?</span></h2>
+        <p>With no budget set it is hard to choose for you — so tell me your figures and I will guide you accurately. But broadly:</p>
+        <ul class="choose-list">
+          <li><strong>The sweet spot for most people:</strong> <a href="/caterham/nitron-ntr-r1">Nitron NTR R1</a>, specified properly, £1,579 +VAT. It out-drives most things and leaves budget for tyres and track time.</li>
+          <li><strong>Stepping up to independent adjustment:</strong> <a href="/caterham/nitron-ntr-r3">Nitron NTR R3</a> (£3,206) if you will use it with a process, or the <a href="/caterham/penske-7500-cosa">Penske 7500 COSA</a> (£3,392) for genuine Penske ownership and rebuildability.</li>
+          <li><strong>Ultimate:</strong> <a href="/caterham/penske-8700-3-way">Penske 8700 3-Way</a> (£7,156) for a serious race programme — or the <a href="/caterham/penske-7500-coda">7500 CODA</a> (£3,758) for most of the benefit at far less cost.</li>
+        </ul>
+        <p>The only thing I will add is what I always have: I offer a stiffer setup for the track day owner and a more forgiving one for road and road-and-track. That is the whole idea of speaking to me rather than to a manufacturer who knows the damper but not the car.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Upgrading From <span class="text-green">Standard Dampers</span></h2>
+        <p>If you are still on the dampers the car came with, here is the honest picture. Standard and OE-style performance dampers are built for broad road use and long life, not for a light, fast Seven being driven hard. They are typically a little under-damped for the way you now drive — not quite enough force to control the car's momentum — and they can vary from unit to unit. They are rarely failed; they are simply doing a different job. Any correctly specified performance kit will transform the car's ride, control and precision — and as long as we get the spring rates right, it will not be harsh. If you want to know exactly where yours stand, they can be dyno tested.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Lead <span class="text-green">Times</span></h2>
+        <p>Current lead time is approximately six weeks across all kits. Every kit is built and tested for the individual car, which is part of why it arrives right.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Common Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Which Caterham suspension kit should I choose?</summary>
+          <p>For the overwhelming majority of Caterham Sevens — fast road, track days, road-and-track use and Nürburgring trips — a correctly specified Nitron NTR R1 is the right answer. Choose the Nitron NTR R3 if you are actively developing the car and adjusting between events with intent. Choose a Penske 7500 COSA or CODA for a committed programme that values Penske build quality and rebuildability, and the Penske 8700 3-Way for a serious, data-led race programme.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is a single-adjustable damper a compromise?</summary>
+          <p>No. On a Caterham Seven a single adjuster controls compression and rebound together, fine-tuning the car around a base that has already been calibrated for the application. A correctly specified single-adjustable kit will comprehensively out-drive a more adjustable kit that has been set up generically. The hardware sets the ceiling; the specification decides whether you ever reach it.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How much does a Caterham coilover kit cost?</summary>
+          <p>Guide prices, excluding VAT and shipping: Nitron NTR R1 40mm from £1,579; Nitron NTR R3 40mm from £3,206; Penske 7500 COSA from £3,392 (clicker adjuster from £3,636); Penske 7500 CODA from £3,758 (clicker adjuster from £4,002); Penske 8700 3-Way from £7,156. Prices correct as at July 2026.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Will new coilovers make my Caterham harsh?</summary>
+          <p>Not if the spring rates are right. Any correctly specified performance kit will transform the car's ride, control and precision without being harsh. Harshness usually comes from spring rates chosen without reference to the car, its tyres and its use — or from a linear piston that spikes in force over sharp bumps and kerbs. A digressive front piston blends that force off at the high-speed end while keeping strong low-speed control.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do these kits fit an S3, SV or CSR Caterham?</summary>
+          <p>Yes. Every kit is specified for the Caterham Seven across the S3, SV and CSR chassis and is supplied with mounting spacers. The specification work behind the kit is what adapts it to your particular car, tyres and use.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Should I upgrade to Hyperco springs?</summary>
+          <p>Hyperco springs are rated more accurately and tested at more positions than other coilover springs, and carry a lifetime warranty. The upgrade is £280 on a Nitron kit (supplied with Nitron springs as standard) or £120 on a Penske kit (supplied with Eibach as standard), excluding VAT. Both standard springs are good; Hyperco is the choice if you want the most consistent and precisely rated spring under the car.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is a digressive piston and why does it matter?</summary>
+          <p>In a linear piston, damping force rises in a straight line: gentle at low damper speeds, much firmer at high speeds such as potholes and kerbs. A digressive piston blends that force off at the high-speed end, so the car is not harsh over sharp inputs, while retaining strong control at the low speeds where the driver actually feels the car. On the Caterham Seven our preferred configuration is front digressive/linear and rear linear, chosen for how the car loads each axle.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are my standard Caterham dampers worn out?</summary>
+          <p>They are rarely failed. Standard and OE-style performance dampers are built for broad road use and long life, not for a light, fast Seven being driven hard, so they are typically a little under-damped for the way you now drive and can vary from unit to unit. They are simply doing a different job. If you want to know exactly where yours stand, they can be dyno tested.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is the lead time on a Caterham suspension kit?</summary>
+          <p>Approximately six weeks across all kits. Every kit is built and tested for the individual car, which is part of why it arrives right.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- PDF Download -->
+  <section class="guide-download">
+    <div class="container">
+      <div class="download-block">
+        <span class="stripe-accent"></span>
+        <h2>Prefer a <span class="text-green">PDF?</span></h2>
+        <p>The same guide is available as a printable PDF, useful if you want to read it away from the screen or share it with a friend who is weighing up the same decision.</p>
+        <a href="/downloads/caterham-suspension-buyers-guide.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download the Guide (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Let's Specify Yours</h2>
+        <p>Tell me about your Caterham — chassis (S3, SV or CSR), your tyres, and how and where you use the car. I will recommend the right kit honestly, specify it to suit your car rather than just sell it to you, and give you a straight answer if something simpler suits you better.</p>
+        <a href="/contact" class="btn btn-primary">Start Your Specification</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 60ch;
+    margin-top: var(--space-sm);
+  }
+
+  .byline {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.95rem;
+    color: var(--tftr-grey);
+    margin-top: var(--space-sm);
+  }
+
+  .byline a {
+    color: var(--tftr-green);
+  }
+
+  /* Guide Body */
+  .guide-body {
+    padding: var(--space-xl) 0;
+  }
+
+  .alt-bg {
+    background: var(--tftr-dark);
+  }
+
+  .content-block {
+    margin-bottom: var(--space-lg);
+  }
+
+  .content-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-block h3 {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+    color: var(--tftr-white);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-block strong {
+    color: var(--tftr-white);
+  }
+
+  .content-block a {
+    color: var(--tftr-green);
+  }
+
+  .content-block a:hover {
+    color: var(--tftr-green-light);
+  }
+
+  /* Choice Lists */
+  .choose-list {
+    max-width: 65ch;
+    margin-bottom: var(--space-sm);
+  }
+
+  .choose-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-grey-light);
+  }
+
+  .choose-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 10px;
+    height: 3px;
+    background: var(--tftr-green);
+  }
+
+  /* Tables */
+  .table-wrap {
+    overflow-x: auto;
+    margin: var(--space-md) 0 var(--space-sm);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 520px;
+  }
+
+  .spec-table th {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.95rem;
+    text-align: left;
+    padding: 1rem;
+    background: var(--tftr-darker);
+    color: var(--tftr-green);
+    border-bottom: 2px solid var(--tftr-green);
+  }
+
+  .spec-table td {
+    padding: 1rem;
+    color: var(--tftr-grey-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    vertical-align: top;
+  }
+
+  .spec-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .spec-table a {
+    color: var(--tftr-white);
+    border-bottom: 1px solid var(--tftr-green);
+  }
+
+  .spec-table a:hover {
+    color: var(--tftr-green);
+  }
+
+  .price-cell {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--tftr-white) !important;
+    white-space: nowrap;
+  }
+
+  .table-note {
+    font-size: 0.9rem;
+    color: var(--tftr-grey);
+    max-width: 75ch;
+  }
+
+  /* Section Header */
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  /* Kit Detail */
+  .kits-detail {
+    padding: var(--space-xl) 0;
+    background: var(--tftr-dark);
+  }
+
+  .kit-detail {
+    padding: var(--space-md) 0;
+    border-top: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .kit-detail:last-child {
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .kit-detail-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-detail-head h3 {
+    margin: 0;
+  }
+
+  .kit-detail-price {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--tftr-green);
+  }
+
+  .kit-detail p {
+    color: var(--tftr-grey-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-detail strong {
+    color: var(--tftr-white);
+  }
+
+  .kit-detail a {
+    color: var(--tftr-green);
+  }
+
+  .my-take {
+    margin: var(--space-sm) 0;
+    padding: 1rem 1.5rem;
+    background: var(--tftr-darker);
+    border-left: 4px solid var(--tftr-green);
+  }
+
+  .my-take p {
+    margin: 0;
+    color: var(--tftr-white);
+  }
+
+  .my-take strong {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--tftr-green);
+  }
+
+  .kit-detail-link {
+    display: inline-block;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--tftr-green);
+    margin-top: var(--space-xs);
+  }
+
+  .kit-detail-link:hover {
+    color: var(--tftr-green-light);
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: var(--space-xl) 0;
+    background: var(--tftr-darker);
+  }
+
+  .faq-list {
+    max-width: 900px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+    padding: var(--space-sm) 0;
+  }
+
+  .faq-item summary {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--tftr-white);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: "+";
+    color: var(--tftr-green);
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .faq-item[open] summary::after {
+    content: "\2212";
+  }
+
+  .faq-item summary:hover {
+    color: var(--tftr-green);
+  }
+
+  .faq-item p {
+    color: var(--tftr-grey-light);
+    margin-top: var(--space-sm);
+  }
+
+  /* PDF Download */
+  .guide-download {
+    padding: var(--space-lg) 0;
+  }
+
+  .download-block p {
+    color: var(--tftr-grey-light);
+    margin: var(--space-sm) 0 var(--space-md);
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: var(--space-xl) 0;
+    background: var(--tftr-darker);
+    border-top: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .cta-content {
+    text-align: center;
+  }
+
+  .cta-content p {
+    color: var(--tftr-grey-light);
+    margin: var(--space-sm) auto var(--space-md);
+  }
+
+  @media (max-width: 768px) {
+    .kit-detail-head {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .faq-item summary {
+      font-size: 1.1rem;
+    }
+  }
+</style>
