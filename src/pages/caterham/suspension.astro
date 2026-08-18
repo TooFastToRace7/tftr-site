@@ -65,10 +65,10 @@ const structuredData = {
         </div>
 
         <aside class="guide-aside">
-          <span class="kit-card-brand">Free Download</span>
+          <span class="kit-card-brand">Read First</span>
           <h3>The Complete Buyer's Guide</h3>
           <p>Simon's full guide to specifying Caterham suspension — every kit explained, spring and ride-height options, the thinking behind digressive valving, and honest recommendations for road, track and competition.</p>
-          <a href="/downloads/caterham-suspension-buyers-guide.pdf" class="btn btn-primary" target="_blank" rel="noopener">Read the Guide (PDF)</a>
+          <a href="/caterham/suspension-buyers-guide" class="btn btn-primary">Read the Buyer's Guide</a>
         </aside>
       </div>
     </div>
@@ -163,14 +163,46 @@ const structuredData = {
     </div>
   </section>
 
-  <!-- Buyer's Guide Download -->
+  <!-- Buyer's Guide -->
   <section class="guide-section">
     <div class="container">
       <div class="guide-block">
         <span class="stripe-accent"></span>
-        <h2>The Complete <span class="text-green">Buyer's Guide</span></h2>
-        <p>Simon's full guide to specifying Caterham suspension — every kit explained, spring and ride-height options, the thinking behind digressive valving, and honest recommendations for road, track and competition. The same advice we give on the phone, written down.</p>
-        <a href="/downloads/caterham-suspension-buyers-guide.pdf" class="btn btn-primary" target="_blank" rel="noopener">Read the Guide (PDF)</a>
+        <h2>Still Weighing It <span class="text-green">Up?</span></h2>
+        <p>The <a href="/caterham/suspension-buyers-guide">Caterham suspension buyer's guide</a> works through the decision properly: what you are actually paying for, why a correctly specified single-adjustable kit out-drives a generically set-up double, what a digressive piston does, why every kit runs linear springs, and what each spring and ride-height option costs. The same advice we give on the phone, written down.</p>
+        <div class="guide-actions">
+          <a href="/caterham/suspension-buyers-guide" class="btn btn-primary">Read the Buyer's Guide</a>
+          <a href="/downloads/caterham-suspension-buyers-guide.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Setup Guide -->
+  <section class="setup-section" id="setup-guide">
+    <div class="container">
+      <div class="setup-grid">
+        <div class="setup-content">
+          <span class="stripe-accent"></span>
+          <h2>Caterham Seven <span class="text-green">Setup Guide</span></h2>
+          <p>Once the kit is on the car, the setup is what makes it work. This is Simon's own method, written down: sump clearance first, then ride height at the spring platform, rake established through the Point A and Point B chassis measurements, and the corner weight approach he uses on a Seven instead of diagonal balancing — developed over 25+ years of sprinting and checked against scales.</p>
+          <p>It carries starting alignment figures and baseline damper click settings for the <a href="/caterham/nitron-ntr-r1">Nitron</a> and <a href="/caterham/penske-8700-3-way">Penske</a> kits above, plus a printable record sheet so every change is written down. The figures are a considered starting point rather than a final answer — if the car is not doing what you want it to do, <a href="/contact">talk it through with us</a>.</p>
+        </div>
+
+        <aside class="setup-aside">
+          <span class="kit-card-brand">Free Download · PDF</span>
+          <h3>Car Set Up for a Caterham 7</h3>
+          <ul class="setup-list">
+            <li>Sump clearance, ride height and rake</li>
+            <li>Point A and Point B chassis measurements</li>
+            <li>Corner weights and braking balance</li>
+            <li>Camber, caster and toe starting figures</li>
+            <li>Nitron and Penske damper settings</li>
+            <li>Printable setup record sheet</li>
+          </ul>
+          <a href="/downloads/caterham-setup-guide.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download the Setup Guide</a>
+          <p class="setup-apps">Keep a record of your alignment with <strong>StringAlignPro</strong>, and check your fastener figures with <strong>SevenSense</strong> — search for both in the App Store or on Google Play.</p>
+        </aside>
       </div>
     </div>
   </section>
@@ -430,6 +462,90 @@ const structuredData = {
 
   @media (max-width: 600px) {
     .kits-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Setup Guide */
+  .setup-section {
+    background: var(--tftr-darker);
+  }
+
+  .setup-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+
+  .setup-content h2 {
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .setup-content p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+  }
+
+  .setup-aside {
+    background: var(--tftr-dark);
+    border: 1px solid rgba(92, 184, 92, 0.25);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .setup-aside h3 {
+    font-size: 1.4rem;
+    color: var(--tftr-white);
+    margin: 0.25rem 0 var(--space-sm);
+  }
+
+  .setup-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-md);
+  }
+
+  .setup-list li {
+    position: relative;
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0.4rem 0 0.4rem var(--space-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .setup-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.95rem;
+    width: 10px;
+    height: 2px;
+    background: var(--tftr-green);
+  }
+
+  .setup-aside .btn-primary {
+    align-self: flex-start;
+  }
+
+  .setup-apps {
+    color: var(--tftr-grey);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin: var(--space-md) 0 0;
+  }
+
+  .setup-apps strong {
+    color: var(--tftr-white);
+  }
+
+  @media (max-width: 900px) {
+    .setup-grid {
       grid-template-columns: 1fr;
     }
   }
