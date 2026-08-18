@@ -1,5 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+
+const galleryImages = [
+  { src: '/images/kawasaki-h2/oil-cooler-plate-01.jpg', alt: 'OE oil cooler blanking plate for the Kawasaki H2 engine' }
+];
 
 // NOTE: `offers` is deliberately omitted while pricing is being finalised.
 // Once prices are fixed, add an "offers" object matching the Caterham kit
@@ -66,6 +71,8 @@ const structuredData = {
   <!-- Content -->
   <section class="kit-content">
     <div class="container">
+      <ProductGallery images={galleryImages} />
+
       <div class="content-block">
         <h2>What It <span class="text-green">Replaces</span></h2>
         <p>The standard H2 engine carries an oil/water heat exchanger mounted to the block — functionally similar to a Laminova core, transferring heat between the oil and the coolant. On the motorcycle it does two useful jobs: it sheds oil heat under sustained load, and it brings the oil up to temperature quickly from cold by borrowing heat from the coolant.</p>
