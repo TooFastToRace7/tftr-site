@@ -1,9 +1,25 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Kawasaki H2 Standalone ECU Options & Engine Management",
+  "description": "What a standalone ECU must handle on a supercharged Kawasaki H2 in a car — immobiliser removal, ride-by-wire throttle, trigger interpretation and boost strategy.",
+  "url": "https://toofasttorace.com/kawasaki-h2/ecu-options",
+  "author": {
+    "@type": "Person",
+    "name": "Simon Rogers"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Too Fast To Race"
+  }
+};
 ---
 
 <Layout title="Kawasaki H2 Standalone ECU Options & Engine Management | Too Fast To Race" description="What a standalone ECU must handle on a supercharged Kawasaki H2 in a car — immobiliser removal, ride-by-wire throttle, trigger interpretation and boost strategy. Honest guidance on choosing engine management for an H2 conversion.">
-
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <!-- Hero -->
   <section class="page-hero">
     <div class="container">
