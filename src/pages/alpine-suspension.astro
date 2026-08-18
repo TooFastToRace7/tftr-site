@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import AuthorPanel from '../components/AuthorPanel.astro';
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "AutomotiveBusiness",
@@ -146,6 +146,13 @@ const structuredData = {
           <a href="/fast-road-suspension" class="system-link">Fast Road Suspension →</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Author -->
+  <section class="author-section">
+    <div class="container">
+      <AuthorPanel />
     </div>
   </section>
 

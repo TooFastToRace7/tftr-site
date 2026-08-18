@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AuthorPanel from '../components/AuthorPanel.astro';
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -147,6 +148,13 @@ const structuredData = {
           <a href="/track-day-suspension" class="system-link">Track Day Suspension →</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Author -->
+  <section class="author-section">
+    <div class="container">
+      <AuthorPanel />
     </div>
   </section>
 
