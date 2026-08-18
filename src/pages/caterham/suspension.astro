@@ -40,10 +40,36 @@ const structuredData = {
     }
   ]
 };
+
+const breadcrumbData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://toofasttorace.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Caterham",
+      "item": "https://toofasttorace.com/caterham/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Caterham Suspension Kits",
+      "item": "https://toofasttorace.com/caterham/suspension/"
+    }
+  ]
+};
 ---
 
 <Layout title="Caterham Suspension Kits | Nitron & Penske Coilovers | Too Fast To Race" description="Caterham Seven suspension kits — Nitron NTR R1 and R3, Penske 7500 COSA, 7500 CODA and 8700 3-way coilovers for S3, SV and CSR. Bespoke specification, championship-winning valving and honest advice from Too Fast To Race.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
 
   <!-- Hero -->
   <section class="page-hero">
@@ -62,6 +88,7 @@ const structuredData = {
           <h2>How to <span class="text-green">Choose</span></h2>
           <p>For the overwhelming majority of fast road and track day Caterhams, a correctly specified Nitron NTR R1 is the right answer — and a better use of budget than something more adjustable used without a process. The NTR R3 adds independent compression and rebound for drivers developing the car with intent.</p>
           <p>The Penske kits are for the committed programme that values Penske's build quality, rebuildability and long-term development: the 7500 COSA and CODA, and the three-way, remote-canister 8700 at the top of the range. We will always recommend the kit your car and your use actually justify — read <a href="/nitron-r1-vs-r3">Nitron R1 vs R3</a> and our view on <a href="/penske-racing-shocks">Penske Racing Shocks</a>, then talk to us.</p>
+          <p>Which kit suits you depends less on the badge on your car than on how you use it. A <a href="/fast-road-suspension">fast road</a> Seven, a car built around <a href="/track-day-suspension">track days</a>, one aimed at the <a href="/nurburgring-suspension">Nordschleife</a> and a <a href="/hillclimb-suspension">sprint or hillclimb</a> car each want something different from the same hardware. If you want to understand what the adjusters actually do before spending anything, <a href="/damper-adjustment-explained">damper adjustment explained</a> covers it, and our wider <a href="/caterham">Caterham build, conversion and setup work</a> sits alongside this.</p>
         </div>
 
         <aside class="guide-aside">
@@ -159,7 +186,7 @@ const structuredData = {
         </a>
       </div>
 
-      <p class="kits-note">All prices are "from", excluding VAT and shipping. Every kit comes with mounting spacers and is specified for the Caterham Seven S3, SV and CSR chassis. Eibach or Hyperco springs, hydraulic spring perches and Torrington bearings are available across the range.</p>
+      <p class="kits-note">All prices are "from", excluding VAT and shipping. Every kit comes with mounting spacers and is specified for the Caterham Seven — S3, SV and CSR chassis, covering Academy, Roadsport and Tracksport cars, the 270, 310, 340, 360, 420 and 620 in S or R specification, and Superlight R300 and R400. Sigma or Duratec, live axle or de Dion: the hardware is common, the specification is not. Eibach or Hyperco springs, hydraulic spring perches and Torrington bearings are available as options.</p>
     </div>
   </section>
 
