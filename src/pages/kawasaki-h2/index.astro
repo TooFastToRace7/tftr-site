@@ -155,6 +155,45 @@ const structuredData = {
     </div>
   </section>
 
+<!-- Measured Output -->
+  <section class="dyno-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Measured, <span class="text-green">Not Claimed</span></h2>
+        <p>Power figures are easy to quote and harder to prove. Both plots below are the same pull, recorded on a Dynojet 224xLC and DIN corrected — not a calculation, and not a manufacturer figure.</p>
+      </div>
+
+      <div class="dyno-grid">
+        <figure class="dyno-figure">
+          <div class="dyno-image">
+            <img src="/images/kawasaki-h2/h2-dyno-wheel.png" alt="Dynojet power plot for the Kawasaki H2 engine measured at the wheel — 245.36 hp and 105.11 lb-ft" width="1598" height="898" loading="lazy" />
+          </div>
+          <figcaption>
+            <span class="kit-card-brand">At the Wheel</span>
+            <p><strong>245.36 hp</strong> at 13,930 rpm and <strong>105.11 lb-ft</strong> at 10,190 rpm, with the boost trace logged alongside it.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="dyno-figure">
+          <div class="dyno-image">
+            <img src="/images/kawasaki-h2/h2-dyno-crank.png" alt="Dynojet power plot for the Kawasaki H2 engine referred to the crank — 284.36 hp and 121.86 lb-ft" width="1311" height="737" loading="lazy" />
+          </div>
+          <figcaption>
+            <span class="kit-card-brand">At the Crank</span>
+            <p><strong>284.36 hp</strong> at 13,830 rpm and <strong>121.86 lb-ft</strong> at 10,190 rpm — the same run, with driveline loss accounted for.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="dyno-notes">
+        <p>The difference between the two plots is around 13%, which is a normal driveline loss for this installation — and the reason both are published together. A crank figure quoted on its own tells you very little unless the measured run behind it is shown as well.</p>
+        <p>The shape matters more than the headline number. Torque arrives early and stays flat from roughly 8,000 rpm through to beyond 11,000, so the engine is tractable well below its peak rather than only usable at the top. Power then climbs almost linearly to nearly 14,000 rpm without the flattening that normally signals a breathing or fuelling limit being reached. That combination — a wide, usable torque plateau beneath a still-rising power curve — is what makes the supercharged H2 genuinely viable in a car rather than simply impressive on paper.</p>
+        <p>Recorded 21 June 2024 at Daytuner Performance, Harrogate. DIN correction 1.03, smoothing 5.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Products -->
   <section class="products-section">
     <div class="container">
@@ -493,6 +532,77 @@ const structuredData = {
     line-height: 1.8;
   }
 
+/* Measured Output */
+  .dyno-section {
+    background: var(--tftr-black);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .dyno-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    align-items: start;
+  }
+
+  .dyno-figure {
+    margin: 0;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .dyno-image {
+    background: var(--tftr-white);
+    padding: var(--space-sm);
+  }
+
+  .dyno-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .dyno-figure figcaption {
+    padding: var(--space-md);
+  }
+
+  .dyno-figure figcaption p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .dyno-figure figcaption p strong {
+    color: var(--tftr-white);
+  }
+
+  .dyno-notes {
+    margin-top: var(--space-lg);
+    max-width: 75ch;
+  }
+
+  .dyno-notes p {
+    color: var(--tftr-grey-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .dyno-notes p:last-child {
+    color: var(--tftr-grey);
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .dyno-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
   /* Parts Grid */
   .products-section {
     background: var(--tftr-black);
