@@ -1,0 +1,491 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Kawasaki H2 Engine Specifications & Variant Guide",
+  "description": "How the Kawasaki supercharged H2 engine family genuinely differs between variants, how to identify an engine correctly, why the standard lubrication system becomes the limiting factor in a car, and measured output from a car installation.",
+  "url": "https://toofasttorace.com/kawasaki-h2/engine-specifications",
+  "author": {
+    "@type": "Organization",
+    "name": "Too Fast To Race"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Too Fast To Race"
+  },
+  "about": "Kawasaki supercharged H2 engine specifications, variant identification and lubrication in car installations"
+};
+---
+
+<Layout title="Kawasaki H2 Engine Specifications & Variant Guide | Too Fast To Race" description="How the Kawasaki supercharged H2 variants genuinely differ, how to identify an engine correctly, why the standard lubrication system becomes the limiting factor in a car, and measured dyno output from a car installation.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Kawasaki H2 <span class="text-green">Engine Specifications &amp; Variant Guide</span></h1>
+      <p class="hero-subtitle">What actually separates the variants of the supercharged H2, how to identify an engine correctly before you buy it, and why lubrication is the problem that decides whether a car installation survives.</p>
+    </div>
+  </section>
+
+  <!-- Engine Synopsis -->
+  <section class="synopsis-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Understanding the <span class="text-green">H2 Platform</span></h2>
+        <p>What matters before you buy an engine. The full detail is in the downloadable reference at the foot of this page.</p>
+      </div>
+
+      <div class="synopsis-grid">
+        <div class="synopsis-block">
+          <h3>One Family, Two Engine Specifications</h3>
+          <p>The H2 range is frequently discussed as though it were a single engine. It is not. The family splits into two genuinely different builds, and the difference is mechanical rather than a matter of calibration.</p>
+          <p>The <strong>Ninja H2 and H2R</strong> run low compression with higher boost. The <strong>Ninja H2 SX and Z H2</strong> run high compression with more moderate boost, using a different cylinder head, camshafts, crankshaft and pistons, along with a different supercharger impeller and plenum chamber.</p>
+
+          <div class="spec-table">
+            <div class="spec-row spec-row-head">
+              <span>Model</span>
+              <span>Compression</span>
+              <span>Claimed Power</span>
+            </div>
+            <div class="spec-row">
+              <span>Ninja H2 (2015–2018)</span>
+              <span>8.5:1</span>
+              <span>200 PS</span>
+            </div>
+            <div class="spec-row">
+              <span>Ninja H2 (2019 on)</span>
+              <span>8.5:1</span>
+              <span>231 PS</span>
+            </div>
+            <div class="spec-row">
+              <span>Ninja H2R</span>
+              <span>8.3:1</span>
+              <span>310 PS</span>
+            </div>
+            <div class="spec-row">
+              <span>Ninja H2 SX / SX SE</span>
+              <span>11.2:1</span>
+              <span>200 PS</span>
+            </div>
+            <div class="spec-row">
+              <span>Z H2 / Z H2 SE</span>
+              <span>11.2:1</span>
+              <span>200 PS</span>
+            </div>
+          </div>
+
+          <p>Compression ratio dictates the boost ceiling, fuel sensitivity and off-boost behaviour. A high-output, high-boost build is better served by the low-compression Ninja H2 specification. Strong mid-range and driveability on pump fuel — usually the better answer in a road or hillclimb car — favours the 11.2:1 engines. Calibration developed on one is not transferable to the other.</p>
+
+          <p>The same split runs through the gearbox. The two engine specifications carry different primary reductions and different first and second gear ratios, which is covered in full on our <a href="/kawasaki-h2/gear-ratios">H2 gear ratios and gearbox data</a> page.</p>
+        </div>
+
+        <div class="synopsis-block">
+          <h3>Why Lubrication Is the Limiting Factor</h3>
+          <p>The H2 wet sump is well designed for its purpose. A motorcycle leans into a corner, so the oil surface stays broadly perpendicular to the sump and the pickup remains submerged. Sustained lateral loading is simply not a design case.</p>
+          <p>A car does not lean. The same corner produces sustained lateral acceleration acting across the sump, and oil migrates away from the pickup and stays there for the duration of the corner — precisely when bearing loads are highest. The severity scales with the car: a light chassis on slicks through long corners is the worst case, and that is exactly the sort of car this engine ends up in.</p>
+          <p>This is a geometry problem rather than a capacity problem. It is not reliably solved by baffling, a deeper pan, or simply running more oil. Oil starvation is the recurring failure pattern in car-installed H2 engines wherever the original wet sump arrangement has been retained or only lightly modified.</p>
+
+          <h3>Identify the Engine Properly</h3>
+          <p>The <strong>ZXT00NE</strong> engine number prefix appears across the whole supercharged family — Z H2, Ninja H2 SX and Ninja H2 alike — and serial numbers run sequentially across all of them. It tells you nothing about compression ratio or state of tune, so buying on prefix alone is a real risk. Identify by VIN or model code, and confirm the specification physically where no VIN is available.</p>
+          <p>Where an engine has been bought loose with no VIN and no history, the gearbox settles it. First gear is 51/16 on a Ninja H2 or H2R and 40/13 on a Z H2 or Ninja H2 SX, and both are countable with the cassette out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Measured Output -->
+  <section class="dyno-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Measured, <span class="text-green">Not Claimed</span></h2>
+        <p>Power figures are easy to quote and harder to prove. Both plots below are the same pull, recorded on a Dynojet 224xLC and DIN corrected — not a calculation, and not a manufacturer figure.</p>
+      </div>
+
+      <div class="dyno-grid">
+        <figure class="dyno-figure">
+          <div class="dyno-image">
+            <img src="/images/kawasaki-h2/h2-dyno-wheel.png" alt="Dynojet power plot for the Kawasaki H2 engine measured at the wheel — 245.36 hp and 105.11 lb-ft" width="1598" height="898" loading="lazy" />
+          </div>
+          <figcaption>
+            <span class="kit-card-brand">At the Wheel</span>
+            <p><strong>245.36 hp</strong> at 13,930 rpm and <strong>105.11 lb-ft</strong> at 10,190 rpm, with the boost trace logged alongside it.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="dyno-figure">
+          <div class="dyno-image">
+            <img src="/images/kawasaki-h2/h2-dyno-crank.png" alt="Dynojet power plot for the Kawasaki H2 engine referred to the crank — 284.36 hp and 121.86 lb-ft" width="1311" height="737" loading="lazy" />
+          </div>
+          <figcaption>
+            <span class="kit-card-brand">At the Crank</span>
+            <p><strong>284.36 hp</strong> at 13,830 rpm and <strong>121.86 lb-ft</strong> at 10,190 rpm — the same run, with driveline loss accounted for.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="dyno-notes">
+        <p>The difference between the two plots is around 13%, which is a normal driveline loss for this installation — and the reason both are published together. A crank figure quoted on its own tells you very little unless the measured run behind it is shown as well.</p>
+        <p>The shape matters more than the headline number. Torque arrives early and stays flat from roughly 8,000 rpm through to beyond 11,000, so the engine is tractable well below its peak rather than only usable at the top. Power then climbs almost linearly to nearly 14,000 rpm without the flattening that normally signals a breathing or fuelling limit being reached. That combination — a wide, usable torque plateau beneath a still-rising power curve — is what makes the supercharged H2 genuinely viable in a car rather than simply impressive on paper.</p>
+        <p>That curve shape also drives the gearing decision. A torque peak at 10,190 rpm sitting beneath power that is still climbing at 13,830 changes where the useful shift points fall, and therefore which final drive suits the car — worked through in detail on the <a href="/kawasaki-h2/gear-ratios">gear ratios page</a>.</p>
+        <p>Recorded 21 June 2024 at Daytuner Performance, Harrogate. DIN correction 1.03, smoothing 5.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reference Download -->
+  <section class="reference-section">
+    <div class="container">
+      <div class="reference-block">
+        <span class="kit-card-brand">Full Technical Reference</span>
+        <h2>The H2 Engine <span class="text-green">Family Reference</span></h2>
+        <p>Our complete technical reference on the supercharged H2 platform — the variants and how they genuinely differ, how to identify an engine correctly, why the standard lubrication system becomes the limiting factor in a car, and what a conversion actually requires.</p>
+        <p>It also covers supercharger specification, oil pressure characteristics and how to interpret them, rev limits and calibration in car use, and what a standalone loom and ECU must account for.</p>
+        <a href="/downloads/kawasaki-h2-engine-reference.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download the Reference (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related-expertise">
+    <div class="container">
+      <div class="expertise-header">
+        <span class="stripe-accent"></span>
+        <h3>H2 Conversion <span class="text-green">Components</span></h3>
+        <p>Understanding the engine is the first step. These are the parts that make it work in a car.</p>
+      </div>
+      <div class="expertise-grid">
+        <a href="/kawasaki-h2" class="expertise-link">H2 Engine Parts →</a>
+        <a href="/kawasaki-h2/dry-sump-kit" class="expertise-link">Dry Sump System →</a>
+        <a href="/kawasaki-h2/gear-ratios" class="expertise-link">Gear Ratios →</a>
+        <a href="/kawasaki-h2/mbe-9a9-ecu" class="expertise-link">MBE 9A9 ECU &amp; Map →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Discuss Your H2 Project</h2>
+        <p>Tell us about the engine, the car and how you intend to use it. We will tell you honestly what the installation needs — and what it does not.</p>
+        <a href="/contact" class="btn btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  /* Shared */
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .section-header p {
+    color: var(--tftr-grey-light);
+    margin-top: var(--space-xs);
+    max-width: 70ch;
+  }
+
+  .kit-card-brand {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--tftr-green);
+    margin-bottom: 0.25rem;
+  }
+
+  /* Synopsis */
+  .synopsis-section {
+    background: var(--tftr-black);
+  }
+
+  .synopsis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .synopsis-block h3 {
+    font-size: 1.35rem;
+    color: var(--tftr-white);
+    margin-bottom: var(--space-sm);
+  }
+
+  .synopsis-block h3 + p {
+    margin-top: 0;
+  }
+
+  .synopsis-block > h3:not(:first-child) {
+    margin-top: var(--space-lg);
+  }
+
+  .synopsis-block p {
+    color: var(--tftr-grey-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .synopsis-block p strong {
+    color: var(--tftr-white);
+  }
+
+  .synopsis-block a {
+    color: var(--tftr-green);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .spec-table {
+    background: var(--tftr-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: var(--space-md) 0;
+  }
+
+  .spec-row {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: var(--space-sm);
+    padding: 0.7rem var(--space-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
+    color: var(--tftr-grey-light);
+  }
+
+  .spec-row:last-child {
+    border-bottom: none;
+  }
+
+  .spec-row-head {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    background: rgba(92, 184, 92, 0.08);
+  }
+
+  /* Measured Output */
+  .dyno-section {
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .dyno-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    align-items: start;
+  }
+
+  .dyno-figure {
+    margin: 0;
+    background: var(--tftr-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .dyno-image {
+    background: var(--tftr-white);
+    padding: var(--space-sm);
+  }
+
+  .dyno-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .dyno-figure figcaption {
+    padding: var(--space-md);
+  }
+
+  .dyno-figure figcaption p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .dyno-figure figcaption p strong {
+    color: var(--tftr-white);
+  }
+
+  .dyno-notes {
+    margin-top: var(--space-lg);
+    max-width: 75ch;
+  }
+
+  .dyno-notes p {
+    color: var(--tftr-grey-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .dyno-notes a {
+    color: var(--tftr-green);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .dyno-notes p:last-child {
+    color: var(--tftr-grey);
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  /* Reference Download */
+  .reference-section {
+    background: var(--tftr-black);
+  }
+
+  .reference-block {
+    background: var(--tftr-dark);
+    border: 1px solid rgba(92, 184, 92, 0.25);
+    padding: var(--space-lg);
+    max-width: 75ch;
+  }
+
+  .reference-block h2 {
+    margin: 0.25rem 0 var(--space-md);
+  }
+
+  .reference-block p {
+    color: var(--tftr-grey-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .reference-block .btn-primary {
+    margin-top: var(--space-sm);
+  }
+
+  /* Related Expertise */
+  .related-expertise {
+    background: var(--tftr-black);
+    border-top: 1px solid rgba(92, 184, 92, 0.2);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+    padding: var(--space-lg) 0;
+  }
+
+  .expertise-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .expertise-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .expertise-header p {
+    color: var(--tftr-grey-light);
+    max-width: 55ch;
+    margin: 0 auto;
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+
+  .expertise-link {
+    display: block;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--tftr-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+  }
+
+  .expertise-link:hover {
+    border-color: var(--tftr-green);
+    background: rgba(92, 184, 92, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .synopsis-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .dyno-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .expertise-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .spec-row {
+      grid-template-columns: 1.4fr 0.8fr 0.8fr;
+      font-size: 0.82rem;
+    }
+
+    .reference-block {
+      padding: var(--space-md);
+    }
+  }
+</style>
