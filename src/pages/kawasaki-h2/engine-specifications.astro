@@ -19,7 +19,7 @@ const structuredData = {
 };
 ---
 
-<Layout title="Kawasaki H2 Engine Specifications & Variant Guide | Too Fast To Race" description="How the Kawasaki supercharged H2 variants genuinely differ, how to identify an engine correctly, why the standard lubrication system becomes the limiting factor in a car, and measured dyno output from a car installation.">
+<Layout title="Kawasaki H2 Engine Specifications, Tuning Headroom & Variant Guide | Too Fast To Race" description="How the Kawasaki supercharged H2 variants differ, how to identify an engine correctly, measured dyno output from a car installation, and how much power the 8.5:1 and 11.2:1 engines will make in a car without opening them.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
@@ -134,6 +134,76 @@ const structuredData = {
         <p>The shape matters more than the headline number. Torque arrives early and stays flat from roughly 8,000 rpm through to beyond 11,000, so the engine is tractable well below its peak rather than only usable at the top. Power then climbs almost linearly to nearly 14,000 rpm without the flattening that normally signals a breathing or fuelling limit being reached. That combination — a wide, usable torque plateau beneath a still-rising power curve — is what makes the supercharged H2 genuinely viable in a car rather than simply impressive on paper.</p>
         <p>That curve shape also drives the gearing decision. A torque peak at 10,190 rpm sitting beneath power that is still climbing at 13,830 changes where the useful shift points fall, and therefore which final drive suits the car — worked through in detail on the <a href="/kawasaki-h2/gear-ratios">gear ratios page</a>.</p>
         <p>Recorded 21 June 2024 at Daytuner Performance, Harrogate. DIN correction 1.03, smoothing 5.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Tuning Headroom -->
+  <section class="headroom-section" id="tuning-headroom">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>How Much Is <span class="text-green">Actually Available</span></h2>
+        <p>What the two engine specifications will give in a car without opening the crankcases, why the factory claims never appear on a dyno, and which engine to buy for which target.</p>
+      </div>
+
+      <div class="synopsis-grid">
+        <div class="synopsis-block">
+          <h3>Why Claimed Figures Don't Appear on a Dyno</h3>
+          <p>The H2R's headline 326 PS is a ram-air figure — the crank output with the intake pressure available at very high road speed. On a dyno the machine is stationary, so that contribution is absent, and 326 PS is 321 bhp before anything else is considered. The factory calibration is also deliberately conservative at the top of the rev range, with rich fuelling and cautious ignition timing, which is entirely correct for an engine sold with a warranty.</p>
+          <p>The practical result, reported consistently by owners and tuners on motorcycle dynos, is that a standard H2R measures 230–240 hp at the rear wheel and a corrected calibration adds 30 hp or so — around 300–310 bhp at the crank on a static test. That is the engine as it is. The gap to the brochure is ram air and correction method, not lost performance.</p>
+
+          <h3>What the H2R Actually Adds</h3>
+          <p>The Ninja H2 and H2R share bore, stroke, pistons, valves, springs and the supercharger itself. What differs is the intake, the exhaust, the camshafts, the ECU calibration, the head gasket and the clutch. The H2R's higher boost is not a different compressor — it is what the same impeller delivers once the intake and exhaust stop restricting it, combined with a far more aggressive ignition map.</p>
+          <p>That matters in a car, because a conversion supplies its own intake, its own exhaust and its own ECU. Most of the H2R's advantage over the H2 is therefore already present in a properly built car installation before the camshafts are considered. The H2R camshafts are the one remaining item, and they fit the 8.5:1 engine without further parts — a top-cover job, not a rebuild.</p>
+
+          <h3>The Cost Argument</h3>
+          <p>The reason this engine makes sense in a car is that a used donor is inexpensive. The moment the crankcases are opened — pistons, rods, crank — the cost converges on any other race engine and the advantage is gone. The useful ceiling is therefore the engine as Kawasaki built it, plus the items that stay outside it: camshafts, charge cooling, intake and exhaust, and a standalone ECU with closed-loop lambda and knock control.</p>
+          <p>On that basis the measured 284 bhp above, from an unopened 11.2:1 engine, is not a starting point. For a lightweight car it is close to the sensible end point, and it was reached for the price of a crash-damaged motorcycle.</p>
+        </div>
+
+        <div class="synopsis-block">
+          <h3>Compression Ratio Under Boost</h3>
+          <p>11.2:1 is an ordinary ratio for a naturally aspirated engine. It is described as high in this family only because, under boost, the static ratio is not the pressure the piston sees. Effective compression scales with absolute intake pressure, and at the same boost the 11.2:1 engine is carrying more peak cylinder pressure than an H2R.</p>
+
+          <div class="spec-table">
+            <div class="spec-row spec-row-4 spec-row-head">
+              <span>Engine</span>
+              <span>Static</span>
+              <span>Boost</span>
+              <span>Effective</span>
+            </div>
+            <div class="spec-row spec-row-4">
+              <span>Ninja H2R</span>
+              <span>8.3:1</span>
+              <span>~24 psi</span>
+              <span>~22:1</span>
+            </div>
+            <div class="spec-row spec-row-4">
+              <span>Ninja H2</span>
+              <span>8.5:1</span>
+              <span>~18 psi</span>
+              <span>~19:1</span>
+            </div>
+            <div class="spec-row spec-row-4">
+              <span>Z H2 / H2 SX</span>
+              <span>11.2:1</span>
+              <span>~18 psi</span>
+              <span>~25:1</span>
+            </div>
+          </div>
+
+          <p>Kawasaki balances this on the 11.2:1 engines with moderate boost, torque-biased camshafts and a conservative calibration, and there is no intercooler on any variant. Knock is decided by cylinder pressure and charge temperature, not the static ratio alone — which is why the same engine is comfortable on 99 RON with charge cooling and a proper ignition strategy, and marginal on lower-octane fuel with a fixed map and no cooling. The reported piston failures on tuned 11.2:1 engines sit almost entirely in the second category.</p>
+
+          <h3>Which Engine for Which Target</h3>
+          <p>For the 8.5:1 Ninja H2 in a car with a free intake and exhaust, a standalone ECU and the H2R camshafts, the published owner and tuner figures point to roughly 265–275 hp at the wheel — around 300–315 bhp at the crank on our 13% driveline factor. Adding charge cooling and raised supercharger drive gearing takes that towards 290–305 at the wheel, 335–350 at the crank, still without opening the engine. Raising boost is the last step, not the first: camshafts and breathing first, then cooling, then boost.</p>
+          <p>The 11.2:1 engine reaches 284 bhp without any of that, and its strength is mid-range on pump fuel rather than peak output. Camshafts with charge cooling are a reasonable further step. Raising boost is the one thing it should not be asked to do, because that is the variable it is already carrying the most of.</p>
+
+          <h3>Z H2, H2 SX and SX SE Are One Engine</h3>
+          <p>As a donor, the Ninja H2 SX and SX SE carry the same 11.2:1 specification as the Z H2 — the same high-compression head, camshafts, crankshaft and piston family. The SE suffix is trim, not engine. The only mechanical difference is the supercharger impeller blade design, which biases the Z H2 slightly further towards mid-range; the intake, exhaust and ECU differences are discarded in a conversion. Any of the three is the same engine once installed, and the SX is the more numerous bike.</p>
+          <p>Whether the H2R camshafts fit the 11.2:1 cylinder head has not been verified — the head casting differs from the 8.5:1 engine, and journals, sprockets and chain timing should be checked on the bench before anything is ordered.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -358,6 +428,16 @@ const structuredData = {
     color: var(--tftr-grey);
     font-size: 0.85rem;
     margin-bottom: 0;
+  }
+
+  /* Tuning Headroom */
+  .headroom-section {
+    background: var(--tftr-black);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .spec-row-4 {
+    grid-template-columns: 1.6fr 0.8fr 0.8fr 0.8fr;
   }
 
   /* Reference Download */
