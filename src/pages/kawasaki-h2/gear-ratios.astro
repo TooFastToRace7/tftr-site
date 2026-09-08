@@ -96,6 +96,8 @@ const structuredData = {
 
       <p class="ratio-note">For reference, the factory chain final drive figures are 2.333 (42/18) on the Ninja H2R, 2.444 (44/18) on the Ninja H2 and H2 SX, and 2.556 (46/18) on the Z H2. In a direct-coupled car installation none of these apply — the differential replaces them entirely.</p>
 
+      <p class="ratio-note">A note on provenance, because not every figure above carries the same weight. The primary reductions and the third to sixth gear ratios are corroborated across independent sources and can be relied on. The Z H2 first and second gear figures come from manufacturer specification sheets rather than from counted teeth, and logged data from a Z H2 running in a car does not sit comfortably with them. Since the Z H2 uses a dog-ring gearbox where the Ninja H2 SX does not, we are not currently satisfied that the two share a gearset in the lower two gears. Treat those two figures as provisional. They do not affect top gear or differential selection, which depend on ratios common to every variant.</p>
+
       <div class="ratio-grid">
         <div class="ratio-block">
           <h3>The Primary Reduction Is Not Optional</h3>
@@ -112,7 +114,8 @@ const structuredData = {
         <div class="ratio-block">
           <h3>Identifying Which Gearbox You Have</h3>
           <p>The <strong>ZXT00NE</strong> engine number prefix runs across the entire supercharged family and serial numbers are sequential across all of them, so the engine number alone will not tell you which gearset is inside. Neither will the supercharger housing colour, which is not a specification code.</p>
-          <p>Where a VIN or model code is available, use it. Where an engine has been bought loose and its history is unknown, the tooth counts settle it definitively: <strong>first gear is 51/16 on a Ninja H2 or H2R, and 40/13 on a Z H2 or Ninja H2 SX.</strong> Both are countable with the cassette out.</p>
+          <p>The frame number does answer it. Any online Kawasaki parts catalogue with a VIN search will return the model, year and full model code from a chassis number, and the family is readable from the prefix alone: <strong>JKAZRT00 is a Z H2, JKAZXT02 is a Ninja H2 SX, and ZX1002 as a model code is a Ninja H2 from 2019 on.</strong> We have used this route to confirm engines in our own cars and for customers assessing engines before purchase, and it takes a couple of minutes.</p>
+          <p>Where an engine has been separated from its motorcycle and no frame number survives, the tooth counts remain definitive — first gear is 51/16 on a Ninja H2 or H2R against 40/13 on a Ninja H2 SX. Be aware that this is not a quick check on a Z H2, whose gears are not individually accessible without stripping the shaft assemblies.</p>
           <p>The distinction matters for two reasons. The primary reduction differs, so every calculated speed shifts by around 5%. And because compression ratio follows the same split — 8.5:1 on the Ninja H2 against 11.2:1 on the Z H2 and SX — identifying the gearbox also confirms which calibration the engine needs.</p>
         </div>
       </div>
@@ -209,7 +212,31 @@ const structuredData = {
       </div>
     </div>
   </section>
+  <!-- Gearbox Parts -->
+  <section class="parts-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>What a Z H2 Gearbox <span class="text-green">Costs to Repair</span></h2>
+        <p>Worth establishing before an engine is bought, because it is not what most builders assume.</p>
+      </div>
 
+      <div class="parts-block">
+        <p>Kawasaki does not list individual gears for the Z H2. The transmission section of the parts catalogue contains exactly two gear part numbers, both of them complete shaft assemblies:</p>
+
+        <div class="formula-block">
+          <span class="formula-label">Transmission assemblies</span>
+          <p class="formula">13341-0640 &mdash; Input shaft assembly<br />13342-0678 &mdash; Output shaft assembly</p>
+        </div>
+
+        <p>At the time of writing these list at roughly &pound;950 and &pound;2,450 respectively, so a gearbox wanting attention at both ends is approaching &pound;3,400 in parts before any labour. There is no route through the factory parts system to replace a single damaged gear.</p>
+        <p>This follows from the dog-ring design rather than being an arbitrary catalogue decision, and it changes what a used Z H2 engine is worth. An engine offered cheaply with an unknown or noisy gearbox is not a bargain. Where the original gearbox is retained in a car installation, as it usually is, its condition deserves the same scrutiny as compression and supercharger condition — and it is far better established before purchase than after.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specification Support -->
+  <section class="support-section">
   <!-- Specification Support -->
   <section class="support-section">
     <div class="container">
@@ -424,6 +451,21 @@ const structuredData = {
   }
 
   .example-notes p {
+    color: var(--tftr-grey-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Gearbox Parts */
+  .parts-section {
+    background: var(--tftr-black);
+  }
+
+  .parts-block {
+    max-width: 80ch;
+  }
+
+  .parts-block p {
     color: var(--tftr-grey-light);
     line-height: 1.8;
     margin-bottom: var(--space-sm);
