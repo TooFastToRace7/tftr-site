@@ -5,7 +5,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Kawasaki H2 Gear Ratios & Gearbox Data for Car Installations",
-  "description": "Verified Kawasaki supercharged H2 gearbox ratios and primary reduction figures for Ninja H2, H2R, Ninja H2 SX and Z H2, with the method for calculating road speed in each gear in a car installation.",
+  "description": "Kawasaki supercharged H2 gearbox ratios and primary reduction figures for Ninja H2, H2R, Ninja H2 SX and Z H2, the method for calculating road speed in each gear in a car installation, and the points where published sources disagree.",
   "url": "https://toofasttorace.com/kawasaki-h2/gear-ratios",
   "author": {
     "@type": "Organization",
@@ -19,7 +19,7 @@ const structuredData = {
 };
 ---
 
-<Layout title="Kawasaki H2 Gear Ratios & Gearbox Data | Too Fast To Race" description="Verified gearbox ratios and primary reduction figures for the Kawasaki supercharged H2 engine family — Ninja H2, H2R, Ninja H2 SX and Z H2 — with the method for calculating road speed in each gear in a car installation.">
+<Layout title="Kawasaki H2 Gear Ratios & Gearbox Data | Too Fast To Race" description="Gearbox ratios and primary reduction figures for the Kawasaki supercharged H2 engine family — Ninja H2, H2R, Ninja H2 SX and Z H2 — with the method for calculating road speed in a car installation, and the points where published sources disagree.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
@@ -27,7 +27,7 @@ const structuredData = {
     <div class="container">
       <span class="stripe-accent"></span>
       <h1>Kawasaki H2 <span class="text-green">Gear Ratios &amp; Gearbox Data</span></h1>
-      <p class="hero-subtitle">Verified ratios for every variant of the supercharged H2 gearbox, and the method for turning them into real road speeds once the engine is in a car.</p>
+      <p class="hero-subtitle">Ratios for every variant of the supercharged H2 gearbox, the method for turning them into real road speeds once the engine is in a car, and an honest account of which figures are solid and which are still disputed.</p>
     </div>
   </section>
 
@@ -38,6 +38,11 @@ const structuredData = {
         <h2>Why the Gearbox Changes <span class="text-green">When the Engine Leaves the Bike</span></h2>
         <p>In a motorcycle the H2 gearbox is only part of the transmission. Behind it sits a chain final drive that contributes another 2.3:1 to 2.6:1 depending on model, and that reduction is trivially changed by swapping a sprocket. Overall gearing is therefore something the rider adjusts rather than something the gearbox dictates.</p>
         <p>In a car that flexibility usually disappears. Most installations couple the gearbox output shaft to a propshaft and a fixed differential, deleting the chain drive entirely. The gearbox internals and the primary reduction then become fixed constants, and the differential is the only ratio left to choose. Choosing it correctly means knowing exactly what sits upstream of it — which is where most calculations go wrong.</p>
+
+        <div class="formula-block">
+          <span class="formula-label">Read This First</span>
+          <p>These figures are compiled from Kawasaki published specifications, parts catalogues and owner's manuals, and cross-checked against each other and against our own installations. Public data on this family is inconsistent and in places contradictory. Where sources disagree we say so below rather than quietly choosing one. This is the best position we can reach from what is publicly available — not a guarantee. Confirm the ratios for your specific engine against the parts catalogue for its model and year before a differential is ordered.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -70,7 +75,7 @@ const structuredData = {
         <div class="ratio-row">
           <span>2nd</span>
           <span>2.526 (48/19)</span>
-          <span>2.471 (42/17)</span>
+          <span>2.471 (42/17) &dagger;</span>
         </div>
         <div class="ratio-row">
           <span>3rd</span>
@@ -96,7 +101,12 @@ const structuredData = {
 
       <p class="ratio-note">For reference, the factory chain final drive figures are 2.333 (42/18) on the Ninja H2R, 2.444 (44/18) on the Ninja H2 and H2 SX, and 2.556 (46/18) on the Z H2. In a direct-coupled car installation none of these apply — the differential replaces them entirely.</p>
 
-      <p class="ratio-note">A note on provenance, because not every figure above carries the same weight. The primary reductions and the third to sixth gear ratios are corroborated across independent sources and can be relied on. The Z H2 first and second gear figures come from manufacturer specification sheets rather than from counted teeth, and logged data from a Z H2 running in a car does not sit comfortably with them. Since the Z H2 uses a dog-ring gearbox where the Ninja H2 SX does not, we are not currently satisfied that the two share a gearset in the lower two gears. Treat those two figures as provisional. They do not affect top gear or differential selection, which depend on ratios common to every variant.</p>
+      <div class="formula-block">
+        <span class="formula-label">&dagger; Where the sources disagree — second gear</span>
+        <p>Kawasaki's 2018 Ninja H2 SX specification and the Z H2 specifications give <strong>2.471 (42/17)</strong>. A later Ninja H2 SX owner's manual gives <strong>2.429 (34/14)</strong>. Both are Kawasaki figures, so this is unlikely to be a simple error in one of them. The probable explanation is that second gear changed during H2 SX production while the Z H2 kept the original. We have a 2022 SX SE manual showing 34/14, so the change had happened by then, but we have not established the exact model year and will not guess at one. Until it is confirmed against the parts catalogue for the specific engine, treat second gear on any Ninja H2 SX as unresolved between those two figures.</p>
+      </div>
+
+      <p class="ratio-note">Nothing else here depends on it. Second gear does not affect the primary reduction, top gear or differential selection, all of which rest on ratios common to every variant. On the confidence of the rest: the primary reductions and third to sixth gear are corroborated across independent sources, and the arithmetic closes against Kawasaki's own published overall top-gear ratios, so they can be relied on. First gear is consistent everywhere we have looked. All of it is nevertheless drawn from published data rather than from teeth we have counted ourselves, and we would rather say so than imply otherwise.</p>
 
       <div class="ratio-grid">
         <div class="ratio-block">
@@ -114,8 +124,8 @@ const structuredData = {
         <div class="ratio-block">
           <h3>Identifying Which Gearbox You Have</h3>
           <p>The <strong>ZXT00NE</strong> engine number prefix runs across the entire supercharged family and serial numbers are sequential across all of them, so the engine number alone will not tell you which gearset is inside. Neither will the supercharger housing colour, which is not a specification code.</p>
-          <p>The frame number does answer it. Any online Kawasaki parts catalogue with a VIN search will return the model, year and full model code from a chassis number, and the family is readable from the prefix alone: <strong>JKAZRT00 is a Z H2, JKAZXT02 is a Ninja H2 SX, and ZX1002 as a model code is a Ninja H2 from 2019 on.</strong> We have used this route to confirm engines in our own cars and for customers assessing engines before purchase, and it takes a couple of minutes.</p>
-          <p>Where an engine has been separated from its motorcycle and no frame number survives, the tooth counts remain definitive — first gear is 51/16 on a Ninja H2 or H2R against 40/13 on a Ninja H2 SX. Be aware that this is not a quick check on a Z H2, whose gears are not individually accessible without stripping the shaft assemblies.</p>
+          <p>The frame number does answer it. Any online Kawasaki parts catalogue with a VIN search will return the model, year and full model code from a chassis number. We have used this route to confirm engines in our own cars and for customers assessing engines before purchase, and it takes a couple of minutes. Prefixes we have seen returned include <strong>JKAZRT00 for a Z H2 and JKAZXT02 for a Ninja H2 SX</strong>, with <strong>ZX1002</strong> appearing as a Ninja H2 model code from 2019 on. VIN construction varies by market, though, so run the lookup rather than reading a prefix and assuming.</p>
+          <p>Where an engine has been separated from its motorcycle and no frame number survives, the tooth counts remain definitive — first gear is 51/16 on a Ninja H2 or H2R against 40/13 on a Ninja H2 SX or Z H2. Every variant in the family uses a dog-ring gearbox, so on any of them this means stripping the shaft assemblies. It is a definitive answer rather than a quick one.</p>
           <p>The distinction matters for two reasons. The primary reduction differs, so every calculated speed shifts by around 5%. And because compression ratio follows the same split — 8.5:1 on the Ninja H2 against 11.2:1 on the Z H2 and SX — identifying the gearbox also confirms which calibration the engine needs.</p>
         </div>
       </div>
@@ -203,6 +213,7 @@ const structuredData = {
       <div class="example-notes">
         <h3>Reading the Table</h3>
         <p>The two columns are not alternatives. The lower figure is a working shift point chosen for mechanical sympathy; the higher is what the gear will reach if taken to the limiter. Because top speed is set entirely by sixth gear, both are available in the same car — shifting at 12,750 through the lower gears costs nothing at the top end.</p>
+        <p>Both columns sit above the factory engine speed limit for this variant. The limiter here is set by our own calibration, on standalone management with knock control and logging, not by Kawasaki. Do not read these as stock figures, and do not raise a limiter on a high-compression engine without the instrumentation to see what it is doing.</p>
         <p>What matters more than either column is where each upshift lands. With this gearset a 12,750 rpm shift drops the engine to between 10,239 and 11,278 rpm, and measured torque on this engine peaks at 10,190 rpm. Every upshift therefore lands at or just above the torque peak, and the engine never falls below it in any gear. That is an unusually good match, and it comes from the close ratio steps — 1.13 to 1.25 — rather than from anything the builder chose.</p>
 
         <h3>Choosing the Differential</h3>
@@ -230,13 +241,11 @@ const structuredData = {
         </div>
 
         <p>At the time of writing these list at roughly &pound;950 and &pound;2,450 respectively, so a gearbox wanting attention at both ends is approaching &pound;3,400 in parts before any labour. There is no route through the factory parts system to replace a single damaged gear.</p>
-        <p>This follows from the dog-ring design rather than being an arbitrary catalogue decision, and it changes what a used Z H2 engine is worth. An engine offered cheaply with an unknown or noisy gearbox is not a bargain. Where the original gearbox is retained in a car installation, as it usually is, its condition deserves the same scrutiny as compression and supercharger condition — and it is far better established before purchase than after.</p>
+        <p>This follows from the dog-ring design rather than being an arbitrary catalogue decision. We have confirmed it on the Z H2 catalogue; since every variant in the family uses a dog-ring gearbox, expect the same across the range, but check the catalogue for your own model before assuming it. Either way it changes what a used engine is worth. One offered cheaply with an unknown or noisy gearbox is not a bargain. Where the original gearbox is retained in a car installation, as it usually is, its condition deserves the same scrutiny as compression and supercharger condition — and it is far better established before purchase than after.</p>
       </div>
     </div>
   </section>
 
-  <!-- Specification Support -->
-  <section class="support-section">
   <!-- Specification Support -->
   <section class="support-section">
     <div class="container">
