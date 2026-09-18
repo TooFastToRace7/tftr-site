@@ -17,10 +17,9 @@ const galleryImages = [
   { src: '/images/kawasaki-h2/dry-sump-09.jpg', alt: 'Kawasaki H2 dry sump system component detail' }
 ];
 
-// NOTE: `offers` is deliberately omitted while pricing is being finalised.
-// Once prices are fixed, add an "offers" object matching the Caterham kit
-// pages (priceCurrency, price, availability, seller, shippingDetails,
-// hasMerchantReturnPolicy) — an Offer without a price is invalid structured data.
+// NOTE: `offers` price is ex VAT, matching the Caterham kit pages.
+// Availability is PreOrder until the first production batch has been received
+// and inspected — change it to "https://schema.org/InStock" at that point.
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Product",
@@ -32,7 +31,35 @@ const structuredData = {
   },
   "category": "Dry Sump Oil System",
   "image": "https://toofasttorace.com/images/Kawasaki%20H2%20Dry%20Sump.png",
-  "url": "https://toofasttorace.com/kawasaki-h2/dry-sump-kit"
+  "url": "https://toofasttorace.com/kawasaki-h2/dry-sump-kit",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://toofasttorace.com/kawasaki-h2/dry-sump-kit",
+    "priceCurrency": "GBP",
+    "price": "2195.00",
+    "availability": "https://schema.org/PreOrder",
+    "seller": {
+      "@type": "Organization",
+      "name": "Too Fast To Race"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "15.00",
+        "currency": "GBP"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "GB"
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "GB",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    }
+  }
 };
 ---
 
@@ -53,9 +80,10 @@ const structuredData = {
     <div class="container">
       <div class="kit-summary">
         <div class="kit-price">
-          <span class="price-label">Pricing</span>
-          <span class="price-pending">To Follow</span>
-          <span class="price-note">Contact us for current pricing</span>
+           <span class="price-label">Price</span>
+          <span class="price-figure">£2,195</span>
+          <span class="price-note">+ VAT &amp; shipping</span>
+          <span class="price-note">First batch in production</span>
         </div>
         <div class="kit-specs">
           <div class="spec">
@@ -119,7 +147,7 @@ const structuredData = {
             <li>Tank position, capacity and line routing advised for your chassis</li>
             <li>Line sizing appropriate to the system rather than a fixed default</li>
             <li>Oil cooling strategy considered alongside the sump, not after it</li>
-            <li>Compatible with our <a href="/kawasaki-h2/oil-cooler-blanking-plate">OE oil cooler blanking plate</a> where remote cooling is used</li>
+            <li>Compatible with our <a href="/kawasaki-h2/oil-cooler-blanking-plate">OE oil cooler blanking plate</a> where remote cooling is used — available separately at £129 +VAT, not included in the kit</li>
             <li>Supplied with the uprated <a href="/kawasaki-h2/high-volume-oil-pump">high volume oil pump gear set</a></li>
             <li>Requires an electric water pump — see below</li>
           </ul>
@@ -243,9 +271,9 @@ const structuredData = {
     color: var(--tftr-grey);
   }
 
-  .price-pending {
+  .price-figure {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--tftr-green);
     letter-spacing: 0.03em;
     white-space: nowrap;

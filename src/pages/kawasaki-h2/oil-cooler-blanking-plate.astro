@@ -6,10 +6,9 @@ const galleryImages = [
   { src: '/images/kawasaki-h2/oil-cooler-plate-01.jpg', alt: 'OE oil cooler blanking plate for the Kawasaki H2 engine' }
 ];
 
-// NOTE: `offers` is deliberately omitted while pricing is being finalised.
-// Once prices are fixed, add an "offers" object matching the Caterham kit
-// pages (priceCurrency, price, availability, seller, shippingDetails,
-// hasMerchantReturnPolicy) — an Offer without a price is invalid structured data.
+// NOTE: `offers` price is ex VAT, matching the Caterham kit pages.
+// Availability is PreOrder until the first production batch has been received
+// and inspected — change it to "https://schema.org/InStock" at that point.
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Product",
@@ -20,7 +19,36 @@ const structuredData = {
     "name": "Too Fast To Race"
   },
   "category": "Engine Oil System Component",
-  "url": "https://toofasttorace.com/kawasaki-h2/oil-cooler-blanking-plate"
+  "image": "https://toofasttorace.com/images/kawasaki-h2/oil-cooler-plate-01.jpg",
+  "url": "https://toofasttorace.com/kawasaki-h2/oil-cooler-blanking-plate",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://toofasttorace.com/kawasaki-h2/oil-cooler-blanking-plate",
+    "priceCurrency": "GBP",
+    "price": "129.00",
+    "availability": "https://schema.org/PreOrder",
+    "seller": {
+      "@type": "Organization",
+      "name": "Too Fast To Race"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "15.00",
+        "currency": "GBP"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "GB"
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "GB",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    }
+  }
 };
 ---
 
@@ -41,9 +69,10 @@ const structuredData = {
     <div class="container">
       <div class="kit-summary">
         <div class="kit-price">
-          <span class="price-label">Pricing</span>
-          <span class="price-pending">To Follow</span>
-          <span class="price-note">Contact us for current pricing</span>
+          <span class="price-label">Price</span>
+          <span class="price-figure">£129</span>
+          <span class="price-note">+ VAT &amp; shipping</span>
+          <span class="price-note">First batch in production</span>
         </div>
         <div class="kit-specs">
           <div class="spec">
@@ -83,7 +112,7 @@ const structuredData = {
         <h2>Why Delete It <span class="text-green">In a Car?</span></h2>
         <p>In a car installation the OE heat exchanger is usually redundant and frequently in the way. Almost every serious H2 conversion runs its own oil cooling — a remote cooler, or a Laminova-type exchanger positioned to suit the car — because the engine is no longer sitting in a motorcycle's airflow and the coolant system has typically been re-engineered around a car radiator anyway.</p>
         <p>Once you have your own oil cooling, the factory unit becomes a second, uncontrolled heat path tied into a coolant circuit you have already changed, plus a lump of hardware occupying space on the side of the block. Removing it simplifies the plumbing, frees up packaging, and puts oil temperature management where you can actually control it.</p>
-        <p>It also pairs naturally with a <a href="/kawasaki-h2/dry-sump-kit">dry sump conversion</a>, where the oil circuit is being redesigned from the ground up and cooling is best specified as part of that system rather than inherited from the motorcycle.</p>
+        <p>It also pairs naturally with a <a href="/kawasaki-h2/dry-sump-kit">dry sump conversion</a>, where the oil circuit is being redesigned from the ground up and cooling is best specified as part of that system rather than inherited from the motorcycle. The plate is sold separately from the dry sump kit, so it is only added where remote oil cooling is actually being used.</p>
       </div>
 
       <div class="included-grid">
@@ -225,9 +254,9 @@ const structuredData = {
     color: var(--tftr-grey);
   }
 
-  .price-pending {
+  .price-figure {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--tftr-green);
     letter-spacing: 0.03em;
     white-space: nowrap;
