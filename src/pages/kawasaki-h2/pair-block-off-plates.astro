@@ -8,22 +8,53 @@ const galleryImages = [
   { src: '/images/kawasaki-h2/pair-plates-01.jpg', alt: 'PAIR block off plates for the Kawasaki Ninja H2 and Z H2' }
 ];
 
-// NOTE: `offers` is deliberately omitted while pricing is being finalised.
+// NOTE: `offers` price is ex VAT, matching the Caterham kit pages.
+// Availability is PreOrder until the first production batch has been received
+// and inspected — change it to "https://schema.org/InStock" at that point.
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Kawasaki H2 PAIR Block Off Plates",
-  "description": "PAIR block off plates for the Kawasaki Ninja H2 and Z H2. Seal the secondary air injection ports when the PAIR system is removed during car conversion, tidying the engine and removing a source of false lambda readings.",
+  "description": "PAIR block off plates for the Kawasaki Ninja H2 and Z H2, black Cerakote finished and supplied as a pair with stainless steel fixings. Seal the secondary air injection ports when the PAIR system is removed during car conversion, tidying the engine and removing a source of false lambda readings.",
   "brand": {
     "@type": "Brand",
     "name": "Too Fast To Race"
   },
   "category": "Engine Component",
-  "url": "https://toofasttorace.com/kawasaki-h2/pair-block-off-plates/"
+  "image": "https://toofasttorace.com/images/kawasaki-h2/pair-plates-01.jpg",
+  "url": "https://toofasttorace.com/kawasaki-h2/pair-block-off-plates/",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://toofasttorace.com/kawasaki-h2/pair-block-off-plates/",
+    "priceCurrency": "GBP",
+    "price": "69.00",
+    "availability": "https://schema.org/PreOrder",
+    "seller": {
+      "@type": "Organization",
+      "name": "Too Fast To Race"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "15.00",
+        "currency": "GBP"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "GB"
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "GB",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+    }
+  }
 };
 ---
 
-<Layout title="Kawasaki H2 PAIR Block Off Plates | Ninja H2 & Z H2 | Too Fast To Race" description="PAIR block off plates for the Kawasaki Ninja H2 and Z H2. Seal the secondary air injection ports when the PAIR system is removed for car conversion — tidier engine, fewer hoses and accurate lambda readings.">
+<Layout title="Kawasaki H2 PAIR Block Off Plates | Ninja H2 & Z H2 | Too Fast To Race" description="PAIR block off plates for the Kawasaki Ninja H2 and Z H2, black Cerakote finished — £69 +VAT the pair. Seal the secondary air injection ports when PAIR is removed for car conversion, for a tidier engine and accurate lambda readings.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
@@ -40,9 +71,10 @@ const structuredData = {
     <div class="container">
       <div class="kit-summary">
         <div class="kit-price">
-          <span class="price-label">Pricing</span>
-          <span class="price-pending">To Follow</span>
-          <span class="price-note">Contact us for current pricing</span>
+          <span class="price-label">Price</span>
+          <span class="price-figure">£69</span>
+          <span class="price-note">+ VAT &amp; shipping</span>
+          <span class="price-note">First batch in production</span>
         </div>
         <div class="kit-specs">
           <div class="spec">
@@ -101,7 +133,7 @@ const structuredData = {
         <div class="included-col">
           <h3>Worth Knowing</h3>
           <ul class="kit-list">
-            <li>Supplied as a pair — one per reed plate — with stainless steel fixings</li>
+            <li>Supplied as a pair — one per reed plate — black Cerakote finished, with stainless steel fixings</li>
             <li>Fit in place of the original PAIR caps, no machining or modification</li>
             <li>Original reed plates are retained and refitted</li>
             <li>Can be done with the engine in the car</li>
@@ -159,7 +191,7 @@ const structuredData = {
         </a>
         <a href="/kawasaki-h2/dry-sump-kit/" class="related-card">
           <h3>Dry Sump System</h3>
-          <p>Three-stage scavenge. The single most important change when putting an H2 engine in a car.</p>
+          <p>Two-stage scavenge. The single most important change when putting an H2 engine in a car.</p>
           <span class="related-link">Dry Sump →</span>
         </a>
         <a href="/kawasaki-h2/high-volume-oil-pump/" class="related-card">
@@ -240,9 +272,9 @@ const structuredData = {
     color: var(--tftr-grey);
   }
 
-  .price-pending {
+  .price-figure {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--tftr-green);
     letter-spacing: 0.03em;
     white-space: nowrap;
