@@ -6,6 +6,14 @@ export async function onRequest(context) {
     return Response.redirect(new URL("/kawasaki-h2/", url).toString(), 301);
   }
 
+  if (path === "/about-us" || path === "/about-us/") {
+    return Response.redirect(new URL("/about/", url).toString(), 301);
+  }
+
+  if (path === "/contact-us-2" || path === "/contact-us-2/") {
+    return Response.redirect(new URL("/contact/", url).toString(), 301);
+  }
+
   const isLegacy =
     url.searchParams.has("add-to-cart") ||
     path.startsWith("/product/") ||
@@ -13,7 +21,9 @@ export async function onRequest(context) {
     path.startsWith("/brand/") ||
     path.startsWith("/shop") ||
     path.startsWith("/wp-") ||
-    path.startsWith("/laba7");
+    path.startsWith("/laba7") ||
+    path.startsWith("/about-us/privacy-policy") ||
+    path.startsWith("/personalized-setings");
   if (isLegacy) {
     return new Response("Gone", {
       status: 410,
