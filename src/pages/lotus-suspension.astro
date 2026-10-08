@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SpecStatement from '../components/SpecStatement.astro';
 import AuthorPanel from '../components/AuthorPanel.astro';
 
 const structuredData = {
@@ -35,7 +36,7 @@ const structuredData = {
 };
 ---
 
-<Layout title="Lotus Coilovers & Suspension | Elise, Exige, Evora & Emira | Too Fast To Race" description="Specialist Lotus coilovers and suspension specification across Elise, Exige, Evora and Emira platforms. Lightweight chassis expertise and Nitron systems specified around real Lotus chassis behaviour by Too Fast To Race.">
+<Layout title="Lotus Elise, Exige & Evora Coilovers | Too Fast To Race" description="Lotus coilovers for Elise, Exige, Evora and Emira, with spring rates calculated and valving specified for your car. Keep the Lotus feel: compliant, quicker.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
@@ -46,6 +47,8 @@ const structuredData = {
       <p class="hero-subtitle">Lotus built its reputation on chassis engineering. Light weight, low centre of gravity and exceptional balance — the fundamentals that make a Lotus rewarding to drive are exactly the fundamentals that correct suspension specification must preserve and enhance.</p>
     </div>
   </section>
+
+  <SpecStatement />
 
   <!-- Intro -->
   <section class="content-intro">

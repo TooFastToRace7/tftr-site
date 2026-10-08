@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SpecStatement from '../components/SpecStatement.astro';
 import AuthorPanel from '../components/AuthorPanel.astro';
 
 const structuredData = {
@@ -30,7 +31,7 @@ const structuredData = {
 };
 ---
 
-<Layout title="TVR Coilovers & Suspension | Griffith, Chimaera & Tuscan | Too Fast To Race" description="Specialist TVR coilovers and suspension specification across Griffith, Chimaera, Cerbera, Tuscan and T350 platforms. Lightweight British sports car expertise and Nitron systems specified by Too Fast To Race.">
+<Layout title="TVR Griffith, Chimaera & Tuscan Coilovers | Too Fast To Race" description="TVR coilovers for Griffith, Chimaera, Cerbera, Tuscan and T350, with spring rates calculated and valving specified for your car. Calmer, quicker, more control.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
@@ -41,6 +42,8 @@ const structuredData = {
       <p class="hero-subtitle">TVR produced some of the most dramatic and capable British sports cars of the last four decades. Light, powerful and rewarding in the right hands — and significantly more capable than their reputation for difficulty suggests when the suspension is correctly set up.</p>
     </div>
   </section>
+
+  <SpecStatement />
 
     <!-- Intro -->
   <section class="content-intro">

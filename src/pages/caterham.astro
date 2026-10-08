@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SpecStatement from '../components/SpecStatement.astro';
 import AuthorPanel from '../components/AuthorPanel.astro';
 
 const structuredData = {
@@ -30,7 +31,7 @@ const structuredData = {
 };
 ---
 
-<Layout title="Caterham Suspension & Coilovers | Seven Specialist | Too Fast To Race" description="Specialist Caterham Seven suspension, coilovers and chassis development. Bespoke Nitron specification, GSXR and Kawasaki H2 conversions, builds and setup from Too Fast To Race — over 30 years of Caterham experience.">
+<Layout title="Caterham Seven Specialist & Coilovers | Too Fast To Race" description="Caterham Seven specialist: suspension with our own spring rates and valving, Nitron and Penske kits, GSXR and Kawasaki H2 conversions, builds and setup.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   
   <!-- Hero -->
@@ -42,6 +43,8 @@ const structuredData = {
       <p class="hero-subtitle">Over 30 years owning, racing and developing Caterham Sevens — Academy to 620R, Sigma to Duratec. Nitron and Penske suspension kits, setup, and complete bespoke builds.</p>
     </div>
   </section>
+
+  <SpecStatement />
 
   <!-- Intro -->
   <section class="intro-section">

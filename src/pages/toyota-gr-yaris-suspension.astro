@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SpecStatement from '../components/SpecStatement.astro';
 import AuthorPanel from '../components/AuthorPanel.astro';
 
 const structuredData = {
@@ -30,7 +31,7 @@ const structuredData = {
 };
 ---
 
-<Layout title="Toyota GR Yaris Coilovers & Suspension | Nitron Specification | Too Fast To Race" description="Specialist Toyota GR Yaris coilovers and suspension specification for fast road, track day and competition use. Nitron systems specified around real GR Yaris chassis behaviour by Too Fast To Race.">
+<Layout title="GR Yaris Coilovers & Bespoke Valving | Too Fast To Race" description="GR Yaris coilovers with spring rates calculated and valving written for your car and how you drive it. Compliant on the road, faster and more controlled.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
@@ -41,6 +42,8 @@ const structuredData = {
       <p class="hero-subtitle">The GR Yaris is a genuinely extraordinary road car — a homologation special built around a rally-derived platform with real engineering intent behind every decision. Correct suspension specification unlocks a chassis that rewards the driver far beyond what its modest exterior suggests.</p>
     </div>
   </section>
+
+  <SpecStatement />
 
     <!-- Intro -->
   <section class="content-intro">

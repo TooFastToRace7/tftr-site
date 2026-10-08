@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SpecStatement from '../components/SpecStatement.astro';
 import AuthorPanel from '../components/AuthorPanel.astro';
 
 const structuredData = {
@@ -35,7 +36,7 @@ const structuredData = {
 };
 ---
 
-<Layout title="Porsche Coilovers & Suspension | 911, Cayman & GT Specification | Too Fast To Race" description="Specialist Porsche coilovers and suspension specification across 911, Cayman, Boxster and GT platform variants. Nitron and elec-TRON systems specified around real Porsche chassis behaviour by Too Fast To Race.">
+<Layout title="Porsche 911 & Cayman Coilovers | Too Fast To Race" description="Porsche 911, Cayman, Boxster and GT coilovers with spring rates calculated and valving written for your car. More control, not more harshness.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
@@ -46,6 +47,8 @@ const structuredData = {
       <p class="hero-subtitle">Porsche chassis engineering is among the finest in the world. The factory suspension is genuinely good — but it is built to a broad mandate covering comfort, compliance and everyday usability. Correct specification unlocks significantly more of what the chassis is actually capable of.</p>
     </div>
   </section>
+
+  <SpecStatement />
 
   <!-- Intro -->
   <section class="content-intro">

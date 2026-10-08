@@ -1,0 +1,49 @@
+---
+// Core positioning statement, shown on every suspension page.
+// Edit the wording here once and every page updates.
+---
+
+<section class="spec-statement">
+  <div class="container">
+    <div class="spec-box">
+      <p class="spec-line">Spring rates calculated. Valving specified. Built to our spec.</p>
+      <p>Too many cars are built too stiff. Hard springs and over-damped shocks make a car feel fast, nervous and edgy, but the stopwatch says otherwise. A car that skips over bumps and loses tyre contact isn't fast. It's just scary.</p>
+      <p>We don't sell off-the-shelf coilovers. For every car, we calculate the spring rates from its actual weight, geometry and tyres, and write our own valving specification for how and where it will be driven. Nitron, Penske or whichever brand suits the car then build the dampers to that specification. The result is suspension that is more compliant and easier to drive than you'd expect, and faster and more controlled because of it.</p>
+      <p>Your car doesn't need to come to us. Your local or preferred workshop can fit the system, and we'll help you choose one and work with them through the install. Caterham owners can have the full build and setup done here.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .spec-statement {
+    padding: 3rem 0 0;
+  }
+  .spec-box {
+    max-width: 900px;
+    border-left: 4px solid var(--tftr-green);
+    padding: 1.5rem 2rem;
+  }
+  .spec-line {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    line-height: 1.1;
+    color: var(--tftr-green);
+    letter-spacing: 0.03em;
+  }
+  .spec-box p:not(.spec-line) {
+    color: var(--tftr-grey-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  .spec-box p + p {
+    margin-top: 1rem;
+  }
+  @media (max-width: 768px) {
+    .spec-box {
+      padding: 1.25rem;
+    }
+    .spec-line {
+      font-size: 1.75rem;
+    }
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SpecStatement from '../components/SpecStatement.astro';
 import AuthorPanel from '../components/AuthorPanel.astro';
 
 const structuredData = {
@@ -30,7 +31,7 @@ const structuredData = {
 };
 ---
 
-<Layout title="Mazda MX-5 Coilovers & Suspension | All Generations | Too Fast To Race" description="Specialist Mazda MX-5 coilovers and suspension specification across all generations. Nitron systems specified around real MX-5 chassis behaviour for fast road, track day and competition use by Too Fast To Race.">
+<Layout title="Mazda MX-5 Coilovers | All Generations | Too Fast To Race" description="MX-5 coilovers for every generation, with spring rates calculated and valving written for your car. More of what makes an MX-5 great, not just stiffer.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
@@ -41,6 +42,8 @@ const structuredData = {
       <p class="hero-subtitle">The MX-5 is one of the most naturally balanced lightweight sports cars ever produced. It does not need to be made aggressive — it needs to be made more of what it already is. Correct suspension specification achieves exactly that.</p>
     </div>
   </section>
+
+  <SpecStatement />
 
     <!-- Intro -->
   <section class="content-intro">

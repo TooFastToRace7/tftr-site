@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import SpecStatement from '../../components/SpecStatement.astro';
 import AuthorPanel from '../../components/AuthorPanel.astro';
 
 const structuredData = {
@@ -68,7 +69,7 @@ const breadcrumbData = {
 };
 ---
 
-<Layout title="Caterham Suspension Kits | Nitron & Penske Coilovers | Too Fast To Race" description="Caterham Seven suspension kits — Nitron NTR R1 and R3, Penske 7500 COSA, 7500 CODA and 8700 3-way coilovers for S3, SV and CSR. Bespoke specification, championship-winning valving and honest advice from Too Fast To Race.">
+<Layout title="Caterham Coilover Kits | Nitron & Penske | Too Fast To Race" description="Nitron and Penske coilover kits for the Caterham Seven S3, SV and CSR, built to our spring and valving spec and proven in competition. From £1,579 +VAT.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
 
@@ -80,6 +81,8 @@ const breadcrumbData = {
       <p class="hero-subtitle">Nitron and Penske coilover kits for the Caterham Seven — S3, SV and CSR. Every kit is specified for your car rather than sold off a shelf, built on valving proven in real competition. Choose by where your car sits, not by price alone — and ask us if you're unsure.</p>
     </div>
   </section>
+
+  <SpecStatement />
 
   <!-- Intro -->
   <section class="hub-intro">

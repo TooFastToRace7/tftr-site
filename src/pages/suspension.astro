@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SpecStatement from '../components/SpecStatement.astro';
 import AuthorPanel from '../components/AuthorPanel.astro';
 ---
 
-<Layout title="Suspension Specification & Chassis Development | Too Fast To Race" description="Specialist suspension specification, chassis development and vehicle dynamics expertise. Nitron and Penske suspension systems specified around real-world applications by Too Fast To Race.">
+<Layout title="Bespoke Spring Rates & Damper Valving | Too Fast To Race" description="Most cars run too stiff: scary fast, not actually fast. We calculate spring rates and write our own valving spec for your car. Compliant, controlled, quicker.">
 
   <!-- Hero -->
   <section class="page-hero">
@@ -13,6 +14,8 @@ import AuthorPanel from '../components/AuthorPanel.astro';
       <p class="hero-subtitle">Correct suspension specification is not about choosing from a catalogue. It is about understanding the chassis, the driver, the tyre and the application — then building a system around that reality.</p>
     </div>
   </section>
+
+  <SpecStatement />
 
   <!-- Philosophy Intro -->
   <section class="philosophy-intro">

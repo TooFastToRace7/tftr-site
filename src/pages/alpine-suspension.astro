@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SpecStatement from '../components/SpecStatement.astro';
 import AuthorPanel from '../components/AuthorPanel.astro';
 const structuredData = {
   "@context": "https://schema.org",
@@ -29,7 +30,7 @@ const structuredData = {
 };
 ---
 
-<Layout title="Alpine A110 Coilovers & Suspension | Nitron Specification | Too Fast To Race" description="Specialist Alpine A110 coilovers and suspension specification for fast road, track day and competition use. Lightweight mid-engined chassis expertise and Nitron systems specified by Too Fast To Race.">
+<Layout title="Alpine A110 Coilovers & Bespoke Valving | Too Fast To Race" description="Alpine A110 coilovers with spring rates calculated and valving written for your car. Keep the A110's suppleness and gain control, not harshness.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
@@ -40,6 +41,8 @@ const structuredData = {
       <p class="hero-subtitle">The Alpine A110 is one of the most genuinely driver-focused cars produced in the modern era. Light, mid-engined and engineered with a clarity of purpose that is rare at any price. Correct suspension specification enhances what is already an exceptional chassis.</p>
     </div>
   </section>
+
+  <SpecStatement />
 
     <!-- Intro -->
   <section class="content-intro">

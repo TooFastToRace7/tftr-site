@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SpecStatement from '../components/SpecStatement.astro';
 import AuthorPanel from '../components/AuthorPanel.astro';
 ---
 
-<Layout title="Nitron elec-TRON | Active Damper Systems | Too Fast To Race" description="Nitron elec-TRON active suspension systems. Electronic damper technology for BMW and Porsche platforms — integrating with factory EDC and PASM systems or running standalone via the Nitron DCU. Specified by Too Fast To Race.">
+<Layout title="Nitron elec-TRON Active Dampers | Too Fast To Race" description="Nitron elec-TRON active dampers for BMW and Porsche, using factory EDC and PASM or the Nitron DCU, with valving and spring rates specified for your car.">
 
   <!-- Hero -->
   <section class="page-hero">
@@ -13,6 +14,8 @@ import AuthorPanel from '../components/AuthorPanel.astro';
       <p class="hero-subtitle">Active damper technology that adjusts continuously in real time — not when you remember to turn a knob. The elec-TRON system brings genuine electronic damping control to road and track applications, integrating with factory systems or running standalone.</p>
     </div>
   </section>
+
+  <SpecStatement />
 
   <!-- Intro -->
   <section class="content-intro">
