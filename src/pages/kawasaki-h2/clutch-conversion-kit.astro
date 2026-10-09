@@ -1,0 +1,478 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductGallery from '../../components/ProductGallery.astro';
+
+// Gallery images. Add entries as photographs are uploaded to
+// /public/images/kawasaki-h2/ — the gallery renders nothing while this is empty.
+const galleryImages = [
+  // { src: '/images/kawasaki-h2/clutch-kit-01.jpg', alt: 'Six-spring clutch conversion kit for the Kawasaki H2 engine' }
+];
+
+// Two kits are offered, so an AggregateOffer carries the price range
+// rather than a single figure. Prices are ex VAT.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kawasaki H2 Six-Spring Clutch Conversion Kit",
+  "description": "Six-spring clutch conversion kit for the Kawasaki supercharged H2 engine, replacing the factory assist and slipper clutch with the earlier six-spring layout. Genuine Kawasaki components, supplied as a complete kit or as a kit for use with the Brock's Performance Clutch Mod Kit. Fits Ninja H2 2016-on, H2 SX and Z H2.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Too Fast To Race"
+  },
+  "category": "Clutch Conversion Kit",
+  "url": "https://toofasttorace.com/kawasaki-h2/clutch-conversion-kit/",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "GBP",
+    "lowPrice": "730.00",
+    "highPrice": "825.00",
+    "offerCount": "2",
+    "url": "https://toofasttorace.com/kawasaki-h2/clutch-conversion-kit/"
+  }
+};
+---
+
+<Layout title="Kawasaki H2 Clutch Conversion Kit | Six-Spring for H2, H2 SX & Z H2 | Too Fast To Race" description="Six-spring clutch conversion for the supercharged Kawasaki H2 engine in car installations. Genuine Kawasaki components replacing the factory slipper clutch on the Ninja H2, H2 SX and Z H2. From £730 + VAT.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Six-Spring <span class="text-green">Clutch Conversion</span></h1>
+      <p class="hero-subtitle">Replaces the factory assist and slipper clutch on the Ninja H2, H2 SX and Z H2 with the earlier six-spring layout. Genuine Kawasaki components, identified, checked and supplied as one kit — for builders who would rather fit the clutch than spend weeks working out which parts it needs.</p>
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="kit-summary-section">
+    <div class="container">
+      <div class="kit-summary">
+        <div class="kit-price">
+          <span class="price-label">From</span>
+          <span class="price-figure">£730</span>
+          <span class="price-note">+ VAT &amp; shipping</span>
+        </div>
+        <div class="kit-specs">
+          <div class="spec">
+            <span class="spec-label">Fitment</span>
+            <span class="spec-value">H2 2016-on · H2 SX · Z H2</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Layout</span>
+            <span class="spec-value">Six-Spring</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Components</span>
+            <span class="spec-value">Genuine Kawasaki</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Supplied As</span>
+            <span class="spec-value">Two Kit Options</span>
+          </div>
+        </div>
+        <a href="/contact/" class="btn btn-primary">Enquire About This Kit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="kit-content">
+    <div class="container">
+      <ProductGallery images={galleryImages} />
+
+      <div class="content-block">
+        <h2>Why Change <span class="text-green">the Clutch</span></h2>
+        <p>From 2016 Kawasaki fitted the Ninja H2 with an assist and slipper clutch, and the H2 SX and Z H2 followed with the same design. On a motorcycle it does exactly what it was engineered to do: it lightens the lever and lets the clutch slip under hard deceleration, protecting the rear tyre on aggressive downshifts.</p>
+        <p>A car asks something different of it. Engine output is often raised well beyond standard, launches are repeated, and what matters is consistent engagement and enough clamping force to hold the torque. The 2015 Ninja H2 and every H2R use a conventional six-spring clutch, and that layout suits a car installation better.</p>
+        <p>The conversion returns a later engine to that six-spring arrangement, using genuine Kawasaki parts throughout.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>What <span class="text-green">Changes</span></h2>
+        <p>The slipper clutch hub, its pressure plate and its three-spring assembly come out. In their place go the six-spring centre drum and inner hub, the matching pressure plate, six springs with their holders and bolts, and the torque limiter assembly. A small number of friction and steel plates are added so the existing clutch pack can be rebuilt to the six-spring specification.</p>
+        <p><strong>Your original clutch housing stays.</strong> So do the release mechanism and push rods, and most of the existing friction and steel plates are reused.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Two <span class="text-green">Kits</span></h2>
+        <p>Which one you need depends on whether you are also fitting the Brock's Performance Clutch Mod Kit, which replaces part of the standard spring and torque limiter assembly.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="included-col">
+          <h3>Complete Conversion Kit</h3>
+          <p class="config-price">£825 <span>+ VAT</span></p>
+          <p class="config-intro">Everything needed to convert to the standard six-spring clutch.</p>
+          <ul class="kit-list">
+            <li>Six-spring centre drum and inner hub</li>
+            <li>Pressure plate for the six-spring layout</li>
+            <li>Six clutch springs with holders and bolts</li>
+            <li>Torque limiter leaf springs and spacer</li>
+            <li>Additional friction and steel plates to complete the clutch pack</li>
+            <li>New clutch hub nut and clutch cover gasket</li>
+          </ul>
+        </div>
+        <div class="included-col">
+          <h3>Kit for the Brock's Clutch Mod</h3>
+          <p class="config-price">£730 <span>+ VAT</span></p>
+          <p class="config-intro">For installations fitting the Brock's Performance Clutch Mod Kit at the same time.</p>
+          <ul class="kit-list">
+            <li>Six-spring centre drum and inner hub</li>
+            <li>Pressure plate for the six-spring layout</li>
+            <li>Clutch spring bolts</li>
+            <li>Spacer, additional friction and steel plates</li>
+            <li>New clutch hub nut and clutch cover gasket</li>
+            <li>Springs, holders and leaf springs omitted — the Clutch Mod Kit replaces them</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <p>The Brock's Performance Clutch Mod Kit is a separate product, available from Brock's Performance. We do not supply it.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Why Buy It <span class="text-green">as a Kit</span></h2>
+        <p>Every part in the conversion is a standard Kawasaki part, but finding them is the hard part. They come from an earlier specification than the engine they are going into, the parts catalogues list a slipper clutch alongside them, and one wrong selection is easy to make and slow to discover. The order then waits weeks for the replacement.</p>
+        <p>The kit removes that work. Every component has been identified against Kawasaki's own parts data, cross-checked against what is fitted to the later engines, and confirmed in our own installations. You receive the parts you need, and only those.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Fitting and <span class="text-green">Setup</span></h2>
+        <p>The conversion is carried out with the engine in place and the clutch cover removed. A genuine Kawasaki service manual is required: torque figures, the order of the clutch pack and the measurement of its stack height all matter. Selective-fit plates set that height, and the measurement should be made rather than assumed.</p>
+        <p>After assembly, check engagement and free play before the car is driven. If you are unsure whether your engine is a 2015 or a later specification, or which kit suits your build, ask before ordering — that is a two-minute conversation.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Availability</h2>
+        <p>Kits are assembled to order from genuine Kawasaki stock. Most components are held in the UK; occasional lines come from Kawasaki Europe and can add to the lead time. Tell us your engine's model and year when you enquire and we will confirm availability before you commit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related H2 Engineering</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/kawasaki-h2/engine-specifications/" class="related-card">
+          <h3>Engine Specifications</h3>
+          <p>How to identify each H2 variant, and how the engines genuinely differ — including the clutch.</p>
+          <span class="related-link">Specifications →</span>
+        </a>
+        <a href="/kawasaki-h2/gear-ratios/" class="related-card">
+          <h3>Gear Ratios</h3>
+          <p>Verified gearbox ratios and primary reduction for every variant, with the road speed method for direct-coupled installations.</p>
+          <span class="related-link">Gear Ratios →</span>
+        </a>
+        <a href="/kawasaki-h2/dry-sump-kit/" class="related-card">
+          <h3>Dry Sump System</h3>
+          <p>Two-stage scavenge. Consistent oil supply regardless of cornering load in a car installation.</p>
+          <span class="related-link">Dry Sump →</span>
+        </a>
+        <a href="/kawasaki-h2/high-volume-oil-pump/" class="related-card">
+          <h3>High Volume Oil Pump</h3>
+          <p>A wider steel gerotor raising oil pressure across the rev range for engines running raised output.</p>
+          <span class="related-link">Oil Pump →</span>
+        </a>
+        <a href="/kawasaki-h2/" class="related-card">
+          <h3>H2 Engine Reference</h3>
+          <p>The variants, how they genuinely differ, and what a conversion actually requires. Free PDF.</p>
+          <span class="related-link">Read the Reference →</span>
+        </a>
+        <a href="/contact/" class="related-card">
+          <h3>Conversion Support</h3>
+          <p>Clutch, oil system, loom and management specified as one package rather than part by part.</p>
+          <span class="related-link">Get in Touch →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Which Kit?</h2>
+        <p>Tell us your engine's model and year, your output target and whether you are fitting the Brock's Clutch Mod. We will confirm which kit you need and its availability.</p>
+        <a href="/contact/" class="btn btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  /* Summary */
+  .kit-summary-section {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .kit-summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-lg);
+    align-items: center;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+    border-left: 3px solid var(--tftr-green);
+    padding: var(--space-md);
+  }
+
+  .kit-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .price-figure {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--tftr-green);
+    letter-spacing: 0.03em;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--tftr-grey);
+  }
+
+  .kit-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .spec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .spec-value {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--tftr-white);
+  }
+
+  /* Content */
+  .kit-content {
+    background: var(--tftr-black);
+  }
+
+  .content-block {
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-block p strong {
+    color: var(--tftr-white);
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .included-col {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .included-col h3 {
+    font-size: 1.1rem;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-xs);
+  }
+
+  .config-price {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--tftr-white);
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+    margin-bottom: var(--space-xs);
+  }
+
+  .config-price span {
+    font-family: var(--font-body, inherit);
+    font-size: 0.8rem;
+    color: var(--tftr-grey);
+    letter-spacing: 0;
+  }
+
+  .config-intro {
+    color: var(--tftr-white);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .kit-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .kit-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--tftr-green);
+  }
+
+  /* Related */
+  .related-section {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    margin-top: auto;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .kit-summary {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .kit-specs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .included-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
