@@ -9,24 +9,18 @@ const galleryImages = [
   // { src: '/images/kawasaki-h2/oil-pump-02.jpg', alt: 'EN26 steel gerotor set for the Kawasaki H2 oil pump' }
 ];
 
-// NOTE: `offers` is deliberately omitted while UK pricing is being finalised.
-// Two configurations are supplied, so a price per configuration may be the
-// honest structure here rather than a single figure.
+// This part is sold by Extreme Creations, not by us, so the page carries
+// WebPage data rather than Product data. Do not add Product without a real price.
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Kawasaki H2 High Volume Oil Pump Upgrade",
-  "description": "High volume oil pump upgrade for the Kawasaki supercharged H2 engine. Supplied as a complete kit with billet pump body, or as the EN26 steel gerotor set alone for dry sump installations. Fits Ninja H2, H2R, H2 SX and Z H2.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Extreme Creations"
-  },
-  "category": "Engine Oil Pump",
+  "@type": "WebPage",
+  "name": "Kawasaki H2 High Volume Oil Pump",
+  "description": "High volume oil pump upgrade for the Kawasaki supercharged H2 engine, made by Extreme Creations and bought directly from them. The EN26 steel gear set is required with the Too Fast To Race dry sump kit.",
   "url": "https://toofasttorace.com/kawasaki-h2/high-volume-oil-pump/"
 };
 ---
 
-<Layout title="Kawasaki H2 High Volume Oil Pump | H2, H2R, H2 SX & Z H2 | Too Fast To Race" description="High volume oil pump upgrade for the supercharged Kawasaki H2 engine. EN26 steel gerotor raising oil pressure across the rev range — supplied complete with billet pump body, or as the gear set alone for dry sump installations.">
+<Layout title="Kawasaki H2 High Volume Oil Pump | H2, H2R, H2 SX & Z H2 | Too Fast To Race" description="High volume oil pump upgrade for the supercharged Kawasaki H2 engine. EN26 steel gerotor from Extreme Creations, raising oil pressure across the rev range. The gear set is required with our dry sump kit. Buy directly from Extreme Creations.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
@@ -34,7 +28,7 @@ const structuredData = {
     <div class="container">
       <span class="stripe-accent"></span>
       <h1>High Volume <span class="text-green">Oil Pump</span></h1>
-      <p class="hero-subtitle">A wider steel gerotor that raises oil pressure across the rev range. Supplied complete with a billet pump body for engines keeping the standard cooling arrangement, or as the gear set alone where a dry sump conversion has taken over the water pump position.</p>
+      <p class="hero-subtitle">A wider steel gerotor that raises oil pressure across the rev range. Our dry sump kit needs the Extreme Creations gear set. We do not supply it, so buy it directly from them.</p>
     </div>
   </section>
 
@@ -43,9 +37,9 @@ const structuredData = {
     <div class="container">
       <div class="kit-summary">
         <div class="kit-price">
-          <span class="price-label">Pricing</span>
-          <span class="price-pending">To Follow</span>
-          <span class="price-note">Per configuration</span>
+          <span class="price-label">Buy From</span>
+          <span class="price-supplier">Extreme Creations</span>
+          <span class="price-note">Not supplied by us</span>
         </div>
         <div class="kit-specs">
           <div class="spec">
@@ -65,7 +59,7 @@ const structuredData = {
             <span class="spec-value">Full Kit or Gear Set</span>
           </div>
         </div>
-        <a href="/contact/" class="btn btn-primary">Enquire About This Pump</a>
+        <a href="https://www.extremecreations.com.au/ninja-h2-h2r-h2sx-zh2-high-volume-oil-pump" class="btn btn-primary" rel="noopener">Buy From Extreme Creations</a>
       </div>
     </div>
   </section>
@@ -91,7 +85,7 @@ const structuredData = {
 
       <div class="content-block">
         <h2>Two <span class="text-green">Configurations</span></h2>
-        <p>Which one you need depends entirely on whether the engine still has its original water pump — and that depends on whether you are running a dry sump.</p>
+        <p>Which one you need depends entirely on whether the engine still has its original water pump — and that depends on whether you are running a dry sump. Extreme Creations sells both, and you buy either one directly from them.</p>
       </div>
 
       <div class="included-grid">
@@ -117,6 +111,7 @@ const structuredData = {
             <li>Cooling handled by an electric water pump under ECU control</li>
             <li>Same pressure benefit, without paying for a part you cannot use</li>
             <li>Effectively standard on our dry sump builds — omitting it costs more, not less</li>
+            <li>Not an OEM replacement — it cannot be used in the standard Kawasaki pump housing</li>
           </ul>
         </div>
       </div>
@@ -125,7 +120,7 @@ const structuredData = {
         <h2>Why the Dry Sump Changes <span class="text-green">the Answer</span></h2>
         <p>On our <a href="/kawasaki-h2/dry-sump-kit/">dry sump conversion</a>, the scavenge pump is positioned where the original water pump sat. That is a deliberate packaging decision — it puts the scavenge stage where it needs to be and keeps the installation compact — but it means the standard mechanical water pump cannot stay.</p>
         <p>Cooling instead moves to an electric water pump running under ECU control. In a car that is arguably the better arrangement anyway: coolant flow becomes a mapped function rather than something tied to engine speed, so you get flow at idle when heat soak is worst and no parasitic drag at high rpm. The <a href="/kawasaki-h2/mbe-9a9-ecu/">MBE 9A9</a> carries a dedicated electric water pump output, so the control is already provided for.</p>
-        <p>The practical consequence for this product is simple: in that configuration the billet pump body has nowhere to go, so we supply the gerotor gear set on its own. You get the full pressure benefit without buying a housing you would put straight on the shelf.</p>
+        <p>The practical consequence for this product is simple: in that configuration the billet pump body has nowhere to go, so you need the gerotor gear set on its own. You get the full pressure benefit without buying a housing you would put straight on the shelf.</p>
         <p>The electric water pump itself is an open choice. Any suitable unit will do, we are happy to work around whatever you intend to fit, and it does not need to be decided before the dry sump is ordered. If you would rather not source it separately, we can supply one as part of a complete package.</p>
       </div>
 
@@ -145,7 +140,7 @@ const structuredData = {
       <div class="content-block">
         <h2>Fitting and <span class="text-green">Timing</span></h2>
         <p>Either configuration requires access to the pump, so the sensible moment is while the engine is apart — during a rebuild, or alongside a dry sump conversion. Fitted then, the additional labour is close to nothing.</p>
-        <p>Tell us which configuration your installation calls for when you enquire. If you are not yet certain whether you are running a dry sump, that is the conversation to have first — it determines this decision and several others.</p>
+        <p>Either version is bought directly from Extreme Creations. If you are not yet certain whether you are running a dry sump, that is the conversation to have first — it determines this decision and several others.</p>
       </div>
     </div>
   </section>
@@ -251,12 +246,11 @@ const structuredData = {
     color: var(--tftr-grey);
   }
 
-  .price-pending {
+  .price-supplier {
     font-family: var(--font-display);
     font-size: 2rem;
     color: var(--tftr-green);
     letter-spacing: 0.03em;
-    white-space: nowrap;
   }
 
   .price-note {
