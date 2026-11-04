@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caterham Suspension Specialist | Nitron &amp; Penske Coilovers | Too Fast To Race</title>
+<link rel="stylesheet" href="/shared.css">
+<link rel="icon" type="image/png" href="/images/TFTR_Icon.png">
+<meta name="description" content="Caterham suspension specialist. Nitron and Penske coilover kits for the Caterham Seven, S3, SV and CSR, specified around your car, tyres and use by Simon Rogers.">
+<style>
+@font-face{font-family:"Bebas Neue";src:url(/assets/bebas-neue-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Barlow";src:url(/assets/barlow-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Barlow";src:url(/assets/barlow-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Barlow";src:url(/assets/barlow-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url(/assets/barlow-condensed-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url(/assets/barlow-condensed-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+
+:root{
+  --green:#5CB85C; --green-ink:#2C7A32; --green-light:#7DCC7D;
+  --black:#0a0a0a; --dark:#111111; --darker:#1a1a1a; --line:#2b2d2b;
+  --white:#ffffff; --soft:#b9bdb6; --mute:#8d928a;
+  --paper:#F1F2EC; --paper-line:#cfd2c7; --ink:#141613; --ink-soft:#4b4f48;
+  --alert:#FF5A45;
+  --display:"Bebas Neue",Impact,sans-serif;
+  --head:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"Barlow",system-ui,sans-serif;
+  --gutter:clamp(16px,3.4vw,48px);
+  --max:1400px;
+  --ease:cubic-bezier(.23,1,.32,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--black);color:var(--white);font:400 1rem/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--green);color:var(--black)}
+img{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:3px}
+h1,h2,h3,p{margin:0}
+:focus-visible{outline:2px solid var(--green-light);outline-offset:3px}
+.paper :focus-visible{outline-color:var(--green-ink)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;background:var(--green);color:var(--black);font:600 1.12rem/1 var(--head);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:16px 26px;cursor:pointer;white-space:nowrap;transition:background .14s var(--ease),transform .12s var(--ease)}
+.btn:hover{background:var(--green-light)}
+.btn:active{transform:translateY(1px)}
+
+/* Hero: one axle, split by a line the visitor drags */
+.hero{--drop:clamp(52px,11.5vh,120px);position:relative;isolation:isolate;min-height:calc(100svh - 96px);overflow:clip;background:var(--black)}
+[data-step="4"].hero{min-height:max(calc(100svh - 96px),790px)}
+.photo{position:absolute;z-index:2;top:0;right:0;width:clamp(520px,50vw,960px);aspect-ratio:1.9/1;overflow:hidden;pointer-events:none;mix-blend-mode:lighten;transition:opacity .35s var(--ease);
+  -webkit-mask-image:linear-gradient(90deg,transparent 18%,#000 40%),linear-gradient(0deg,transparent 0,#000 6%);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(90deg,transparent 18%,#000 40%),linear-gradient(0deg,transparent 0,#000 6%);mask-composite:intersect}
+.photo img{position:absolute;left:0;bottom:0;width:100%;height:auto;max-width:none;filter:saturate(.92) brightness(.82)}
+.photo small{position:absolute;right:10px;top:8px;font-size:.72rem;color:#d6d9d3}
+.hero:not([data-step="1"]) .photo{opacity:0}
+.hero-copy{position:relative;z-index:4;width:calc(max(var(--gutter),(100vw - var(--max))/2 + var(--gutter)) + clamp(400px,37vw,560px));padding:calc(clamp(16px,3vh,44px) + var(--drop)) 0 56px max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)))}
+.kicker{font:600 .9rem/1.2 var(--head);letter-spacing:.17em;text-transform:uppercase;color:var(--green-light)}
+h1{font:400 clamp(3rem,min(5.5vw,9.6vh),5.5rem)/.94 var(--display);letter-spacing:.012em;margin-top:10px}
+h1 span{display:block}
+h1 .g{color:var(--green)}
+.q{margin-top:clamp(14px,2.6vh,28px)}
+.q-label{font:600 1.16rem/1.2 var(--head);letter-spacing:.05em;text-transform:uppercase;margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{background:rgba(17,17,17,.82);border:1px solid #4a4e49;color:var(--white);font:500 1.08rem/1 var(--head);letter-spacing:.04em;padding:12px 15px;cursor:pointer;transition:border-color .14s var(--ease),background .14s var(--ease),color .14s var(--ease),transform .12s var(--ease)}
+.chip:hover{border-color:var(--green)}
+.chip:active{transform:translateY(1px)}
+.chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--black);font-weight:600}
+.diag{margin-top:clamp(12px,2vh,20px);padding-left:14px;border-left:3px solid var(--alert);min-height:106px}
+.diag-tag{font:600 .86rem/1.2 var(--head);letter-spacing:.13em;text-transform:uppercase;color:var(--soft)}
+.diag-name{font:400 clamp(2rem,3vw,2.7rem)/1 var(--display);letter-spacing:.02em;margin-top:2px}
+.diag-text{margin-top:4px;line-height:1.38;color:#e4e6e1;max-width:44ch}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;margin-top:clamp(12px,2vh,20px)}
+.other{color:var(--soft);font-size:.95rem}
+.hero-foot{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:12px}
+.hero-foot .other,.hero-foot .linkbtn{font-size:.85rem}
+@media (min-width:1101px) and (max-width:1400px){.chip{font-size:.98rem;padding:11px 10px}.chips{gap:6px}}
+.linkbtn{background:none;border:0;padding:0;color:var(--soft);font:inherit;font-size:.88rem;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.linkbtn:hover{color:var(--white)}
+.model{margin-top:8px;font-size:.9rem;color:var(--soft);max-width:48ch}
+.model[hidden]{display:none}
+
+.stage{position:absolute;inset:0;z-index:1;pointer-events:none}
+#cvGL{background:#0a0a0a}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.wipe{position:absolute;top:0;bottom:0;pointer-events:auto;touch-action:pan-y;cursor:ew-resize;-webkit-user-select:none;user-select:none}
+.wipe-line{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:var(--green-light);box-shadow:0 0 18px rgba(125,204,125,.55)}
+.grip svg{width:32px;height:18px;display:block}
+.grip{position:absolute;left:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:var(--green);color:var(--black);display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.6);transition:transform .14s var(--ease)}
+.wipe:hover .grip{transform:scale(1.07)}
+.stage:has(#wipeRange:focus-visible) .grip{outline:3px solid var(--white);outline-offset:3px}
+.orbit{display:none;position:absolute;inset:0 0 62px;pointer-events:auto;touch-action:pan-y;cursor:grab;-webkit-user-select:none;user-select:none}
+.orbit.drag{cursor:grabbing}
+.hero:not([data-step="1"]) .orbit{display:block}
+.no3d .orbit{display:none!important}
+.orbit-hint{position:absolute;right:max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)));bottom:14px;font:600 .9rem/1 var(--head);letter-spacing:.09em;text-transform:uppercase;color:var(--soft);transition:opacity .3s var(--ease)}
+.orbit-hint.gone{opacity:0}
+.hero[data-step="4"] .orbit-hint{display:none}
+.fit-tag{position:absolute;right:max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)));top:clamp(16px,5vh,44px);text-align:right;pointer-events:none;animation:fitIn .5s .35s var(--ease) both}
+.fit-tag[hidden]{display:none}
+.fit-tag span{display:block;font:600 .92rem/1.2 var(--head);letter-spacing:.12em;text-transform:uppercase;color:var(--green-light)}
+.fit-tag b{display:block;font:400 clamp(1.7rem,3vw,2.8rem)/1 var(--display);letter-spacing:.02em;font-weight:400}
+@keyframes fitIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tag{position:absolute;display:grid;gap:2px;transition:opacity .16s var(--ease);max-width:46%}
+.tag{text-shadow:0 1px 8px #000,0 0 2px #000}
+.tag{z-index:3;background:rgba(10,10,10,.74);padding:7px 11px}
+.tag b{font:600 1.16rem/1.05 var(--head);letter-spacing:.06em;text-transform:uppercase}
+.tag span{font-size:.84rem;line-height:1.2;color:var(--soft);font-variant-numeric:tabular-nums}
+@media (min-width:1101px){.tag{display:flex;align-items:baseline;gap:10px;max-width:none;white-space:nowrap}.tag-good{flex-direction:row-reverse}}
+.tag-good{text-align:right}
+.tag-good b{color:var(--green-light)}
+
+@media (min-width:1101px){.stage{z-index:auto}.stage canvas{z-index:1}.tag,.wipe,.orbit,.fit-tag{z-index:3}}
+/* Session */
+.rail{list-style:none;margin:0 0 clamp(12px,2.2vh,20px);padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;position:relative;z-index:3}
+.rail button{width:100%;height:100%;display:block;background:#161816;border:1px solid #565b56;padding:9px 10px 8px;color:var(--white);text-align:left;cursor:pointer;transition:border-color .14s var(--ease),background .14s var(--ease)}
+.rail b{display:block;font:600 1.12rem/1.05 var(--head);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.rail small{display:block;margin-top:2px;font:500 .84rem/1.15 var(--body);color:var(--soft);white-space:nowrap}
+.rail button:hover{border-color:var(--green-light);background:#1d221d}
+.rail button[data-state="done"]{border-color:var(--green)}
+.rail button[data-state="done"] b::after{content:" \2713";color:var(--green-light)}
+.rail button[aria-current="step"]{background:var(--green);border-color:var(--green);color:var(--black)}
+.rail button[aria-current="step"] small{color:#10260f}
+.rail button[aria-current="step"] b::after{color:var(--black)}
+.hero-copy .btn{width:100%;padding:20px 22px;font-size:1.3rem;white-space:normal;line-height:1.1}
+.hero-copy .btn[disabled]{background:none;border:1px solid #4a4e49;color:var(--soft);cursor:default}
+.step[hidden]{display:none!important}
+.step h2{font:400 clamp(2.3rem,3.6vw,3.3rem)/.96 var(--display);letter-spacing:.015em;text-transform:none}
+.step-lede{margin-top:8px;color:#d6d9d3;line-height:1.42;max-width:46ch}
+.step:focus{outline:0}
+.scrim{position:absolute;z-index:1;left:0;top:0;bottom:62px;width:calc(max(var(--gutter),(100vw - var(--max))/2 + var(--gutter)) + clamp(400px,37vw,560px) + 70px);background:linear-gradient(90deg,var(--black) 86%,transparent);opacity:0;transition:opacity .3s var(--ease);pointer-events:none}
+.hero:not([data-step="1"]) .scrim{opacity:1}
+.hero:not([data-step="1"]) .wipe,.hero:not([data-step="1"]) .tag{display:none}
+.session-foot{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:14px}
+.session-foot .other,.session-foot .linkbtn{font-size:.85rem}
+
+/* Damper step */
+.tune{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;align-items:center;margin-top:12px}
+.read-num{font:400 clamp(2.2rem,3.2vw,3rem)/.95 var(--display)}
+.read-sub{margin-top:5px;font-size:.98rem;line-height:1.36;color:#d6d9d3}
+.gauge{position:relative;height:50px;margin-top:14px}
+.gauge .bar{position:absolute;left:0;right:0;top:9px;height:8px;background:linear-gradient(90deg,#FF5A45,#d5b13f 28%,#5CB85C 50%,#d5b13f 72%,#FF5A45)}
+.gauge b.end{color:var(--soft);transform:none}
+.gauge b.l{left:0}
+.gauge b.r{right:0}
+.gauge i{position:absolute;top:0;width:3px;height:26px;margin-left:-1px;background:var(--white)}
+.gauge i#gTarget{background:var(--black);outline:2px solid var(--green-light)}
+.gauge b{position:absolute;top:30px;font:600 .9rem/1.1 var(--head);letter-spacing:.03em;white-space:nowrap;transform:translateX(-50%)}
+.gauge b#gTargetL{color:var(--green-light);left:50%}
+.dials{display:flex;justify-content:center}
+.dial{width:150px;text-align:center}
+.dial-name{display:none}
+.dial svg{display:block;width:100%;height:auto;touch-action:none;cursor:grab}
+.dial:has(input:focus-visible) svg{outline:2px solid var(--green-light);outline-offset:2px}
+.dial .knob{transform-origin:100px 100px;transform-box:view-box}
+.dial-ctrl{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:2px}
+.dial-ctrl button{width:44px;height:44px;flex:none;background:var(--dark);border:1px solid #4a4e49;color:var(--white);font:600 1.5rem/1 var(--head);cursor:pointer}
+.dial-ctrl button:hover{border-color:var(--green)}
+.dial-ctrl button:active{transform:translateY(1px)}
+.dial-ctrl output{flex:1;min-width:0;font:600 1rem/1 var(--head);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Question step */
+.qp{display:none}
+.qp.on{display:block;animation:qIn .24s var(--ease)}
+@keyframes qIn{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+.q-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:14px 0 8px}
+.q-back{margin-top:10px}
+.q-back[hidden]{display:none}
+.step-lede[hidden]{display:none}
+.q-count{font:600 .92rem/1.2 var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--green-light)}
+.so-far{font-size:.86rem;color:var(--soft);text-align:right}
+.q-nav{display:flex;align-items:center;gap:18px;margin-top:6px}
+#options legend{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+#optionGroups .radios{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+#optionGroups .radio span{padding:9px 11px}
+#optionGroups .radio b{font-size:1rem}
+#optionGroups .radio small{font-size:.82rem}
+.opt-head{margin-bottom:10px;line-height:1.35}
+.opt-head b{display:block;font:400 1.8rem/1 var(--display);letter-spacing:.02em}
+.opt-head span{font-size:.94rem;color:var(--soft)}
+
+/* Form parts */
+h2{font:600 clamp(2.15rem,4.4vw,3.5rem)/1 var(--head);letter-spacing:.015em;text-transform:uppercase}
+fieldset{border:0;margin:0 0 12px;padding:0;min-width:0}
+legend{padding:0;margin-bottom:10px;font:600 1.4rem/1.2 var(--head);letter-spacing:.04em;text-transform:uppercase}
+.radios{display:grid;gap:7px}
+.radios.row{grid-template-columns:repeat(2,minmax(0,1fr))}
+.radio{position:relative;display:block}
+.radio input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.radio span{display:block;height:100%;padding:12px 14px;border:1px solid #3d413c;background:var(--black);line-height:1.25;transition:border-color .14s var(--ease),background .14s var(--ease)}
+.radio b{display:block;font:600 1.09rem/1.15 var(--head);letter-spacing:.03em}
+.radio small{display:block;margin-top:3px;font-size:.88rem;line-height:1.3;color:var(--soft)}
+.radio:hover span{border-color:var(--green)}
+.radio input:checked+span{border-color:var(--green);background:#16261a;box-shadow:inset 0 0 0 1px var(--green)}
+.radio input:focus-visible+span{outline:2px solid var(--green-light);outline-offset:3px}
+#options[hidden]{display:none}
+.opt-group{margin-bottom:14px}
+.opt-title{font:600 .98rem/1.2 var(--head);letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin-bottom:7px}
+
+/* Spec sheet */
+.paper[hidden]{display:none}
+.paper{position:absolute;z-index:3;top:clamp(14px,2.4vh,26px);right:max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)));width:clamp(330px,27vw,400px);background:var(--paper);color:var(--ink);padding:clamp(16px,1.7vw,24px);box-shadow:0 26px 54px -22px rgba(0,0,0,.8),inset 0 1px 0 #fff}
+.sheet-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding-bottom:10px;border-bottom:3px solid var(--ink)}
+.sheet-top h3{font:400 2rem/.95 var(--display);letter-spacing:.03em}
+.sheet-top small{display:block;font-size:.84rem;color:var(--ink-soft);margin-top:4px}
+.sheet-top img{width:44px;height:44px}
+.lines{margin:0;padding:6px 0}
+.lines div{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:4px 0;border-bottom:1px solid var(--paper-line)}
+.lines dt{font:600 .92rem/1.4 var(--head);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.lines dd{margin:0;font-weight:500;line-height:1.35}
+.lines dd.unset{color:#6b7067;font-weight:400}
+.lines div[hidden]{display:none}
+.result{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:14px;padding:14px 0 12px}
+.result[hidden]{display:none}
+.result .tag-line{font:600 .9rem/1.2 var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--green-ink)}
+.result h4{margin:2px 0 4px;font:400 2.3rem/.98 var(--display);letter-spacing:.02em}
+.result .adj{font-size:.95rem;line-height:1.35;color:var(--ink-soft)}
+.result img{width:112px;height:112px;object-fit:contain;background:#fff}
+blockquote{margin:0 0 12px;padding:0;font-size:1.02rem;line-height:1.42}
+blockquote footer{margin-top:3px;font-size:.86rem;color:var(--ink-soft)}
+.empty{padding:16px 0;color:var(--ink-soft)}
+.empty[hidden]{display:none}
+.price{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:10px 0;border-top:3px solid var(--ink)}
+.price[hidden]{display:none}
+.price .amt{font:400 2.5rem/.9 var(--display);font-variant-numeric:tabular-nums}
+.price small{display:block;font-size:.86rem;line-height:1.25;color:var(--ink-soft);text-align:right;max-width:21ch}
+.breakdown{font-size:.88rem;color:var(--ink-soft);padding-bottom:10px}
+.paper .btn{width:100%;background:var(--ink);color:var(--white)}
+.paper .btn:hover{background:#2c6e33}
+.reassure{margin-top:9px;font-size:.88rem;line-height:1.35;color:var(--ink-soft)}
+
+/* Send */
+.send[hidden]{display:none}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.field label{display:block;margin-bottom:5px;font-weight:600;font-size:.95rem}
+.field input,.field textarea{width:100%;padding:12px;background:var(--black);border:1px solid #4a4e49;color:var(--white);font:inherit;border-radius:0}
+.field input:focus,.field textarea:focus{border-color:var(--green);outline:2px solid var(--green-light);outline-offset:1px}
+.field.wide{grid-column:1/-1}
+.send .btn{margin-top:16px}
+.preview{margin-top:18px;background:var(--black);border:1px solid #F2C94C;padding:16px}
+.preview[hidden]{display:none} .ledger-note{display:block;margin-top:4px;font:400 .9rem/1.35 var(--body,sans-serif);color:#b9bdb6;letter-spacing:0;text-transform:none} .send-error{color:#ff8a78;margin:12px 0 0}
+.preview strong{color:#F2C94C}
+.preview pre{margin:10px 0 0;font:400 .9rem/1.45 ui-monospace,Menlo,monospace;white-space:pre-wrap;color:#e4e6e1}
+
+/* Why */
+.why{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);background:var(--black)}
+.why-photo{position:relative;min-height:440px}
+.why-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 60%}
+.why-photo figcaption{position:absolute;right:10px;bottom:8px;font-size:.78rem;color:#fff;background:rgba(10,10,10,.68);padding:2px 7px}
+.why-photo{margin:0}
+.why-copy{padding:clamp(40px,6vw,84px) var(--gutter)}
+.why-copy q{display:block;quotes:none;font:400 clamp(2.3rem,3.9vw,3.5rem)/1.02 var(--display);letter-spacing:.012em}
+.who{margin-top:14px;color:var(--soft)}
+.facts{margin:26px 0 0;padding:0;list-style:none}
+.facts li{padding:12px 0;border-top:1px solid var(--line)}
+.facts b{display:block;font:600 1.15rem/1.2 var(--head);letter-spacing:.03em}
+.facts span{color:#cfd2cc}
+
+/* Range */
+.range{padding:clamp(52px,8vw,92px) 0;background:var(--dark);border-top:1px solid var(--line)}
+.ledger{width:100%;border-collapse:collapse;margin-top:24px;font-variant-numeric:tabular-nums}
+.ledger th{font:600 .92rem/1.2 var(--head);letter-spacing:.08em;text-transform:uppercase;color:var(--soft);text-align:left;padding:8px 14px 8px 0;border-bottom:1px solid #4a4e49}
+.ledger td{padding:13px 14px 13px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+.ledger td:first-child a{font:600 1.28rem/1.15 var(--head);text-decoration:none}
+.ledger td:first-child a:hover{color:var(--green-light)}
+.ledger .num{text-align:right;padding-right:0;font:600 1.2rem/1 var(--head);white-space:nowrap}
+.ledger th.num{font-size:.92rem}
+.note{margin-top:12px;font-size:.92rem;color:var(--soft)}
+.elsewhere{margin-top:36px;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline}
+.elsewhere b{font:600 1.15rem/1.2 var(--head);text-transform:uppercase;letter-spacing:.05em}
+
+@media (max-width:1180px){
+}
+@media (max-width:1100px){
+  .hero{--drop:0px;min-height:0;display:flex;flex-direction:column;padding-bottom:18px}
+  [data-step="4"].hero{min-height:0}
+  .hero-copy,#step1{display:contents}
+  .scrim{display:none}
+  .rail{order:1;margin:12px var(--gutter) 10px}
+  #step1>*{order:2;margin-inline:var(--gutter);position:relative;z-index:3}
+  #step1>.diag,#step1>.hero-actions{order:4}
+  .hero[data-step="1"] .stage{order:3}
+  .stage{order:2;position:relative;inset:auto;margin-top:10px;height:clamp(272px,70vw,470px)}
+  .hero[data-step="2"] .stage,.hero[data-step="3"] .stage{position:sticky;top:68px;z-index:6;margin-top:0;background:var(--black);height:clamp(190px,46vw,320px)}
+  .hero[data-step="4"] .stage{height:clamp(170px,40vw,260px);margin-top:0}
+  .step:not(#step1){order:3;margin:12px var(--gutter) 0}
+  .paper{order:3;position:relative;top:auto;right:auto;width:auto;margin:12px var(--gutter) 0}
+  .hero[data-step="4"] #step4{order:4}
+  .orbit{inset:0 0 30px}
+  .orbit-hint{right:12px;bottom:6px;font-size:.78rem}
+  .fit-tag{right:12px;top:8px}
+  .fit-tag span{font-size:.76rem}
+  .fit-tag b{font-size:1.4rem}
+  .session-foot{order:9;margin-inline:var(--gutter)}
+  .diag{min-height:0}
+  .photo{width:112vw;right:-30vw;top:0;opacity:.5}
+}
+@media (max-width:960px){
+  .why{grid-template-columns:1fr}
+  .why-photo{min-height:0;aspect-ratio:3/2}
+}
+@media (max-width:640px){
+  html{scroll-padding-top:80px}
+  .kicker{font-size:.8rem;letter-spacing:.12em}
+  .chip{font-size:1rem;padding:11px 12px}
+  .rail{gap:4px}
+  .rail button{padding:7px 6px 6px}
+  .rail b{font-size:.9rem;letter-spacing:.02em}
+  .rail small{font-size:.7rem}
+  .tune{grid-template-columns:146px minmax(0,1fr);gap:12px}
+  .dial{width:146px}
+  .dial-ctrl{gap:3px}
+  .dial-ctrl button{width:36px;height:42px}
+  .dial-ctrl output{font-size:.94rem}
+  .read-num{font-size:2rem}
+  .read-sub{font-size:.9rem}
+  .grip{width:50px;height:50px;margin:-25px 0 0 -25px}
+  .tag b{font-size:1rem}
+  .tag span{font-size:.78rem}
+  .fields{grid-template-columns:1fr}
+  .lines div{grid-template-columns:82px 1fr}
+  .result{grid-template-columns:minmax(0,1fr) 92px}
+  .result img{width:92px;height:92px}
+  .ledger .hide-sm{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:.01ms!important}
+}
+</style>
+<link rel="stylesheet" href="/assets/descent.css"><link rel="canonical" href="https://toofasttorace.com/">
+<meta name="msvalidate.01" content="FC8B2B692C15E23B452E676F4C8C0657">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Too Fast To Race">
+<meta property="og:title" content="Caterham Suspension Specialist | Nitron &amp; Penske Coilovers | Too Fast To Race">
+<meta property="og:description" content="Caterham suspension specialist. Nitron and Penske coilover kits for the Caterham Seven, S3, SV and CSR, specified around your car, tyres and use by Simon Rogers.">
+<meta property="og:image" content="https://toofasttorace.com/images/TFTR.png">
+<meta property="og:url" content="https://toofasttorace.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Caterham Suspension Specialist | Nitron &amp; Penske Coilovers | Too Fast To Race">
+<meta name="twitter:description" content="Caterham suspension specialist. Nitron and Penske coilover kits for the Caterham Seven, S3, SV and CSR, specified around your car, tyres and use by Simon Rogers.">
+<meta name="twitter:image" content="https://toofasttorace.com/images/TFTR.png">
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Too Fast To Race",
+      "alternateName": "TFTR",
+      "legalName": "S Rogers Engineering Ltd",
+      "description": "Specialist suspension specification, chassis development and vehicle dynamics consultancy. Bespoke Nitron and Penske suspension systems for fast road, track day and motorsport applications.",
+      "url": "https://toofasttorace.com",
+      "logo": "https://toofasttorace.com/images/TFTR.png",
+      "image": "https://toofasttorace.com/images/TFTR.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Y Gwernen",
+        "addressLocality": "Dryslwyn",
+        "addressRegion": "Carmarthen",
+        "postalCode": "SA32 8SA",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "51.8566",
+        "longitude": "-4.0731"
+      },
+      "telephone": "+447920843146",
+      "areaServed": "United Kingdom",
+      "serviceType": [
+        "Suspension Specification",
+        "Chassis Development",
+        "Vehicle Dynamics Consultancy",
+        "Nitron Suspension Systems",
+        "Penske Racing Shocks",
+        "Track Day Suspension Setup",
+        "Hillclimb Suspension"
+      ],
+      "knowsAbout": [
+        "Suspension Engineering",
+        "Vehicle Dynamics",
+        "Nitron Suspension",
+        "Penske Racing Shocks",
+        "Caterham Seven",
+        "Caterham 7",
+        "Lotus Seven",
+        "Lotus 7",
+        "Chassis Development",
+        "Motorsport Engineering",
+        "Kawasaki H2 Engine",
+        "Motorcycle Engine Car Conversion",
+        "Dry Sump Systems"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/toofasttorace"
+      ]
+    }
+    </script>
+</head>
+<body>
+<header class="site-header"> <nav class="nav-container"> <a href="/" class="logo"> <img src="/images/TFTR_Icon.png" alt="Too Fast To Race" class="logo-img" width="90" height="90" onerror="this.src='images/TFTR.png'"> </a> <button class="mobile-menu-btn" aria-label="Toggle menu"> <span></span> <span></span> <span></span> </button> <ul class="nav-links"> <li class="dropdown"> <a href="/suspension/">Suspension <span class="dropdown-arrow">▼</span></a> <ul class="dropdown-menu"> <li><a href="/nitron-suspension/">Nitron Systems</a></li> <li><a href="/penske-racing-shocks/">Penske Racing Shocks</a></li> <li><a href="/nitron-electron/">Nitron elec-TRON</a></li> <li><a href="/nitron-r1-vs-r3/">R1 vs R3 Explained</a></li> <li><a href="/damper-adjustment-explained/">Damper Adjustment Explained</a></li> </ul> </li> <li class="dropdown"> <a href="/services/">Applications <span class="dropdown-arrow">▼</span></a> <ul class="dropdown-menu"> <li><a href="/fast-road-suspension/">Fast Road</a></li> <li><a href="/track-day-suspension/">Track Day</a></li> <li><a href="/nurburgring-suspension/">Nürburgring</a></li> <li><a href="/hillclimb-suspension/">Hillclimb</a></li> </ul> </li> <li class="dropdown"> <a href="/caterham/">Caterham <span class="dropdown-arrow">▼</span></a> <ul class="dropdown-menu"> <li><a href="/caterham/">Caterham Overview</a></li> <li><a href="/caterham/suspension/">Suspension Kits</a></li> <li><a href="/caterham/nitron-ntr-r1/">Nitron NTR R1 Kit</a></li> <li><a href="/caterham/nitron-ntr-r3/">Nitron NTR R3 Kit</a></li> <li><a href="/caterham/penske-7500-cosa/">Penske 7500 COSA Kit</a></li> <li><a href="/caterham/penske-7500-coda/">Penske 7500 CODA Kit</a></li> <li><a href="/caterham/penske-8700-3-way/">Penske 8700 3-Way Kit</a></li> <li><a href="/caterham/suspension-buyers-guide/">Suspension Buyer's Guide</a></li> <li><a href="/caterham/os-giken-lsd/">OS Giken LSD</a></li> <li><a href="/caterham/os-giken-dual-core-lsd/">OS Giken Dual Core LSD</a></li> </ul> </li> <li class="dropdown"> <a href="/kawasaki-h2/">Kawasaki H2 <span class="dropdown-arrow">▼</span></a> <ul class="dropdown-menu"> <li><a href="/kawasaki-h2/">H2 Overview &amp; Engine Guide</a></li> <li><a href="/kawasaki-h2/dry-sump-kit/">Dry Sump System</a></li> <li><a href="/kawasaki-h2/oil-cooler-blanking-plate/">Oil Cooler Blanking Plate</a></li> <li><a href="/kawasaki-h2/high-volume-oil-pump/">High Volume Oil Pump</a></li> <li><a href="/kawasaki-h2/pair-block-off-plates/">PAIR Block Off Plates</a></li> <li><a href="/kawasaki-h2/wiring-loom/">Motorsport Wiring Loom</a></li> <li><a href="/kawasaki-h2/ecu-options/">ECU Options</a></li> <li><a href="/kawasaki-h2/mbe-9a9-ecu/">MBE 9A9 ECU &amp; Map</a></li> <li><a href="/kawasaki-h2/clutch-conversion-kit/">Clutch Conversion Kit</a></li> </ul> </li> <li class="dropdown"> <a href="#">Vehicles <span class="dropdown-arrow">▼</span></a> <ul class="dropdown-menu"> <li><a href="/porsche-suspension/">Porsche</a></li> <li><a href="/lotus-suspension/">Lotus</a></li> <li><a href="/bmw-suspension/">BMW</a></li> <li><a href="/mazda-mx5-suspension/">Mazda MX-5</a></li> <li><a href="/alpine-suspension/">Alpine A110</a></li> <li><a href="/toyota-gr-yaris-suspension/">Toyota GR Yaris</a></li> <li><a href="/tvr-suspension/">TVR</a></li> </ul> </li> <li><a href="/about/">About</a></li> <li><a href="/partners/">Partners</a></li> <li><a href="/contact/">Contact</a></li> <li><a href="/#step-3" class="nav-cta" data-go="3">Start your specification</a></li> </ul> </nav> </header>
+
+<main>
+<section class="hero" id="hero" data-step="1" aria-labelledby="h1">
+  <div class="photo" aria-hidden="true"><img src="/assets/hero-epynt.jpg" width="900" height="600" alt=""><small>Photo: Chris Huish</small></div>
+  <div class="stage" id="stage">
+    <canvas id="cvGL" aria-hidden="true"></canvas>
+    <canvas id="cvHero" role="img"></canvas>
+    <div class="tag tag-bad" id="tagBad"><b id="tagBadName"></b><span id="tagBadSub"></span></div>
+    <div class="tag tag-good" id="tagGood"><b>Balanced</b><span id="tagGoodSub"></span></div>
+    <div class="wipe" id="wipe"><div class="wipe-line" id="wipeLine"><span class="grip" id="grip" aria-hidden="true"><svg viewBox="0 0 32 18" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2 3 9l7 7M22 2l7 7-7 7"/></svg></span></div></div>
+    <div class="orbit" id="orbit"><span class="orbit-hint" id="orbitHint">Drag to turn the car</span></div>
+    <div class="fit-tag" id="fitTag" hidden><span>Recommended for you</span><b id="fitName"></b></div>
+    <input class="vh" id="wipeRange" type="range" min="0" max="100" step="1" value="50" aria-label="Compare the problem with the balanced set-up">
+  </div>
+  <div class="scrim" aria-hidden="true"></div>
+
+  <div class="hero-copy" id="heroCopy">
+    <ol class="rail" id="rail" aria-label="Your set-up session">
+      <li><button type="button" data-go="1"><b>1 Diagnose</b><small>What it does</small></button></li>
+      <li><button type="button" data-go="2"><b>2 Tune</b><small>Find the click</small></button></li>
+      <li><button type="button" data-go="3"><b>3 Specify</b><small>Your kit</small></button></li>
+      <li><button type="button" data-go="4"><b>4 Send</b><small>To Simon</small></button></li>
+    </ol>
+
+    <div class="step" id="step1" tabindex="-1">
+      <p class="kicker">Caterham suspension specialist. Nitron &amp; Penske.</p>
+      <h1 id="h1"><span>A car that skips</span><span class="g">isn't fast</span></h1>
+      <div class="q">
+        <p class="q-label" id="qLabel">What does your car do over a bump?</p>
+        <div class="chips" id="chips" role="group" aria-labelledby="qLabel"></div>
+      </div>
+      <div class="diag" aria-live="polite">
+        <p class="diag-tag">Usual cause</p>
+        <p class="diag-name" id="diagName"></p>
+        <p class="diag-text" id="verdict"></p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn" href="#step-3" id="heroCta" data-go="3">Start your specification</a>
+        </div>
+    </div>
+
+    <div class="step" id="step2" tabindex="-1" hidden>
+      <h2 id="labH">Find the right click</h2>
+      <p class="step-lede" id="labIntro">A one-way damper with 24 clicks, from 0 at full hard to -24 at softest, on a <span id="labTitle"></span>. <span id="labHelp"></span></p>
+      <div class="tune">
+        <div class="dials" id="dials"></div>
+        <div><div class="read-num" id="labNum" aria-live="polite"></div><p class="read-sub" id="labSub"></p></div>
+      </div>
+      <div class="gauge" aria-hidden="true">
+        <div class="bar"></div>
+        <i id="gTarget"></i><i id="gYou"></i>
+        <b class="end l">Under-damped</b><b id="gTargetL">Balanced</b><b class="end r">Over-damped</b>
+      </div>
+      <div class="hero-actions"><a class="btn" href="#step-3" data-go="3" id="labNext">Next: your specification</a></div>
+    </div>
+
+    <div class="step" id="step3" tabindex="-1" hidden>
+      <h2 id="benchH">Your specification</h2>
+      <p class="step-lede" id="qLede">Five quick questions, using the same advice Simon gives on the phone. If something simpler suits your car, this will say so.</p>
+      <div class="q-top"><span class="q-count" id="qCount"></span><span class="so-far" id="soFar"></span></div>
+      <form id="specForm" onsubmit="return false">
+        <fieldset class="qp"><legend>How do you use the car?</legend><div class="radios row" id="f-use"></div></fieldset>
+        <fieldset class="qp"><legend>Which chassis?</legend><div class="radios row" id="f-chassis"></div></fieldset>
+        <fieldset class="qp"><legend>What tyres?</legend><div class="radios row" id="f-tyres"></div></fieldset>
+        <fieldset class="qp"><legend>How do you work with the car?</legend><div class="radios" id="f-style"></div></fieldset>
+        <fieldset class="qp"><legend>What matters most long term?</legend><div class="radios" id="f-value"></div></fieldset>
+        <fieldset class="qp" id="options"><legend>Options</legend><p class="opt-head"><b id="optName"></b><span id="optPrice"></span></p><div id="optionGroups"></div></fieldset>
+      </form>
+      <div class="q-nav"><button class="btn" type="button" id="qNext">Next</button></div><button class="linkbtn q-back" type="button" id="qBack">Back to the last question</button>
+    </div>
+
+    <div class="step" id="step4" tabindex="-1" hidden>
+      <div class="send" id="send">
+        <h2>Send this to Simon</h2>
+        <p class="step-lede">Your answers go with this message, so you won't need to explain it all again.</p>
+        <form id="sendForm" method="post" action="https://formspree.io/f/mjknoakd">
+          <div class="fields">
+            <div class="field"><label for="n">Name</label><input id="n" name="name" required autocomplete="name"></div>
+            <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" required autocomplete="email"></div>
+            <div class="field"><label for="t">Phone (optional)</label><input id="t" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field wide"><label for="m">Anything else about the car? (optional)</label><textarea id="m" name="message" rows="3"></textarea></div>
+          </div>
+          <button class="btn" type="submit">Send this to Simon</button>
+          <p class="send-error" id="sendError" role="alert" hidden>That did not send. Please try again, or use the <a href="/contact/">contact page</a>.</p>
+        </form>
+        <div class="preview" id="preview" hidden role="status">
+          <strong>Thank you. This has been sent to Simon:</strong>
+          <pre id="previewText"></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="session-foot">
+      <span class="other">Not a Caterham? <a href="#elsewhere">Lotus, Porsche, BMW and more</a></span>
+      <button class="linkbtn" id="pause">Pause</button>
+      <button class="linkbtn" id="modelBtn" aria-expanded="false" aria-controls="model">About this animation</button>
+      <div class="model" id="model" hidden>
+        <p>An exaggerated illustration of how a corner behaves, shown in slow motion. It is not a simulation of your car. Both sides of the line are the same car on the same road.</p>
+      </div>
+    </div>
+  </div>
+
+  <aside class="paper" id="spec" aria-label="Your draft specification" hidden>
+    <div class="sheet-top">
+      <div><h3>Draft specification</h3><small>Caterham Seven. Simon reviews every one.</small></div>
+      <img src="/assets/logo.png" width="44" height="44" alt="">
+    </div>
+    <dl class="lines">
+      <div><dt>Use</dt><dd id="l-use" class="unset">Not set</dd></div>
+      <div><dt>Chassis</dt><dd id="l-chassis" class="unset">Not set</dd></div>
+      <div><dt>Tyres</dt><dd id="l-tyres" class="unset">Not set</dd></div>
+      <div id="l-sym-row" hidden><dt>Symptom</dt><dd id="l-sym"></dd></div>
+    </dl>
+    <p class="empty" id="empty"></p>
+    <div class="result" id="result" hidden>
+      <div>
+        <p class="tag-line">Starting point</p>
+        <h4 id="r-name"></h4>
+        <p class="adj" id="r-adj"></p>
+      </div>
+      <img id="r-img" src="/assets/kit-r1.png" width="112" height="112" alt="">
+    </div>
+    <blockquote id="r-quote" hidden><span id="r-quoteText"></span><footer>Simon Rogers</footer></blockquote>
+    <div class="price" id="price" hidden>
+      <div class="amt" id="r-price"></div>
+      <small>from, + VAT &amp; shipping. About six weeks' lead time.</small>
+    </div>
+    <p class="breakdown" id="r-break" hidden></p>
+    <p class="reassure" id="reassure" hidden>No payment and no commitment. Simon checks it against your car and gives you a straight answer.</p>
+  </aside>
+</section>
+
+<section class="dsc" id="descent" aria-labelledby="dscH">
+<script>(function(){var s=document.getElementById('descent'),ok=!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);if(ok){try{var c=document.createElement('canvas');ok=!!(c.getContext('webgl2')||c.getContext('webgl'))}catch(e){ok=false}}s.classList.add(ok?'dsc-live':'dsc-static')})()</script>
+  <div class="dsc-stage">
+    <canvas class="dsc-gl" aria-hidden="true"></canvas>
+    <div class="dsc-intro">
+      <h2 id="dscH">A damper is a <span class="g">timing device.</span></h2>
+      <p>The part that decides how your car drives is the part you never see. So open one up.</p>
+      <div class="dsc-cta"><button type="button" class="btn dsc-open" aria-expanded="false" aria-controls="dscPanel">See inside the damper</button><a href="#step-3" data-go="3">Start your specification</a></div>
+    </div>
+    <div class="dsc-panel" id="dscPanel">
+      <button type="button" class="dsc-close">Close</button>
+      <div class="dsc-tag" data-tag="reb"><span>Rebound shims</span></div>
+      <div class="dsc-tag" data-tag="piston"><span>Piston</span></div>
+      <div class="dsc-tag" data-tag="comp"><span>Compression shims</span></div>
+      <div class="dsc-tag l" data-tag="oil"><span>Oil</span></div>
+      <div class="dsc-tag l" data-tag="gas"><span>Gas</span></div>
+      <article class="dsc-step" data-s="0">
+        <div><h3>The spring holds the car up.</h3><p>So what controls it?</p></div>
+        <img src="/assets/descent-2.jpg" width="1200" height="800" alt="Illustration of a coilover: a green spring around a damper" loading="lazy">
+      </article>
+      <article class="dsc-step" data-s="1">
+        <div><h3>The damper controls the timing.</h3><p>When load arrives, how long it stays, and how quickly it leaves.</p></div>
+        <img src="/assets/descent-6.jpg" width="1200" height="800" alt="Illustration of the coilover, cut away" loading="lazy">
+      </article>
+      <article class="dsc-step" data-s="2">
+        <div><h3>This is the valving.</h3><p>The single biggest differentiator between a mediocre damper and a brilliant one.</p></div>
+        <img src="/assets/descent-4.jpg" width="1200" height="800" alt="Illustration of the piston in section, with a stack of thin steel shims above and below it" loading="lazy">
+      </article>
+      <article class="dsc-step" data-s="3">
+        <div><h3>Now see it move.</h3>
+        <div class="dsc-hits"><button type="button" class="dsc-hit" data-hit="slow">Slow bump</button><button type="button" class="dsc-hit" data-hit="kerb">Sharp kerb</button></div>
+        <p class="dsc-live-word">At rest</p><p class="dsc-live-sub">Low-speed compression deals with body movement. High-speed compression deals with sharp inputs from the surface.</p>
+        <p class="dsc-note">The speeds are damper shaft speeds, not car speeds. Illustration, not a simulation.</p></div>
+        <img src="/assets/descent-5.jpg" width="1200" height="800" alt="Illustration of the piston moving with oil passing through a port" loading="lazy">
+      </article>
+      <article class="dsc-step" data-s="4">
+        <div><h3>Adjusters cannot rescue <span class="g">bad valving.</span></h3><p>So we start from your chassis, your tyres and your use, not a part number.</p>
+        <div class="dsc-cta"><a class="btn" href="#step-3" data-go="3">Start your specification</a><a href="/damper-adjustment-explained/">Damper Adjustment Explained</a></div></div>
+      </article>
+      <div class="dsc-bar">
+        <ol class="dsc-chips"><li><button type="button"><i></i>Spring</button></li><li><button type="button"><i></i>Damper</button></li><li><button type="button"><i></i>Valving</button></li><li><button type="button"><i></i>Motion</button></li></ol>
+        <button type="button" class="dsc-pause">Pause</button>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="/assets/descent.js" defer></script>
+<section class="why" aria-labelledby="whyH">
+  <figure class="why-photo">
+    <img src="/assets/caterham-hillclimb.jpg" width="800" height="531" alt="Caterham Seven on a hillclimb bend, driver leaning into the corner">
+    <figcaption>Photo: Chris Huish</figcaption>
+  </figure>
+  <div class="why-copy">
+    <h2 class="vh" id="whyH">Why specification matters</h2>
+    <q>The hardware sets the ceiling; the specification decides whether you ever reach it.</q>
+    <p class="who">Simon Rogers, founder of Raceshocks UK and Meteor Motorsport. Championship-winning driver and record holder, with over 30 years owning, racing and developing Caterhams.</p>
+    <ul class="facts">
+      <li><b>Your car doesn't need to come to us</b><span>Your local workshop can fit the system, and we'll work with them through the install. Full build and set-up is available here too.</span></li>
+      <li><b>It won't be harsh</b><span>Not if the spring rates are right. A digressive piston takes the sting out of sharp bumps and keeps strong control.</span></li>
+      <li><b>You'll be told if you need less</b><span>We recommend the kit your car and your use actually justify.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="range" aria-labelledby="rangeH">
+  <div class="wrap">
+    <h2 id="rangeH">The Caterham range</h2>
+    <table class="ledger">
+      <thead><tr><th scope="col">Kit</th><th scope="col" class="hide-sm">Adjustment</th><th scope="col" class="num">From, + VAT</th></tr></thead>
+      <tbody id="ledger"></tbody>
+    </table>
+    <p class="note">All prices exclude VAT and shipping. Every kit fits S3, SV and CSR and comes with mounting spacers. <a href="/caterham/suspension-buyers-guide/">Read the full buyer's guide</a>.</p>
+    <div class="elsewhere" id="elsewhere">
+      <b>Not a Caterham?</b>
+      <a href="/lotus-suspension/">Lotus</a>
+      <a href="/porsche-suspension/">Porsche</a>
+      <a href="/bmw-suspension/">BMW</a>
+      <a href="/mazda-mx5-suspension/">Mazda MX-5</a>
+      <a href="/toyota-gr-yaris-suspension/">Toyota GR Yaris</a>
+      <a href="/alpine-suspension/">Alpine A110</a>
+      <a href="/tvr-suspension/">TVR</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer"> <div class="footer-content"> <div class="footer-brand"> <img src="/images/TFTR_Icon.png" alt="TFTR" class="footer-logo" width="60" height="60"> <p class="footer-tagline">Too Fast To Race</p> <p class="footer-company">S Rogers Engineering Ltd</p> <address class="footer-address">
+Y Gwernen<br>
+Dryslwyn<br>
+Carmarthen<br>
+SA32 8SA
+</address> </div> <div class="footer-links"> <h2>Suspension</h2> <ul> <li><a href="/suspension/">Suspension Overview</a></li> <li><a href="/nitron-suspension/">Nitron Systems</a></li> <li><a href="/penske-racing-shocks/">Penske Racing Shocks</a></li> <li><a href="/nitron-electron/">Nitron elec-TRON</a></li> <li><a href="/track-day-suspension/">Track Day</a></li> <li><a href="/fast-road-suspension/">Fast Road</a></li> <li><a href="/nurburgring-suspension/">Nürburgring</a></li> <li><a href="/hillclimb-suspension/">Hillclimb</a></li> <li><a href="/damper-adjustment-explained/">Damper Adjustment Explained</a></li> </ul> </div> <div class="footer-links"> <h2>Caterham</h2> <ul> <li><a href="/caterham/">Caterham Overview</a></li> <li><a href="/caterham/suspension/">Suspension Kits</a></li> <li><a href="/caterham/nitron-ntr-r1/">Nitron NTR R1 Kit</a></li> <li><a href="/caterham/nitron-ntr-r3/">Nitron NTR R3 Kit</a></li> <li><a href="/caterham/penske-7500-cosa/">Penske 7500 COSA Kit</a></li> <li><a href="/caterham/penske-7500-coda/">Penske 7500 CODA Kit</a></li> <li><a href="/caterham/penske-8700-3-way/">Penske 8700 3-Way Kit</a></li> <li><a href="/caterham/suspension-buyers-guide/">Suspension Buyer's Guide</a></li> <li><a href="/caterham/os-giken-lsd/">OS Giken LSD</a></li> <li><a href="/caterham/os-giken-dual-core-lsd/">OS Giken Dual Core LSD</a></li> </ul> </div> <div class="footer-links"> <h2>Kawasaki H2</h2> <ul> <li><a href="/kawasaki-h2/">H2 Overview</a></li> <li><a href="/kawasaki-h2/dry-sump-kit/">Dry Sump System</a></li> <li><a href="/kawasaki-h2/oil-cooler-blanking-plate/">Oil Cooler Blanking Plate</a></li> <li><a href="/kawasaki-h2/high-volume-oil-pump/">High Volume Oil Pump</a></li> <li><a href="/kawasaki-h2/wiring-loom/">Motorsport Wiring Loom</a></li> <li><a href="/kawasaki-h2/mbe-9a9-ecu/">MBE 9A9 ECU &amp; Map</a></li> <li><a href="/kawasaki-h2/clutch-conversion-kit/">Clutch Conversion Kit</a></li> </ul> </div> <div class="footer-links"> <h2>Vehicles</h2> <ul> <li><a href="/lotus-suspension/">Lotus</a></li> <li><a href="/porsche-suspension/">Porsche</a></li> <li><a href="/bmw-suspension/">BMW</a></li> <li><a href="/mazda-mx5-suspension/">Mazda MX-5</a></li> <li><a href="/toyota-gr-yaris-suspension/">Toyota GR Yaris</a></li> <li><a href="/alpine-suspension/">Alpine A110</a></li> <li><a href="/tvr-suspension/">TVR</a></li> </ul> </div> <div class="footer-links"> <h2>Partners</h2> <ul> <li>Penske Racing Shocks</li> <li>Nitron Racing Systems</li> <li>Hyperco Springs</li> <li>Eibach</li> </ul> </div> <div class="footer-links"> <h2>Tools &amp; Apps</h2> <ul> <li><a href="https://www.racetracs.com" target="_blank" rel="noopener">RaceTracs — Motorsport Logbook &amp; Lap Timing</a></li> <li><a href="https://springspec.com" target="_blank" rel="noopener">SpringSpec — Spring Rate &amp; Wheel Frequency Calculator</a></li> <li><a href="https://stringalignpro.racetracs.com" target="_blank" rel="noopener">StringAlign Pro — Wheel Alignment Calculator</a></li> <li><a href="https://sevensense.racetracs.com" target="_blank" rel="noopener">SevenSense — Caterham Torque &amp; Fastener Reference</a></li> </ul> </div> </div> <div class="footer-bottom"> <p>&copy; 2026 S Rogers Engineering Ltd. All rights reserved.</p> </div> </footer>
+
+<script>
+(function(){var b=document.querySelector('.mobile-menu-btn'),n=document.querySelector('.nav-links');
+if(b)b.addEventListener('click',function(){n.classList.toggle('active')});
+document.querySelectorAll('.dropdown>a').forEach(function(a){a.addEventListener('click',function(e){if(innerWidth<=1240){e.preventDefault();a.parentNode.classList.toggle('dropdown-open')}})});})();
+</script>
+<noscript><p class="wrap" style="padding:20px 16px">This tool needs JavaScript. You can still <a href="/contact/">contact us directly</a>.</p></noscript>
+
+<script src="/assets/three.min.js"></script>
+<script src="/assets/axle3d.js"></script>
+<script>
+"use strict";
+/* ============================================================
+   EDIT HERE: prices, kit wording and assumed model figures.
+   ============================================================ */
+const KITS = {
+  r1:   {name:"Nitron NTR R1 40mm", maker:"nitron", price:1579, adj:"Single-adjustable", img:"kit-r1.png",
+         valving:160, note:"Option: digressive or linear front valving, £80 + VAT per damper (£160 + VAT for the front pair, which is all we recommend).",
+         url:"/caterham/nitron-ntr-r1/",
+         quote:"For most people reading this, the R1 is the answer, and the best use of your budget."},
+  r3:   {name:"Nitron NTR R3 40mm", maker:"nitron", price:3440, adj:"Independent compression and rebound", img:"kit-r3.png",
+         url:"/caterham/nitron-ntr-r3/",
+         quote:"Used to refine a setup against chassis behaviour you can identify and measure, it is a precision instrument.",
+         quoteRoad:"If your car is a fast road or occasional track day car, the R1 is almost certainly the better choice, and a better use of budget."},
+  cosa: {name:"Penske 7500 COSA", maker:"penske", price:3392, clicker:3636, adj:"Single-adjustable, sweep or clicker", img:"kit-7500.png",
+         url:"/caterham/penske-7500-cosa/",
+         quote:"For many fast road and lighter track day cars, a correctly specified R1 delivers outstanding performance for considerably less, and I will say so honestly."},
+  coda: {name:"Penske 7500 CODA", maker:"penske", price:3758, clicker:4002, adj:"Independent compression and rebound, no remote reservoir", img:"kit-7500.png",
+         url:"/caterham/penske-7500-coda/",
+         quote:"The kit for the Penske owner who has a process and adjusts with purpose.",
+         quoteRoad:"If you want most of that benefit for less, the Nitron R3 gives you independent adjustment at a lower price, and I will give you an honest comparison."},
+  p8700:{name:"Penske 8700 3-Way", maker:"penske", price:7526, adj:"High-speed compression, low-speed compression and rebound", img:"kit-8700.png",
+         url:"/caterham/penske-8700-3-way/",
+         quote:"For most Caterhams it is more damper than the application justifies, and I will tell you that plainly."}
+};
+const OPTIONS = {
+  springs:{nitron:[["std","Nitron, standard",0],["eibach","Eibach",200],["hyperco","Hyperco",280]],
+           penske:[["std","Eibach, standard",0],["hyperco","Hyperco",120]]},
+  ride:[["none","Standard",0],["torrington","Torrington bearings, set of 4",156],["hydraulic","Hyperco hydraulic platforms, 4 at £175",700]]
+};
+const USES = {road:{label:"Fast road"},track:{label:"Track days"},ring:{label:"Nürburgring"},hill:{label:"Sprint & hillclimb"},race:{label:"Circuit racing"}};
+/* Springs and damper positions. */
+const SPRINGS = {soft:{lb:225},stiff:{lb:400}};
+const CAR = {corner:140,unsprung:25,motion:.57};
+const CLICKS_MAX = 24;
+const BALANCED = {225:-8,400:-1};
+/* What the owner feels. Each one is shown against the balanced car. */
+const GOOD = {lb:225,click:-8};
+const SYMPTOMS = {
+  skip:  {chip:"It skips over bumps", name:"Too much spring", lb:400, click:-1,
+          text:"The wheel skips more often and rebounds very fast, out of control. The right spring stays on the road.",
+          cta:["Next: your specification",3]},
+  float: {chip:"It floats after a bump", name:"Under-damped", lb:225, click:-24,
+          text:"Too little control. The body floats and the wheel bounces after each bump. The right click holds it.",
+          cta:["Next: find the right click",2]},
+  wooden:{chip:"It feels wooden", name:"Over-damped", lb:225, click:0,
+          text:"The damper barely moves. The wheel skips and stays off the road longer. The right click lets it work.",
+          cta:["Next: find the right click",2]}
+};
+const CHASSIS = [["S3","S3"],["SV","SV"],["CSR","CSR"],["Not sure","Not sure"]];
+const TYRES = [["road","Road tyre"],["trackroad","Track-biased road tyre"],["slick","Full slick"],["unsure","Not sure"]];
+const STYLES = [["set","Set it once and drive","Correct from the start, then enjoy it."],
+                ["adjust","Adjust between events with intent","You change settings for a reason."],
+                ["data","Data-led, engineer in the loop","Logged data drives each change."]];
+const VALUES = [["budget","Best use of budget","Leave money for tyres and track time."],
+                ["penske","Penske build quality and rebuildability","Rebuild and re-valve as the car develops."]];
+
+/* Same rules as the buyer's guide. */
+function recommend(s){
+  if(!s.use||!s.style||!s.value) return null;
+  const competition = s.use==="hill"||s.use==="race";
+  if(s.style==="set")    return s.value==="penske" ? "cosa" : "r1";
+  if(s.style==="adjust") return s.value==="penske" ? "coda" : "r3";
+  if(competition)        return s.value==="penske" ? "p8700" : "r3";
+  return s.value==="penske" ? "coda" : "r3";
+}
+
+/* ---------- Illustration ----------
+   Motion is authored to show how each state behaves. Exaggerated on purpose.
+   o: over-damped, u: under-damped, sp: over-sprung, each 0 to 1. */
+const MR2=CAR.motion*CAR.motion, SPRUNG=CAR.corner-CAR.unsprung;
+const freqOf=lb=>Math.sqrt(lb*MR2*386.4/(SPRUNG*2.2))/(2*Math.PI);
+const REC_HZ=500, N=600, BUMP=[.030,.022,.036,.026,.034,.024], XS=2, D0=.02;
+const pulse=(t,w)=>Math.abs(t)<w?.5*(1+Math.cos(Math.PI*t/w)):0;
+const bumpAt=j=>50+100*j;
+const ROADMAP=(()=>{ const a=new Float32Array(N*XS); for(let i=0;i<N*XS;i++){ let z=0; BUMP.forEach((A,j)=>z+=A*pulse(i/XS-bumpAt(j),16)); a[i]=z; } return a; })();
+const parab=(t,d,h)=>t>=0&&t<d?4*h*(t/d)*(1-t/d):0;
+const positionScale=c=>c>=-8?Math.pow(2,(c+8)/8):Math.pow(.4,(-8-c)/16);
+const damperRatio=(lb,c)=>positionScale(c)/positionScale(BALANCED[lb]);
+const clamp01=x=>Math.max(0,Math.min(1,x));
+function stateOf(lb,click){ const r=Math.log(damperRatio(lb,click));
+  return {o:clamp01(r/Math.log(2)),u:clamp01(-r/Math.log(2.5)),sp:clamp01((lb-225)/175)}; }
+const synthMemo={};
+function synth(lb,click){
+  const key=lb+"/"+click; if(synthMemo[key]) return synthMemo[key];
+  const {o,u,sp}=stateOf(lb,click), plain=1-Math.max(o,u,sp);
+  const zs=new Float32Array(N), zu=new Float32Array(N), ft=new Float32Array(N), x=new Float32Array(N), lift=new Float32Array(N);
+  for(let i=0;i<N;i++){
+    const zr=ROADMAP[i*XS]; let hang=0, hops=0, bounce=0, base=0, wallow=0, jit=0, pul=0;
+    BUMP.forEach((A,j)=>{
+      const t=i-bumpAt(j); pul+=pulse(t,16);
+      base+=A*.2*pulse(t-10,30);
+      if(t>=4&&t<84){ const v=(t-4)/80; hang+=A*2.1*Math.sin(Math.PI*Math.pow(v,.55)); }
+      let at=6; [[20,1.7],[15,1.2],[11,.8],[8,.45]].forEach(([d,h])=>{ hops+=parab(t-at,d,A*h); at+=d+2; });
+      hops+=parab(t-70,11,A*.7)+parab(t-83,8,A*.35);
+      if(t>=0){ bounce+=parab(t-8,22,A*1.1)+parab(t-32,15,A*.5); wallow+=A*1.5*Math.exp(-t/48)*Math.cos(2*Math.PI*t/42); jit+=.005*Math.exp(-t/22)*Math.sin(t*1.5); }
+    });
+    const up=Math.max(o*hang,sp*hops,u*bounce); lift[i]=up;
+    const h=zr+up;
+    zu[i]=h+D0; x[i]=i*XS;
+    zs[i]=plain*base+o*h*.88+sp*(h*.55+jit)+(1-sp)*u*wallow*(1-o);
+  }
+  for(let i=0;i<N;i++){
+    let land=0; for(let k=1;k<7;k++) if(lift[(i-k+N)%N]>0&&lift[i]===0) land=Math.max(land,1-k/7);
+    ft[i]=lift[i]>0?0:1+.35*Math.min(1,ROADMAP[i*XS]/.03)+land*(.5+Math.max(o,sp)*1.1);
+  }
+  return synthMemo[key]={zs,zu,ft,x,N,d0:D0,lift};
+}
+let RUN=null;
+function runFor(){
+  const st=SPRINGS.stiff.lb, so=SPRINGS.soft.lb;
+  return RUN||(RUN={road:ROADMAP,stiff:synth(st,BALANCED[st]),spec:synth(so,BALANCED[so])});
+}
+
+/* ---------- Drawing ---------- */
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function size(c){const r=c.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);
+  const W=Math.round(r.width*d),H=Math.round(r.height*d);if(c.width!==W||c.height!==H){c.width=W;c.height=H}return{w:r.width,h:r.height,d}}
+/* Front view of a double wishbone corner. Geometry is in metres, y up from the ground,
+   x out from the car's centreline. Static points below are illustrative, not measured. */
+const GEO={P1:{x:.20,y:.17},P2:{x:.31,y:.38},T:{x:.335,y:.60},B1:{x:.60,y:.15},B2:{x:.565,y:.40},H:{x:.665,y:.27},R:.27,tw:.20,mount:.60};
+GEO.L1=Math.hypot(GEO.B1.x-GEO.P1.x,GEO.B1.y-GEO.P1.y);
+GEO.L2=Math.hypot(GEO.B2.x-GEO.P2.x,GEO.B2.y-GEO.P2.y);
+GEO.U =Math.hypot(GEO.B2.x-GEO.B1.x,GEO.B2.y-GEO.B1.y);
+GEO.a0=Math.atan2(GEO.B2.x-GEO.B1.x,GEO.B2.y-GEO.B1.y);
+function solveCorner(hubY,bo){
+  const P1={x:GEO.P1.x,y:GEO.P1.y+bo}, P2={x:GEO.P2.x,y:GEO.P2.y+bo};
+  const rx=GEO.H.x-GEO.B1.x, ry=GEO.H.y-GEO.B1.y;
+  let b1y=hubY-(GEO.H.y-GEO.B1.y), out=null;
+  for(let n=0;n<4;n++){
+    const dy=Math.max(-GEO.L1*.8,Math.min(GEO.L1*.8,b1y-P1.y));
+    const B1={x:P1.x+Math.sqrt(GEO.L1*GEO.L1-dy*dy),y:P1.y+dy};
+    const dx=B1.x-P2.x, dyy=B1.y-P2.y, d=Math.hypot(dx,dyy);
+    const a=(GEO.L2*GEO.L2-GEO.U*GEO.U+d*d)/(2*d), h=Math.sqrt(Math.max(0,GEO.L2*GEO.L2-a*a));
+    const mx=P2.x+a*dx/d, my=P2.y+a*dyy/d;
+    const c1={x:mx+h*dyy/d,y:my-h*dx/d}, c2={x:mx-h*dyy/d,y:my+h*dx/d}, B2=c1.y>c2.y?c1:c2;
+    const tilt=Math.atan2(B2.x-B1.x,B2.y-B1.y)-GEO.a0, co=Math.cos(tilt), si=Math.sin(tilt);
+    const H={x:B1.x+rx*co+ry*si,y:B1.y-rx*si+ry*co};
+    out={P1,P2,B1,B2,H,tilt}; b1y+=hubY-H.y;
+  }
+  return out;
+}
+function drawTrace(g,w,h,data,i,traceH,col){
+  const th2=traceH-8, ty0=h-4, span=600, step=w/span;
+  g.fillStyle="#0c0d0c"; g.fillRect(0,h-traceH-2,w,traceH+2);
+  g.lineWidth=1.5; g.lineCap="round"; let prev=null; g.beginPath();
+  for(let k=0;k<=span;k+=2){const q=(i-span+k+data.N*4)%data.N,v=Math.min(2,data.ft[q]),off=v<=0,x=k*step,y=ty0-v/2*th2;
+    if(off!==prev){ if(prev!==null){g.lineTo(x,y);g.strokeStyle=prev?"#FF5A45":col;g.lineWidth=prev?3:1.5;g.stroke();g.beginPath()} g.moveTo(x,y); prev=off } else g.lineTo(x,y) }
+  g.strokeStyle=prev?"#FF5A45":col; g.lineWidth=prev?3:1.5; g.stroke();
+  g.font="500 11px Barlow,sans-serif"; const lab="Tyre load", lw=g.measureText(lab).width+10;
+  g.fillStyle="#0c0d0c"; g.fillRect(0,h-traceH-2,lw,15); g.fillStyle="#b9bdb6"; g.textAlign="left"; g.fillText(lab,5,h-traceH+9);
+}
+function drawAxle(g,w,h,run,data,pos,col,L,clip){
+  g.save();
+  if(clip){ g.beginPath(); g.rect(clip[0],0,clip[1]-clip[0],h); g.clip(); }
+  const {half,traceH,gy,s,cx}=L, mag=2.3, n=run.road.length;
+  const i=Math.floor(pos)%data.N, iL=(i+Math.floor(data.N*.37))%data.N;
+  const road=q=>run.road[((Math.round(data.x[q])%n)+n)%n];
+  const zsR=data.zs[i], zsL=half?zsR:data.zs[iL], mid=(zsR+zsL)/2*mag, roll=(zsR-zsL)/2*mag*.3;
+  const X=(sg,x)=>cx+sg*x*s, Y=y=>gy-y*s;
+  const bo=(sg,x)=>mid+sg*roll*x/.67;
+  const sides=half?[1]:[-1,1];
+  const zone=(sg)=>{const q=sg>0?i:iL, zr=road(q), lift=Math.max(0,data.zu[q]-data.d0-zr)*mag, ground=zr*mag; return {ground,lift,c:solveCorner(GEO.R+ground+lift,bo(sg,.3))}};
+  const Z={}; sides.forEach(sg=>Z[sg]=zone(sg));
+  /* road surface */
+  const gR=Y(Z[1].ground), gL=half?gR:Y(Z[-1].ground);
+  const profile=()=>{ g.beginPath(); if(half){ g.moveTo(0,gR); g.lineTo(w,gR); } else { g.moveTo(0,gL); g.lineTo(X(-1,.665),gL); g.lineTo(X(1,.665),gR); g.lineTo(w,gR); } };
+  const fillRoad=g.createLinearGradient(0,gy-20,0,h); fillRoad.addColorStop(0,"#2a2d2a"); fillRoad.addColorStop(1,"#121412");
+  profile(); g.lineTo(w,h); g.lineTo(0,h); g.closePath(); g.fillStyle=fillRoad; g.fill();
+  profile(); g.strokeStyle="#9ea39b"; g.lineWidth=1.5; g.stroke();
+  /* tubes: a dark body with a lit core, so they read as metal at any size */
+  const stick=(a,b,lw,base,lit)=>{ g.lineCap="round"; g.strokeStyle=base; g.lineWidth=lw; g.beginPath(); g.moveTo(a[0],a[1]); g.lineTo(b[0],b[1]); g.stroke();
+    if(lit&&lw>4){ g.strokeStyle=lit; g.lineWidth=lw*.28; g.beginPath(); g.moveTo(a[0],a[1]-lw*.14); g.lineTo(b[0],b[1]-lw*.14); g.stroke(); } };
+  const tube=(a,b)=>{g.beginPath();g.moveTo(a[0],a[1]);g.lineTo(b[0],b[1]);g.stroke()};
+  /* chassis: front bulkhead tubes */
+  g.lineCap="round"; g.lineJoin="round";
+  const frame=Math.max(3.5,s*.016), steel=["#4d524d","#7c827b"];
+  const pt=(sg,p)=>[X(sg,p.x),Y(p.y+bo(sg,p.x))];
+  const lowIn={x:GEO.P1.x,y:GEO.P1.y-.03};
+  if(!half){ const rad=(x,y)=>[X(1,x),Y(y+mid)]; g.save(); g.strokeStyle="#2f332f"; g.lineWidth=2; g.beginPath(); const a=rad(-.15,.24), b=rad(.15,.54);
+    g.rect(a[0],b[1],b[0]-a[0],a[1]-b[1]); for(let t=.27;t<.54;t+=.04){const l=rad(-.15,t),r=rad(.15,t);g.moveTo(l[0],l[1]);g.lineTo(r[0],r[1])} g.stroke(); g.restore(); }
+  sides.forEach(sg=>{ stick(pt(sg,lowIn),pt(sg,GEO.P2),frame,...steel); stick(pt(sg,GEO.P2),pt(sg,GEO.T),frame,...steel); });
+  if(half){ stick([0,pt(1,lowIn)[1]],pt(1,lowIn),frame,...steel); stick([0,pt(1,GEO.T)[1]],pt(1,GEO.T),frame,...steel); }
+  else { stick(pt(-1,lowIn),pt(1,lowIn),frame,...steel); stick(pt(-1,GEO.T),pt(1,GEO.T),frame,...steel); }
+  sides.forEach(sg=>corner(sg));
+  function corner(sg){
+    const z=Z[sg], k=z.c, q=sg>0?i:iL, off=z.lift*s>.8;
+    const P=p=>[X(sg,p.x),Y(p.y)];
+    const p1=P(k.P1), p2=P(k.P2), b1=P(k.B1), b2=P(k.B2), hub=P(k.H);
+    /* lower mount on the lower wishbone, top mount on the chassis */
+    const m=GEO.mount, lm=[p1[0]+(b1[0]-p1[0])*m,p1[1]+(b1[1]-p1[1])*m], top=pt(sg,GEO.T);
+    /* tyre */
+    g.save(); g.translate(hub[0],hub[1]); g.rotate(sg*k.tilt);
+    const tw=GEO.tw*s, th=GEO.R*2*s;
+    const rub=g.createLinearGradient(-tw/2,0,tw/2,0); rub.addColorStop(0,"#0d0e0d"); rub.addColorStop(.16,"#262926"); rub.addColorStop(.5,"#1a1c1a"); rub.addColorStop(.84,"#262926"); rub.addColorStop(1,"#0d0e0d");
+    g.beginPath(); g.roundRect(-tw/2,-th/2,tw,th,tw*.2); g.fillStyle=rub; g.fill();
+    g.save(); g.clip(); g.strokeStyle="#303430"; g.lineWidth=1.5;
+    const gap=.075*s, ph=(data.x[q]/100*s)%gap;
+    for(let y=-th/2-gap+ph;y<th/2+gap;y+=gap){ g.beginPath(); g.moveTo(-tw/2,y); g.lineTo(tw/2,y); g.stroke(); }
+    g.strokeStyle="#0a0b0a"; g.lineWidth=Math.max(2,s*.01); [-.24,.24].forEach(f=>{ g.beginPath(); g.moveTo(tw*f,-th/2); g.lineTo(tw*f,th/2); g.stroke(); });
+    g.restore();
+    g.beginPath(); g.roundRect(-tw/2,-th/2,tw,th,tw*.2); g.lineWidth=off?3.5:2.5; g.strokeStyle=off?"#FF5A45":"#4b504b"; g.stroke();
+    g.restore();
+    /* lower and upper wishbones */
+    const bone=["#7f847d","#d3d6cf"];
+    stick(p1,b1,Math.max(3.5,s*.017),...bone); stick(p2,b2,Math.max(3,s*.014),...bone);
+    /* upright and stub axle */
+    stick(b1,b2,Math.max(5,s*.026),"#aeb2ab","#f1f2ec");
+    const u=[(b1[0]+b2[0])/2,(b1[1]+b2[1])/2]; stick(u,hub,Math.max(3,s*.014),"#aeb2ab","#f1f2ec"); g.fillStyle="#d6d9d3"; g.beginPath(); g.arc(hub[0],hub[1],Math.max(3,s*.016),0,7); g.fill();
+    /* coilover: back of the coils, rod, body, front of the coils, perches */
+    const dx=top[0]-lm[0], dy=top[1]-lm[1], len=Math.hypot(dx,dy), nx=-dy/len, ny=dx/len;
+    const at=(t,o)=>[lm[0]+dx*t+nx*o,lm[1]+dy*t+ny*o], amp=Math.max(6,s*.034);
+    const coils=half?5:6, s0=.17, s1=.84, steps=coils*20, wire=Math.max(2.2,s*.012);
+    const helix=front=>{ g.strokeStyle=col; g.lineWidth=wire; g.lineCap="round"; g.beginPath(); let pen=false;
+      for(let e=0;e<=steps;e++){ const f=e/steps, ang=f*coils*6.2832, on=(Math.cos(ang)>=0)===front, p=at(s0+(s1-s0)*f,Math.sin(ang)*amp);
+        if(on){ pen?g.lineTo(p[0],p[1]):g.moveTo(p[0],p[1]); pen=true; } else pen=false; }
+      g.stroke(); };
+    g.save(); g.globalAlpha=.42; helix(false); g.restore();
+    g.lineCap="butt"; g.strokeStyle="#e4e6e1"; g.lineWidth=Math.max(2.5,s*.010); tube(at(.04,0),at(.55,0));
+    const bw=Math.max(6,s*.034); g.strokeStyle="#3f433f"; g.lineWidth=bw; tube(at(.5,0),at(.97,0));
+    g.strokeStyle="#7c827b"; g.lineWidth=bw*.26; { const a=at(.5,-bw*.2), b=at(.97,-bw*.2); tube(a,b); }
+    helix(true);
+    g.lineCap="butt"; g.strokeStyle="#c9ccc6"; g.lineWidth=Math.max(2.5,s*.012); tube(at(s0,-amp*1.25),at(s0,amp*1.25)); tube(at(s1,-amp*1.25),at(s1,amp*1.25));
+    /* pivots and ball joints */
+    g.fillStyle="#f1f2ec"; [p1,p2,b1,b2,lm,top].forEach(a=>{g.beginPath();g.arc(a[0],a[1],Math.max(2.4,s*.011),0,7);g.fill()});
+    /* lift-off marker */
+    const gr=Y(z.ground);
+    if(off){ const lift=gr-(hub[1]+GEO.R*s);
+      if(lift>2){ g.fillStyle="rgba(255,90,69,.15)"; g.fillRect(hub[0]-tw*.6,hub[1]+GEO.R*s,tw*1.2,lift); }
+      g.strokeStyle="#FF5A45"; g.lineWidth=3; tube([hub[0]-tw*.62,gr],[hub[0]+tw*.62,gr]);
+      g.fillStyle="#FF5A45"; g.font=`600 ${half?12:Math.max(14,Math.min(19,s*.03))}px 'Barlow Condensed',sans-serif`; g.textAlign=half?"right":sg>0?"right":"left";
+      g.fillText(half||L.labelTop?"TYRE OFF":"TYRE OFF THE ROAD",half?w-4:hub[0]+sg*tw*.6,Math.max(L.labelTop||13,hub[1]-GEO.R*s-7)); }
+  }
+  drawTrace(g,w,h,data,i,traceH,col);
+  g.restore();
+}
+
+/* ---------- Playback ---------- */
+const S={use:null,chassis:null,tyres:null,style:null,value:null,springs:"std",ride:"none",adjuster:"sweep",symptom:null};
+let pos=0, playing=!reduce, last=0, visible=true, raf=0, rigVis=true, step=1;
+const cam={z:1,f:0,x:null,az:-.14,el:.1,dist:1,tx:0,ty:.42,tz:0};
+let gl=null, slowT=0, slowN=0, slowDone=false;
+const SLOW=1/8;
+function col(){return getComputedStyle(document.documentElement).getPropertyValue("--green").trim()||"#5CB85C"}
+const GREEN=col();
+function frame(t){
+  raf=0; if(!playing||!visible||document.hidden){return}
+  if(last) pos+=Math.min(60,t-last)/1000*REC_HZ*SLOW;
+  const dt=last?Math.min(60,t-last):0; if(gl&&last&&!slowDone){ slowT+=t-last; if(++slowN===90){ if(slowT/90>42){ gl.lighten(); slowDone=true; } slowT=slowN=0; } } last=t; stepSweep(t); stepCam(dt); paint(); raf=requestAnimationFrame(frame);
+}
+function start(){ last=0; if(!raf&&playing) raf=requestAnimationFrame(frame); }
+function paint(){ if(rigVis) paintHero(); }
+function worstMoment(d,road){ let best=0,bv=-1; for(let i=0;i<d.N;i++){ const v=d.zu[i]-d.d0-road[Math.round(d.x[i])%road.length]; if(v>bv){bv=v;best=i} } return best; }
+const $=id=>document.getElementById(id);
+
+
+/* ---------- Hero: symptom and the dragged line ----------
+   wipeAt runs from 1, all problem, to 0, all balanced. 0.5 is the car's centreline. */
+let symptom="skip", wipeAt=.5, sweep=null, wipeL=null;
+const easeOut=t=>1-Math.pow(1-t,3);
+/* The camera. z is zoom, f is the point of the car in the middle of the shot, in metres from the centreline. */
+const SHOTS={1:{z:1,f:0},2:{z:1.4,f:.46},3:{z:1.75,f:.42},4:{z:1.3,f:.46},5:{z:1.75,f:.42}};
+const viewKey=()=>step===3&&typeof qi!=="undefined"&&qi===5?5:step;
+/* 3D shots: az and el are the camera's angles in radians, dist is relative to the opening shot, t is what it looks at. */
+const VIEWS={1:{az:-.14,el:.1,dist:1,tx:0,ty:.42,tz:0},2:{az:-.3,el:.14,dist:.6,tx:.52,ty:.36,tz:0},3:{az:-.2,el:.06,dist:.46,tx:.44,ty:.38,tz:0},5:{az:.2,el:.16,dist:.5,tx:.4,ty:.42,tz:-.02},4:{az:-.34,el:.2,dist:.66,tx:.52,ty:.36,tz:0}};
+const wideNow=()=>matchMedia("(min-width:1101px)").matches;
+function shotX(w){
+  if(!wideNow()) return w/2;
+  const hero=$("hero").getBoundingClientRect(), edge=$("heroCopy").getBoundingClientRect().right-hero.left+12;
+  const end=step===4&&!$("spec").hidden?$("spec").getBoundingClientRect().left-hero.left:w;
+  return edge+(end-edge)/2;
+}
+function stepCam(dt){ const t=SHOTS[viewKey()], k=dt?1-Math.exp(-dt/230):1, w=$("cvHero").getBoundingClientRect().width, x=shotX(w);
+  cam.z+=(t.z-cam.z)*k; cam.f+=(t.f-cam.f)*k; const u=VIEWS[viewKey()]; const dk=dt?1-Math.exp(-dt/200):1; if(!orbit.drag){ orbit.az*=1-dk*(orbit.keep?0:1); orbit.el*=1-dk*(orbit.keep?0:1); } ["az","el","dist","tx","ty","tz"].forEach(n=>cam[n]+=(u[n]-cam[n])*k); cam.x=cam.x===null?x:cam.x+(x-cam.x)*k; }
+function heroLayout(w,h){
+  const wide=wideNow(), traceH=!wide&&h<260?30:wide?60:44, gy=h-traceH-(wide?22:10);
+  const hero=$("hero").getBoundingClientRect(), edge=$("heroCopy").getBoundingClientRect().right-hero.left+12;
+  const base=wide?Math.min((gy-64)/.70,(w-edge)/1.62):Math.min((gy-30)/.72,w/1.6), top=(gy-10)/.64;
+  const s=Math.min(base*cam.z,Math.max(base,top));
+  if(cam.x===null) cam.x=shotX(w);
+  return {half:false,traceH,gy,s,cx:cam.x-cam.f*s,labelTop:wide?0:(step===1?58:13)};
+}
+function paintHero(){
+  const c=$("cvHero"), {w,h,d}=size(c), g=c.getContext("2d"); g.setTransform(d,0,0,d,0,0); g.clearRect(0,0,w,h);
+  const L=heroLayout(w,h), r=runFor(), good=synth(GOOD.lb,GOOD.click), p=SYMPTOMS[symptom];
+  const ok=step!==2||ratingFor(G.lb,clickOf(G.v))==="Balanced", one=step===1?null:{data:step===2?(labData||good):good,col:ok?GREEN:PALE};
+  if(!gl){
+    if(step===1){
+      const x0=L.cx-.8*L.s, x1=Math.min(w-4,L.cx+.8*L.s), x=splitX(x0,x1,w);
+      wipeL={x0,x1};
+      drawAxle(g,w,h,r,synth(p.lb,p.click),pos,PALE,L,[0,x]);
+      drawAxle(g,w,h,r,good,pos,GREEN,L,[x,w]);
+      placeWipe(x0,x1,w,h);
+    } else drawAxle(g,w,h,r,one.data,pos,one.col,L,null);
+    return;
+  }
+  const dpr=Math.min(devicePixelRatio||1,2), hero=$("hero").getBoundingClientRect();
+  const room=wideNow()?w-($("heroCopy").getBoundingClientRect().right-hero.left+12):w;
+  const [x0,x1]=gl.view(w,h,dpr,{...cam,sx:cam.x,az:cam.az+orbit.az+(reduce?0:Math.sin(pos/900)*.035),el:Math.max(.02,cam.el+orbit.el)},Math.min(room,w),L.traceH,dropPx());
+  const bad=synth(p.lb,p.click), N=good.N, i=Math.floor(pos)%N, iL=(i+Math.floor(N*.37))%N;
+  let layers;
+  if(step===1){ const x=splitX(x0,x1,w); wipeL={x0,x1}; layers=[{data:bad,col:PALE,a:0,b:x},{data:good,col:GREEN,a:x,b:w}]; placeWipe(x0,x1,w,h); }
+  else layers=[{data:one.data,col:one.col,a:0,b:w}];
+  syncKit();
+  const marks=gl.render(layers,i,iL,r.road,pos,N);
+  layers.forEach(l=>{ g.save(); g.beginPath(); g.rect(l.a,0,l.b-l.a,h); g.clip(); drawTrace(g,w,h,l.data,i,L.traceH,l.col); g.restore(); });
+  g.fillStyle="#FF5A45"; g.font=`600 ${w<500?14:18}px 'Barlow Condensed',sans-serif`; g.textAlign="center";
+  marks.forEach(m=>{ if(m.x<m.a||m.x>m.b) return; g.fillText(w<500?"TYRE OFF":"TYRE OFF THE ROAD",m.x,Math.max(16,m.y-8)); });
+}
+const splitX=(x0,x1,w)=>wipeAt>=.995?w:wipeAt<=.005?0:x0+(x1-x0)*wipeAt;
+const PALE="#d6d9d3";
+/* The recommended kit, fitted to the model. Colours follow the kit photos. */
+const LOOKS={
+  nitron:{body:0xf2f4f6,trim:0xc9ccc6,cap:0x2c2f2c,res:0xc9cdd0},
+  penske:{body:0x171817,trim:0xa98a55,cap:0x171817,res:0x171817}
+};
+const KIT3D={r1:{look:"nitron",knobs:1,reservoir:false},r3:{look:"nitron",knobs:2,reservoir:true},cosa:{look:"penske",knobs:1,reservoir:false},coda:{look:"penske",knobs:2,reservoir:false},p8700:{look:"penske",knobs:2,reservoir:true}};
+/* Nitron blue is from the photo. The other spring colour is a placeholder. */
+const SPRING_COL={blue:0x79b4e2,other:0xb7bbb4};
+const orbit={az:0,el:0,drag:false,keep:false};
+let fitted="", scanFrom=0, scanNext=null;
+function wantKit(){ const id=recommend(S); return id&&(step===4||(step===3&&qi===5))?id:null; }
+function kitLook(id){ const m=KIT3D[id], l=LOOKS[m.look]; return {...l,knobs:m.knobs,reservoir:m.reservoir,spring:(KITS[id].maker==="nitron"&&S.springs==="std")?SPRING_COL.blue:SPRING_COL.other}; }
+function syncKit(){
+  if(!gl) return;
+  const id=wantKit(), key=id?id+"/"+S.springs:"";
+  if(key!==fitted){
+    if(id&&!fitted&&playing&&!reduce){ scanFrom=performance.now(); scanNext=id; fitted=key; }
+    else { fitted=key; scanNext=null; gl.scan(null); gl.setKit(id?kitLook(id):null); }
+  }
+  if(scanNext){ const t=(performance.now()-scanFrom)/1150;
+    if(t>=.5&&scanNext!=="done"&&scanNext!=="half"){ gl.setKit(kitLook(scanNext)); scanNext="half"; }
+    if(t>=1){ gl.scan(null); scanNext=null; } else gl.scan(t); }
+}
+function refreshFit(){ const id=wantKit(); $("fitTag").hidden=!(id&&step===3); if(id) $("fitName").textContent=KITS[id].name; }
+const dropPx=()=>wideNow()?Math.max(52,Math.min(120,innerHeight*.115)):0;
+function placeWipe(x0,x1,w,h){
+  const wipe=$("wipe"), x=x0+(x1-x0)*wipeAt;
+  wipe.style.left=x0+"px"; wipe.style.width=(x1-x0)+"px";
+  $("wipeLine").style.left=(x-x0)+"px";
+  $("grip").style.top=(h*.56+dropPx())+"px";
+  const top=(wideNow()?Math.round(document.querySelector(".photo").offsetHeight+6):8)+"px", a=$("tagBad"), b=$("tagGood");
+  a.style.left=Math.max(10,x0)+"px"; a.style.top=top; b.style.right=Math.max(10,w-x1)+"px"; b.style.top=top;
+  a.style.opacity=wipeAt>.3?1:0; b.style.opacity=wipeAt<.7?1:0;
+}
+function setWipe(v){ wipeAt=Math.max(0,Math.min(1,v)); const r=$("wipeRange"); r.value=Math.round(wipeAt*100); r.setAttribute("aria-valuetext",wipeAt>.66?"Mostly the problem":wipeAt<.34?"Mostly the balanced set-up":"Half and half"); }
+function startSweep(){ if(!playing||reduce){ setWipe(.5); return; } sweep={t0:0,from:1}; setWipe(1); }
+function stepSweep(t){ if(!sweep) return; if(!sweep.t0) sweep.t0=t; const k=(t-sweep.t0-700)/1300; if(k<=0) return; if(k>=1){ setWipe(.5); sweep=null; return; } setWipe(1-.5*easeOut(k)); }
+function renderSymptom(){
+  const p=SYMPTOMS[symptom];
+  document.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===symptom));
+  $("diagName").textContent=p.name; $("verdict").textContent=p.text;
+  [["heroCta",p.cta]].forEach(([id,a])=>{ const e=$(id); e.textContent=a[0]; e.dataset.go=a[1]; e.href="#step-"+a[1]; });
+  $("tagBadName").textContent=p.name;
+  $("tagBadSub").textContent=p.lb+" lb/in, "+freqOf(p.lb).toFixed(2)+" Hz, click "+p.click;
+  $("tagGoodSub").textContent=GOOD.lb+" lb/in, "+freqOf(GOOD.lb).toFixed(2)+" Hz, click "+GOOD.click;
+  $("cvHero").setAttribute("aria-label","Animated double wishbone front suspension. One side of the line shows "+p.name.toLowerCase()+", the other shows the balanced set-up.");
+}
+function pickSymptom(k){
+  symptom=k; S.symptom=k; renderSymptom();
+  if(!G.moved){ G.v=SYMPTOMS[k].click===0?POS-1:0; labRender(); }
+  renderSpec(); renderRail(); startSweep(); if(!playing) pos=worstMoment(synth(SYMPTOMS[k].lb,SYMPTOMS[k].click),runFor().road); paint();
+}
+$("chips").innerHTML=Object.entries(SYMPTOMS).map(([k,p])=>`<button class="chip" type="button" data-k="${k}" aria-pressed="false">${p.chip}</button>`).join("");
+$("chips").addEventListener("click",e=>{ const b=e.target.closest(".chip"); if(b) pickSymptom(b.dataset.k); });
+{
+  let drag=false; const w=$("wipe");
+  const move=e=>{ if(!wipeL) return; sweep=null; setWipe((e.clientX-w.getBoundingClientRect().left)/(wipeL.x1-wipeL.x0)); if(!playing) paint(); };
+  w.addEventListener("pointerdown",e=>{ drag=true; w.setPointerCapture&&w.setPointerCapture(e.pointerId); move(e); });
+  w.addEventListener("pointermove",e=>{ if(drag) move(e); });
+  ["pointerup","pointercancel"].forEach(t=>w.addEventListener(t,()=>drag=false));
+  $("wipeRange").addEventListener("input",e=>{ sweep=null; setWipe(+e.target.value/100); if(!playing) paint(); });
+}
+
+$("pause").onclick=e=>{ playing=!playing; e.target.textContent=playing?"Pause":"Play"; if(playing) start(); };
+$("modelBtn").onclick=e=>{ const m=$("model"), o=m.hidden; m.hidden=!o; e.target.setAttribute("aria-expanded",o); };
+const seen=()=>{ visible=rigVis; if(visible) start(); };
+new IntersectionObserver(es=>{ rigVis=es[0].isIntersecting; seen(); }).observe($("stage"));
+document.addEventListener("visibilitychange",()=>{ if(!document.hidden) start(); });
+addEventListener("resize",()=>paint());
+
+/* ---------- Damper test ---------- */
+var POS=CLICKS_MAX+1;                 /* dial positions: 0 is -24 softest, 24 is 0 full hard */
+const clickOf=v=>v-CLICKS_MAX;
+var G={v:0,lb:SPRINGS.soft.lb,moved:false};
+let labSummary="", labData=null;
+function dialSVG(){
+  let ticks="",knurl="";
+  for(let i=0;i<POS;i++){const a=(-135+270*i/(POS-1))*Math.PI/180,m=i%4===0,r0=m?84:88;
+    ticks+=`<line x1="${(100+Math.sin(a)*r0).toFixed(1)}" y1="${(100-Math.cos(a)*r0).toFixed(1)}" x2="${(100+Math.sin(a)*96).toFixed(1)}" y2="${(100-Math.cos(a)*96).toFixed(1)}" stroke="${m?"#d6d9d3":"#6d726c"}" stroke-width="2"/>`;}
+  for(let i=0;i<54;i++){const a=i/54*2*Math.PI;knurl+=`<line x1="${(100+Math.sin(a)*62).toFixed(1)}" y1="${(100-Math.cos(a)*62).toFixed(1)}" x2="${(100+Math.sin(a)*74).toFixed(1)}" y2="${(100-Math.cos(a)*74).toFixed(1)}" stroke="#0d0f0d" stroke-width="2.4"/>`;}
+  return `<svg viewBox="0 0 200 200" aria-hidden="true"><defs><radialGradient id="kn" cx=".38" cy=".3" r=".85"><stop offset="0" stop-color="#7c827b"/><stop offset=".55" stop-color="#3b3f3b"/><stop offset="1" stop-color="#191b19"/></radialGradient></defs>${ticks}<circle cx="100" cy="104" r="76" fill="#000" opacity=".5"/><g class="knob"><circle cx="100" cy="100" r="74" fill="url(#kn)"/>${knurl}<circle cx="100" cy="100" r="58" fill="url(#kn)" stroke="#0d0f0d" stroke-width="2"/><rect x="96.5" y="42" width="7" height="30" fill="#5CB85C"/></g></svg>`;
+}
+function makeDial(host,name,get,set){
+  const w=document.createElement("div"); w.className="dial";
+  w.innerHTML=`<p class="dial-name">${name}</p>${dialSVG()}<div class="dial-ctrl"><button type="button" aria-label="${name}: softer">-</button><output></output><button type="button" aria-label="${name}: firmer">+</button></div><input class="vh" type="range" min="0" max="${POS-1}" step="1" aria-label="${name}, click position">`;
+  host.append(w);
+  const knob=w.querySelector(".knob"), out=w.querySelector("output"), rng=w.querySelector("input"), svg=w.querySelector("svg"), [lo,hi]=w.querySelectorAll("button");
+  const draw=()=>{ const v=get(), t="Click "+clickOf(v); knob.style.transform=`rotate(${-135+270*v/(POS-1)}deg)`; out.textContent=t; rng.value=v; rng.setAttribute("aria-valuetext",t); };
+  const put=v=>{ v=Math.max(0,Math.min(POS-1,v)); if(v===get()) return; set(v); draw(); if(navigator.vibrate) navigator.vibrate(4); labUpdate(); };
+  lo.onclick=()=>put(get()-1); hi.onclick=()=>put(get()+1); rng.oninput=()=>put(+rng.value);
+  let drag=false;
+  const fromPointer=e=>{ const b=svg.getBoundingClientRect(), dx=e.clientX-(b.left+b.width/2), dy=e.clientY-(b.top+b.height/2);
+    let ang=Math.atan2(dx,-dy)*180/Math.PI; ang=Math.max(-135,Math.min(135,ang)); put(Math.round((ang+135)/270*(POS-1))); };
+  svg.addEventListener("pointerdown",e=>{ drag=true; svg.setPointerCapture&&svg.setPointerCapture(e.pointerId); rng.focus({preventScroll:true}); fromPointer(e); });
+  svg.addEventListener("pointermove",e=>{ if(drag) fromPointer(e); });
+  ["pointerup","pointercancel"].forEach(t=>svg.addEventListener(t,()=>drag=false));
+  draw();
+}
+function ratingFor(lb,click){ const b=BALANCED[lb]; return click===b?"Balanced":click<b?"Under-damped":"Over-damped"; }
+function describe(lb,click){
+  const r=ratingFor(lb,click);
+  if(r==="Balanced") return "The damper is working and the tyre stays on the road.";
+  if(r==="Over-damped") return "The damper barely moves. The wheel skips and stays off the road longer.";
+  return "Too little control. The body floats and the wheel bounces after each bump.";
+}
+function labRender(){
+  $("labTitle").textContent=G.lb+" lb/in spring";
+  $("labHelp").textContent=(G.v===POS-1?"It starts at full hard.":"It starts at its softest.")+" Find the click where the tyre stays on the road.";
+  const host=$("dials"); host.innerHTML="";
+  makeDial(host,"Adjuster",()=>G.v,v=>{G.v=v;G.moved=true;renderRail()});
+  labUpdate();
+}
+function labUpdate(){
+  const click=clickOf(G.v);
+  labData=synth(G.lb,click);
+  $("labNum").textContent=ratingFor(G.lb,click);
+  $("labSub").textContent=describe(G.lb,click);
+  if(G.moved) labSummary=`Stopped at click ${click}, ${ratingFor(G.lb,click).toLowerCase()}`;
+  const r=Math.log(damperRatio(G.lb,click)); $("gTarget").style.left="50%";
+  $("gYou").style.left=(Math.max(0,Math.min(1,.5+r/2.4))*100)+"%";
+  paint();
+}
+function labReset(){ labRender(); }
+
+/* ---------- Session steps ---------- */
+function canSend(){ return !!recommend(S); }
+function renderRail(){
+  const did={1:!!S.symptom,2:G.moved,3:canSend(),4:false};
+  document.querySelectorAll("#rail button").forEach(b=>{ const n=+b.dataset.go;
+    b.dataset.state=did[n]?"done":"";
+    if(n===step) b.setAttribute("aria-current","step"); else b.removeAttribute("aria-current"); });
+}
+function go(n,push=true){
+  if(n===4&&!canSend()) n=3;
+  if(n===3){ const first=QS.findIndex(id=>!document.querySelector(`#${id} input:checked`)); showQ(first<0?5:first); }
+  step=n; const h=$("hero"); h.dataset.step=n;
+  [1,2,3,4].forEach(i=>$("step"+i).hidden=i!==n);
+  $("spec").hidden=n!==4; $("wipeRange").hidden=n!==1;
+  orbit.keep=false; refreshFit(); renderRail();
+  if(push&&history.pushState) history.pushState({step:n},"","#step-"+n);
+  if(n===1&&playing) startSweep();
+  if(!playing||!rigVis) stepCam(0);
+  const r=h.getBoundingClientRect();
+  if(push&&(r.top<0||r.top>120)) scrollTo({top:scrollY+r.top-70,behavior:reduce?"auto":"smooth"});
+  if(push) $("step"+n).focus({preventScroll:true});
+  paint();
+}
+addEventListener("popstate",e=>{ if(e.state&&e.state.step) go(e.state.step,false); else if(!location.hash) go(1,false); });
+document.addEventListener("click",e=>{ const a=e.target.closest("[data-go]"); if(!a) return; e.preventDefault(); go(+a.dataset.go); });
+
+const QS=["f-use","f-chassis","f-tyres","f-style","f-value"];
+let qi=0;
+function showQ(i){
+  qi=Math.max(0,Math.min(5,i));
+  document.querySelectorAll(".qp").forEach((p,j)=>p.classList.toggle("on",j===qi));
+  $("qCount").textContent=qi<5?`Question ${qi+1} of 5`:"Your starting point";
+  $("qBack").hidden=qi===0; $("qLede").hidden=qi!==0;
+  orbit.keep=false; refreshFit(); if(!playing){ stepCam(0); paint(); }
+  renderQ();
+}
+function renderQ(){
+  const done=qi===5||!!document.querySelector(`#${QS[qi]} input:checked`);
+  $("qNext").disabled=!done; $("qNext").textContent=qi===5?"Next: send this to Simon":done?"Next question":"Pick an answer above";
+  $("soFar").textContent=[S.use&&USES[S.use].label,labelOf(CHASSIS,S.chassis),labelOf(TYRES,S.tyres)].filter(Boolean).join(", ");
+}
+{
+  const o=$("orbit"); let px=0, py=0, on=false;
+  o.addEventListener("pointerdown",e=>{ on=true; px=e.clientX; py=e.clientY; orbit.drag=orbit.keep=true; o.classList.add("drag"); o.setPointerCapture&&o.setPointerCapture(e.pointerId); $("orbitHint").classList.add("gone"); });
+  o.addEventListener("pointermove",e=>{ if(!on) return; orbit.az=Math.max(-1.05,Math.min(1.05,orbit.az-(e.clientX-px)*.0065)); if(wideNow()) orbit.el=Math.max(-.12,Math.min(.5,orbit.el+(e.clientY-py)*.004)); px=e.clientX; py=e.clientY; if(!playing) paint(); });
+  ["pointerup","pointercancel"].forEach(t=>o.addEventListener(t,()=>{ on=false; orbit.drag=false; o.classList.remove("drag"); }));
+}
+$("qNext").onclick=()=>{ if(qi===5) go(4); else showQ(qi+1); };
+$("qBack").onclick=()=>showQ(qi-1);
+/* A tap on an answer moves on by itself. Keyboard users move with Next, so arrow keys can browse the answers. */
+$("specForm").addEventListener("click",e=>{ const i=e.target.closest("input[type=radio]"); if(i&&e.detail>0&&qi<5) setTimeout(()=>showQ(qi+1),190); });
+
+/* ---------- Questions ---------- */
+function radios(host,name,items){
+  $(host).innerHTML=items.map(([v,l,h])=>`<label class="radio"><input type="radio" name="${name}" value="${v}"><span><b>${l}</b>${h?`<small>${h}</small>`:""}</span></label>`).join("");
+}
+radios("f-use","use",Object.entries(USES).map(([k,u])=>[k,u.label]));
+radios("f-chassis","chassis",CHASSIS);
+radios("f-tyres","tyres",TYRES);
+radios("f-style","style",STYLES);
+radios("f-value","value",VALUES);
+function setUse(k){ S.use=k; renderSpec(); }
+$("specForm").addEventListener("change",e=>{
+  const t=e.target; if(t.type!=="radio") return;
+  if(t.name==="use"){ setUse(t.value); return; }
+  S[t.name]=t.value; renderSpec();
+});
+
+function renderOptions(id){
+  const k=KITS[id], host=$("optionGroups"); if(!k){host.innerHTML="";return}
+  const springs=OPTIONS.springs[k.maker];
+  if(!springs.some(o=>o[0]===S.springs)) S.springs="std";
+  if(!k.clicker) S.adjuster="sweep";
+  const money=n=>n?` <small>+£${n.toLocaleString("en-GB")}</small>`:"";
+  const grp=(title,name,list,cur)=>`<div class="opt-group"><p class="opt-title">${title}</p><div class="radios">`+list.map(([v,l,p])=>`<label class="radio"><input type="radio" name="${name}" value="${v}"${v===cur?" checked":""}><span><b>${l}</b>${p?`<small>+£${p.toLocaleString("en-GB")} + VAT</small>`:""}</span></label>`).join("")+`</div></div>`;
+  let html="";
+  if(k.clicker) html+=grp("Adjuster","adjuster",[["sweep","Sweep, set with a pin tool",0],["clicker","Clicker eyelet, by hand",k.clicker-k.price]],S.adjuster);
+  if(k.valving){ if(!S.valving) S.valving="std"; html+=grp("Front valving","valving",[["std","Standard",0],["option","Digressive or linear, front pair",k.valving]],S.valving); } else S.valving="std";
+  html+=grp("Springs","springs",springs,S.springs)+grp("Ride height adjustment","ride",OPTIONS.ride,S.ride);
+  host.innerHTML=html;
+}
+let lastKit=null;
+function total(id){
+  const k=KITS[id]; let n=k.clicker&&S.adjuster==="clicker"?k.clicker:k.price; const extras=[];
+  if(k.clicker&&S.adjuster==="clicker") extras.push("clicker adjuster");
+  if(k.valving&&S.valving==="option"){n+=k.valving;extras.push("digressive or linear front valving")}
+  const sp=OPTIONS.springs[k.maker].find(o=>o[0]===S.springs); if(sp&&sp[2]){n+=sp[2];extras.push(sp[1]+" springs")}
+  const r=OPTIONS.ride.find(o=>o[0]===S.ride); if(r&&r[2]){n+=r[2];extras.push(r[0]==="torrington"?"Torrington bearings":"hydraulic platforms")}
+  return {n,extras};
+}
+function line(id,val){ const d=$(id); d.textContent=val||"Not set"; d.classList.toggle("unset",!val); }
+function labelOf(list,v){ const f=list.find(x=>x[0]===v); return f?f[1]:null; }
+function renderSpec(){
+  line("l-use",S.use&&USES[S.use].label); line("l-chassis",labelOf(CHASSIS,S.chassis)); line("l-tyres",labelOf(TYRES,S.tyres));
+  $("l-sym-row").hidden=!S.symptom;
+  if(S.symptom){ const p=SYMPTOMS[S.symptom]; $("l-sym").textContent=p.chip+". Usual cause: "+p.name.toLowerCase()+"."; }
+  const id=recommend(S), k=KITS[id], has=!!k;
+  if(id!==lastKit){ renderOptions(id); lastKit=id; }
+  ["result","r-quote","price","r-break"].forEach(x=>$(x).hidden=!has);
+  $("reassure").hidden=!has;
+  const left=["use","style","value"].filter(x=>!S[x]).length;
+  $("empty").hidden=has;
+  $("empty").textContent=left===3?"Answer the questions and your starting point appears here.":`${left} more ${left===1?"answer":"answers"} and your starting point appears here.`;
+  if(has){
+    const t=total(id), price="£"+t.n.toLocaleString("en-GB");
+    $("r-name").textContent=k.name; $("r-adj").textContent=k.adj;
+    $("r-img").src="/assets/"+k.img; $("r-img").alt=k.name;
+    $("r-quoteText").textContent=(k.quoteRoad&&(S.use==="road"||S.use==="track"))?k.quoteRoad:k.quote;
+    $("r-price").textContent=price;
+    $("r-break").hidden=!t.extras.length;
+    $("r-break").textContent=t.extras.length?"Includes "+t.extras.join(", ")+".":"";
+    $("optName").textContent=k.name; $("optPrice").textContent="From "+price+" + VAT & shipping";
+  }
+  renderQ(); renderRail(); refreshFit();
+}
+$("options").addEventListener("change",e=>{ if(e.target.type==="radio"){ S[e.target.name]=e.target.value; renderSpec(); if(!playing) paint(); } });
+
+/* Enquiry: sent to the same Formspree form as the contact page */
+$("sendForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f=e.target, id=recommend(S), k=KITS[id], t=k?total(id):null;
+  const lines=[
+    "Enquiry type: Suspension Setup",
+    "Name: "+f.name.value, "Email: "+f.email.value, "Phone: "+(f.phone.value||"Not given"), "",
+    "Reported symptom: "+(S.symptom?SYMPTOMS[S.symptom].chip+" (usual cause: "+SYMPTOMS[S.symptom].name.toLowerCase()+")":"Not given"),
+    "Use: "+(S.use?USES[S.use].label:"Not given"),
+    "Chassis: "+(labelOf(CHASSIS,S.chassis)||"Not given"),
+    "Tyres: "+(labelOf(TYRES,S.tyres)||"Not given"),
+    "Works with the car: "+(labelOf(STYLES,S.style)||"Not given"),
+    "Priority: "+(labelOf(VALUES,S.value)||"Not given"),
+    "Starting point: "+(k?k.name:"Not reached"),
+    "Options: "+(t&&t.extras.length?t.extras.join(", "):"None"),
+    "Guide price: "+(t?"From £"+t.n.toLocaleString("en-GB")+" + VAT & shipping":"Not reached"),
+    "Damper test: "+(labSummary||"Not played"), "",
+    "Message: "+(f.message.value||"None")
+  ];
+  const btn=f.querySelector("button[type=submit]"), err=$("sendError"), label=btn.textContent;
+  btn.disabled=true; btn.textContent="Sending"; err.hidden=true;
+  fetch("https://formspree.io/f/mjknoakd",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},
+    body:JSON.stringify({name:f.name.value,email:f.email.value,phone:f.phone.value,subject:"Suspension Setup",_subject:"Specification from the website: "+(k?k.name:"no kit reached"),message:lines.join("\n")})})
+  .then(r=>{ if(!r.ok) throw 0;
+    $("previewText").textContent=lines.join("\n"); $("preview").hidden=false; f.hidden=true; $("preview").scrollIntoView({block:"nearest"}); })
+  .catch(()=>{ err.hidden=false; btn.disabled=false; btn.textContent=label; });
+});
+
+/* Range ledger */
+$("ledger").innerHTML=Object.values(KITS).map(k=>`<tr><td><a href="${k.url}">${k.name}</a>${k.note?`<small class="ledger-note">${k.note}</small>`:""}</td><td class="hide-sm">${k.adj}</td><td class="num">£${k.price.toLocaleString("en-GB")}</td></tr>`).join("");
+
+/* Start */
+function boot(){ try{ gl=window.Axle3D?Axle3D.init($("cvGL")):null; }catch(e){ gl=null; } if(!gl){ $("cvGL").style.display="none"; document.documentElement.classList.add("no3d"); } renderSymptom(); renderSpec(); labReset(); showQ(0); const m=/^#step-([1-4])$/.exec(location.hash); if(m) go(+m[1],false); else go(1,false); if(reduce){ playing=false; $("pause").textContent="Play"; pos=worstMoment(synth(SYMPTOMS.skip.lb,SYMPTOMS.skip.click),runFor().road); paint(); } else { startSweep(); paint(); start(); } }
+window.__t={synth,stateOf,ratingFor,BALANCED,seek:v=>{pos=v;paint()},pause:()=>{playing=false},wipe:v=>{sweep=null;setWipe(v);paint()},go,has3D:()=>!!gl,orbit,settle:()=>{for(let i=0;i<300;i++)stepCam(50);paint()},worst:()=>worstMoment(synth(SYMPTOMS[symptom].lb,SYMPTOMS[symptom].click),runFor().road)};
+(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(boot);
+
+</script>
+</body>
+</html>

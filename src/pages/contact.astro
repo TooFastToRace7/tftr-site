@@ -109,6 +109,26 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <script is:inline>
+    // Pre-fill from the home page Spec Finder (?car=&use=&setup=&kit=&msg=)
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search);
+        if (!q.get('msg')) return;
+        var msg = document.getElementById('message');
+        var subj = document.getElementById('subject');
+        if (msg && !msg.value) msg.value = q.get('msg');
+        if (subj && !subj.value) subj.value = 'suspension-setup';
+        var note = document.createElement('p');
+        note.className = 'form-note';
+        note.textContent = 'We have filled in your answers. Add your tyres and anything else, then send.';
+        var form = document.querySelector('.contact-form');
+        if (form && form.parentNode) form.parentNode.insertBefore(note, form);
+        if (msg) { msg.focus({ preventScroll: true }); msg.setSelectionRange(msg.value.length, msg.value.length); }
+      } catch (e) {}
+    })();
+  </script>
+
 </Layout>
 
 <style>

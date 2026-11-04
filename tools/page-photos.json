@@ -1,0 +1,518 @@
+{
+"about": {
+"kind": "photo",
+"img": "o-simon-2019-champion.jpg",
+"fx": 62,
+"fy": 55,
+"cap": "",
+"strip": [
+"o-simon-rogers-caterham-championship-trophies.jpg",
+"o-simon-anglesey-fixed.jpg",
+"o-llys-y-fran-2017.jpg"
+]
+},
+"contact": {
+"kind": "photo",
+"img": "n-shocks1.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "",
+"strip": [
+"p-machine1-1.jpg",
+"n-nitron-springs-various.jpg",
+"p-gallery-automotive-03.jpg"
+]
+},
+"partners": {
+"kind": "photo",
+"img": "n-nitron-sema-2025-blog-banner.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "",
+"strip": [
+"p-home-hero-20211027.jpg",
+"n-nitron-shocks-sema.jpg",
+"p-gallery-automotive-01.jpg"
+]
+},
+"products": {
+"kind": "photo",
+"img": "p-home-hero-20211027.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"n-shocks1a.jpg",
+"p-photo-continuously-improve-20210309.jpg",
+"n-nitron-r3-reservoir-options.jpg"
+]
+},
+"services": {
+"kind": "photo",
+"img": "p-martinsville-7988.jpg",
+"fx": 60,
+"fy": 55,
+"cap": "",
+"strip": [
+"p-gallery-automotive-03.jpg",
+"n-porsche-track2.jpg",
+"n-corvette-c8-blog.jpg"
+]
+},
+"suspension": {
+"kind": "photo",
+"img": "p-gallery-automotive-01.jpg",
+"fx": 58,
+"fy": 55,
+"cap": "",
+"strip": [
+"n-nitron-hpa-variations.jpg",
+"p-photo-bolt-on-speed.jpg",
+"n-nitron-r3-reservoir-options.jpg"
+]
+},
+"nitron-suspension": {
+"kind": "photo",
+"img": "n-shocks1.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"n-nitron-shocks-sema.jpg",
+"n-nitron-springs-various.jpg",
+"n-nitron-r3-reservoir-options.jpg"
+]
+},
+"penske-racing-shocks": {
+"kind": "photo",
+"img": "p-home-hero-20211027.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"p-workbench-posted-8-28-25.jpg",
+"p-photo-continuously-improve-20210309.jpg",
+"p-photo-bolt-on-speed.jpg"
+]
+},
+"nitron-electron": {
+"kind": "photo",
+"img": "n-nitron-elec-tron-range-now-available.jpg",
+"fx": 62,
+"fy": 45,
+"cap": "",
+"strip": [
+"n-c8-er3.jpg",
+"n-nitron-electron-dcu-loom.jpg",
+"n-nitron-electron-r3-kit-porsche.jpg"
+]
+},
+"nitron-r1-vs-r3": {
+"kind": "photo",
+"img": "n-nitron-r3-reservoir-options.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"k-ntcca014r1-01.jpg",
+"k-ntcca014r3-01.jpg",
+"n-nitron-hpa-variations.jpg"
+]
+},
+"damper-adjustment-explained": {
+"kind": "kit",
+"img": "n-r3-coilover-no-numbers.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "",
+"strip": [
+"n-nitron-hpa-variations.jpg",
+"p-webinar-photo-hero-shock.jpg",
+"n-shocks1a.jpg"
+]
+},
+"fast-road-suspension": {
+"kind": "photo",
+"img": "n-corvette-c8-blog.jpg",
+"fx": 62,
+"fy": 55,
+"cap": "",
+"strip": [
+"n-gt3-home-thumb.jpg",
+"n-shocks1a.jpg",
+"n-nitron-springs-various.jpg"
+]
+},
+"track-day-suspension": {
+"kind": "photo",
+"img": "p-gallery-automotive-03.jpg",
+"fx": 60,
+"fy": 55,
+"cap": "",
+"strip": [
+"n-porsche-track2.jpg",
+"p-mazda-mx5-cup-car-track-test-24.jpg",
+"n-shocks1.jpg"
+]
+},
+"nurburgring-suspension": {
+"kind": "photo",
+"img": "n-porsche-track2.jpg",
+"fx": 68,
+"fy": 50,
+"cap": "",
+"strip": [
+"n-gt3-home-thumb.jpg",
+"n-nitron-r3-reservoir-options.jpg",
+"n-shocks1a.jpg"
+]
+},
+"hillclimb-suspension": {
+"kind": "photo",
+"img": "p-tire-smoke-racecar-background.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"p-photo-bolt-on-speed.jpg",
+"n-nitron-hpa-variations.jpg",
+"p-photo-continuously-improve-20210309.jpg"
+]
+},
+"caterham": {
+"kind": "kit",
+"img": "k-ntcca014r3-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Caterham CSR Duratec R3 Suspension Kit",
+"strip": [
+"k-ntcca014r1-01.jpg",
+"p-webinar-photo-hero-shock.jpg",
+"n-shocks1a.jpg"
+]
+},
+"caterham/suspension": {
+"kind": "kit",
+"img": "k-ntcca014r1-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Caterham CSR Duratec R1 Suspension Kit",
+"strip": [
+"k-ntcca014r3-01.jpg",
+"p-webinar-photo-hero-shock.jpg",
+"p-photo-bolt-on-speed.jpg"
+]
+},
+"caterham/nitron-ntr-r1": {
+"kind": "kit",
+"img": "k-ntcca014r1-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Caterham CSR Duratec R1 Suspension Kit",
+"strip": [
+"k-ntcca013r1-01.jpg",
+"n-shocks1a.jpg",
+"n-nitron-springs-various.jpg"
+]
+},
+"caterham/nitron-ntr-r3": {
+"kind": "kit",
+"img": "k-ntcca014r3-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Caterham CSR Duratec R3 Suspension Kit",
+"strip": [
+"k-ntcca013r3-01.jpg",
+"n-nitron-r3-reservoir-options.jpg",
+"n-nitron-hpa-variations.jpg"
+]
+},
+"caterham/penske-7500-cosa": {
+"kind": "kit",
+"img": "s-shop9.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Penske 7500 Series single adjustable",
+"strip": [
+"p-vid-howto-7500bleedingtheshock.jpg",
+"p-photo-bolt-on-speed.jpg",
+"p-workbench-posted-8-28-25.jpg"
+]
+},
+"caterham/penske-7500-coda": {
+"kind": "kit",
+"img": "s-shop15.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Penske 7500 Series double adjustable",
+"strip": [
+"p-vid-howto-7500bleedingtheshock.jpg",
+"p-photo-continuously-improve-20210309.jpg",
+"p-photo-bolt-on-speed.jpg"
+]
+},
+"caterham/penske-8700-3-way": {
+"kind": "kit",
+"img": "o-8700.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Penske 8700 3-Way",
+"strip": [
+"p-home-hero-20211027.jpg",
+"p-photo-continuously-improve-20210309.jpg",
+"p-gallery-automotive-01.jpg"
+]
+},
+"caterham/suspension-buyers-guide": {
+"kind": "kit",
+"img": "k-ntcca013r3-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Caterham Wide track de-Dion (96-) R3 Suspension Kit",
+"strip": [
+"k-ntcca013r1-01.jpg",
+"p-photo-bolt-on-speed.jpg",
+"n-shocks1a.jpg"
+]
+},
+"caterham/os-giken-lsd": {
+"kind": "photo",
+"img": "o-core3.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-core1.jpg",
+"o-core2.jpg",
+"o-super1.jpg"
+]
+},
+"caterham/os-giken-dual-core-lsd": {
+"kind": "photo",
+"img": "o-super3.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-super1.jpg",
+"o-core3.jpg",
+"o-core2.jpg"
+]
+},
+"kawasaki-h2": {
+"kind": "photo",
+"img": "o-photoroom-20250830-133723.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-photoroom-20250830-133648.jpg",
+"o-photoroom-20250830-134437.jpg",
+"o-photoroom-20250830-133751.jpg"
+]
+},
+"kawasaki-h2/dry-sump-kit": {
+"kind": "photo",
+"img": "o-photoroom-20250830-133648.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-photoroom-20250830-133723.jpg",
+"o-photoroom-20250830-133751.jpg",
+"o-photoroom-20250830-134437.jpg"
+]
+},
+"kawasaki-h2/oil-cooler-blanking-plate": {
+"kind": "kit",
+"img": "o-oil-cooler-plate-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-photoroom-20250830-133723.jpg",
+"o-photoroom-20250830-133648.jpg",
+"o-photoroom-20250830-133751.jpg"
+]
+},
+"kawasaki-h2/high-volume-oil-pump": {
+"kind": "photo",
+"img": "o-photoroom-20250830-133723.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-photoroom-20250830-133751.jpg",
+"o-photoroom-20250830-133648.jpg",
+"o-photoroom-20250830-134531.jpg"
+]
+},
+"kawasaki-h2/pair-block-off-plates": {
+"kind": "kit",
+"img": "o-pair-plates-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-photoroom-20250830-133723.jpg",
+"o-photoroom-20250830-134437.jpg",
+"o-photoroom-20250830-133751.jpg"
+]
+},
+"kawasaki-h2/wiring-loom": {
+"kind": "kit",
+"img": "o-loom-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-mbe-9a9-01.jpg",
+"o-photoroom-20250830-133723.jpg",
+"o-photoroom-20250830-133648.jpg"
+]
+},
+"kawasaki-h2/ecu-options": {
+"kind": "kit",
+"img": "o-mbe-9a9-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-loom-01.jpg",
+"o-photoroom-20250830-133723.jpg",
+"o-photoroom-20250830-133648.jpg"
+]
+},
+"kawasaki-h2/mbe-9a9-ecu": {
+"kind": "kit",
+"img": "o-mbe-9a9-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-loom-01.jpg",
+"o-photoroom-20250830-133723.jpg",
+"o-photoroom-20250830-134437.jpg"
+]
+},
+"kawasaki-h2/clutch-conversion-kit": {
+"kind": "photo",
+"img": "o-photoroom-20250830-133751.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-photoroom-20250830-133648.jpg",
+"o-photoroom-20250830-133723.jpg",
+"o-photoroom-20250830-134531.jpg"
+]
+},
+"kawasaki-h2/gear-ratios": {
+"kind": "photo",
+"img": "o-photoroom-20250830-134531.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-photoroom-20250830-133648.jpg",
+"o-photoroom-20250830-133751.jpg",
+"o-photoroom-20250830-134437.jpg"
+]
+},
+"kawasaki-h2/engine-specifications": {
+"kind": "photo",
+"img": "o-photoroom-20250830-133723.jpg",
+"fx": 55,
+"fy": 50,
+"cap": "",
+"strip": [
+"o-photoroom-20250830-133648.jpg",
+"o-photoroom-20250830-133751.jpg",
+"o-photoroom-20250830-134531.jpg"
+]
+},
+"porsche-suspension": {
+"kind": "photo",
+"img": "n-porsche-track2.jpg",
+"fx": 68,
+"fy": 50,
+"cap": "",
+"strip": [
+"n-gt3-home-thumb.jpg",
+"k-ntcpo024er3-01.jpg",
+"k-ntcpo042r1-01.jpg"
+]
+},
+"lotus-suspension": {
+"kind": "kit",
+"img": "k-ntclo031r3-frs-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Lotus Emira V6 R3 FastRoad Suspension Kit",
+"strip": [
+"n-ntclo031er1-frs-02.jpg",
+"n-ntclo031r3-frs-02.jpg",
+"n-ntclo031r3-frs-03.jpg"
+]
+},
+"bmw-suspension": {
+"kind": "kit",
+"img": "k-ntcbm014r3-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: BMW 3 (E90) M3, 3 Coupe (E92) M3 R3 Suspension Kit",
+"strip": [
+"k-ntcbm011r3-01.jpg",
+"k-ntcbm024r1-01.jpg",
+"k-ntcbm014er3-01.jpg"
+]
+},
+"mazda-mx5-suspension": {
+"kind": "kit",
+"img": "s-shop0.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Penske Spec Miata damper, Mazda Motorsports",
+"strip": [
+"p-martinsville-7988.jpg",
+"s-shop3.jpg",
+"k-ntcma014r3-02.jpg"
+]
+},
+"alpine-suspension": {
+"kind": "kit",
+"img": "k-ntcap010r3-01.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Alpine A110 R3 Suspension Kit",
+"strip": [
+"k-ntcap010r1-01.jpg",
+"n-shocks1a.jpg",
+"n-nitron-springs-various.jpg"
+]
+},
+"toyota-gr-yaris-suspension": {
+"kind": "kit",
+"img": "k-ntcto012r3-02.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Toyota GR Yaris R3 Suspension Kit",
+"strip": [
+"k-ntcto012r3-03.jpg",
+"k-ntcto012r3-04.jpg",
+"k-ntcto012er3-03.jpg"
+]
+},
+"tvr-suspension": {
+"kind": "kit",
+"img": "n-nitron-r3-reservoir-options.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron R3 range. Shown for illustration, not a TVR kit.",
+"strip": [
+"n-shocks1a.jpg",
+"n-shocks1.jpg",
+"n-nitron-springs-various.jpg"
+]
+}
+}
