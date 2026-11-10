@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Privacy and Cookies | Too Fast To Race" description="How Too Fast To Race handles enquiry details, what cookies this website uses, and how to change your cookie choice.">
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Privacy and <span class="text-green">Cookies</span></h1>
+      <p class="hero-subtitle">What this website collects, why, and how to change your cookie choice.</p>
+    </div>
+  </section>
+
+  <!-- Policy -->
+  <section class="privacy-section">
+    <div class="container privacy-text">
+
+      <h2>Who we are</h2>
+      <p>Too Fast To Race is a trading name of S Rogers Engineering Ltd, Y Gwernen, Dryslwyn, Carmarthen, SA32 8SA. We are the data controller for this website. To ask about anything on this page, use the <a href="/contact/">contact page</a>.</p>
+
+      <h2>Enquiries you send us</h2>
+      <p>When you send an enquiry or a specification request, we receive the details you enter: your name, email address, phone number if you give one, and what you tell us about your car. We use them only to reply to you and to prepare your specification or quotation. The forms are delivered to us by Formspree, a form handling service based in the United States.</p>
+      <p>We do not sell your details or pass them to anyone for marketing. Where an order follows, we share what a supplier needs to build or deliver it.</p>
+
+      <h2>Cookies and analytics</h2>
+      <p>This website does not set any analytics cookies unless you click Accept on the cookie banner.</p>
+      <p>If you accept, we use Google Analytics to see how the site is used: which pages are visited, roughly where visitors are, and what kind of device they use. Google Analytics sets cookies with names beginning <strong>_ga</strong>, which last for up to two years. We do not use it for advertising or remarketing.</p>
+      <p>If you decline, Google Analytics is not loaded and no analytics cookies are set.</p>
+      <p id="cookie-choice"><a href="#cookie-choice" class="btn btn-outline" data-cookie-settings>Change my cookie choice</a></p>
+
+      <h2>What is stored in your browser</h2>
+      <ul>
+        <li>Your cookie choice, so that we do not ask on every page.</li>
+        <li>Setups you save in the Corner Weights app and notes you make in the trackside tool on the Damper Adjustment Explained page. These stay on your device and are not sent to us.</li>
+      </ul>
+
+      <h2>Hosting</h2>
+      <p>The website is hosted by Cloudflare, which processes technical information such as your IP address in order to deliver the pages and protect the site.</p>
+
+      <h2>Other websites</h2>
+      <p>Our merchandise shop at shop.toofasttorace.com and the apps listed in the footer are separate websites with their own privacy information.</p>
+
+      <h2>Your rights</h2>
+      <p>You can ask us for a copy of the details we hold about you, ask us to correct them, or ask us to delete them. If you are unhappy with how we have handled your details, you can complain to the Information Commissioner's Office at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>.</p>
+
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .privacy-section {
+    background: var(--tftr-black);
+  }
+
+  .privacy-text {
+    max-width: 820px;
+  }
+
+  .privacy-text h2 {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+  }
+
+  .privacy-text h2:first-child {
+    margin-top: 0;
+  }
+
+  .privacy-text p,
+  .privacy-text ul {
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-grey-light);
+  }
+
+  .privacy-text ul {
+    padding-left: 1.25rem;
+  }
+
+  .privacy-text li {
+    margin-bottom: var(--space-xs);
+  }
+</style>

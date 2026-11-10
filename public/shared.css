@@ -53,6 +53,9 @@
 .footer-address{font-style:normal;margin-top:8px}
 .footer-bottom{max-width:1400px;margin:28px auto 0;padding:14px var(--s-gutter) 0;border-top:1px solid var(--s-line);font-size:.86rem}
 .footer-bottom p{margin:0}
+.footer-bottom p+p{margin-top:6px}
+.footer-bottom a{color:#b9bdb6}
+.footer-bottom a:hover{color:#fff}
 @media (max-width:1100px){.footer-content{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:640px){.footer-content{grid-template-columns:1fr 1fr}}
 @media (max-width:420px){.footer-content{grid-template-columns:1fr}}
