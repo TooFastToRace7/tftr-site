@@ -40,7 +40,8 @@
     }
     document.cookie.split(';').forEach(function (c) {
       var name = c.split('=')[0].trim();
-      if (name.indexOf('_ga') !== 0) return;
+      /* Only this site's own cookie. The shared _ga cookie also belongs to the shop, so it is left alone. */
+      if (name !== '_ga_' + GA_ID.slice(2)) return;
       domains.forEach(function (d) {
         document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
       });
