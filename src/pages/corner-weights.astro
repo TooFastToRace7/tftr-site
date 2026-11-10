@@ -1,0 +1,254 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Free Corner Weight Calculator App | Too Fast To Race" description="A free corner weight calculator for your phone. Enter four scale readings for cross weight, front/rear and left/right splits, and the kg correction for each corner. Works offline on iPhone and Android.">
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Corner <span class="text-green">Weights</span></h1>
+      <p class="hero-subtitle">A free corner weight calculator for your phone. Enter the four scale readings and it does the maths. No account, no adverts, and it works offline in the paddock.</p>
+      <div class="cw-actions">
+        <a href="/corner-weights/app/" class="btn btn-primary">Open the app</a>
+        <a href="#install" class="btn btn-outline">How to install</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What it does -->
+  <section class="cw-section">
+    <div class="container cw-grid">
+      <div>
+        <span class="stripe-accent"></span>
+        <h2>What it <span class="text-green">does</span></h2>
+        <ul class="cw-list">
+          <li>Four large entry boxes laid out as a top-down view of the car, so each reading goes in the right corner.</li>
+          <li>Tap any two corners to see their combined weight and percentage of the total: front, rear, left, right or either diagonal.</li>
+          <li>A live summary of total weight, front/rear and left/right splits, and cross weight. The cross weight turns green within 0.5% of 50%.</li>
+          <li>A balance panel showing the target weight for each corner and how many kg each one needs to change.</li>
+          <li>Save named setups, then search them later. The newest are shown first.</li>
+        </ul>
+      </div>
+      <aside class="cw-panel">
+        <h3>Good to know</h3>
+        <p>Winding the spring platforms with the car on its wheels cannot change total weight, front/rear or left/right. It only moves weight across the diagonals. The correction is therefore the same on every corner: half the cross weight error in kg, added on one diagonal and taken off the other.</p>
+        <p>Adjust a little at a time, settle the car, re-read the scales and repeat.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Install -->
+  <section class="cw-section cw-alt" id="install">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h2>Add it to your <span class="text-green">home screen</span></h2>
+      <p class="cw-intro">Open the app first, then add it from the app screen. It then opens full screen from its own TFTR icon, like any other app.</p>
+      <div class="cw-steps">
+        <div class="cw-card">
+          <h3>iPhone and iPad</h3>
+          <ol>
+            <li>In <strong>Safari</strong>, open <a href="/corner-weights/app/">toofasttorace.com/corner-weights/app/</a></li>
+            <li>Tap the <strong>Share</strong> button (a square with an arrow). On iOS 26, tap the <strong>•••</strong> button first, then <strong>Share</strong>.</li>
+            <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
+            <li>If you see <strong>Open as Web App</strong>, leave it switched on. Tap <strong>Add</strong>.</li>
+          </ol>
+        </div>
+        <div class="cw-card">
+          <h3>Android</h3>
+          <ol>
+            <li>In <strong>Chrome</strong>, open <a href="/corner-weights/app/">toofasttorace.com/corner-weights/app/</a></li>
+            <li>Tap the <strong>⋮</strong> menu at the top right.</li>
+            <li>Tap <strong>Add to home screen</strong> (on some phones it reads <strong>Install app</strong>).</li>
+            <li>Tap <strong>Install</strong> or <strong>Add</strong> to confirm.</li>
+          </ol>
+          <p class="cw-note">Samsung Internet: tap the <strong>≡</strong> menu, then <strong>Add page to</strong> and <strong>Home screen</strong>.</p>
+        </div>
+      </div>
+      <p class="cw-intro">Open it once while you have signal. After that it works with no connection at all.</p>
+    </div>
+  </section>
+
+  <!-- Your data -->
+  <section class="cw-section">
+    <div class="container cw-narrow">
+      <span class="stripe-accent"></span>
+      <h2>Your <span class="text-green">data</span></h2>
+      <p>Everything you enter, including saved setups, is stored only on your own phone. Nothing is sent to Too Fast To Race or anyone else. The app has no account, no tracking and no adverts.</p>
+      <p>Because the setups live on your phone, removing the app from your home screen or clearing your browser's website data will delete them. A setup saved on one phone does not appear on another.</p>
+      <p>The app is free. It is a calculator, not a substitute for experience, so sanity-check the results the first time you use it.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Found a bug or want a feature?</h2>
+        <p>Tell us what you were doing and what you expected to see. Setup questions are welcome too.</p>
+        <a href="/contact/" class="btn btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 60ch;
+    margin-top: var(--space-sm);
+  }
+
+  .cw-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+  }
+
+  .cw-section {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .cw-alt {
+    background: var(--tftr-darker);
+  }
+
+  .cw-section h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .cw-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .cw-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cw-list li,
+  .cw-steps li {
+    color: var(--tftr-grey-light);
+    line-height: 1.7;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .cw-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--tftr-green);
+  }
+
+  .cw-panel {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border-left: 3px solid var(--tftr-green);
+  }
+
+  .cw-panel h3,
+  .cw-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--tftr-green);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-sm);
+  }
+
+  .cw-panel p,
+  .cw-narrow p,
+  .cw-intro {
+    color: var(--tftr-grey-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .cw-narrow {
+    max-width: 800px;
+  }
+
+  .cw-intro {
+    max-width: 70ch;
+  }
+
+  .cw-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin: var(--space-md) 0;
+  }
+
+  .cw-card {
+    background: var(--tftr-black);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .cw-card ol {
+    counter-reset: step;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cw-card ol li {
+    counter-increment: step;
+    padding-left: 2rem;
+  }
+
+  .cw-card ol li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    background: var(--tftr-green);
+    color: var(--tftr-black);
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+    text-align: center;
+  }
+
+  .cw-card a {
+    color: var(--tftr-green);
+    word-break: break-word;
+  }
+
+  .cw-card strong {
+    color: var(--tftr-white);
+  }
+
+  .cw-note {
+    color: var(--tftr-grey);
+    font-size: 0.9rem;
+    margin-top: var(--space-sm);
+  }
+
+  @media (max-width: 900px) {
+    .cw-grid,
+    .cw-steps {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+  }
+</style>
