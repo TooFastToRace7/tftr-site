@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Free Corner Weight Calculator App | Too Fast To Race" description="A free corner weight calculator for your phone. Enter four scale readings for cross weight, front/rear and left/right splits, and the kg correction for each corner. Works offline on iPhone and Android.">
 
   <!-- Hero -->
-  <section class="page-hero">
+  <section class="page-hero cw-hero">
     <div class="container">
       <span class="stripe-accent"></span>
       <h1>Corner <span class="text-green">Weights</span></h1>
@@ -99,6 +99,12 @@ import Layout from '../layouts/Layout.astro';
     padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
     background: var(--tftr-darker);
     border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  /* No hero photo on this page: drop the site-wide tall hero */
+  .page-hero.cw-hero {
+    min-height: 0;
+    padding: var(--space-lg) 0 var(--space-md);
   }
 
   .hero-subtitle {
