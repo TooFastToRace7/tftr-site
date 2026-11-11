@@ -1,6 +1,6 @@
 // TFTR Corner Weights - offline support.
 // Bump VERSION whenever any file in this folder changes.
-const VERSION = 'cw-v1';
+const VERSION = 'cw-v2';
 const FILES = ['./', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png', './icon-maskable-512.png'];
 
 self.addEventListener('install', (e) => {

@@ -246,6 +246,10 @@
     var s = p.slice().sort().join();
     return s === "lf,rr" || s === "lr,rf";
   }
+  function isAxlePair(p){
+    var s = p.slice().sort().join();
+    return s === "lf,rf" || s === "lr,rr";
+  }
   function pairText(p){
     var t = p.map(function(c){ return c.toUpperCase(); }).join(" + ");
     return isDiagPair(p) ? t + " · Cross" : t;
@@ -332,7 +336,22 @@
         ? "Raise the RF & LR spring perches (or lower LF & RR). Adjust a little, settle the car, re-read the scales."
         : "Raise the LF & RR spring perches (or lower RF & LR). Adjust a little, settle the car, re-read the scales.";
     }
+    var grid = document.querySelector(".b-grid");
+    if (isAxlePair(pair)) {
+      grid.style.display = "none";
+      note.className = "b-note";
+      note.textContent = "Balance advice is off while the front or rear pair is selected.";
+    } else {
+      grid.style.display = "";
+    }
 
+    if (pair.length < 2) {
+      el("pairLabel").textContent = pair[0].toUpperCase() + " \u00B7 tap a 2nd corner";
+      el("crossVal").textContent = fmt(100 * w[pair[0]] / total,1) + "%";
+      el("pairKg").textContent = fmt(w[pair[0]],1) + " kg";
+      badge.className = "cross-badge";
+      return;
+    }
     var pairSum = w[pair[0]] + w[pair[1]];
     var pairPct = 100 * pairSum / total;
     el("pairLabel").textContent = pairText(pair);
