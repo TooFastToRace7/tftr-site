@@ -505,14 +505,170 @@
 },
 "tvr-suspension": {
 "kind": "kit",
-"img": "n-nitron-r3-reservoir-options.jpg",
+"img": "k-ntctv011r3-tftr.jpg",
 "fx": 50,
 "fy": 50,
-"cap": "Nitron R3 range. Shown for illustration, not a TVR kit.",
+"cap": "Nitron: TVR Griffith R3 Suspension Kit",
 "strip": [
 "n-shocks1a.jpg",
 "n-shocks1.jpg",
 "n-nitron-springs-various.jpg"
+]
+},
+"alpine-a110-nitron-kits": {
+"kind": "kit",
+"img": "k-ntcap010r3-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Alpine A110 R3 Suspension Kit",
+"strip": [
+"k-ntcap010r1-tftr.jpg",
+"n-shocks1a.jpg",
+"n-nitron-springs-various.jpg"
+]
+},
+"toyota-gr-yaris-nitron-kits": {
+"kind": "kit",
+"img": "k-ntcto012r3-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Toyota GR Yaris R3 Suspension Kit",
+"strip": [
+"k-ntcto012er3-tftr.jpg",
+"k-ntcto012r1-tftr.jpg",
+"k-ntcto012er1-tftr.jpg"
+]
+},
+"mazda-mx5-nitron-kits": {
+"kind": "kit",
+"img": "k-ntcma011r3-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Mazda MX5 NA/NB R3 Suspension Kit",
+"strip": [
+"k-ntcma014r3-tftr.jpg",
+"k-ntcma011r1-tftr.jpg",
+"k-ntcma014r1-tftr.jpg"
+]
+},
+"tvr-nitron-kits": {
+"kind": "kit",
+"img": "k-ntctv011r3-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: TVR Griffith R3 Suspension Kit",
+"strip": [
+"k-ntctv012r3-tftr.jpg",
+"k-ntctv013r3-tftr.jpg",
+"k-ntctv014r3-tftr.jpg"
+]
+},
+"lotus-elise-nitron-kits": {
+"kind": "kit",
+"img": "k-ntclo010-rp3-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Lotus Elise S1 RacePro 3 Suspension Kit",
+"strip": [
+"k-ntclo012-rp3-tftr.jpg",
+"k-ntclo014-rp3-tftr.jpg",
+"k-ntclo020-rp3-tftr.jpg"
+]
+},
+"lotus-exige-nitron-kits": {
+"kind": "kit",
+"img": "k-ntclo023-cup3-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Lotus Exige S V6 R3 CupSport Suspension Kit",
+"strip": [
+"k-ntclo011-rp3-tftr.jpg",
+"k-ntclo013-rp3-tftr.jpg",
+"k-ntclo017-rp3-tftr.jpg"
+]
+},
+"lotus-emira-evora-nitron-kits": {
+"kind": "kit",
+"img": "k-ntclo031r3-frs-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Lotus Emira V6 R3 FastRoad Suspension Kit",
+"strip": [
+"k-ntclo031r3-cs-tftr.jpg",
+"k-ntclo022-fr-tftr.jpg",
+"k-ntclo022-cs-tftr.jpg"
+]
+},
+"porsche-911-gt3-gt2-nitron-kits": {
+"kind": "kit",
+"img": "k-ntcpo024r3-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Porsche 911 (991) GT2/3 R3 Suspension Kit",
+"strip": [
+"k-ntcpo013r3-tftr.jpg",
+"k-ntcpo021r3-tftr.jpg",
+"k-ntcpo023r3-tftr.jpg"
+]
+},
+"porsche-cayman-boxster-nitron-kits": {
+"kind": "kit",
+"img": "k-ntcpo031rs3-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Porsche Cayman (981), 718 Cayman (982) RoadSport3 Suspension Kit",
+"strip": [
+"k-ntcpo030r3-tftr.jpg",
+"k-ntcpo031ers3-tftr.jpg",
+"k-ntcpo031ers3-oei-tftr.jpg"
+]
+},
+"bmw-m3-m4-nitron-kits": {
+"kind": "kit",
+"img": "k-ntcbm011r3-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: BMW 3 Coupe (E46) M3 R3 Suspension Kit",
+"strip": [
+"k-ntcbm014r3-tftr.jpg",
+"k-ntcbm027r3-tftr.jpg",
+"k-ntcbm022r3-tftr.jpg"
+]
+},
+"honda-s2000-nitron-kits": {
+"kind": "kit",
+"img": "k-ntcho010r3-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Honda S2000 R3 Suspension Kit",
+"strip": [
+"k-ntcho010r1-tftr.jpg",
+"n-shocks1a.jpg",
+"n-nitron-springs-various.jpg"
+]
+},
+"toyota-gt86-gr86-subaru-brz-nitron-kits": {
+"kind": "kit",
+"img": "k-ntcto014r3-tftr.jpg",
+"fx": 50,
+"fy": 50,
+"cap": "Nitron: Toyota GR86, GT86 R3 Suspension Kit",
+"strip": [
+"k-ntcsu015r3-tftr.jpg",
+"k-ntcto014r1-tftr.jpg",
+"k-ntcsu015r1-tftr.jpg"
+]
+},
+"engineering-services": {
+"kind": "photo",
+"img": "p-gallery-automotive-01.jpg",
+"fx": 58,
+"fy": 55,
+"cap": "",
+"strip": [
+"n-nitron-hpa-variations.jpg",
+"p-photo-bolt-on-speed.jpg",
+"n-shocks1a.jpg"
 ]
 }
 }

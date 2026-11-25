@@ -1,15 +1,19 @@
 ---
 // Core positioning statement, shown on every suspension page.
 // Edit the wording here once and every page updates.
+// A page can place a panel beside the statement with slot="side".
 ---
 
 <section class="spec-statement">
   <div class="container">
-    <div class="spec-box">
-      <p class="spec-line">Spring rates calculated. Valving specified. Built to our spec.</p>
-      <p>Too many cars are built too stiff. Hard springs and over-damped shocks make a car feel fast, nervous and edgy, but the stopwatch says otherwise. A car that skips over bumps and loses tyre contact isn't fast. It's just scary.</p>
-      <p>We don't sell off-the-shelf coilovers. For every car, we calculate the spring rates from its actual weight, geometry and tyres, and write our own valving specification for how and where it will be driven. Nitron, Penske or whichever brand suits the car then build the dampers to that specification. The result is suspension that is more compliant and easier to drive than you'd expect, and faster and more controlled because of it.</p>
-      <p>Your car doesn't need to come to us. Your local or preferred workshop can fit the system, and we'll help you choose one and work with them through the install. Caterham owners can have the full build and setup done here.</p>
+    <div class={Astro.slots.has('side') ? 'spec-layout' : undefined}>
+      <div class="spec-box">
+        <p class="spec-line">Spring rates calculated. Valving specified. Built to our spec.</p>
+        <p>Too many cars are built too stiff. Hard springs and over-damped shocks make a car feel fast, nervous and edgy, but the stopwatch says otherwise. A car that skips over bumps and loses tyre contact isn't fast. It's just scary.</p>
+        <p>We don't sell off-the-shelf coilovers. For every car, we calculate the spring rates from its actual weight, geometry and tyres, and write our own valving specification for how and where it will be driven. Nitron, Penske or whichever brand suits the car then build the dampers to that specification. The result is suspension that is more compliant and easier to drive than you'd expect, and faster and more controlled because of it.</p>
+        <p>Your car doesn't need to come to us. Your local or preferred workshop can fit the system, and we'll help you choose one and work with them through the install. Caterham owners can have the full build and setup done here.</p>
+      </div>
+      <slot name="side" />
     </div>
   </div>
 </section>
@@ -22,6 +26,21 @@
     max-width: 900px;
     border-left: 4px solid var(--tftr-green);
     padding: 1.5rem 2rem;
+  }
+  .spec-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 3rem;
+    align-items: start;
+  }
+  @media (max-width: 1000px) {
+    .spec-layout {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .spec-layout .spec-box {
+      order: 2;
+    }
   }
   .spec-line {
     font-family: var(--font-display);

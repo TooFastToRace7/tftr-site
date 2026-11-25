@@ -1,0 +1,841 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuthorPanel from '../components/AuthorPanel.astro';
+
+// NOTE: prices are Nitron UK retail list prices, ex VAT (price list November 2026).
+// One page covers several kits, so `offers` is an AggregateOffer.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Nitron Coilover Kits for the Lotus Exige",
+  "description": "Nitron coilover suspension kits for the Lotus Exige S1, S2, Exige S and Exige S V6. Nitron's standard specification at list price, or spring rates and valving specified for your car by Simon Rogers.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Nitron Racing Systems"
+  },
+  "category": "Coilover Suspension Kit",
+  "image": "https://toofasttorace.com/images/nitron/NTCLO011_FR.jpg",
+  "url": "https://toofasttorace.com/lotus-exige-nitron-kits/",
+  "offers": {
+    "@type": "AggregateOffer",
+    "url": "https://toofasttorace.com/lotus-exige-nitron-kits/",
+    "priceCurrency": "GBP",
+    "lowPrice": "1580.00",
+    "highPrice": "3695.00",
+    "offerCount": "13",
+    "availability": "https://schema.org/PreOrder",
+    "seller": {
+      "@type": "Organization",
+      "name": "Too Fast To Race"
+    }
+  }
+};
+---
+
+<Layout title="Lotus Exige Nitron Coilover Kits | Prices | Too Fast To Race" description="Nitron coilover kits for the Lotus Exige S1, S2, Exige S and Exige S V6. From £1,580 +VAT. Nitron's standard specification, or spring rates and valving specified for your car by Simon Rogers.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Lotus Exige <span class="text-green">Nitron Kits</span></h1>
+      <div class="hero-intro">
+        <div class="brand-logo-chip">
+          <img src="/images/Nitron.png" alt="Nitron coilover kits for the Lotus Exige — Nitron Racing Systems" class="brand-logo" width="160" height="64" />
+        </div>
+        <p class="hero-subtitle">Nitron coilover kits for the Lotus Exige S1, S2, Exige S and Exige S V6. Buy the kit to Nitron's standard specification at list price, or have the spring rates and valving specified for your car, your tyres and the way you use it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary / Price -->
+  <section class="kit-summary-section">
+    <div class="container">
+      <div class="kit-summary">
+        <div class="kit-price">
+          <span class="price-label">From</span>
+          <span class="price-figure">£1,580</span>
+          <span class="price-note">+ VAT &amp; shipping</span>
+        </div>
+        <div class="kit-specs">
+          <div class="spec">
+            <span class="spec-label">Cars</span>
+            <span class="spec-value">Exige S1 · S2 · S · S V6</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Kits</span>
+            <span class="spec-value">R1 · R3 CupSport · RacePro 3</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Prices</span>
+            <span class="spec-value">Nitron UK retail, ex VAT</span>
+          </div>
+          <div class="spec">
+            <span class="spec-label">Supply</span>
+            <span class="spec-value">Made to order</span>
+          </div>
+        </div>
+        <a href="/contact/" class="btn btn-primary">Enquire About These Kits</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kits and prices -->
+  <section class="kit-content">
+    <div class="container">
+      <div class="content-block">
+        <h2>Kits and <span class="text-green">Prices</span></h2>
+        <p>Every kit is a four-corner coilover kit, supplied complete and ready to fit with springs. Prices are Nitron's UK retail prices, excluding VAT and shipping. Spring rates are Nitron's standard rates in lb/in, front then rear.</p>
+      </div>
+
+      <div class="model-block" id="lotus-exige-s1">
+        <h3>Lotus Exige S1</h3>
+        <p class="model-years">2000 to 2001</p>
+        <div class="kit-table-wrap">
+          <table class="kit-table">
+            <thead>
+              <tr>
+                <th>Photo</th>
+                <th>Kit</th>
+                <th>Reservoir</th>
+                <th>Nitron Springs</th>
+                <th>Nitron Part No.</th>
+                <th>Price + VAT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="lotus-exige-s1-r1-fastroad">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO011_FR.jpg"><img src="/images/nitron/thumbs/NTCLO011_FR.jpg" alt="Nitron NTR R1 FastRoad for the Lotus Exige S1" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron NTR R1 FastRoad</td>
+                <td>None</td>
+                <td>400 / 475</td>
+                <td>NTCLO011_FR</td>
+                <td class="kit-cost">£1,580</td>
+              </tr>
+              <tr id="lotus-exige-s1-r1-clubsport">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO011_CS.jpg"><img src="/images/nitron/thumbs/NTCLO011_CS.jpg" alt="Nitron NTR R1 ClubSport for the Lotus Exige S1" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron NTR R1 ClubSport</td>
+                <td>None</td>
+                <td>450 / 525</td>
+                <td>NTCLO011_CS</td>
+                <td class="kit-cost">£1,830</td>
+              </tr>
+              <tr id="lotus-exige-s1-racepro-3">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO011_RP3.jpg"><img src="/images/nitron/thumbs/NTCLO011_RP3.jpg" alt="Nitron RacePro 3 for the Lotus Exige S1" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron RacePro 3</td>
+                <td>Remote, on hose</td>
+                <td>550 / 650</td>
+                <td>NTCLO011_RP3</td>
+                <td class="kit-cost">£3,630</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="model-block" id="lotus-exige-s2">
+        <h3>Lotus Exige S2</h3>
+        <p class="model-years">2004 to 2006</p>
+        <div class="kit-table-wrap">
+          <table class="kit-table">
+            <thead>
+              <tr>
+                <th>Photo</th>
+                <th>Kit</th>
+                <th>Reservoir</th>
+                <th>Nitron Springs</th>
+                <th>Nitron Part No.</th>
+                <th>Price + VAT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="lotus-exige-s2-r1-fastroad">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO013_FR.jpg"><img src="/images/nitron/thumbs/NTCLO013_FR.jpg" alt="Nitron NTR R1 FastRoad for the Lotus Exige S2" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron NTR R1 FastRoad</td>
+                <td>None</td>
+                <td>425 / 550</td>
+                <td>NTCLO013_FR</td>
+                <td class="kit-cost">£1,755</td>
+              </tr>
+              <tr id="lotus-exige-s2-r1-clubsport">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO013_CS.jpg"><img src="/images/nitron/thumbs/NTCLO013_CS.jpg" alt="Nitron NTR R1 ClubSport for the Lotus Exige S2" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron NTR R1 ClubSport</td>
+                <td>None</td>
+                <td>450 / 600</td>
+                <td>NTCLO013_CS</td>
+                <td class="kit-cost">£1,860</td>
+              </tr>
+              <tr id="lotus-exige-s2-racepro-3">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO013_RP3.jpg"><img src="/images/nitron/thumbs/NTCLO013_RP3.jpg" alt="Nitron RacePro 3 for the Lotus Exige S2" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron RacePro 3</td>
+                <td>Remote, on hose</td>
+                <td>550 / 700</td>
+                <td>NTCLO013_RP3</td>
+                <td class="kit-cost">£3,630</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="model-block" id="lotus-exige-s">
+        <h3>Lotus Exige S</h3>
+        <p class="model-years">2006 to 2012</p>
+        <div class="kit-table-wrap">
+          <table class="kit-table">
+            <thead>
+              <tr>
+                <th>Photo</th>
+                <th>Kit</th>
+                <th>Reservoir</th>
+                <th>Nitron Springs</th>
+                <th>Nitron Part No.</th>
+                <th>Price + VAT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="lotus-exige-s-r1-fastroad">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO017_FR.jpg"><img src="/images/nitron/thumbs/NTCLO017_FR.jpg" alt="Nitron NTR R1 FastRoad for the Lotus Exige S" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron NTR R1 FastRoad</td>
+                <td>None</td>
+                <td>425 / 550</td>
+                <td>NTCLO017_FR</td>
+                <td class="kit-cost">£1,755</td>
+              </tr>
+              <tr id="lotus-exige-s-r1-clubsport">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO017_CS.jpg"><img src="/images/nitron/thumbs/NTCLO017_CS.jpg" alt="Nitron NTR R1 ClubSport for the Lotus Exige S" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron NTR R1 ClubSport</td>
+                <td>None</td>
+                <td>450 / 600</td>
+                <td>NTCLO017_CS</td>
+                <td class="kit-cost">£1,860</td>
+              </tr>
+              <tr id="lotus-exige-s-racepro-3">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO017_RP3.jpg"><img src="/images/nitron/thumbs/NTCLO017_RP3.jpg" alt="Nitron RacePro 3 for the Lotus Exige S" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron RacePro 3</td>
+                <td>Remote, on hose</td>
+                <td>550 / 700</td>
+                <td>NTCLO017_RP3</td>
+                <td class="kit-cost">£3,630</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="model-block" id="lotus-exige-s-v6">
+        <h3>Lotus Exige S V6</h3>
+        <p class="model-years">2012 to 2022</p>
+        <div class="kit-table-wrap">
+          <table class="kit-table">
+            <thead>
+              <tr>
+                <th>Photo</th>
+                <th>Kit</th>
+                <th>Reservoir</th>
+                <th>Nitron Springs</th>
+                <th>Nitron Part No.</th>
+                <th>Price + VAT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="lotus-exige-s-v6-r1-fastroad">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO023_FR.jpg"><img src="/images/nitron/thumbs/NTCLO023_FR.jpg" alt="Nitron NTR R1 FastRoad for the Lotus Exige S V6" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron NTR R1 FastRoad</td>
+                <td>None</td>
+                <td>500 / 850</td>
+                <td>NTCLO023_FR</td>
+                <td class="kit-cost">£1,960</td>
+              </tr>
+              <tr id="lotus-exige-s-v6-r1-clubsport">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO023_CS.jpg"><img src="/images/nitron/thumbs/NTCLO023_CS.jpg" alt="Nitron NTR R1 ClubSport for the Lotus Exige S V6" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron NTR R1 ClubSport</td>
+                <td>None</td>
+                <td>550 / 1100</td>
+                <td>NTCLO023_CS</td>
+                <td class="kit-cost">£2,085</td>
+              </tr>
+              <tr id="lotus-exige-s-v6-r3-cupsport">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO023_CUP3.jpg"><img src="/images/nitron/thumbs/NTCLO023_CUP3.jpg" alt="Nitron NTR R3 CupSport for the Lotus Exige S V6" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron NTR R3 CupSport</td>
+                <td>Remote, on hose</td>
+                <td>850 / 1300</td>
+                <td>NTCLO023_CUP3</td>
+                <td class="kit-cost">£3,530</td>
+              </tr>
+              <tr id="lotus-exige-s-v6-racepro-3">
+                <td class="kit-photo"><a href="/images/nitron/NTCLO023_RP3.jpg"><img src="/images/nitron/thumbs/NTCLO023_RP3.jpg" alt="Nitron RacePro 3 for the Lotus Exige S V6" width="128" height="128" loading="lazy" /></a></td>
+                <td class="kit-name">Nitron RacePro 3</td>
+                <td>Remote, on hose</td>
+                <td>850 / 1300</td>
+                <td>NTCLO023_RP3</td>
+                <td class="kit-cost">£3,695</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>Reading the <span class="text-green">Tables</span></h2>
+        <p><strong>NTR R1:</strong> one adjuster, changing compression and rebound damping together.</p>
+        <p><strong>NTR R3, RS3 and RacePro 3:</strong> three-way kits with a reservoir, piggyback or on a hose as shown. High-speed compression, low-speed compression and rebound are each adjusted separately.</p>
+        <p><strong>FastRoad, ClubSport, CupSport and RacePro 3:</strong> Nitron's names for its specifications on these cars. The spring rates for each are in the tables.</p>
+      </div>
+
+      <div class="showcase-grid">
+        <div class="showcase-image">
+          <img src="/images/nitron/NTCLO011_FR.jpg" alt="Nitron coilover kit for the Lotus Exige" width="800" height="800" loading="lazy" />
+        </div>
+        <div class="content-block showcase-text">
+          <h2>R1 or <span class="text-green">R3</span>?</h2>
+          <p>A correctly specified NTR R1 is the right kit for most cars used for <a href="/fast-road-suspension/">fast road</a> and <a href="/track-day-suspension/">track day</a> driving. It has one adjuster, it is simple to live with, and it leaves budget for tyres and track time.</p>
+          <p>The three-way kits separate high-speed compression, low-speed compression and rebound. That puts more tools in your toolbox to dial in the setup and handling that suit you. If you can justify it financially, it is the kit Simon would choose. The reasoning is set out in <a href="/nitron-r1-vs-r3/">Nitron R1 vs R3</a> and <a href="/damper-adjustment-explained/">damper adjustment explained</a>.</p>
+        </div>
+      </div>
+
+      <!-- Standard / Specified -->
+      <div class="included-grid">
+        <div class="included-col">
+          <h3>Nitron Standard Specification</h3>
+          <ul class="kit-list">
+            <li>The kit at Nitron's list price, as shown above</li>
+            <li>Nitron's standard spring rates and valving</li>
+            <li>Where Nitron's valving suits your car and use, the springs can be changed for rates Simon recommends</li>
+          </ul>
+        </div>
+        <div class="included-col">
+          <h3>Specified for Your Car — £600 + VAT per kit</h3>
+          <ul class="kit-list">
+            <li>Spring rates and damper valving specified by Simon Rogers for your car, tyres and use</li>
+            <li>For cars where Nitron's standard valving is not the right answer</li>
+            <li>Charged on top of the Nitron list price</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>Ordering, Lead Time and <span class="text-green">Shipping</span></h2>
+        <p>Every kit is made to order, so payment is taken when the order is placed. Lead time varies, and Simon confirms it with you when you enquire. We ship worldwide with the large carriers, insured, and shipping is quoted for each customer.</p>
+        <p>For how we approach these cars, see <a href="/lotus-suspension/">Lotus suspension</a>. For what the specification work and trackside support cost, see <a href="/engineering-services/">engineering services and prices</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related Expertise</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/lotus-suspension/" class="related-card">
+          <h3>Lotus Suspension</h3>
+          <p>How Lotus chassis behave, and what correct specification changes.</p>
+          <span class="related-link">Lotus →</span>
+        </a>
+        <a href="/nitron-r1-vs-r3/" class="related-card">
+          <h3>R1 vs R3 Explained</h3>
+          <p>What the extra adjusters on the R3 do, and how to choose between the two.</p>
+          <span class="related-link">R1 vs R3 →</span>
+        </a>
+        <a href="/damper-adjustment-explained/" class="related-card">
+          <h3>Damper Adjustment Explained</h3>
+          <p>What each adjuster changes, what you feel in the car, and a process for using them.</p>
+          <span class="related-link">Damper Adjustment →</span>
+        </a>
+        <a href="/nitron-suspension/" class="related-card">
+          <h3>Nitron Suspension</h3>
+          <p>The full Nitron range and how we approach specification for each application.</p>
+          <span class="related-link">Nitron Systems →</span>
+        </a>
+        <a href="/engineering-services/" class="related-card">
+          <h3>Engineering Services</h3>
+          <p>What specification, valving and trackside engineering cost.</p>
+          <span class="related-link">Services and Prices →</span>
+        </a>
+        <a href="/track-day-suspension/" class="related-card">
+          <h3>Track Day Suspension</h3>
+          <p>What track day use actually demands, and why balance matters more than stiffness.</p>
+          <span class="related-link">Track Day →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Author -->
+  <section class="author-section">
+    <div class="container">
+      <AuthorPanel />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Talk Through Your Exige</h2>
+        <p>Tell us about your car, your tyres and how you use it. Simon will tell you which kit suits it, and whether Nitron's standard specification is right or a specified set is worth the extra.</p>
+        <a href="/contact/" class="btn btn-primary">Contact Simon</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  .hero-intro {
+    display: flex;
+    align-items: stretch;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .hero-intro .hero-subtitle {
+    margin-top: 0;
+  }
+
+  .brand-logo-chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tftr-white);
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .brand-logo {
+    height: 100%;
+    width: auto;
+    max-height: 96px;
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    .hero-intro {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .brand-logo {
+      height: 44px;
+    }
+  }
+
+  /* Summary / Price */
+  .kit-summary-section {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .kit-summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-lg);
+    align-items: center;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+    border-left: 3px solid var(--tftr-green);
+    padding: var(--space-md);
+  }
+
+  .kit-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .price-figure {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--tftr-green);
+    letter-spacing: 0.03em;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--tftr-grey);
+  }
+
+  .kit-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .spec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .spec-value {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--tftr-white);
+  }
+
+  /* Content */
+  .kit-content {
+    background: var(--tftr-black);
+  }
+
+  .content-block {
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .included-col {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .included-col h3 {
+    font-size: 1.1rem;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .kit-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .kit-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--tftr-green);
+  }
+
+  /* Related */
+  .related-section {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    margin-top: auto;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .kit-summary {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .kit-specs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Product Showcase */
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .showcase-image {
+    background: var(--tftr-white);
+    border-radius: 6px;
+    padding: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .showcase-image img {
+    width: 100%;
+    height: auto;
+    max-height: 460px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .showcase-text {
+    margin-bottom: 0 !important;
+  }
+
+  @media (max-width: 900px) {
+    .showcase-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+  }
+
+  /* Kit price table */
+  .kit-table-wrap {
+    overflow-x: auto;
+    margin-bottom: var(--space-lg);
+  }
+
+  .kit-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .kit-table th,
+  .kit-table td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: top;
+  }
+
+  .kit-table th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+    font-weight: normal;
+  }
+
+  .kit-table td {
+    color: var(--tftr-grey-light);
+  }
+
+  .kit-table .kit-name {
+    font-family: var(--font-heading);
+    color: var(--tftr-white);
+    white-space: nowrap;
+  }
+
+  .kit-table .kit-cost {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--tftr-green);
+    white-space: nowrap;
+  }
+
+  .kit-table .kit-detail {
+    display: block;
+    font-family: var(--font-body, inherit);
+    font-size: 0.82rem;
+    color: var(--tftr-grey);
+    white-space: normal;
+    margin-top: 0.25rem;
+  }
+
+  .model-block {
+    margin-bottom: var(--space-lg);
+  }
+
+  .model-block h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .model-years {
+    color: var(--tftr-grey);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-table .acc-row td {
+    font-size: 0.88rem;
+  }
+
+  .kit-table .kit-detail {
+    display: block;
+    font-family: var(--font-body, inherit);
+    font-size: 0.82rem;
+    color: var(--tftr-grey);
+    white-space: normal;
+    margin-top: 0.25rem;
+  }
+
+  .model-block {
+    margin-bottom: var(--space-lg);
+  }
+
+  .model-block h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .model-years {
+    color: var(--tftr-grey);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-table .acc-row td {
+    font-size: 0.88rem;
+  }
+
+  .kit-table .kit-detail {
+    display: block;
+    font-family: var(--font-body, inherit);
+    font-size: 0.82rem;
+    color: var(--tftr-grey);
+    white-space: normal;
+    margin-top: 0.25rem;
+  }
+
+  .model-block {
+    margin-bottom: var(--space-lg);
+  }
+
+  .model-block h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .model-years {
+    color: var(--tftr-grey);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-table .acc-row td {
+    font-size: 0.88rem;
+  }
+
+  .table-note {
+    font-size: 0.85rem;
+    color: var(--tftr-grey);
+    margin-top: 0.75rem;
+  }
+</style>

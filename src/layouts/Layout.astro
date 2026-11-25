@@ -1,10 +1,15 @@
 ---
+import pagePhotos from '../../tools/page-photos.json';
+
 interface Props {
   title: string;
   description?: string;
 }
 
 const { title, description = "Bespoke Nitron and Penske suspension specification, chassis development and vehicle dynamics consultancy from Too Fast To Race. Over 25 years of motorsport and suspension development experience." } = Astro.props;
+
+// In `npm run dev` only: show the header and strip photos that tools/finish.mjs adds to the published build.
+const devPhoto = import.meta.env.DEV ? (pagePhotos as Record<string, any>)[Astro.url.pathname.replace(/^\/|\/$/g, '')] : null;
 ---
 
 <!DOCTYPE html>
@@ -113,6 +118,9 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
               <li><a href="/nitron-suspension/">Nitron Systems</a></li>
               <li><a href="/penske-racing-shocks/">Penske Racing Shocks</a></li>
               <li><a href="/nitron-electron/">Nitron elec-TRON</a></li>
+              <li><a href="/nitron-suspension/#kits-by-car">Nitron Kits &amp; Prices by Car</a></li>
+              <li><a href="/penske-racing-shocks/#penske-kits">Penske Kits &amp; Prices</a></li>
+              <li><a href="/engineering-services/">Engineering Services &amp; Prices</a></li>
               <li><a href="/nitron-r1-vs-r3/">R1 vs R3 Explained</a></li>
               <li><a href="/damper-adjustment-explained/">Damper Adjustment Explained</a></li>
               <li><a href="/corner-weights/">Corner Weights App (Free)</a></li>
@@ -251,6 +259,8 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
             <li><a href="/toyota-gr-yaris-suspension/">Toyota GR Yaris</a></li>
             <li><a href="/alpine-suspension/">Alpine A110</a></li>
             <li><a href="/tvr-suspension/">TVR</a></li>
+            <li><a href="/nitron-suspension/#kits-by-car">Nitron Kits &amp; Prices by Car</a></li>
+            <li><a href="/engineering-services/">Engineering Services &amp; Prices</a></li>
           </ul>
         </div>
         <div class="footer-links">
@@ -258,7 +268,6 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
           <ul>
             <li>Penske Racing Shocks</li>
             <li>Nitron Racing Systems</li>
-            <li>Hyperco Springs</li>
             <li>Eibach</li>
           </ul>
         </div>
@@ -310,6 +319,37 @@ const { title, description = "Bespoke Nitron and Penske suspension specification
       initMobileDropdowns();
       window.addEventListener('resize', initMobileDropdowns);
     </script>
+    {devPhoto && (
+      <script is:inline define:vars={{ p: devPhoto }}>
+        (function () {
+          var hero = document.querySelector('section.page-hero');
+          if (!hero) return;
+          if (p.kind === 'kit') {
+            hero.classList.add('is-kit');
+            var fig = document.createElement('figure');
+            fig.className = 'page-hero-panel';
+            fig.innerHTML = '<img class="page-hero-img" src="/assets/pages/' + p.img + '" alt="">' + (p.cap ? '<figcaption>' + p.cap + '</figcaption>' : '');
+            hero.insertBefore(fig, hero.firstChild);
+          } else {
+            var img = document.createElement('img');
+            img.className = 'page-hero-img';
+            img.src = '/assets/pages/' + p.img;
+            img.alt = '';
+            img.style.objectPosition = p.fx + '% ' + p.fy + '%';
+            hero.insertBefore(img, hero.firstChild);
+          }
+          var main = document.querySelector('main');
+          var sections = main ? main.querySelectorAll(':scope > section') : [];
+          var after = sections.length > 2 ? sections[1] : sections[sections.length - 1];
+          if (after) {
+            var strip = document.createElement('div');
+            strip.className = 'photo-strip';
+            strip.innerHTML = p.strip.map(function (i) { return '<figure><img src="/assets/pages/' + i + '" alt="" loading="lazy"></figure>'; }).join('');
+            after.parentNode.insertBefore(strip, after.nextSibling);
+          }
+        })();
+      </script>
+    )}
   </body>
 </html>
 

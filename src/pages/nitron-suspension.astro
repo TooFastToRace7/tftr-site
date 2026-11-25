@@ -55,11 +55,11 @@ import AuthorPanel from '../components/AuthorPanel.astro';
 
         <div class="range-card">
           <h3>Nitron R3</h3>
-          <p>The R3 introduces separate compression and rebound adjustment, allowing independent tuning of each damping direction. This is genuinely useful in applications where setup development is ongoing — motorsport, dedicated track cars and vehicles being actively developed.</p>
-          <p>The R3 is not automatically better than the R1. It is more adjustable — which is only an advantage if the setup knowledge exists to use that adjustability purposefully.</p>
+          <p>The R3 is a three-way damper with a reservoir: high-speed compression, low-speed compression and rebound are each adjusted separately. That puts more tools in your toolbox to dial in the setup and handling that suit you, on road, track day and competition cars alike.</p>
+          <p>For the vast majority of cars a correctly specified R1 is the right kit. If you can justify the R3 financially, it is the kit Simon would use every day.</p>
           <ul class="range-features">
             <li>Monotube construction</li>
-            <li>Separate compression and rebound adjustment</li>
+            <li>Separate high-speed compression, low-speed compression and rebound adjustment</li>
             <li>Ride height adjustable</li>
             <li>Motorsport and track day focus</li>
             <li>Greater setup development range</li>
@@ -149,6 +149,33 @@ import AuthorPanel from '../components/AuthorPanel.astro';
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kits and prices by car -->
+  <section class="kits-by-car" id="kits-by-car">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Nitron Kits and Prices by Car</h2>
+      </div>
+      <p class="kits-by-car-intro">Every Nitron kit we supply for these cars, with Nitron's own photo, part number and price. Buy to Nitron's standard specification, or have the spring rates and valving specified for your car. See <a href="/engineering-services/">engineering services and prices</a> for what that costs. If your car is not listed, <a href="/contact/">ask</a>: Nitron makes kits for many more.</p>
+      <div class="kit-prices-list">
+        <a href="/caterham/nitron-ntr-r1/">Caterham NTR R1</a>
+        <a href="/caterham/nitron-ntr-r3/">Caterham NTR R3</a>
+        <a href="/lotus-elise-nitron-kits/">Lotus Elise</a>
+        <a href="/lotus-exige-nitron-kits/">Lotus Exige</a>
+        <a href="/lotus-emira-evora-nitron-kits/">Lotus Emira &amp; Evora</a>
+        <a href="/porsche-911-gt3-gt2-nitron-kits/">Porsche 911 GT3 &amp; GT2</a>
+        <a href="/porsche-cayman-boxster-nitron-kits/">Porsche Cayman &amp; Boxster</a>
+        <a href="/bmw-m3-m4-nitron-kits/">BMW M3 &amp; M4</a>
+        <a href="/tvr-nitron-kits/">TVR</a>
+        <a href="/alpine-a110-nitron-kits/">Alpine A110</a>
+        <a href="/mazda-mx5-nitron-kits/">Mazda MX-5</a>
+        <a href="/toyota-gr-yaris-nitron-kits/">Toyota GR Yaris</a>
+        <a href="/toyota-gt86-gr86-subaru-brz-nitron-kits/">Toyota GT86, GR86 &amp; Subaru BRZ</a>
+        <a href="/honda-s2000-nitron-kits/">Honda S2000</a>
       </div>
     </div>
   </section>
@@ -554,5 +581,42 @@ import AuthorPanel from '../components/AuthorPanel.astro';
     .related-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+
+  /* Kits and prices by car */
+  .kits-by-car {
+    background: var(--tftr-darker);
+    scroll-margin-top: 90px;
+  }
+
+  .kits-by-car-intro {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: var(--space-md);
+  }
+
+  .kit-prices-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .kit-prices-list a {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--tftr-green);
+    color: var(--tftr-green);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .kit-prices-list a:hover {
+    background: var(--tftr-green);
+    color: var(--tftr-black);
   }
 </style>

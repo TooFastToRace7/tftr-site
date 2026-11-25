@@ -42,7 +42,15 @@ const structuredData = {
     </div>
   </section>
 
-  <SpecStatement />
+  <SpecStatement>
+    <aside slot="side" class="kit-prices-links">
+      <h3>Nitron Kits and Prices for The Alpine A110</h3>
+      <p>Every Nitron kit we supply for the Alpine A110, with Nitron's own photo, part number and price. See <a href="/engineering-services/">engineering services and prices</a> for what a kit specified for your car costs.</p>
+      <div class="kit-prices-list">
+        <a href="/alpine-a110-nitron-kits/">Alpine A110 kits and prices</a>
+      </div>
+    </aside>
+  </SpecStatement>
 
     <!-- Intro -->
   <section class="content-intro">
@@ -392,5 +400,50 @@ const structuredData = {
     .systems-grid {
       grid-template-columns: 1fr;
     }
+  }
+
+  /* Kits and prices panel, shown beside the opening statement */
+  .kit-prices-links {
+    padding: var(--space-md);
+    background: var(--tftr-dark);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 3px solid var(--tftr-green);
+  }
+
+  .kit-prices-links h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-prices-links p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-prices-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .kit-prices-list a {
+    display: block;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    background: var(--tftr-green);
+    border: 1px solid var(--tftr-green);
+    color: var(--tftr-black);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .kit-prices-list a:hover {
+    background: transparent;
+    color: var(--tftr-green);
   }
 </style>

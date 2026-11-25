@@ -1,0 +1,603 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuthorPanel from '../components/AuthorPanel.astro';
+
+// NOTE: prices are ex VAT, matching the rest of the site.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Suspension Engineering Services",
+  "serviceType": "Suspension specification and trackside engineering",
+  "provider": {
+    "@type": "Organization",
+    "name": "Too Fast To Race",
+    "url": "https://toofasttorace.com/"
+  },
+  "url": "https://toofasttorace.com/engineering-services/",
+  "description": "Suspension engineering by Simon Rogers: spring rates and damper valving specified for your car at £600 + VAT per kit, and trackside engineering at £600 + VAT per day plus travel expenses.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Engineering services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Kit specification: spring rates and damper valving",
+        "price": "600.00",
+        "priceCurrency": "GBP",
+        "description": "Per kit, excluding VAT, on top of the Nitron list price."
+      },
+      {
+        "@type": "Offer",
+        "name": "Trackside engineering",
+        "price": "600.00",
+        "priceCurrency": "GBP",
+        "description": "Per day, excluding VAT, plus travel expenses."
+      }
+    ]
+  }
+};
+---
+
+<Layout title="Suspension Engineering Services & Prices | Too Fast To Race" description="What Simon Rogers' engineering time costs: spring rates and damper valving specified for your car, £600 +VAT per kit. Trackside engineering, £600 +VAT per day plus travel expenses.">
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="stripe-accent"></span>
+      <h1>Engineering Services <span class="text-green">&amp; Prices</span></h1>
+      <p class="hero-subtitle">What Simon Rogers' engineering time costs, stated plainly. A kit specified for your car, and engineering support at the circuit.</p>
+    </div>
+  </section>
+
+  <!-- Prices -->
+  <section class="kit-content">
+    <div class="container">
+      <div class="content-block">
+        <h2>The <span class="text-green">Prices</span></h2>
+        <p>All prices exclude VAT.</p>
+      </div>
+
+      <div class="kit-table-wrap">
+        <table class="kit-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>What It Covers</th>
+              <th>Price + VAT</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="kit-specification">
+              <td class="kit-name">Kit specification</td>
+              <td>Spring rates and damper valving specified by Simon Rogers for your car, tyres and use. Charged per kit, on top of the Nitron list price.</td>
+              <td class="kit-cost">£600</td>
+            </tr>
+            <tr id="trackside-engineering">
+              <td class="kit-name">Trackside engineering</td>
+              <td>Simon at the circuit with you and your car. Charged per day, plus travel expenses.</td>
+              <td class="kit-cost">£600</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="content-block">
+        <h2>How Kit Specification <span class="text-green">Works</span></h2>
+        <p>Any Nitron kit can be bought to Nitron's standard specification at Nitron's list price. Where Nitron's valving suits your car and the way you use it, the springs can be changed for rates Simon recommends.</p>
+        <p>Where Nitron's standard valving is not the right answer for your car, the kit is built as a custom set: Simon specifies the spring rates and the damper valving, and the kit is built to that specification. That is the £600 + VAT per kit.</p>
+        <p>Simon will tell you honestly which of the two your car needs.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="included-col">
+          <h3>Caterham Kits</h3>
+          <ul class="kit-list">
+            <li>The £600 does not apply to Caterham kits</li>
+            <li>Every <a href="/caterham/suspension/">Caterham suspension kit</a> is already specified for the individual car, at the price shown on its page</li>
+          </ul>
+        </div>
+        <div class="included-col">
+          <h3>Penske</h3>
+          <ul class="kit-list">
+            <li>Penske dampers are built to order and valved for the individual car</li>
+            <li>Specification is part of every <a href="/penske-racing-shocks/">Penske</a> kit, and each one is quoted individually</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>Ordering, Lead Time and <span class="text-green">Shipping</span></h2>
+        <p>Every kit is made to order, so payment is taken when the order is placed. Lead time varies, and Simon confirms it with you when you enquire. We ship worldwide with the large carriers, insured, and shipping is quoted for each customer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="related-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="stripe-accent"></span>
+        <h2>Related Expertise</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/suspension/" class="related-card">
+          <h3>Suspension Specification</h3>
+          <p>How we specify suspension, and why it is not a catalogue exercise.</p>
+          <span class="related-link">Suspension →</span>
+        </a>
+        <a href="/nitron-suspension/" class="related-card">
+          <h3>Nitron Suspension</h3>
+          <p>The full Nitron range and how we approach specification for each application.</p>
+          <span class="related-link">Nitron Systems →</span>
+        </a>
+        <a href="/penske-racing-shocks/" class="related-card">
+          <h3>Penske Racing Shocks</h3>
+          <p>Built to order and valved for the individual car.</p>
+          <span class="related-link">Penske →</span>
+        </a>
+        <a href="/services/" class="related-card">
+          <h3>Suspension Development</h3>
+          <p>Development, vehicle dynamics and trackside work in more detail.</p>
+          <span class="related-link">Services →</span>
+        </a>
+        <a href="/damper-adjustment-explained/" class="related-card">
+          <h3>Damper Adjustment Explained</h3>
+          <p>What each adjuster changes, what you feel in the car, and a process for using them.</p>
+          <span class="related-link">Damper Adjustment →</span>
+        </a>
+        <a href="/caterham/" class="related-card">
+          <h3>Caterham Specialist</h3>
+          <p>Builds, conversions, setup and development from over 30 years with the Seven.</p>
+          <span class="related-link">Caterham →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Author -->
+  <section class="author-section">
+    <div class="container">
+      <AuthorPanel />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Talk It Through With Simon</h2>
+        <p>Tell us about your car, your tyres and how you use it. Simon is always happy to talk a specification through.</p>
+        <a href="/contact/" class="btn btn-primary">Contact Simon</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Page Hero */
+  .page-hero {
+    padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
+    background: var(--tftr-darker);
+    border-bottom: 1px solid rgba(92, 184, 92, 0.2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tftr-grey-light);
+    max-width: 65ch;
+    margin-top: var(--space-sm);
+    line-height: 1.7;
+  }
+
+  .hero-intro {
+    display: flex;
+    align-items: stretch;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .hero-intro .hero-subtitle {
+    margin-top: 0;
+  }
+
+  .brand-logo-chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tftr-white);
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .brand-logo {
+    height: 100%;
+    width: auto;
+    max-height: 96px;
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    .hero-intro {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .brand-logo {
+      height: 44px;
+    }
+  }
+
+  /* Summary / Price */
+  .kit-summary-section {
+    background: var(--tftr-black);
+    padding: var(--space-lg) 0;
+  }
+
+  .kit-summary {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-lg);
+    align-items: center;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(92, 184, 92, 0.2);
+    border-left: 3px solid var(--tftr-green);
+    padding: var(--space-md);
+  }
+
+  .kit-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .price-figure {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--tftr-green);
+    letter-spacing: 0.03em;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--tftr-grey);
+  }
+
+  .kit-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .spec {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+  }
+
+  .spec-value {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--tftr-white);
+  }
+
+  /* Content */
+  .kit-content {
+    background: var(--tftr-black);
+  }
+
+  .content-block {
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .content-block h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .content-block p {
+    color: var(--tftr-grey-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .included-col {
+    background: var(--tftr-darker);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .included-col h3 {
+    font-size: 1.1rem;
+    color: var(--tftr-green);
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .kit-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .kit-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--tftr-green);
+  }
+
+  /* Related */
+  .related-section {
+    background: var(--tftr-darker);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .related-card {
+    background: var(--tftr-dark);
+    padding: var(--space-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .related-card:hover {
+    border-color: rgba(92, 184, 92, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .related-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--tftr-white);
+  }
+
+  .related-card p {
+    color: var(--tftr-grey-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-sm);
+  }
+
+  .related-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-green);
+    margin-top: auto;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--tftr-green-dark), var(--tftr-green));
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--tftr-black);
+  }
+
+  .cta-content p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.25rem;
+    margin: var(--space-sm) auto var(--space-md);
+    max-width: 55ch;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--tftr-black);
+    color: var(--tftr-white);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--tftr-darker);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .kit-summary {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .kit-specs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Product Showcase */
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .showcase-image {
+    background: var(--tftr-white);
+    border-radius: 6px;
+    padding: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .showcase-image img {
+    width: 100%;
+    height: auto;
+    max-height: 460px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .showcase-text {
+    margin-bottom: 0 !important;
+  }
+
+  @media (max-width: 900px) {
+    .showcase-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+  }
+
+  /* Kit price table */
+  .kit-table-wrap {
+    overflow-x: auto;
+    margin-bottom: var(--space-lg);
+  }
+
+  .kit-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--tftr-darker);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--tftr-green);
+  }
+
+  .kit-table th,
+  .kit-table td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: top;
+  }
+
+  .kit-table th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tftr-grey);
+    font-weight: normal;
+  }
+
+  .kit-table td {
+    color: var(--tftr-grey-light);
+  }
+
+  .kit-table .kit-name {
+    font-family: var(--font-heading);
+    color: var(--tftr-white);
+    white-space: nowrap;
+  }
+
+  .kit-table .kit-cost {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--tftr-green);
+    white-space: nowrap;
+  }
+
+  .kit-table .kit-detail {
+    display: block;
+    font-family: var(--font-body, inherit);
+    font-size: 0.82rem;
+    color: var(--tftr-grey);
+    white-space: normal;
+    margin-top: 0.25rem;
+  }
+
+  .model-block {
+    margin-bottom: var(--space-lg);
+  }
+
+  .model-block h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .model-years {
+    color: var(--tftr-grey);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-table .acc-row td {
+    font-size: 0.88rem;
+  }
+
+  .kit-table .kit-detail {
+    display: block;
+    font-family: var(--font-body, inherit);
+    font-size: 0.82rem;
+    color: var(--tftr-grey);
+    white-space: normal;
+    margin-top: 0.25rem;
+  }
+
+  .model-block {
+    margin-bottom: var(--space-lg);
+  }
+
+  .model-block h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .model-years {
+    color: var(--tftr-grey);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-table .acc-row td {
+    font-size: 0.88rem;
+  }
+
+  .table-note {
+    font-size: 0.85rem;
+    color: var(--tftr-grey);
+    margin-top: 0.75rem;
+  }
+</style>
