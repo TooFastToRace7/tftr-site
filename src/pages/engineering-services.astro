@@ -14,14 +14,28 @@ const structuredData = {
     "url": "https://toofasttorace.com/"
   },
   "url": "https://toofasttorace.com/engineering-services/",
-  "description": "Suspension engineering by Simon Rogers: spring rates and damper valving specified for your car at £600 + VAT per kit, and trackside engineering at £600 + VAT per day plus travel expenses.",
+  "description": "Suspension engineering by Simon Rogers: spring rates and damper valving specified for your car from £250 + VAT per kit, and trackside engineering at £600 + VAT per day plus travel expenses.",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Engineering services",
     "itemListElement": [
       {
         "@type": "Offer",
-        "name": "Kit specification: spring rates and damper valving",
+        "name": "Kit specification, one-way kits",
+        "price": "250.00",
+        "priceCurrency": "GBP",
+        "description": "Per kit, excluding VAT, on top of the Nitron list price."
+      },
+      {
+        "@type": "Offer",
+        "name": "Kit specification, one-way strut kits",
+        "price": "400.00",
+        "priceCurrency": "GBP",
+        "description": "Per kit, excluding VAT, on top of the Nitron list price."
+      },
+      {
+        "@type": "Offer",
+        "name": "Kit specification, three-way kits",
         "price": "600.00",
         "priceCurrency": "GBP",
         "description": "Per kit, excluding VAT, on top of the Nitron list price."
@@ -38,7 +52,7 @@ const structuredData = {
 };
 ---
 
-<Layout title="Suspension Engineering Services & Prices | Too Fast To Race" description="What Simon Rogers' engineering time costs: spring rates and damper valving specified for your car, £600 +VAT per kit. Trackside engineering, £600 +VAT per day plus travel expenses.">
+<Layout title="Suspension Engineering Services & Prices | Too Fast To Race" description="What Simon Rogers' engineering time costs: spring rates and damper valving specified for your car, from £250 +VAT per kit. Trackside engineering, £600 +VAT per day plus travel expenses.">
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
   <!-- Hero -->
@@ -68,9 +82,19 @@ const structuredData = {
             </tr>
           </thead>
           <tbody>
+            <tr id="kit-specification-one-way">
+              <td class="kit-name">Kit specification, one-way kits</td>
+              <td>Spring rates and damper valving specified by Simon Rogers for your car, tyres and use. For one-way (R1) coilover kits such as Lotus, TVR, Alpine A110, Mazda MX-5 and Honda S2000, and for all RoadSport kits. Per kit, on top of the Nitron list price.</td>
+              <td class="kit-cost">£250</td>
+            </tr>
+            <tr id="kit-specification-strut">
+              <td class="kit-name">Kit specification, one-way strut kits</td>
+              <td>The same service for one-way (R1) kits on strut-type cars: Toyota GR Yaris, BMW, Porsche, Toyota GT86 and GR86, and Subaru BRZ. Per kit, on top of the Nitron list price.</td>
+              <td class="kit-cost">£400</td>
+            </tr>
             <tr id="kit-specification">
-              <td class="kit-name">Kit specification</td>
-              <td>Spring rates and damper valving specified by Simon Rogers for your car, tyres and use. Charged per kit, on top of the Nitron list price.</td>
+              <td class="kit-name">Kit specification, three-way kits</td>
+              <td>The same service for any three-way kit, on any car. Per kit, on top of the Nitron list price.</td>
               <td class="kit-cost">£600</td>
             </tr>
             <tr id="trackside-engineering">
@@ -85,7 +109,8 @@ const structuredData = {
       <div class="content-block">
         <h2>How Kit Specification <span class="text-green">Works</span></h2>
         <p>Any Nitron kit can be bought to Nitron's standard specification at Nitron's list price. Where Nitron's valving suits your car and the way you use it, the springs can be changed for rates Simon recommends.</p>
-        <p>Where Nitron's standard valving is not the right answer for your car, the kit is built as a custom set: Simon specifies the spring rates and the damper valving, and the kit is built to that specification. That is the £600 + VAT per kit.</p>
+        <p>Where Nitron's standard valving is not the right answer for your car, the kit is built as a custom set: Simon specifies the spring rates and the damper valving, and the kit is built to that specification. The price depends on the kit: £250 + VAT for a one-way kit, £400 + VAT for a one-way kit on a strut-type car, and £600 + VAT for any three-way kit.</p>
+        <p>Nitron elec-TRON kits are not expected to need revalving, so for those it is usually a choice of spring rates.</p>
         <p>Simon will tell you honestly which of the two your car needs.</p>
       </div>
 
@@ -93,7 +118,7 @@ const structuredData = {
         <div class="included-col">
           <h3>Caterham Kits</h3>
           <ul class="kit-list">
-            <li>The £600 does not apply to Caterham kits</li>
+            <li>These charges do not apply to Caterham kits</li>
             <li>Every <a href="/caterham/suspension/">Caterham suspension kit</a> is already specified for the individual car, at the price shown on its page</li>
           </ul>
         </div>
@@ -537,6 +562,34 @@ const structuredData = {
     font-size: 1.4rem;
     color: var(--tftr-green);
     white-space: nowrap;
+  }
+
+  .kit-table .kit-detail {
+    display: block;
+    font-family: var(--font-body, inherit);
+    font-size: 0.82rem;
+    color: var(--tftr-grey);
+    white-space: normal;
+    margin-top: 0.25rem;
+  }
+
+  .model-block {
+    margin-bottom: var(--space-lg);
+  }
+
+  .model-block h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .model-years {
+    color: var(--tftr-grey);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .kit-table .acc-row td {
+    font-size: 0.88rem;
   }
 
   .kit-table .kit-detail {
