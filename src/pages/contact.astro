@@ -129,9 +129,62 @@ import Layout from '../layouts/Layout.astro';
     })();
   </script>
 
+  <script is:inline>
+    // Send the enquiry in the background so the visitor stays on this page,
+    // then tell Google Analytics an enquiry was sent (only if the visitor accepted analytics).
+    // If anything fails, the form is sent the ordinary way, so no enquiry is lost.
+    (function () {
+      var form = document.querySelector('.contact-form');
+      if (!form || !window.fetch || !window.FormData) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+        var subj = document.getElementById('subject');
+        var topic = (subj && subj.value) || 'other';
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        }).then(function (res) {
+          if (!res.ok) throw new Error('not sent');
+          try {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'generate_lead', { form_name: 'contact', enquiry_topic: topic });
+            }
+          } catch (err) {}
+          var done = document.createElement('div');
+          done.className = 'form-sent';
+          done.setAttribute('role', 'status');
+          var h = document.createElement('h3');
+          h.textContent = 'Thank you. Your message has been sent.';
+          var p = document.createElement('p');
+          p.textContent = 'Simon will reply personally, usually within 24 to 48 hours.';
+          done.appendChild(h);
+          done.appendChild(p);
+          form.parentNode.replaceChild(done, form);
+          done.scrollIntoView({ block: 'center' });
+        }).catch(function () {
+          HTMLFormElement.prototype.submit.call(form);
+        });
+      });
+    })();
+  </script>
+
 </Layout>
 
 <style>
+  /* Shown in place of the form once an enquiry has been sent */
+  :global(.form-sent) {
+    padding: var(--space-md);
+    border: 1px solid rgba(92, 184, 92, 0.4);
+    background: rgba(92, 184, 92, 0.08);
+  }
+
+  :global(.form-sent h3) {
+    margin-bottom: 0.5rem;
+  }
+
   /* Page Hero */
   .page-hero {
     padding: calc(80px + var(--space-xl)) 0 var(--space-lg);
